@@ -1,0 +1,27 @@
+* Fri Mar 05 2010 Anas Nashif <anas.nashif@intel.com> - 0.56.13
+- BuildRequire cvs
+
+* Wed Mar 03 2010 Anas Nashif <anas.nashif@intel.com> - 0.56.13
+- Require gettext-devel
+
+* Sat Feb 27 2010 Anas Nashif <anas.nashif@intel.com> - 0.56.13
+- Updated with latest spectacle
+- Include YAML file in source rpm
+
+* Sun Jan 17 2010 Vivian Zhang <vivian.zhang@intel.com> - 0.56.13
+- Update to 0.56.13
+
+* Sun Feb 15 2009 Anas Nashif <anas.nashif@intel.com> 0.56.9
+- Fixed BR
+
+* Mon Feb  9 2009 Yin Kangkai <kangkai.yin@intel.com> 0.56.9
+- Update Source0 URL
+
+* Fri Jan 09 2009 Anas Nashif <anas.nashif@intel.com> 0.56.9
+- Make it build with new libtool
+
+* Tue Dec 16 2008 Arjan van de Ven <arjan@linux.intel.com> 0.56.9
+- Clean up spec file
+
+* Sat Dec 13 2008 Anas Nashif <anas.nashif@intel.com> 0.56.9
+- Enable python
