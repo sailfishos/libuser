@@ -1,8 +1,0 @@
-<package project="Mer:Trunk:Base" name="libuser">
-  <title>A user and group account administration library</title>
-  <description>Description: %{summary}
-
-
-</description>
-  <url>https://fedorahosted.org/libuser/</url>
-</package>
