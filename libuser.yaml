@@ -2,7 +2,7 @@ Name: libuser
 Summary: A user and group account administration library
 Description: |
   %{summary}.
-Version: 0.57.3
+Version: 0.58
 Release: 1
 Group: System/Base
 License: LGPLv2+
