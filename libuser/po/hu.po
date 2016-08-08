@@ -1,0 +1,1433 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Red Hat, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# Arpad Biro <biro_arpad@yahoo.com>, 2004, 2005, 2007
+# Laszlo Dvornik <dvornikl@mailbox.hu>, 2004
+# Miloslav Trmač <mitr@volny.cz>, 2011
+# Nikolas Slivka <snicore@gmail.com>, 2010
+# ptr <ptr@ulx.hu>, 2011
+# Tamas Szanto <tszanto@mol.hu>, 2003
+# Zoltan Hoppár <hopparz@gmail.com>, 2011-2013
+msgid ""
+msgstr ""
+"Project-Id-Version: libuser 0.60\n"
+"Report-Msgid-Bugs-To: http://bugzilla.redhat.com/bugzilla/\n"
+"POT-Creation-Date: 2015-07-23 21:16+0200\n"
+"PO-Revision-Date: 2013-04-29 04:37-0400\n"
+"Last-Translator: Miloslav Trmač <mitr@volny.cz>\n"
+"Language-Team: Hungarian (http://www.transifex.com/projects/p/fedora/"
+"language/hu/)\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Zanata 3.6.2\n"
+
+#: apps/apputil.c:197 apps/apputil.c:201
+#, c-format
+msgid "Failed to drop privileges.\n"
+msgstr "Jogosultságok eldobása sikertelen.\n"
+
+#: apps/apputil.c:210
+#, c-format
+msgid "Internal error.\n"
+msgstr "Belső hiba.\n"
+
+#: apps/apputil.c:231
+#, c-format
+msgid "%s is not authorized to change the finger info of %s\n"
+msgstr "%s nem jogosult %s személyes adatainak megváltoztatására\n"
+
+#: apps/apputil.c:233
+msgid "Unknown user context"
+msgstr "Ismeretlen felhasználói környezet"
+
+#: apps/apputil.c:241
+#, c-format
+msgid "Can't set default context for /etc/passwd\n"
+msgstr ""
+"Az alapértelmezett kontextus beállítása nem sikerült a /etc/passwd "
+"esetében \n"
+
+#: apps/apputil.c:250
+#, c-format
+msgid "Error initializing PAM.\n"
+msgstr "Hiba a PAM inicializálásakor.\n"
+
+#: apps/apputil.c:260 apps/apputil.c:287
+#, c-format
+msgid "Authentication failed for %s.\n"
+msgstr "Azonosítás mint \"%s\" sikertelen\n"
+
+#: apps/apputil.c:268
+#, c-format
+msgid "Internal PAM error `%s'.\n"
+msgstr "Belső PAM hiba `%s'.\n"
+
+#: apps/apputil.c:273
+#, c-format
+msgid "Unknown user authenticated.\n"
+msgstr "Ismeretlen felhasználó hitelesítve.\n"
+
+#: apps/apputil.c:277
+#, c-format
+msgid "User mismatch.\n"
+msgstr "Felhasználói eltérés.\n"
+
+#: apps/lchage.c:84 apps/lchfn.c:53 apps/lchsh.c:44 apps/lgroupadd.c:47
+#: apps/lgroupdel.c:42 apps/lgroupmod.c:54 apps/lid.c:115 apps/lnewusers.c:45
+#: apps/lpasswd.c:47 apps/luseradd.c:55 apps/luserdel.c:45 apps/lusermod.c:56
+msgid "prompt for all information"
+msgstr "összes információ megjelenítése"
+
+#: apps/lchage.c:86
+msgid "list aging parameters for the user"
+msgstr "lista a felhasználó időkorlát paramétereiről"
+
+#: apps/lchage.c:88
+msgid "minimum days between password changes"
+msgstr "minimális napok száma jelszó váltások között"
+
+#: apps/lchage.c:88 apps/lchage.c:90 apps/lchage.c:93 apps/lchage.c:96
+#: apps/lchage.c:99 apps/lchage.c:102
+msgid "DAYS"
+msgstr "NAPOK"
+
+#: apps/lchage.c:90
+msgid "maximum days between password changes"
+msgstr "maximális napok száma jelszó váltások között"
+
+#: apps/lchage.c:92
+msgid "date of last password change in days since 1/1/70"
+msgstr "az utolsó jelszó cseréje napokban 1970/1/1 óta"
+
+#: apps/lchage.c:95
+msgid ""
+"number of days after password expiration date when account is considered "
+"inactive"
+msgstr "hány nappal a jelszó lejárata után váljon a regisztrált fiók inaktívvá"
+
+#: apps/lchage.c:98
+msgid "password expiration date in days since 1/1/70"
+msgstr "jelszó lejárati ideje napokban 1970/01/01 óta"
+
+#: apps/lchage.c:101
+msgid "days before expiration to begin warning user"
+msgstr "hány nappal kezdjen el a lejárat előtt figyelmeztetést küldeni "
+
+#: apps/lchage.c:114 apps/lid.c:130 apps/lpasswd.c:68 apps/luseradd.c:100
+#: apps/luserdel.c:59 apps/lusermod.c:101
+msgid "[OPTION...] user"
+msgstr "[OPCIÓ...] felhasználó"
+
+#: apps/lchage.c:117 apps/lchfn.c:70 apps/lchsh.c:58 apps/lgroupadd.c:65
+#: apps/lgroupdel.c:56 apps/lgroupmod.c:85 apps/lid.c:133 apps/lnewusers.c:66
+#: apps/lpasswd.c:71 apps/luseradd.c:103 apps/luserdel.c:62
+#: apps/lusermod.c:104
+#, c-format
+msgid "Error parsing arguments: %s.\n"
+msgstr "Hiba a paraméter értelmezésekor: %s.\n"
+
+#: apps/lchage.c:126 apps/lpasswd.c:85 apps/luseradd.c:118 apps/luserdel.c:70
+#: apps/lusermod.c:115
+#, c-format
+msgid "No user name specified.\n"
+msgstr "Nincs felhasználónév megadva.\n"
+
+#: apps/lchage.c:138 apps/lchfn.c:103 apps/lchsh.c:91 apps/lgroupadd.c:102
+#: apps/lgroupdel.c:77 apps/lgroupmod.c:119 apps/lid.c:179 apps/lnewusers.c:79
+#: apps/lpasswd.c:97 apps/luseradd.c:143 apps/luserdel.c:81
+#: apps/lusermod.c:157 samples/enum.c:56 samples/testuser.c:71
+#, c-format
+msgid "Error initializing %s: %s.\n"
+msgstr "Hiba a(z) %s inicializálásakor: %s.\n"
+
+#: apps/lchage.c:147 apps/lchfn.c:114 apps/lchsh.c:102 apps/lpasswd.c:148
+#: apps/luserdel.c:89 apps/lusermod.c:171
+#, c-format
+msgid "User %s does not exist.\n"
+msgstr "%s felhasználó nem létezik.\n"
+
+#: apps/lchage.c:160
+#, c-format
+msgid "Account is locked.\n"
+msgstr "Azonosító zárolva.\n"
+
+#: apps/lchage.c:162
+#, c-format
+msgid "Account is not locked.\n"
+msgstr "Fiók nincs lezárva.\n"
+
+#: apps/lchage.c:166
+#, c-format
+msgid "Minimum:\t%ld\n"
+msgstr "Minimum:\t%ld\n"
+
+#: apps/lchage.c:170
+#, c-format
+msgid "Maximum:\t%ld\n"
+msgstr "Maximum:\t%ld\n"
+
+#: apps/lchage.c:172
+#, c-format
+msgid "Maximum:\tNone\n"
+msgstr "Maximum:\tNincs\n"
+
+#: apps/lchage.c:175
+#, c-format
+msgid "Warning:\t%ld\n"
+msgstr "Figyelmeztetés:\t%ld\n"
+
+#: apps/lchage.c:180
+#, c-format
+msgid "Inactive:\t%ld\n"
+msgstr "Inaktív:\t%ld\n"
+
+#: apps/lchage.c:182
+#, c-format
+msgid "Inactive:\tNever\n"
+msgstr "Inaktív:\tSoha\n"
+
+#: apps/lchage.c:186 apps/lchage.c:194 apps/lchage.c:204
+msgid "Must change password on next login"
+msgstr "Meg kell változtatnia jelszavát a következő bejelentkezésnél"
+
+#: apps/lchage.c:188 apps/lchage.c:196 apps/lchage.c:206 apps/lchage.c:215
+msgid "Never"
+msgstr "Soha"
+
+#: apps/lchage.c:191
+#, c-format
+msgid "Last Change:\t%s\n"
+msgstr "Utolsó módosítás:\t%s\n"
+
+#: apps/lchage.c:201
+#, c-format
+msgid "Password Expires:\t%s\n"
+msgstr "Jelszó lejár:\t%s\n"
+
+#: apps/lchage.c:213
+#, c-format
+msgid "Password Inactive:\t%s\n"
+msgstr "jelszó inaktív:\t%s\n"
+
+#: apps/lchage.c:219
+#, c-format
+msgid "Account Expires:\t%s\n"
+msgstr "Azonosító lejár:\t%s\n"
+
+#: apps/lchage.c:240
+#, c-format
+msgid "Failed to modify aging information for %s: %s\n"
+msgstr "%s elévülési információit nem sikerült módosítani: %s\n"
+
+#: apps/lchfn.c:67 apps/lchsh.c:55
+msgid "[OPTION...] [user]"
+msgstr "[OPCIÓ...] [felhasználó]"
+
+#: apps/lchfn.c:86 apps/lchsh.c:74 apps/lid.c:164
+#, c-format
+msgid "No user name specified, no name for uid %d.\n"
+msgstr "Nincs felhasználónév megadva, nincs név a(z) %d uid-hoz.\n"
+
+#: apps/lchfn.c:96
+#, c-format
+msgid "Changing finger information for %s.\n"
+msgstr "%s személyes adatainak megváltoztatása.\n"
+
+#: apps/lchfn.c:136
+msgid "Full Name"
+msgstr "Teljes név"
+
+#: apps/lchfn.c:146
+msgid "Surname"
+msgstr "Vezetéknév"
+
+#: apps/lchfn.c:157
+msgid "Given Name"
+msgstr "Utónév"
+
+#: apps/lchfn.c:167
+msgid "Office"
+msgstr "Munkahely"
+
+#: apps/lchfn.c:176
+msgid "Office Phone"
+msgstr "Munkahelyi telefon"
+
+#: apps/lchfn.c:185
+msgid "Home Phone"
+msgstr "Otthoni telefon"
+
+#: apps/lchfn.c:195
+msgid "E-Mail Address"
+msgstr "E-mail cím"
+
+#: apps/lchfn.c:208
+#, c-format
+msgid "Finger information not changed:  input error.\n"
+msgstr "A személyes információk nem változtak: beviteli hiba. \n"
+
+#: apps/lchfn.c:270
+msgid "Finger information changed.\n"
+msgstr "Az információ frissítése megtörtént.\n"
+
+#: apps/lchfn.c:273
+#, c-format
+msgid "Finger information not changed: %s.\n"
+msgstr "A személyes adatok nem változtak: %s \n"
+
+#: apps/lchsh.c:84
+#, c-format
+msgid "Changing shell for %s.\n"
+msgstr "%s parancsértelmezőjének megváltoztatása. \n"
+
+#: apps/lchsh.c:114
+msgid "New Shell"
+msgstr "Új shell"
+
+#: apps/lchsh.c:121 apps/lchsh.c:136
+#, c-format
+msgid "Shell not changed: %s\n"
+msgstr "Shell nem változott: %s\n"
+
+#: apps/lchsh.c:133
+msgid "Shell changed.\n"
+msgstr "Shell megváltozott.\n"
+
+#: apps/lgroupadd.c:49
+msgid "gid for new group"
+msgstr "az új csoport GID azonosítója"
+
+#: apps/lgroupadd.c:49 apps/lgroupmod.c:56 apps/lpasswd.c:56 apps/lpasswd.c:59
+#: apps/luseradd.c:67 apps/lusermod.c:66 apps/lusermod.c:68
+msgid "NUM"
+msgstr "SZÁM"
+
+#: apps/lgroupadd.c:51
+msgid "create a system group"
+msgstr "rendszercsoport készítése"
+
+#: apps/lgroupadd.c:62 apps/lgroupdel.c:53 apps/lgroupmod.c:82
+msgid "[OPTION...] group"
+msgstr "[OPCIÓ...] csoport"
+
+#: apps/lgroupadd.c:74 apps/lgroupdel.c:65 apps/lgroupmod.c:93
+#, c-format
+msgid "No group name specified.\n"
+msgstr "Nincs csoportnév megadva.\n"
+
+#: apps/lgroupadd.c:87 apps/lgroupmod.c:105 apps/lnewusers.c:172
+#: apps/luseradd.c:164 apps/lusermod.c:127
+#, c-format
+msgid "Invalid group ID %s\n"
+msgstr "Érvénytelen csoportazonosító %s\n"
+
+#: apps/lgroupadd.c:119
+#, c-format
+msgid "Group creation failed: %s\n"
+msgstr "Csoportl étrehozása meghiúsult: %s\n"
+
+#: apps/lgroupdel.c:85 apps/lgroupmod.c:132 apps/lpasswd.c:153
+#, c-format
+msgid "Group %s does not exist.\n"
+msgstr "A(z) %s csoport nem létezik.\n"
+
+#: apps/lgroupdel.c:91
+#, c-format
+msgid "Group %s could not be deleted: %s\n"
+msgstr "A(z) %s csoport nem törölhető : %s\n"
+
+#: apps/lgroupmod.c:56
+msgid "set GID for group"
+msgstr "GID beállítása a csoporthoz"
+
+#: apps/lgroupmod.c:58
+msgid "change group to have given name"
+msgstr "csoport megváltoztatása egy megadott névre"
+
+#: apps/lgroupmod.c:58
+msgid "NAME"
+msgstr "NÉV"
+
+#: apps/lgroupmod.c:60 apps/luseradd.c:75
+msgid "plaintext password for use with group"
+msgstr "sima szöveges jelszó csoporttal való használathoz"
+
+#: apps/lgroupmod.c:60 apps/lgroupmod.c:62 apps/lgroupmod.c:64
+#: apps/lgroupmod.c:66 apps/lgroupmod.c:68 apps/lgroupmod.c:70
+#: apps/lpasswd.c:51 apps/lpasswd.c:53 apps/luseradd.c:59 apps/luseradd.c:61
+#: apps/luseradd.c:63 apps/luseradd.c:65 apps/luseradd.c:69 apps/luseradd.c:75
+#: apps/luseradd.c:77 apps/luseradd.c:79 apps/luseradd.c:81 apps/luseradd.c:83
+#: apps/luseradd.c:85 apps/luseradd.c:87 apps/luseradd.c:89 apps/lusermod.c:58
+#: apps/lusermod.c:60 apps/lusermod.c:64 apps/lusermod.c:70 apps/lusermod.c:72
+#: apps/lusermod.c:74 apps/lusermod.c:80 apps/lusermod.c:82 apps/lusermod.c:84
+#: apps/lusermod.c:86 apps/lusermod.c:88 apps/lusermod.c:90
+msgid "STRING"
+msgstr "SZÖVEG"
+
+#: apps/lgroupmod.c:62 apps/luseradd.c:77
+msgid "pre-hashed password for use with group"
+msgstr "elő-hash-elt jelszó a csoporttal való használathoz"
+
+#: apps/lgroupmod.c:64
+msgid "list of administrators to add"
+msgstr "hozzáadandó adminisztrátorok listája"
+
+#: apps/lgroupmod.c:66
+msgid "list of administrators to remove"
+msgstr "eltávolítandó adminisztrátorok listája"
+
+#: apps/lgroupmod.c:68
+msgid "list of group members to add"
+msgstr "hozzáadandó csoporttagok listája"
+
+#: apps/lgroupmod.c:70
+msgid "list of group members to remove"
+msgstr "eltávolítandó csoporttagok listája"
+
+#: apps/lgroupmod.c:71
+msgid "lock group"
+msgstr "csoport zárolása"
+
+#: apps/lgroupmod.c:72
+msgid "unlock group"
+msgstr "csoport feloldása"
+
+#: apps/lgroupmod.c:125 apps/lusermod.c:164
+#, c-format
+msgid "Both -L and -U specified.\n"
+msgstr "-L és -U is meg van adva.\n"
+
+#: apps/lgroupmod.c:139 apps/lgroupmod.c:148
+#, c-format
+msgid "Failed to set password for group %s: %s\n"
+msgstr "Hiba a(z) %s csoport jelszavának beállításakor: %s\n"
+
+#: apps/lgroupmod.c:157
+#, c-format
+msgid "Group %s could not be locked: %s\n"
+msgstr "%s csoportot nem lehet zárolni: %s\n"
+
+#: apps/lgroupmod.c:166
+#, c-format
+msgid "Group %s could not be unlocked: %s\n"
+msgstr "%s csoportot nem lehet feloldani: %s\n"
+
+#: apps/lgroupmod.c:242 apps/lgroupmod.c:257
+#, c-format
+msgid "Group %s could not be modified: %s\n"
+msgstr "%s csoportot nem lehet módosítani: %s\n"
+
+#: apps/lid.c:42 apps/lid.c:74 apps/lid.c:188
+#, c-format
+msgid "Error looking up %s: %s\n"
+msgstr "Hiba %s keresése közben: %s \n"
+
+#: apps/lid.c:117
+msgid ""
+"list members of a named group instead of the group memberships for the named "
+"user"
+msgstr ""
+"csak a megnevezett csoport tagjait listázza - a megnevezett felhasználó "
+"csoporttagságai helyett"
+
+#: apps/lid.c:120
+msgid "only list membership information by name, and not UID/GID"
+msgstr "csak tagsági információkat listázza - de ne UID/GID, hanem név alapján"
+
+#: apps/lid.c:146
+#, c-format
+msgid "No group name specified, using %s.\n"
+msgstr "Nincs csoportnév megadva, %s használata.\n"
+
+#: apps/lid.c:150
+#, c-format
+msgid "No group name specified, no name for gid %d.\n"
+msgstr "Nincs csoportnév megadva, nincs név a(z) %d gid-hez.\n"
+
+#: apps/lid.c:160
+#, c-format
+msgid "No user name specified, using %s.\n"
+msgstr "Nincs felhasználónév megadva, %s használata.\n"
+
+#: apps/lid.c:192
+#, c-format
+msgid "%s does not exist\n"
+msgstr "%s nem létezik\n"
+
+#: apps/lnewusers.c:47
+msgid "file with user information records"
+msgstr "fájl felhasználói információs bejegyzésekkel"
+
+#: apps/lnewusers.c:47
+msgid "PATH"
+msgstr "ELÉRÉSI ÚT"
+
+#: apps/lnewusers.c:49
+msgid "don't create home directories"
+msgstr "ne készítsen home könyvtárakat"
+
+#: apps/lnewusers.c:51
+msgid "don't create mail spools"
+msgstr "ne készítsen levélgyüjtőket"
+
+#: apps/lnewusers.c:63
+msgid "[OPTION...]"
+msgstr "[OPCIÓ...]"
+
+#: apps/lnewusers.c:88
+#, c-format
+msgid "Error opening `%s': %s.\n"
+msgstr "Hiba a(z) `%s' megnyitásakor: %s.\n"
+
+#: apps/lnewusers.c:118
+#, c-format
+msgid "Error creating account for `%s': line improperly formatted.\n"
+msgstr ""
+"A fiók létrehozása `%s' számára nem sikerült: a sor nem megfelelően "
+"formázott.\n"
+
+#: apps/lnewusers.c:129 apps/luseradd.c:128 apps/lusermod.c:142
+#, c-format
+msgid "Invalid user ID %s\n"
+msgstr "Érvénytelen felhasználói azonosító %s\n"
+
+#: apps/lnewusers.c:136
+msgid "Refusing to create account with UID 0.\n"
+msgstr "Felhasználó létrehozása 0 UID-val megtagadva.\n"
+
+#: apps/lnewusers.c:206
+#, c-format
+msgid "Error creating group for `%s' with GID %jd: %s\n"
+msgstr "A(z) `%s' csoport nem hozható létre %jd GID-el: %s\n"
+
+#: apps/lnewusers.c:246
+#, c-format
+msgid "Refusing to use dangerous home directory `%s' for %s by default\n"
+msgstr ""
+"`%s' veszélyes home könyvtár használati jogának megtagadása %s számára "
+"alapértelmezésként\n"
+
+#: apps/lnewusers.c:257
+#, c-format
+msgid "Error creating home directory for %s: %s\n"
+msgstr "Hiba történt %s saját könyvtárának létrehozásakor: %s\n"
+
+#: apps/lnewusers.c:270
+#, c-format
+msgid "Error creating mail spool for %s: %s\n"
+msgstr "Hiba a levéltár %s részére való létrehozásakor: %s\n"
+
+#: apps/lnewusers.c:285
+#, c-format
+msgid "Error setting initial password for %s: %s\n"
+msgstr "%s kezdeti jelszávanak beállítása nem sikerült: %s\n"
+
+#: apps/lnewusers.c:295
+#, c-format
+msgid "Error creating user account for %s: %s\n"
+msgstr "Hiba történt %s felhasználói fiók létrehozásakor: %s\n"
+
+#: apps/lpasswd.c:49
+msgid "set group password instead of user password"
+msgstr "állítsa be a csoport jelszavának a felhasználó jelszava helyett"
+
+#: apps/lpasswd.c:51
+msgid "new plain password"
+msgstr "új titkosítatlan jelszó"
+
+#: apps/lpasswd.c:53
+msgid "new crypted password"
+msgstr "új titkosított jelszó"
+
+#: apps/lpasswd.c:55
+msgid "read new plain password from given descriptor"
+msgstr "az új titkosítatlan jelszó beolvasása a megadott leírófájlból"
+
+#: apps/lpasswd.c:58
+msgid "read new crypted password from given descriptor"
+msgstr "az új titkosított jelszó beolvasása a megadott leírófájlból"
+
+#: apps/lpasswd.c:83
+#, c-format
+msgid "Changing password for %s.\n"
+msgstr "%s jelszavának megváltoztatása.\n"
+
+#: apps/lpasswd.c:111
+msgid "New password"
+msgstr "Új jelszó"
+
+#: apps/lpasswd.c:114
+msgid "New password (confirm)"
+msgstr "Új jelszó (megerősítés)"
+
+#: apps/lpasswd.c:128
+#, c-format
+msgid "Passwords do not match, try again.\n"
+msgstr "A két jelszó nem egyezik meg, próbálja újból.\n"
+
+#: apps/lpasswd.c:133
+#, c-format
+msgid "Password change canceled.\n"
+msgstr "Jelszóváltoztatás megszakítva.\n"
+
+#: apps/lpasswd.c:165 apps/lpasswd.c:182
+#, c-format
+msgid "Error reading from file descriptor %d.\n"
+msgstr "Hiba %d fájl leírójának olvasásakor.\n"
+
+#: apps/lpasswd.c:203 apps/luseradd.c:302 apps/luseradd.c:311
+#, c-format
+msgid "Error setting password for user %s: %s.\n"
+msgstr "Hiba történt %s felhasználó jelszavának beállításakor: %s.\n"
+
+#: apps/lpasswd.c:212
+#, c-format
+msgid "Error setting password for group %s: %s.\n"
+msgstr "Hiba történt %s csoport jelszavának beállításakor: %s.\n"
+
+#: apps/lpasswd.c:224
+#, c-format
+msgid "Password changed.\n"
+msgstr "A jelszó megváltoztatva.\n"
+
+#: apps/luseradd.c:57
+msgid "create a system user"
+msgstr "rendszer felhasználó készítése"
+
+#: apps/luseradd.c:59
+msgid "GECOS information for new user"
+msgstr "az új felhasználó GECOS információi"
+
+#: apps/luseradd.c:61
+msgid "home directory for new user"
+msgstr "az új felhasználó home mappája"
+
+#: apps/luseradd.c:63
+msgid "directory with files for the new user"
+msgstr "az új felhasználó könyvtára fájlokkal"
+
+#: apps/luseradd.c:65
+msgid "shell for new user"
+msgstr "az új felhasználó shell-je"
+
+#: apps/luseradd.c:67
+msgid "uid for new user"
+msgstr "az új felhasználó UID-je"
+
+#: apps/luseradd.c:69
+msgid "group for new user"
+msgstr "az új felhasználó csoportja"
+
+#: apps/luseradd.c:71
+msgid "don't create home directory for user"
+msgstr "ne készítsen home könyvtárat a felhasználó számára"
+
+#: apps/luseradd.c:73
+msgid "don't create group with same name as user"
+msgstr "ne készítsen felhasználó nevével megegyező csoportot"
+
+#: apps/luseradd.c:79
+msgid "common name for new user"
+msgstr "az új felhasználó közös neve"
+
+#: apps/luseradd.c:81
+msgid "given name for new user"
+msgstr "az új felhasználó kitalált neve"
+
+#: apps/luseradd.c:83
+msgid "surname for new user"
+msgstr "az új felhasználó utóneve"
+
+#: apps/luseradd.c:85
+msgid "room number for new user"
+msgstr "az új felhasználó szobaszáma"
+
+#: apps/luseradd.c:87
+msgid "telephone number for new user"
+msgstr "az új felhasználó telefonszáma"
+
+#: apps/luseradd.c:89
+msgid "home telephone number for new user"
+msgstr "az új felhasználó otthoni telefonszáma"
+
+#: apps/luseradd.c:189
+#, c-format
+msgid "Group %jd does not exist\n"
+msgstr "%jd csoport nem létezik\n"
+
+#: apps/luseradd.c:207 apps/luseradd.c:220
+#, c-format
+msgid "Error creating group `%s': %s\n"
+msgstr "Hiba történt `%s'  csoport létrehozásakor: %s\n"
+
+#: apps/luseradd.c:260
+#, c-format
+msgid "Account creation failed: %s.\n"
+msgstr "Azonosító létrehozása meghiúsult: %s.\n"
+
+#: apps/luseradd.c:283
+#, c-format
+msgid "Error creating %s: %s.\n"
+msgstr "Hiba történt %s létrehozásakor: %s.\n"
+
+#: apps/luseradd.c:290
+#, c-format
+msgid "Error creating mail spool: %s\n"
+msgstr "Hiba a levéltár létrehozásakor: %s\n"
+
+#: apps/luserdel.c:47
+msgid "don't remove the user's private group, if the user has one"
+msgstr ""
+"ne távolítsa el a felhasználó privát csoportját, ha rendelkezik ilyennel"
+
+#: apps/luserdel.c:50
+msgid "remove the user's home directory"
+msgstr "távolítsa el felhasználók home mappáját"
+
+#: apps/luserdel.c:94
+#, c-format
+msgid "User %s could not be deleted: %s.\n"
+msgstr "%s felhasználó nem törölhető: %s.\n"
+
+#: apps/luserdel.c:108
+#, c-format
+msgid "%s did not have a gid number.\n"
+msgstr "%s nem rendelkezik  GID számmal.\n"
+
+#: apps/luserdel.c:114
+#, c-format
+msgid "No group with GID %jd exists, not removing.\n"
+msgstr "Nincs csoport %jd GID azonosítóval, így nincs eltávolítás sem.\n"
+
+#: apps/luserdel.c:120
+#, c-format
+msgid "Group with GID %jd did not have a group name.\n"
+msgstr "A %jd GID azonosítójú csoportnak nincs csoportneve.\n"
+
+#: apps/luserdel.c:126
+#, c-format
+msgid "Group %s could not be deleted: %s.\n"
+msgstr "%s csoportot nem lehet törölni: %s.\n"
+
+#: apps/luserdel.c:139
+#, fuzzy, c-format
+msgid "Error removing home directory: %s.\n"
+msgstr "hiba a felhasználó saját könyvtárának eltávolításakor"
+
+#: apps/luserdel.c:145
+#, c-format
+msgid "Error removing mail spool: %s"
+msgstr "Hiba a levéltár törlésekor: %s"
+
+#: apps/lusermod.c:58
+msgid "GECOS information"
+msgstr "GECOS információk"
+
+#: apps/lusermod.c:60
+msgid "home directory"
+msgstr "home könyvtár"
+
+#: apps/lusermod.c:62
+msgid "move home directory contents"
+msgstr "home könyvtár tartalmának elmozgatása"
+
+#: apps/lusermod.c:64
+msgid "set shell for user"
+msgstr "parancsértelmező beállítása fehasználó számára"
+
+#: apps/lusermod.c:66
+msgid "set UID for user"
+msgstr "UID beállítása a felhasználó számára"
+
+#: apps/lusermod.c:68
+msgid "set primary GID for user"
+msgstr "elsődleges GID beállítása a felhasználó számára"
+
+#: apps/lusermod.c:70
+msgid "change login name for user"
+msgstr "bejelentkezési név megváltozatása a felhasználónál"
+
+#: apps/lusermod.c:72
+msgid "plaintext password for the user"
+msgstr "egyszerű szöveges jelszó a felhasználónak"
+
+#: apps/lusermod.c:74
+msgid "pre-hashed password for the user"
+msgstr "elő-hash-elt jelszó a felhasználó számára"
+
+#: apps/lusermod.c:75
+msgid "lock account"
+msgstr "felhasználói fiók zárolása"
+
+#: apps/lusermod.c:78
+msgid "unlock account"
+msgstr "felhasználói fiók feloldása"
+
+#: apps/lusermod.c:80
+msgid "set common name for user"
+msgstr "közös név megadása a felhasználó számára"
+
+#: apps/lusermod.c:82
+msgid "set given name for user"
+msgstr "megadott név beállítása a felhasználó számára"
+
+#: apps/lusermod.c:84
+msgid "set surname for user"
+msgstr "vezetéknév beállítása a felhasználó számára"
+
+#: apps/lusermod.c:86
+msgid "set room number for user"
+msgstr "szobaszám beállítása a felhasználó számára"
+
+#: apps/lusermod.c:88
+msgid "set telephone number for user"
+msgstr "telefonszám beállítása a felhasználó számára"
+
+#: apps/lusermod.c:90
+msgid "set home telephone number for user"
+msgstr "otthoni telefonszám beállítása a felhasználó számára"
+
+#: apps/lusermod.c:180 apps/lusermod.c:193
+#, c-format
+msgid "Failed to set password for user %s: %s.\n"
+msgstr "Hiba történt %s felhasználó jelszavának beállításakor: %s.\n"
+
+#: apps/lusermod.c:203
+#, c-format
+msgid "User %s could not be locked: %s.\n"
+msgstr "%s felhasználót nem lehet zárolni: %s.\n"
+
+#: apps/lusermod.c:211
+#, c-format
+msgid "User %s could not be unlocked: %s.\n"
+msgstr "%s felhasználó nem megnyitható: %s.\n"
+
+#: apps/lusermod.c:232
+#, c-format
+msgid "Warning: Group with ID %jd does not exist.\n"
+msgstr "Figyelem: Csoport %jd GID azonosítóval nem létezik.\n"
+
+#: apps/lusermod.c:275
+#, c-format
+msgid "User %s could not be modified: %s.\n"
+msgstr "%s felhasználó nem módosítható: %s.\n"
+
+#: apps/lusermod.c:326
+#, c-format
+msgid "Group %s could not be modified: %s.\n"
+msgstr "%s csoport nem módosítható: %s.\n"
+
+#: apps/lusermod.c:342
+#, c-format
+msgid "No old home directory for %s.\n"
+msgstr "%s nem rendelkezik régi saját könyvtárral.\n"
+
+#: apps/lusermod.c:347
+#, c-format
+msgid "No new home directory for %s.\n"
+msgstr "%s nem rendelkezik új saját könyvtárral.\n"
+
+#: apps/lusermod.c:353
+#, c-format
+msgid "Error moving %s to %s: %s.\n"
+msgstr "Hiba történt %s mozgatásakor %s: %s.\n"
+
+#: lib/config.c:128
+#, c-format
+msgid "could not open configuration file `%s': %s"
+msgstr "`%s' konfigurációs fájl nem nyitható meg: %s"
+
+#: lib/config.c:134
+#, c-format
+msgid "could not stat configuration file `%s': %s"
+msgstr "`%s' konfigurációs fájl nem elérhető: %s"
+
+#: lib/config.c:143
+#, c-format
+msgid "configuration file `%s' is too large"
+msgstr "`%s' konfigurációs fájl túl nagy"
+
+#: lib/config.c:159
+#, c-format
+msgid "could not read configuration file `%s': %s"
+msgstr "a(z) `%s' konfigurációs fájlt nem lehet olvasni: %s"
+
+#: lib/error.c:62
+msgid "success"
+msgstr "kész"
+
+#: lib/error.c:64
+msgid "module disabled by configuration"
+msgstr "modul kikapcsolva a konfigurációból"
+
+#: lib/error.c:66
+msgid "generic error"
+msgstr "általános hiba"
+
+#: lib/error.c:68
+msgid "not enough privileges"
+msgstr "nincs elég jogosultság"
+
+#: lib/error.c:70
+msgid "access denied"
+msgstr "hozzáférés megtagadva"
+
+#: lib/error.c:72
+msgid "bad user/group name"
+msgstr "rossz felhasználónév / csoportnév"
+
+#: lib/error.c:74
+msgid "bad user/group id"
+msgstr "rossz felhasználó/csoport azonosító"
+
+#: lib/error.c:76
+msgid "user/group name in use"
+msgstr "felhasználónév/csoportnév használatban"
+
+#: lib/error.c:78
+msgid "user/group id in use"
+msgstr "felhasználó/csoport azonosító használatban"
+
+#: lib/error.c:80
+msgid "error manipulating terminal attributes"
+msgstr "hiba a terminálattribútumok kezelésekor"
+
+#: lib/error.c:82
+msgid "error opening file"
+msgstr "hiba a fájl megnyitásakor"
+
+#: lib/error.c:84
+msgid "error locking file"
+msgstr "hiba a fájl zárolásakor"
+
+#: lib/error.c:86
+msgid "error statting file"
+msgstr "hiba a fájl beállításakor"
+
+#: lib/error.c:88
+msgid "error reading file"
+msgstr "hiba a fájl olvasásakor"
+
+#: lib/error.c:90
+msgid "error writing to file"
+msgstr "hiba a fájlba való íráskor"
+
+#: lib/error.c:92
+msgid "data not found in file"
+msgstr "az adat nem található a fájlban"
+
+#: lib/error.c:94
+msgid "internal initialization error"
+msgstr "belső inicializálási hiba"
+
+#: lib/error.c:96
+msgid "error loading module"
+msgstr "hiba a modul betöltésekor"
+
+#: lib/error.c:98
+msgid "error resolving symbol in module"
+msgstr "hiba a modulszimbólum feloldásakor"
+
+#: lib/error.c:100
+msgid "library/module version mismatch"
+msgstr "könyvtár/modul verzió eltérő"
+
+#: lib/error.c:102
+msgid "unlocking would make the password field empty"
+msgstr "a feloldás üresen hagyná a jelszó-mezőt"
+
+#: lib/error.c:105
+msgid "invalid attribute value"
+msgstr "rossz attributum érték"
+
+#: lib/error.c:107
+msgid "invalid module combination"
+msgstr "helytelen modulkombináció"
+
+#: lib/error.c:109
+#, fuzzy
+msgid "user's home directory not owned by them"
+msgstr "az új felhasználó home mappája"
+
+#: lib/error.c:115
+msgid "unknown error"
+msgstr "ismeretlen hiba"
+
+#: lib/misc.c:240
+msgid "invalid number"
+msgstr "érvénytelen szám"
+
+#: lib/misc.c:254
+msgid "invalid ID"
+msgstr "érvénytelen azonosító"
+
+#: lib/modules.c:61
+#, c-format
+msgid "no initialization function %s in `%s'"
+msgstr "Nem található %s inicializáló funkció itt: %s"
+
+#: lib/modules.c:79
+#, c-format
+msgid "module version mismatch in `%s'"
+msgstr "modul verzió eltérés itt: %s"
+
+#: lib/modules.c:92
+#, c-format
+msgid "module `%s' does not define `%s'"
+msgstr "`%s' modul nincs meghatározva `%s'"
+
+#: lib/prompt.c:88
+msgid "error reading terminal attributes"
+msgstr "hiba a terminálattribútumok olvasásakor"
+
+#: lib/prompt.c:95 lib/prompt.c:107
+msgid "error setting terminal attributes"
+msgstr "hiba a terminálattribútumok beállításakor"
+
+#: lib/prompt.c:101
+msgid "error reading from terminal"
+msgstr "hiba a terminálból való olvasáskor"
+
+#: lib/user.c:218
+msgid "name is not set"
+msgstr "név nincs beállítva"
+
+#: lib/user.c:223
+msgid "name is too short"
+msgstr "név túl rövid"
+
+#: lib/user.c:228
+#, c-format
+msgid "name is too long (%zu > %d)"
+msgstr "név túl hosszú (%zu > %d)"
+
+#: lib/user.c:235
+msgid "name contains non-ASCII characters"
+msgstr "név tartalmaz nem ASCII karaktereket"
+
+#: lib/user.c:242
+msgid "name contains control characters"
+msgstr "név tartalmaz vezérlőkaraktereket"
+
+#: lib/user.c:249
+msgid "name contains whitespace"
+msgstr "a név tartalmaz szóközt"
+
+#: lib/user.c:261
+msgid "name starts with a hyphen"
+msgstr "név kötőjellel kezdődik"
+
+#: lib/user.c:272
+#, c-format
+msgid "name contains invalid char `%c'"
+msgstr "név érvénytelen `%c' karaktert tartalmaz"
+
+#: lib/user.c:308 lib/user.c:360
+#, c-format
+msgid "user %s has no UID"
+msgstr "%s felhasználónak nincs UID azonosítója"
+
+#: lib/user.c:310
+#, c-format
+msgid "user %s not found"
+msgstr "%s felhasználó nem található"
+
+#: lib/user.c:333 lib/user.c:361
+#, c-format
+msgid "group %s has no GID"
+msgstr "%s csoportnak nincs GID azonosítója"
+
+#: lib/user.c:335
+#, c-format
+msgid "group %s not found"
+msgstr "%s csoport nem található"
+
+#: lib/user.c:355
+#, c-format
+msgid "user %jd has no name"
+msgstr "%jd felhasználónak nincs neve"
+
+#: lib/user.c:356
+#, c-format
+msgid "group %jd has no name"
+msgstr "%jd csoportnak nincs neve"
+
+#: lib/user.c:364
+msgid "user has neither a name nor an UID"
+msgstr "felhasználónak nincs se neve se UID azonosítója"
+
+#: lib/user.c:365
+msgid "group has neither a name nor a GID"
+msgstr "csoportnak nincs neve, sem GID azonosítója"
+
+#: lib/user.c:1311
+#, c-format
+msgid "Refusing to use dangerous home directory `%s' by default"
+msgstr ""
+"alapértelmezésben`%s' veszélyes home könyvtár használatának megtagadása"
+
+#: lib/user.c:2310
+#, c-format
+msgid "Invalid default value of field %s: %s"
+msgstr "%s mező érvénytelen alapértelmezett értéke: %s"
+
+#: lib/util.c:300 modules/files.c:374
+#, c-format
+msgid "error locking file: %s"
+msgstr "hiba a fájl zárolásakor: %s"
+
+#: lib/util.c:704
+#, c-format
+msgid "couldn't get default security context: %s"
+msgstr "Nem sikerült lekérni az alap futtatási kontextust: %s"
+
+#: lib/util.c:731 lib/util.c:757 lib/util.c:783
+#, c-format
+msgid "couldn't get security context of `%s': %s"
+msgstr "%s biztonsági kontextusa nem kérhető le: %s"
+
+#: lib/util.c:737 lib/util.c:763 lib/util.c:789 lib/util.c:821
+#, c-format
+msgid "couldn't set default security context to `%s': %s"
+msgstr "Nem sikerült beállítani az alap futtatási kontextust erre: %s: %s"
+
+#: lib/util.c:813
+#, c-format
+msgid "couldn't determine security context for `%s': %s"
+msgstr ""
+"Nem sikerült meghatározni az alapértelmezett kontextust az alábbi program "
+"számára: %s: %s"
+
+#: modules/files.c:129 modules/files.c:692 modules/files.c:1585
+#: modules/files.c:1920 modules/files.c:1930 modules/files.c:2012
+#: modules/files.c:2023 modules/files.c:2089 modules/files.c:2101
+#: modules/files.c:2191 modules/files.c:2200 modules/files.c:2255
+#: modules/files.c:2264 modules/files.c:2359 modules/files.c:2368
+#, c-format
+msgid "couldn't open `%s': %s"
+msgstr "`%s' nem nyitható meg: %s"
+
+#: modules/files.c:137 modules/files.c:994 modules/files.c:1187
+#: modules/files.c:1329
+#, c-format
+msgid "couldn't stat `%s': %s"
+msgstr "`%s'-t nem lehet beállítani: %s"
+
+#: modules/files.c:161
+#, c-format
+msgid "error creating `%s': %s"
+msgstr "hiba a(z) `%s' létrehozásakor: %s"
+
+#: modules/files.c:169
+#, c-format
+msgid "Error changing owner of `%s': %s"
+msgstr "Hiba a(z) `%s' tulajdonosának változatásakor: %s"
+
+#: modules/files.c:175
+#, c-format
+msgid "Error changing mode of `%s': %s"
+msgstr "Hiba a '%s' mód váltáskor: %s"
+
+#: modules/files.c:191
+#, c-format
+msgid "Error reading `%s': %s"
+msgstr "Hiba a(z) `%s' olvasásakor: %s"
+
+#: modules/files.c:206 modules/files.c:217 modules/files.c:305
+#: modules/files.c:467
+#, c-format
+msgid "Error writing `%s': %s"
+msgstr "Hiba a(z) `%s' írasakor: %s"
+
+#: modules/files.c:247 modules/files.c:1005 modules/files.c:1195
+#: modules/files.c:1338
+#, c-format
+msgid "couldn't read from `%s': %s"
+msgstr "%s nem olvasható: %s"
+
+#: modules/files.c:256
+#, c-format
+msgid "Invalid contents of lock `%s'"
+msgstr ""
+
+#: modules/files.c:261
+#, c-format
+msgid "The lock %s is held by process %ju"
+msgstr ""
+
+#: modules/files.c:269
+#, fuzzy, c-format
+msgid "Error removing stale lock `%s': %s"
+msgstr "Hiba történt %s mozgatásakor %s: %s.\n"
+
+#: modules/files.c:297
+#, fuzzy, c-format
+msgid "error opening temporary file for `%s': %s"
+msgstr "Hiba a '%s' mód váltáskor: %s"
+
+#: modules/files.c:321
+#, c-format
+msgid "Cannot obtain lock `%s': %s"
+msgstr ""
+
+#: modules/files.c:434
+#, fuzzy, c-format
+msgid "Error resolving `%s': %s"
+msgstr "Hiba a(z) `%s' olvasásakor: %s"
+
+#: modules/files.c:442
+#, fuzzy, c-format
+msgid "Error replacing `%s': %s"
+msgstr "Hiba a(z) `%s' olvasásakor: %s"
+
+#: modules/files.c:903
+#, fuzzy, c-format
+msgid "%s value `%s': `\\n' not allowed"
+msgstr "%s érték `%s': `:' nem engedélyezett"
+
+#: modules/files.c:910
+#, c-format
+msgid "%s value `%s': `:' not allowed"
+msgstr "%s érték `%s': `:' nem engedélyezett"
+
+#: modules/files.c:1014
+msgid "entry already present in file"
+msgstr "bejegyzés már megtalálható a fájlban"
+
+#: modules/files.c:1021 modules/files.c:1031 modules/files.c:1041
+#: modules/files.c:1393 modules/files.c:1401 modules/files.c:1409
+#, c-format
+msgid "couldn't write to `%s': %s"
+msgstr "%s nem írható: %s"
+
+#: modules/files.c:1173
+#, c-format
+msgid "entity object has no %s attribute"
+msgstr "A(z) %s entitás-objektumnak nincs attribútuma"
+
+#: modules/files.c:1215
+msgid "entry with conflicting name already present in file"
+msgstr "bejegyzés ellentétes névvel már a fájlban van"
+
+#: modules/files.c:1803
+#, fuzzy
+msgid "`:' and `\\n' not allowed in encrypted password"
+msgstr "`:' nem megengedett a titkosított jelszavakban"
+
+#: modules/files.c:1815 modules/ldap.c:1543 modules/ldap.c:1812
+msgid "error encrypting password"
+msgstr "hiba a jelszó titkosításakor"
+
+#: modules/files.c:2517 modules/ldap.c:2410
+#, c-format
+msgid "the `%s' and `%s' modules can not be combined"
+msgstr "az `%s' és a `%s' modulok nem kombinálhatóak"
+
+#: modules/files.c:2601 modules/files.c:2679
+msgid "not executing with superuser privileges"
+msgstr "nem végrehajtható rendszergazdai jogosultságokkal"
+
+#: modules/files.c:2692
+msgid "no shadow file present -- disabling"
+msgstr "nincs árnyék fájl -- kikapcsolás"
+
+#: modules/ldap.c:199
+msgid "error initializing ldap library"
+msgstr "hiba az ldap könyvtár beállításakor"
+
+#: modules/ldap.c:210
+#, c-format
+msgid "could not set LDAP protocol to version %d"
+msgstr "az LDAP protokoll nincs beállítva a(z) %d verzióra"
+
+#: modules/ldap.c:229
+msgid "could not negotiate TLS with LDAP server"
+msgstr "nem lehet egyeztetni a TLS-t az LDAP kiszolgálóval"
+
+#: modules/ldap.c:424
+msgid "could not bind to LDAP server"
+msgstr "nem lehet kapcsolódni az LDAP kiszolgálóhoz"
+
+#: modules/ldap.c:427
+#, c-format
+msgid "could not bind to LDAP server, first attempt as `%s': %s"
+msgstr "LDAP kiszolgáló elérése nem sikerült. Első próbálkozás, mint %s: %s"
+
+#: modules/ldap.c:1315
+#, c-format
+msgid "user object had no %s attribute"
+msgstr "A felhasználói objektumnak nincs %s attribútuma"
+
+#: modules/ldap.c:1324
+#, c-format
+msgid "user object was created with no `%s'"
+msgstr "felhasználói objektum létrehozva `%s' nélkül"
+
+#: modules/ldap.c:1344
+#, c-format
+msgid "error creating a LDAP directory entry: %s"
+msgstr "hiba az LDAP könyvtár-bejegyzés létrehozásakor: %s"
+
+#: modules/ldap.c:1370 modules/ldap.c:1604
+#, c-format
+msgid "error modifying LDAP directory entry: %s"
+msgstr "hiba az LDAP könyvtár-bejegyzés módosításakor: %s"
+
+#: modules/ldap.c:1395
+#, c-format
+msgid "error renaming LDAP directory entry: %s"
+msgstr "hiba az LDAP könyvtár-bejegyzés átnevezésekor: %s"
+
+#: modules/ldap.c:1440
+#, c-format
+msgid "object had no %s attribute"
+msgstr "objektumnak nem volt %s attribútuma"
+
+#: modules/ldap.c:1456
+#, c-format
+msgid "error removing LDAP directory entry: %s"
+msgstr "hiba az LDAP könyvtár-bejegyzés eltávolításakor: %s"
+
+#: modules/ldap.c:1506 modules/ldap.c:1521 modules/ldap.c:1635
+#: modules/ldap.c:1730
+#, c-format
+msgid "object has no %s attribute"
+msgstr "objektumnak nincs %s attribútuma"
+
+#: modules/ldap.c:1533
+msgid "unsupported password encryption scheme"
+msgstr "nem támogatott jelszó-titkosítási séma "
+
+#: modules/ldap.c:1658
+msgid "no such object in LDAP directory"
+msgstr "nincs ilyen objektum az LDAP könyvtárban"
+
+#: modules/ldap.c:1670
+#, c-format
+msgid "no `%s' attribute found"
+msgstr "nincs `%s' attribútum"
+
+#: modules/ldap.c:1843
+#, c-format
+msgid "error setting password in LDAP directory for %s: %s"
+msgstr "hiba történt %s jelszavának beállításakor az LDAP könyvtárban: %s"
+
+#: modules/ldap.c:2446
+msgid "LDAP Server Name"
+msgstr "LDAP kiszolgálónév"
+
+#: modules/ldap.c:2452
+msgid "LDAP Search Base DN"
+msgstr "LDAP keresés Base DN-je"
+
+#: modules/ldap.c:2458
+msgid "LDAP Bind DN"
+msgstr "LDAP keresés DN-je"
+
+#: modules/ldap.c:2465
+msgid "LDAP Bind Password"
+msgstr "LDAP kapcsolódási jelszó"
+
+#: modules/ldap.c:2471
+msgid "LDAP SASL User"
+msgstr "LDAP SASL felhasználó"
+
+#: modules/ldap.c:2478
+msgid "LDAP SASL Authorization User"
+msgstr "LDAP SASL hitelesített felhasználó"
+
+#: modules/sasldb.c:132
+#, c-format
+msgid "Cyrus SASL error creating user: %s"
+msgstr "Cyrus SASL hiba %s felhasználó létrehozásakor"
+
+#: modules/sasldb.c:136
+#, c-format
+msgid "Cyrus SASL error removing user: %s"
+msgstr "Cyrus SASL hiba %s felhasználó eltávolításakor"
+
+#: modules/sasldb.c:503 modules/sasldb.c:511
+#, c-format
+msgid "error initializing Cyrus SASL: %s"
+msgstr "hiba a Cyrus SASL előkészítésekor: %s"
+
+#: python/admin.c:505
+msgid "error creating home directory for user"
+msgstr "hiba a felhasználó saját könyvtárának létrehozásakor"
+
+#: python/admin.c:544 python/admin.c:583
+msgid "error removing home directory for user"
+msgstr "hiba a felhasználó saját könyvtárának eltávolításakor"
+
+#: python/admin.c:654
+msgid "error moving home directory for user"
+msgstr "hiba a felhasználó saját könyvtárának mozgatásakor"
+
+#: samples/lookup.c:63
+#, c-format
+msgid "Error initializing %s: %s\n"
+msgstr "Hiba történt %s inicializálásakor: %s\n"
+
+#: samples/lookup.c:76
+#, c-format
+msgid "Invalid ID %s\n"
+msgstr "Érvénytelen azonosító %s\n"
+
+#: samples/lookup.c:88
+#, c-format
+msgid "Searching for group with ID %jd.\n"
+msgstr "%jd azonosítójú csoport keresése.\n"
+
+#: samples/lookup.c:92
+#, c-format
+msgid "Searching for group named %s.\n"
+msgstr "%s nevű csoport keresése.\n"
+
+#: samples/lookup.c:99
+#, c-format
+msgid "Searching for user with ID %jd.\n"
+msgstr "%jd azonosítóval rendelkező felhasználó keresése.\n"
+
+#: samples/lookup.c:103
+#, c-format
+msgid "Searching for user named %s.\n"
+msgstr "%s nevű felhasználó keresése.\n"
+
+#: samples/lookup.c:117
+msgid "Entry not found.\n"
+msgstr "A bejegyzés nem található.\n"
+
+#: samples/prompt.c:48
+msgid "Prompts succeeded.\n"
+msgstr "Kérések teljesítve.\n"
+
+#: samples/prompt.c:58
+msgid "Prompts failed.\n"
+msgstr "Kérések meghiúsultak.\n"
+
+#: samples/testuser.c:76
+msgid "Default user object classes:\n"
+msgstr "Alapértelmezett felhasználói objektumosztályok:\n"
+
+#: samples/testuser.c:82
+msgid "Default user attribute names:\n"
+msgstr "Alapértelmezett felhasználói attríbútumok nevei: \n"
+
+#: samples/testuser.c:88
+msgid "Getting default user attributes:\n"
+msgstr "Alapértelmezett felhasználói attribútumok lekérése: \n"
+
+#: samples/testuser.c:95
+msgid "Copying user structure:\n"
+msgstr "Felhasználói szerkezet másolása:\n"
+
+#~ msgid "backup file `%s' exists and is not a regular file"
+#~ msgstr "`%s' backup fájl már létezik és nem szabályos fájl"
+
+#~ msgid "backup file size mismatch"
+#~ msgstr "backup fájl mérete nem egyezik"

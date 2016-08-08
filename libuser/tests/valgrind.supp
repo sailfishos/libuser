@@ -1,0 +1,86 @@
+{
+   GLib g_type_init
+   Memcheck:Leak
+   ...
+   fun:g_type_init_with_debug_flags
+}
+
+{
+   librpm addr1
+   Memcheck:Addr1
+   ...
+   fun:init_rpm
+}
+
+{
+   librpm addr2
+   Memcheck:Addr2
+   ...
+   fun:init_rpm
+}
+
+{
+   librpm addr4
+   Memcheck:Addr4
+   ...
+   fun:init_rpm
+}
+
+{
+   librpm/NSS
+   Memcheck:Leak
+   ...
+   fun:NSS_NoDB_Init
+   ...
+   fun:init_rpm
+}
+
+{
+   glibc md5
+   Memcheck:Cond
+   fun:__stpncpy_sse2_unaligned
+   fun:__md5_crypt_r
+}
+
+{
+   glibc sha256
+   Memcheck:Cond
+   fun:__stpncpy_sse2_unaligned
+   fun:__sha256_crypt_r
+}
+
+{
+   glibc sha512
+   Memcheck:Cond
+   fun:__stpncpy_sse2_unaligned
+   fun:__sha512_crypt_r
+}
+
+{
+   NSS initialization
+   Memcheck:Leak
+   ...
+   fun:NSS_InitContext
+}
+
+{
+   strlen() in popt (?)
+   Memcheck:Addr4
+   ...
+   fun:poptGetNextOpt
+}
+
+{
+   known memory leak "in" popt (well, the data is for the caller...)
+   Memcheck:Leak
+   fun:malloc
+   fun:poptGetNextOpt
+}
+
+{
+   known memory leak in popt
+   Memcheck:Leak
+   fun:realloc
+   fun:poptGetNextOpt
+   fun:main
+}

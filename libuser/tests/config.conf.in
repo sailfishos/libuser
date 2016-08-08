@@ -1,0 +1,25 @@
+[defaults]
+# non-portable
+moduledir = @TOP_BUILDDIR@/modules/.libs
+modules = files shadow
+create_modules = files shadow
+
+[files]
+nonroot = yes
+
+[shadow]
+nonroot = yes
+
+# trailing garbage on section headers is ignored
+[test] garbage
+name = value1
+# empty value
+name2 =
+# values of the same key are kept in order
+name = value2
+# invalid section header
+[invalid
+# no '=' sign
+name3
+# empty key name
+= value3

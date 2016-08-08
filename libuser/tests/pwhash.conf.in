@@ -1,0 +1,24 @@
+[defaults]
+# non-portable
+moduledir = @TOP_BUILDDIR@/modules/.libs
+modules = files shadow
+create_modules = files shadow
+
+[userdefaults]
+LU_USERNAME = %n
+LU_UIDNUMBER = 500
+LU_GIDNUMBER = %u
+
+[groupdefaults]
+LU_GROUPNAME = %n
+LU_GIDNUMBER = 500
+
+[files]
+directory = @WORKDIR@/files
+nonroot = yes
+
+[shadow]
+directory = @WORKDIR@/files
+nonroot = yes
+
+[defaults]

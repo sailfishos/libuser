@@ -1,0 +1,7 @@
+THIS_VARIABLE_IS_UNKNOWN=1@#$%
+EXPIRE=00:00 UTC May 1 1980
+GROUP=4322
+HOME=/custom/homes
+INACTIVE=4323
+SHELL=/login/shell
+SKEL=/skeleton/path

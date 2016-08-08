@@ -1,0 +1,79 @@
+.\" A man page for lpasswd
+.\" Copyright (C) 2005 Red Hat, Inc.
+.\"
+.\" This is free software; you can redistribute it and/or modify it under
+.\" the terms of the GNU Library General Public License as published by
+.\" the Free Software Foundation; either version 2 of the License, or
+.\" (at your option) any later version.
+.\"
+.\" This program is distributed in the hope that it will be useful, but
+.\" WITHOUT ANY WARRANTY; without even the implied warranty of
+.\" MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+.\" General Public License for more details.
+.\"
+.\" You should have received a copy of the GNU Library General Public
+.\" License along with this program; if not, write to the Free Software
+.\" Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
+.\"
+.\" Author: Miloslav Trmac <mitr@redhat.com>
+.TH lpasswd 1 "Jan 12 2005" libuser
+
+.SH NAME
+lpasswd \- Change group or user password
+
+.SH SYNOPSIS
+lpasswd [\fIOPTION\fR]... [\fIname\fR]
+
+.SH DESCRIPTION
+Changes password of user or group \fIname\fR.
+
+If the \fIname\fR argument is not provided,
+username of the invoking user is used;
+the \fIname\fR argument is ignored if
+.B lpasswd
+is run set-uid to a different user.
+
+Entering an empty password (by pressing Enter)
+aborts the password setting operation.
+
+.SH OPTIONS
+.TP
+\fB\-F\fR, \fB\-\-plainpassword-fd\fR=\fIfd\fR
+Read password from file descriptor \fIfd\fR, terminated by end of file,
+\fB'\\r'\fR or \fB'\\n'\fR.
+
+.TP
+\fB\-f\fR, \fB\-\-password-fd\fR=\fIfd\fR
+Read password hash from file descriptor \fIfd\fR, terminated by end of file,
+\fB'\\r'\fR or \fB'\\n'\fR.
+
+.TP
+\fB\-g\fR, \fB\-\-group\fR
+Change password of group \fIname\fR.
+By default the password of user \fIname\fR is changed.
+
+.TP
+\fB\-i\fR, \fB\-\-interactive\fR 
+Ask all questions when connecting to the user database,
+even if default answers are set up in
+.B libuser
+configuration.
+
+.TP
+\fB\-P\fR, \fB\-\-plainpassword\fR=\fIpassword\fR
+Set the password to \fIpassword\fR.
+Note that the password can be viewed while running
+.BR lpasswd
+using tools such as
+.BR ps (1)\fR.
+
+.TP
+\fB\-p\fR, \fB\-\-password\fR=\fIencrypted\fR
+Set the password to the password represented by the hash \fIencrypted\fR.
+Note that the hash can be viewed while running
+.BR lpasswd
+using tools such as
+.BR ps (1)\fR.
+
+.SH EXIT STATUS
+The exit status is 0 on success, nonzero on error.

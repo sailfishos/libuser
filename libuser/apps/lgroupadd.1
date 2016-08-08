@@ -1,0 +1,56 @@
+.\" A man page for lgroupadd
+.\" Copyright (C) 2005 Red Hat, Inc.
+.\"
+.\" This is free software; you can redistribute it and/or modify it under
+.\" the terms of the GNU Library General Public License as published by
+.\" the Free Software Foundation; either version 2 of the License, or
+.\" (at your option) any later version.
+.\"
+.\" This program is distributed in the hope that it will be useful, but
+.\" WITHOUT ANY WARRANTY; without even the implied warranty of
+.\" MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+.\" General Public License for more details.
+.\"
+.\" You should have received a copy of the GNU Library General Public
+.\" License along with this program; if not, write to the Free Software
+.\" Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
+.\"
+.\" Author: Miloslav Trmac <mitr@redhat.com>
+.TH lgroupadd 1 "Jan 11 2005" libuser
+
+.SH NAME
+lgroupadd \- Add an user group
+
+.SH SYNOPSIS
+lgroupadd [\fIOPTION\fR]... \fIgroup\fR
+
+.SH DESCRIPTION
+Adds a new user group with name \fIgroup\fR.
+
+.SH OPTIONS
+.TP
+\fB\-g\fR, \fB\-\-gid\fR=\fIgid\fR
+Use group ID \fIgid\fR for the newly created group.
+A group ID is selected automatically if this option is not present.
+
+.TP
+\fB\-i\fR, \fB\-\-interactive\fR 
+Ask all questions when connecting to the user database,
+even if default answers are set up in
+.B libuser
+configuration.
+
+.TP
+\fB\-r\fR, \fB\-\-reserved\fR
+The group is a system group.
+Groups that are not marked as system groups
+usually have automatically selected group IDs above a certain value
+(configured as
+.B LU_GIDNUMBER
+in \fBlibuser.conf\fP\fR(5)\fP).
+This information is also passed to the
+.B libuser
+backends.
+
+.SH EXIT STATUS
+The exit status is 0 on success, nonzero on error.

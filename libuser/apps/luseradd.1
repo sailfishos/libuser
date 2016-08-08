@@ -1,0 +1,177 @@
+.\" A man page for luseradd
+.\" Copyright (C) 2005, 2009 Red Hat, Inc.
+.\"
+.\" This is free software; you can redistribute it and/or modify it under
+.\" the terms of the GNU Library General Public License as published by
+.\" the Free Software Foundation; either version 2 of the License, or
+.\" (at your option) any later version.
+.\"
+.\" This program is distributed in the hope that it will be useful, but
+.\" WITHOUT ANY WARRANTY; without even the implied warranty of
+.\" MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+.\" General Public License for more details.
+.\"
+.\" You should have received a copy of the GNU Library General Public
+.\" License along with this program; if not, write to the Free Software
+.\" Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
+.\"
+.\" Author: Miloslav Trmac <mitr@redhat.com>
+.TH luseradd 1 2009-12-09 libuser
+
+.SH NAME
+luseradd \- Add an user
+
+.SH SYNOPSIS
+luseradd [\fIOPTION\fR]... \fIuser\fR
+
+.SH DESCRIPTION
+Adds an user with name \fIuser\fR.
+
+.SH OPTIONS
+.TP
+\fB\-c\fR, \fB\-\-gecos\fR=\fIgecos\fR
+Set the \f[SM]GECOS\fR field to \fIgecos\fR.
+The \f[SM]GECOS\fR field is traditionally used to store user's real name
+and other information.
+
+.TP
+\fB\-d\fR, \fB\-\-directory\fR=\fIdirectory\fR
+Set user's home directory to \fIdirectory\fR.
+If this option is not present,
+a default specified by
+.B libuser
+configuration is used.
+
+.TP
+\fB\-g\fR, \fB\-\-gid\fR=\fIgroup\fR
+Set user's primary group to \fIgroup\fR.
+\fIgroup\fR can either be a group ID of an existing group, or a group name;
+if \fIgroup\fR is a group name and the group does not exist,
+it is created.
+If the \fB\-\-gid\fR option is not specified,
+the default group name is \fIuser\fR.
+
+.TP
+\fB\-i\fR, \fB\-\-interactive\fR 
+Ask all questions when connecting to the user database,
+even if default answers are set up in
+.B libuser
+configuration.
+
+.TP
+\fB\-k\fR, \fB\-\-skeleton\fR=\fIdirectory\fR
+Populate the newly created user's home directory with a copy of
+\fIdirectory\fR.
+If this option is not present,
+a default directory specified by 
+.B libuser
+configuration,
+or \fB/etc/skel\fR if
+.B libuser
+configuration does not specify a default,
+is used.
+
+.TP
+\fB\-M\fR, \fB\-\-nocreatehome\fR
+Don't create a home directory and a mail spool for the newly created user.
+
+.TP
+\fB\-n\fR, \fB\-\-nocreategroup\fR
+If a group is not specified using \fB\-g\fR,
+use group name "users" instead of \fIuser\fR.
+Note that despite the name of the option,
+the group will still be created if it does not exist.
+
+.TP
+\fB\-P\fR, \fB\-\-plainpassword\fR=\fIpassword\fR
+Set \fIuser\fR's password to \fIpassword\fR.
+Note that the password can be viewed while running
+.BR luseradd
+using tools such as
+.BR ps (1)\fR.
+
+.TP
+\fB\-p\fR, \fB\-\-password\fR=\fIencrypted\fR
+Set \fIuser\fR's password to the password represented by the hash
+\fIencrypted\fR.
+Note that the hash can be viewed while running
+.BR luseradd
+using tools such as
+.BR ps (1)\fR.
+
+.TP
+\fB\-r\fR, \fB\-\-reserved\fR
+The user is a system user.
+Users that are not marked as system user
+usually have automatically selected user IDs above a certain value
+(configured as
+.B LU_UIDNUMBER
+in \fBlibuser.conf\fP\fR(5)\fP).
+This information is also passed to the
+.B libuser
+backends.
+This option implies the \fB\-M\fR option.
+
+.TP
+\fB\-s\fR, \fB\-\-shell\fR=\fIshell\fR
+Set user's login shell to \fIshell\fR.
+If this option is not present,
+a default specified by
+.B libuser
+configuration is used.
+
+.TP
+\fB\-u\fR, \fB\-\-uid\fR=\fIuid\fR
+Use user ID \fIuid\fR for the newly created user.
+An user ID is selected automatically if this option is not present.
+
+.TP
+\fB\-\-commonname\fP=\fIname\fP
+Use common name
+.I name
+for the newly created user.
+This attribute is only supported in some backends (e.g.LDAP),
+and its support may have further limitations (e.g. LDAP schema rules).
+
+.TP
+\fB\-\-givenname\fP=\fIname\fP
+Use given name
+.I name
+for the newly created user.
+This attribute is only supported in some backends (e.g.LDAP),
+and its support may have further limitations (e.g. LDAP schema rules).
+
+.TP
+\fB\-\-homephone\fP=\fIphone\fP
+Use home telephone number
+.I phone
+for the newly created user.
+This attribute is only supported in some backends (e.g.LDAP),
+and its support may have further limitations (e.g. LDAP schema rules).
+
+.TP
+\fB\-\-roomnumber\fP=\fIroom\fP
+Use room number
+.I room
+for the newly created user.
+This attribute is only supported in some backends (e.g.LDAP),
+and its support may have further limitations (e.g. LDAP schema rules).
+
+.TP
+\fB\-\-surname\fP=\fIname\fP
+Use surname
+.I name
+for the newly created user.
+This attribute is only supported in some backends (e.g.LDAP),
+and its support may have further limitations (e.g. LDAP schema rules).
+
+.TP
+\fB\-\-telephonenumber\fP=\fIphone\fP
+Use telephone number
+.I phone
+for the newly created user.
+This attribute is only supported in some backends (e.g.LDAP),
+and its support may have further limitations (e.g. LDAP schema rules).
+
+.SH EXIT STATUS
+The exit status is 0 on success, nonzero on error.

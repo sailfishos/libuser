@@ -1,0 +1,137 @@
+.\" A man page for lusermod
+.\" Copyright (C) 2005, 2008, 2009 Red Hat, Inc.
+.\"
+.\" This is free software; you can redistribute it and/or modify it under
+.\" the terms of the GNU Library General Public License as published by
+.\" the Free Software Foundation; either version 2 of the License, or
+.\" (at your option) any later version.
+.\"
+.\" This program is distributed in the hope that it will be useful, but
+.\" WITHOUT ANY WARRANTY; without even the implied warranty of
+.\" MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+.\" General Public License for more details.
+.\"
+.\" You should have received a copy of the GNU Library General Public
+.\" License along with this program; if not, write to the Free Software
+.\" Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
+.\"
+.\" Author: Miloslav Trmac <mitr@redhat.com>
+.TH lusermod 1 2009-12-11 libuser
+
+.SH NAME
+lusermod \- Modify an user
+
+.SH SYNOPSIS
+lusermod [\fIOPTION\fR]... \fIuser\fR
+
+.SH DESCRIPTION
+Modifies the user with name \fIuser\fR.
+
+.SH OPTIONS
+.TP
+\fB\-c\fR, \fB\-\-gecos\fR=\fIgecos\fR
+Set \fIuser\fR's \f[SM]GECOS\fR field to \fIgecos\fR.
+The \f[SM]GECOS\fR field is traditionally used to store user's real name
+and other information.
+
+.TP
+\fB\-d\fR, \fB\-\-directory\fR=\fIdirectory\fR
+Set \fIuser\fR's home directory to \fIdirectory\fR.
+
+.TP
+\fB\-g\fR, \fB\-\-gid\fR=\fIgid\fR
+Change \fIuser\fR's primary group ID to \fIgid\fR.
+If group with ID
+.I gid
+does not exist,
+a warning is printed,
+but the operation is performed anyway.
+
+.TP
+\fB\-i\fR, \fB\-\-interactive\fR 
+Ask all questions when connecting to the user database,
+even if default answers are set up in
+.B libuser
+configuration.
+
+.TP
+\fB\-L\fR, \fB\-\-lock\fR
+Lock \fIuser\fR's account.
+This prevents logging in using \fIuser\fR's password.
+
+.TP
+\fB\-l\fR, \fB\-\-login\fR=\fIname\fR
+Rename \fIuser\fR to \fIname\fR.
+
+.TP
+\fB\-m\fR, \fB\-\-movedirectory\fR
+After changing \fIuser\fR's home directory (using the \fB\-d\fR option),
+move the old home directory to the new location.
+
+.TP
+\fB\-P\fR, \fB\-\-plainpassword\fR=\fIpassword\fR
+Set \fIuser\fR's password to \fIpassword\fR.
+Note that the password can be viewed while running
+.BR lusermod
+using tools such as
+.BR ps (1)\fR.
+
+.TP
+\fB\-p\fR, \fB\-\-password\fR=\fIencrypted\fR
+Set \fIuser\fR's password to the password represented by the hash
+\fIencrypted\fR.
+Note that the hash can be viewed while running
+.BR lusermod
+using tools such as
+.BR ps (1)\fR.
+
+.TP
+\fB\-s\fR, \fB\-\-shell\fR=\fIshell\fR
+Set \fIuser\fR's login shell to \fIshell\fR.
+
+.TP
+\fB\-U\fR, \fB\-\-unlock\fR
+Unlock \fIuser\fR's account.
+
+.TP
+\fB\-u\fR, \fB\-\-uid\fR=\fIuid\fR
+Change \fIuser\fR's user ID to \fIuid\fR.
+
+.TP
+\fB\-\-commonname\fP=\fIname\fP
+Set \fIuser\fP's common name to \fIname\fP.
+This attribute is only supported in some backends (e.g.LDAP),
+and its support may have further limitations (e.g. LDAP schema rules).
+
+.TP
+\fB\-\-givenname\fP=\fIname\fP
+Set \fIuser\fP's given name to \fIname\fP.
+This attribute is only supported in some backends (e.g.LDAP),
+and its support may have further limitations (e.g. LDAP schema rules).
+
+.TP
+\fB\-\-homephone\fP=\fIphone\fP
+Set \fIuser\fP's home telephone number to \fIphone\fP.
+This attribute is only supported in some backends (e.g.LDAP),
+and its support may have further limitations (e.g. LDAP schema rules).
+
+.TP
+\fB\-\-roomnumber\fP=\fIroom\fP
+Set \fIuser\fP's room number to \fIroom\fP.
+This attribute is only supported in some backends (e.g.LDAP),
+and its support may have further limitations (e.g. LDAP schema rules).
+
+.TP
+\fB\-\-surname\fP=\fIname\fP
+Set \fIuser\fP's surname to \fIname\fP.
+This attribute is only supported in some backends (e.g.LDAP),
+and its support may have further limitations (e.g. LDAP schema rules).
+
+.TP
+\fB\-\-telephonenumber\fP=\fIphone\fP
+Set \fIuser\fP's telephone number to \fIphone\fP.
+This attribute is only supported in some backends (e.g.LDAP),
+and its support may have further limitations (e.g. LDAP schema rules).
+
+.SH EXIT STATUS
+The exit status is 0 on success, nonzero on error.

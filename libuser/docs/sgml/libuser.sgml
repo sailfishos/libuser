@@ -1,0 +1,195 @@
+<!doctype linuxdoc system>
+<article>
+
+<title>libuser 0.52.2</title>
+<author>Nalin Dahyabhai <tt/&lt;nalin@redhat.com&gt;/
+<date>28 September 2004
+<abstract>This is the libuser administrator and programmer's guide.  It
+first describes the motivation for the existence of this library, and
+then delves into the library interface used by both libuser modules and
+applications.</abstract>
+
+<sect>Introduction
+
+<p>This section describes libuser: why it was written, and how it works.  How
+the library is to be used will be described later.
+
+<sect1>Motivation
+
+<p>When proper nsswitch functionality was introduced into glibc 2.0, it
+became possible to supply third-party facilities which would allow the
+standard C library (and by extension, all of a system's binaries) to pull
+information about users, protocols, and services from a variety of sources
+the glibc authors might not have anticipated.
+
+<p>The most common use for a new nsswitch module is supplementing the user
+and group databases, extending the data sources accessed over a network
+to a centrally-managed information store.  This, along with the ability to
+authenticate users using networked servers (functionality provided by the
+increasingly-ubiquitous Linux-PAM library) and an enterprise-class
+networked filesystem, allows a properly-configured Linux workstation to
+participate as a full-fledged client in a large-scale network.
+
+<p>The facilities provided by PAM allow a user to log in and change her
+authentication tokens.  The nsswitch interface allows any user (even
+unprivileged users like <bf>nobody</bf>) to look up information needed
+to run applications.
+
+<p>However, there are certain functions supplied by traditional isolated
+systems which such a networked workstation can't provide.  Users have no
+method for modifying their non-essential information (<bf>chfn</bf> is broken),
+and the system administrator who previously had total power over the user and
+group databases must now perform all administration at the server using
+tools which are designed for general modification of the information
+store (hand-editing zone files for hesiod databases, <bf>ldapmodify</bf>,
+<bf>kadmin</bf>) instead of the traditionally-used tools.
+
+</sect1>
+
+<sect1>Alternative Solutions
+
+<p>The software which comes closest to meeting these needs is
+<bf>pwdb</bf>.  However, the pwdb library has a few design limitations
+which make it unsuitable for this purpose.  Like the standard files-based
+mechanisms, pwdb assumes that the superuser wields full power over the
+databases it interfaces with.  The current version of pwdb provides no
+facilities for managing groups(?).  The current version of pwdb can not be
+extended easily by third parties due to its reliance on static linking.
+
+</sect1>
+
+<sect1>The libuser Library
+
+<p>The libuser library implements a fully-modular system for reading,
+modifying, creating, and removing user and group accounts and account
+information.  Modules which provide access to information stores can
+request information from the accessing user in order to authenticate to
+the information store.
+
+</sect1>
+
+</sect>
+
+<sect>System Administration
+
+<p>This section describes libuser's configuration file and bundled
+applications which may be of use to system administrators.
+
+<sect1>Configuration
+
+<p>The libuser configuration file is named <bf>libuser.conf</bf> and
+usually lives in <bf>/etc</bf>.  Its format is the common format used
+by numerous other programs.  Sections are marked by the section name
+enclosed in square brackets (<bf>[section]</bf>), and configuration
+directives within these sections are of the form <bf>key = value</bf>.
+
+<p>The <bf>defaults</bf>, <bf>userdefaults</bf>, and <bf>groupdefaults</bf>
+sections are used by the library itself.  The <bf>defaults</bf> section
+specifies the directory where modules can be found (<bf>moduledir</bf>) and
+lists the modules to be consulted when looking up user information.
+
+<p>There are two lists of modules because <bf>libuser</bf> separates an
+account's authentication information from other information.  This is done
+to allow different information stores to be used for these functions, and
+because some information stores can only hold authentication data (for
+example, shadow).
+
+<p>For the <bf>info_modules</bf> and <bf>auth_modules</bf> lists, order
+is only important for account creation -- the library will attempt to
+create a data entry for the user in each of the modules until one of them
+succeeds (so if you prefer new accounts to be created in your LDAP
+directory, then you'd make sure &quot;ldap&quot; was listed <it>before</it>
+&quot;files&quot;).  For looking up account information, the order determines
+precedence because the library stops searching after a module returns success
+(so again, you'd want &quot;ldap&quot; listed before &quot;files&quot;).
+Account modifications and deletions go straight to the information store which
+is known to hold the user's information.
+
+</sect1>
+
+<sect1>Modules
+
+<p>Specific modules implement access to specific information stores.  The
+modules included in the source distribution are the <bf>files</bf> and
+<bf>shadow</bf> modules.  Modules can supply and manipulate either (or both)
+of two distinct types of data about a user: generic user information (the
+UID, home directory, etc.), and authentication-related information.
+
+<sect2>files
+
+<p>The files module implements both information and authentication data
+stores using the standard <bf>passwd</bf> and <bf>group</bf> files.
+
+<p>This module uses the <bf>files</bf> section of the configuration file
+to store configuration data.  It presently recognizes these flags:
+
+<itemize>
+<item>directory - the directory the <bf>passwd</bf> and <bf>group</bf> files
+are to be stored in
+</itemize>
+
+</sect2>
+
+<sect2>shadow
+
+<p>The shadow module implements only an authentication data store using
+the <bf>shadow</bf> and the <bf>gshadow</bf> files.  While the format of
+these files (and even the existence of the <bf>gshadow</bf> file) varies
+between OSs, this module supports the same file formats used by the shadow
+password suite.
+
+<p>This module uses the <bf>shadow</bf> section of the configuration file
+to store configuration data.  It presently recognizes these flags:
+
+<itemize>
+<item>directory - the directory the <bf>shadow</bf> and <bf>gshadow</bf>
+files are to be stored in.
+</itemize>
+
+</sect2>
+
+<sect2>ldap
+
+<p>The ldap module implements both information and authentication data stores
+using an LDAP directory and a schema which (should) conform to RFC2307.  The
+module expects the client and server to support access using LDAPv3 with TLS;
+TLS is not required if the server is specified by URI.
+
+<p>This module uses the <bf>ldap</bf> section of the configuration file
+to store configuration data.  It presently recognizes these flags:
+
+<itemize>
+<item>server - the hostname or URI of the LDAP server
+<item>basedn - the distinguished name which is the root of your tree
+<item>user - the user name with which to perform SASL binds
+<item>authuser - the authorization user name with which to perform SASL binds
+<item>binddn - the distinguished name to connect as for administrative access
+<item>userBranch - the distinguished name (relative to the basedn) under which
+user account data is kept
+<item>groupBranch - the distinguished name (relative to the basedn) under which
+group account data is kept
+</itemize>
+
+</sect2>
+
+</sect1>
+
+<sect1>Applications
+
+<p>Sample testbed applications which mimic the behavior of certain parts
+of the shadow password suite are included in the libuser distribution.
+To allow them to be used alongside existing utilities, their names have
+been prefixed with the letter 'l'.
+
+<p>As of this writing (version 0.7), this list of tools includes
+workalikes for <bf>useradd</bf>, <bf>usermod</bf>, <bf>userdel</bf>,
+<bf>groupadd</bf>, <bf>groupmod</bf>, <bf>groupdel</bf>, and <bf>chage</bf>.
+It should be noted that none of these tools provide a means for modifying
+the defaults they use, and no functions for creating, populating, moving, or
+deleting user home directories are implemented.
+
+</sect1>
+
+</sect>
+
+</article>

@@ -1,0 +1,19 @@
+#!/usr/bin/python
+
+import libuser
+import os
+
+print("--------- Initializing.")
+admin = libuser.admin()
+
+print("--------- Lookup.")
+user = admin.lookupUserByName("ldap")
+if(not user):
+	os.exit(0)
+
+print("--------- Setting new name.")
+user[libuser.USERNAME] = 'bubba'
+print(user[libuser.USERNAME])
+
+print("--------- Modifying user.")
+admin.modifyUser(user)

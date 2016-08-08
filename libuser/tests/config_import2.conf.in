@@ -1,0 +1,14 @@
+[defaults]
+# non-portable
+moduledir = @TOP_BUILDDIR@/modules/.libs
+modules = files shadow
+create_modules = files shadow
+
+[import]
+login_defs = @SRCDIR@/config_login2.defs
+
+[files]
+nonroot = yes
+
+[shadow]
+nonroot = yes

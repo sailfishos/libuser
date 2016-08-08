@@ -1,0 +1,99 @@
+.\" A man page for lnewusers
+.\" Copyright (C) 2005, 2008 Red Hat, Inc.
+.\"
+.\" This is free software; you can redistribute it and/or modify it under
+.\" the terms of the GNU Library General Public License as published by
+.\" the Free Software Foundation; either version 2 of the License, or
+.\" (at your option) any later version.
+.\"
+.\" This program is distributed in the hope that it will be useful, but
+.\" WITHOUT ANY WARRANTY; without even the implied warranty of
+.\" MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+.\" General Public License for more details.
+.\"
+.\" You should have received a copy of the GNU Library General Public
+.\" License along with this program; if not, write to the Free Software
+.\" Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
+.\"
+.\" Author: Miloslav Trmac <mitr@redhat.com>
+.TH lnewusers 1 "Jul 13 2008" libuser
+
+.SH NAME
+lnewusers \- Create new user accounts
+
+.SH SYNOPSIS
+lnewusers [\fIOPTION\fR]...
+
+.SH DESCRIPTION
+Creates new user accounts using data read from standard input.
+
+The input data consists of lines,
+each line has 7 colon-separated fields:
+
+.IP "User name"
+
+.IP "Plaintext password"
+
+.IP "User ID"
+.B lnewusers
+refuses to create users with user ID 0 (the \fBroot\fR user ID).
+
+.IP Group
+If this field is a valid group ID,
+it is interpreted as a group ID,
+otherwise as a group name.
+If the field is empty,
+a group name equal to user name is used.
+
+If the specified group does not exist,
+it is automatically created.
+If the group is specified with a group ID,
+the created group has group name equal to the user name.
+
+.IP \f[SM]GECOS\fR
+The \f[SM]GECOS\fR field is traditionally used to store user's real name
+and other information.
+
+.IP "Home directory"
+If this field is empty,
+a default specified by
+.B libuser
+configuration,
+or \fB/home/\fIusername\fR if
+.B libuser
+configuration does not specify a default,
+is used.
+
+.IP "Login shell"
+If this field is empty,
+a default specified by
+.B libuser
+configuration is used.
+
+.PP
+Errors in user specifications are reported and processing continues
+on the next line.
+
+.SH OPTIONS
+.TP
+\fB\-f\fR, \fB\-\-file\fR=\fIfile\fR
+Read account data from \fIfile\fR instead of standard input.
+
+.TP
+\fB\-i\fR, \fB\-\-interactive\fR 
+Ask all questions when connecting to the user database,
+even if default answers are set up in
+.B libuser
+configuration.
+
+.TP
+\fB\-M\fR, \fB\-\-nocreatehome\fR
+Don't create home directories.
+
+.TP
+\fB\-n\fR, \fB\-\-nocreatemail\fR
+Don't create mail spool files.
+
+.SH EXIT STATUS
+The exit status is 0 on success, nonzero on fatal error.
+Errors in user specifications are not reflected in the exit status.

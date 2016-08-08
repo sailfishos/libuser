@@ -1,0 +1,1424 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Red Hat, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# Boril Gourinov <boril@bitex.com>, 2004
+# Miloslav Trmač <mitr@volny.cz>, 2011
+# Valentin Laskov <laskov@festa.bg>, 2011-2013
+msgid ""
+msgstr ""
+"Project-Id-Version: libuser 0.60\n"
+"Report-Msgid-Bugs-To: http://bugzilla.redhat.com/bugzilla/\n"
+"POT-Creation-Date: 2015-07-23 21:16+0200\n"
+"PO-Revision-Date: 2013-08-16 04:04-0400\n"
+"Last-Translator: Valentin Laskov <laskov@festa.bg>\n"
+"Language-Team: Bulgarian (http://www.transifex.com/projects/p/fedora/"
+"language/bg/)\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Zanata 3.6.2\n"
+
+#: apps/apputil.c:197 apps/apputil.c:201
+#, c-format
+msgid "Failed to drop privileges.\n"
+msgstr "Неуспешен отказ от привилегии.\n"
+
+#: apps/apputil.c:210
+#, c-format
+msgid "Internal error.\n"
+msgstr "Вътрешна грешка.\n"
+
+#: apps/apputil.c:231
+#, c-format
+msgid "%s is not authorized to change the finger info of %s\n"
+msgstr "%s не е оторизиран да променя информацията на %s\n"
+
+#: apps/apputil.c:233
+msgid "Unknown user context"
+msgstr "Неизвестен потребителски контекст"
+
+#: apps/apputil.c:241
+#, c-format
+msgid "Can't set default context for /etc/passwd\n"
+msgstr "Не може да установи контекста за /etc/passwd\n"
+
+#: apps/apputil.c:250
+#, c-format
+msgid "Error initializing PAM.\n"
+msgstr "Грешка при инициализиране на PAM.\n"
+
+#: apps/apputil.c:260 apps/apputil.c:287
+#, c-format
+msgid "Authentication failed for %s.\n"
+msgstr "Неуспешно удостоверяване на %s.\n"
+
+#: apps/apputil.c:268
+#, c-format
+msgid "Internal PAM error `%s'.\n"
+msgstr "Вътрешна грешка на PAM `%s'.\n"
+
+#: apps/apputil.c:273
+#, c-format
+msgid "Unknown user authenticated.\n"
+msgstr "Удостовери се неизвестен потребител.\n"
+
+#: apps/apputil.c:277
+#, c-format
+msgid "User mismatch.\n"
+msgstr "Несъответстващ потребител.\n"
+
+#: apps/lchage.c:84 apps/lchfn.c:53 apps/lchsh.c:44 apps/lgroupadd.c:47
+#: apps/lgroupdel.c:42 apps/lgroupmod.c:54 apps/lid.c:115 apps/lnewusers.c:45
+#: apps/lpasswd.c:47 apps/luseradd.c:55 apps/luserdel.c:45 apps/lusermod.c:56
+msgid "prompt for all information"
+msgstr "подканване за всичко в информацията"
+
+#: apps/lchage.c:86
+msgid "list aging parameters for the user"
+msgstr "показвай параметрите за стареене за потребителя"
+
+#: apps/lchage.c:88
+msgid "minimum days between password changes"
+msgstr "минимум дни между смени на паролата"
+
+#: apps/lchage.c:88 apps/lchage.c:90 apps/lchage.c:93 apps/lchage.c:96
+#: apps/lchage.c:99 apps/lchage.c:102
+msgid "DAYS"
+msgstr "ДНИ"
+
+#: apps/lchage.c:90
+msgid "maximum days between password changes"
+msgstr "максимум дни между смени на паролата"
+
+#: apps/lchage.c:92
+msgid "date of last password change in days since 1/1/70"
+msgstr "дата на последна смяна на паролата в дни след 1/1/70"
+
+#: apps/lchage.c:95
+msgid ""
+"number of days after password expiration date when account is considered "
+"inactive"
+msgstr ""
+"брой дни след датата на изтичане на паролата, когато акаунтът да се счита за "
+"неактивен"
+
+#: apps/lchage.c:98
+msgid "password expiration date in days since 1/1/70"
+msgstr "дата на изтичане на паролата в дни след 1/1/70"
+
+#: apps/lchage.c:101
+msgid "days before expiration to begin warning user"
+msgstr "дни за предупреждаване на потребителя преди изтичането"
+
+#: apps/lchage.c:114 apps/lid.c:130 apps/lpasswd.c:68 apps/luseradd.c:100
+#: apps/luserdel.c:59 apps/lusermod.c:101
+msgid "[OPTION...] user"
+msgstr "[ПАРАМЕТЪР...] потребител"
+
+#: apps/lchage.c:117 apps/lchfn.c:70 apps/lchsh.c:58 apps/lgroupadd.c:65
+#: apps/lgroupdel.c:56 apps/lgroupmod.c:85 apps/lid.c:133 apps/lnewusers.c:66
+#: apps/lpasswd.c:71 apps/luseradd.c:103 apps/luserdel.c:62
+#: apps/lusermod.c:104
+#, c-format
+msgid "Error parsing arguments: %s.\n"
+msgstr "Грешка при анализа на аргументите: %s.\n"
+
+#: apps/lchage.c:126 apps/lpasswd.c:85 apps/luseradd.c:118 apps/luserdel.c:70
+#: apps/lusermod.c:115
+#, c-format
+msgid "No user name specified.\n"
+msgstr "Не е посочено име на потребител.\n"
+
+#: apps/lchage.c:138 apps/lchfn.c:103 apps/lchsh.c:91 apps/lgroupadd.c:102
+#: apps/lgroupdel.c:77 apps/lgroupmod.c:119 apps/lid.c:179 apps/lnewusers.c:79
+#: apps/lpasswd.c:97 apps/luseradd.c:143 apps/luserdel.c:81
+#: apps/lusermod.c:157 samples/enum.c:56 samples/testuser.c:71
+#, c-format
+msgid "Error initializing %s: %s.\n"
+msgstr "Грешка при инициализацията на %s: %s.\n"
+
+#: apps/lchage.c:147 apps/lchfn.c:114 apps/lchsh.c:102 apps/lpasswd.c:148
+#: apps/luserdel.c:89 apps/lusermod.c:171
+#, c-format
+msgid "User %s does not exist.\n"
+msgstr "Потребител %s не съществува.\n"
+
+#: apps/lchage.c:160
+#, c-format
+msgid "Account is locked.\n"
+msgstr "Акаунта е заключен.\n"
+
+#: apps/lchage.c:162
+#, c-format
+msgid "Account is not locked.\n"
+msgstr "Акаунта не е заключен.\n"
+
+#: apps/lchage.c:166
+#, c-format
+msgid "Minimum:\t%ld\n"
+msgstr "Минимум:\t%ld\n"
+
+#: apps/lchage.c:170
+#, c-format
+msgid "Maximum:\t%ld\n"
+msgstr "Максимум:\t%ld\n"
+
+#: apps/lchage.c:172
+#, c-format
+msgid "Maximum:\tNone\n"
+msgstr "Максимум:\tНяма\n"
+
+#: apps/lchage.c:175
+#, c-format
+msgid "Warning:\t%ld\n"
+msgstr "Предупреждение:\t%ld\n"
+
+#: apps/lchage.c:180
+#, c-format
+msgid "Inactive:\t%ld\n"
+msgstr "Неактивен:\t%ld\n"
+
+#: apps/lchage.c:182
+#, c-format
+msgid "Inactive:\tNever\n"
+msgstr "Неактивен:\tНикога\n"
+
+#: apps/lchage.c:186 apps/lchage.c:194 apps/lchage.c:204
+msgid "Must change password on next login"
+msgstr "Трябва да промени паролата при следващото влизане"
+
+#: apps/lchage.c:188 apps/lchage.c:196 apps/lchage.c:206 apps/lchage.c:215
+msgid "Never"
+msgstr "Никога"
+
+#: apps/lchage.c:191
+#, c-format
+msgid "Last Change:\t%s\n"
+msgstr "Последна промяна:\t%s\n"
+
+#: apps/lchage.c:201
+#, c-format
+msgid "Password Expires:\t%s\n"
+msgstr "Срокът на паролата изтича:\t%s\n"
+
+#: apps/lchage.c:213
+#, c-format
+msgid "Password Inactive:\t%s\n"
+msgstr "Паролата е неактивна:\t%s\n"
+
+#: apps/lchage.c:219
+#, c-format
+msgid "Account Expires:\t%s\n"
+msgstr "Акаунтът изтича на:\t%s\n"
+
+#: apps/lchage.c:240
+#, c-format
+msgid "Failed to modify aging information for %s: %s\n"
+msgstr "Неуспех при промяна на информацията за срока за %s: %s\n"
+
+#: apps/lchfn.c:67 apps/lchsh.c:55
+msgid "[OPTION...] [user]"
+msgstr "[ПАРАМЕТЪР...] [потребител]"
+
+#: apps/lchfn.c:86 apps/lchsh.c:74 apps/lid.c:164
+#, c-format
+msgid "No user name specified, no name for uid %d.\n"
+msgstr "Не е посочено име на потребител, няма име за uid %d.\n"
+
+#: apps/lchfn.c:96
+#, c-format
+msgid "Changing finger information for %s.\n"
+msgstr "Промяна на finger информацията за %s.\n"
+
+#: apps/lchfn.c:136
+msgid "Full Name"
+msgstr "Пълно име"
+
+#: apps/lchfn.c:146
+msgid "Surname"
+msgstr "Презиме"
+
+#: apps/lchfn.c:157
+msgid "Given Name"
+msgstr "Лично име"
+
+#: apps/lchfn.c:167
+msgid "Office"
+msgstr "Работа"
+
+#: apps/lchfn.c:176
+msgid "Office Phone"
+msgstr "Служебен телефон"
+
+#: apps/lchfn.c:185
+msgid "Home Phone"
+msgstr "Домашен телефон"
+
+#: apps/lchfn.c:195
+msgid "E-Mail Address"
+msgstr "Електронна поща"
+
+#: apps/lchfn.c:208
+#, c-format
+msgid "Finger information not changed:  input error.\n"
+msgstr "Finger информацията не е променена:  грешен вход.\n"
+
+#: apps/lchfn.c:270
+msgid "Finger information changed.\n"
+msgstr "Finger информацията е променена.\n"
+
+#: apps/lchfn.c:273
+#, c-format
+msgid "Finger information not changed: %s.\n"
+msgstr "Finger информацията не е променена: %s.\n"
+
+#: apps/lchsh.c:84
+#, c-format
+msgid "Changing shell for %s.\n"
+msgstr "Промяна на командния интерпретатор за %s.\n"
+
+#: apps/lchsh.c:114
+msgid "New Shell"
+msgstr "Нов команден интерпретатор"
+
+#: apps/lchsh.c:121 apps/lchsh.c:136
+#, c-format
+msgid "Shell not changed: %s\n"
+msgstr "Командният интерпретатор не е променен: %s\n"
+
+#: apps/lchsh.c:133
+msgid "Shell changed.\n"
+msgstr "Командният интерпретатор е променен.\n"
+
+#: apps/lgroupadd.c:49
+msgid "gid for new group"
+msgstr "gid за новата група"
+
+#: apps/lgroupadd.c:49 apps/lgroupmod.c:56 apps/lpasswd.c:56 apps/lpasswd.c:59
+#: apps/luseradd.c:67 apps/lusermod.c:66 apps/lusermod.c:68
+msgid "NUM"
+msgstr "NUM"
+
+#: apps/lgroupadd.c:51
+msgid "create a system group"
+msgstr "създава системна група"
+
+#: apps/lgroupadd.c:62 apps/lgroupdel.c:53 apps/lgroupmod.c:82
+msgid "[OPTION...] group"
+msgstr "[ПАРАМЕТЪР...] група"
+
+#: apps/lgroupadd.c:74 apps/lgroupdel.c:65 apps/lgroupmod.c:93
+#, c-format
+msgid "No group name specified.\n"
+msgstr "Не е посочено име на група.\n"
+
+#: apps/lgroupadd.c:87 apps/lgroupmod.c:105 apps/lnewusers.c:172
+#: apps/luseradd.c:164 apps/lusermod.c:127
+#, c-format
+msgid "Invalid group ID %s\n"
+msgstr "Невалиден групов идентификатор %s\n"
+
+#: apps/lgroupadd.c:119
+#, c-format
+msgid "Group creation failed: %s\n"
+msgstr "Неуспех при създаване на група: %s\n"
+
+#: apps/lgroupdel.c:85 apps/lgroupmod.c:132 apps/lpasswd.c:153
+#, c-format
+msgid "Group %s does not exist.\n"
+msgstr "Група %s не съществува.\n"
+
+#: apps/lgroupdel.c:91
+#, c-format
+msgid "Group %s could not be deleted: %s\n"
+msgstr "Група %s не може да бъде премахната: %s\n"
+
+#: apps/lgroupmod.c:56
+msgid "set GID for group"
+msgstr "задава GID за група"
+
+#: apps/lgroupmod.c:58
+msgid "change group to have given name"
+msgstr "променя групата така, че да има даденото име"
+
+#: apps/lgroupmod.c:58
+msgid "NAME"
+msgstr "ИМЕ"
+
+#: apps/lgroupmod.c:60 apps/luseradd.c:75
+msgid "plaintext password for use with group"
+msgstr "парола в прав текст за употреба с групата"
+
+#: apps/lgroupmod.c:60 apps/lgroupmod.c:62 apps/lgroupmod.c:64
+#: apps/lgroupmod.c:66 apps/lgroupmod.c:68 apps/lgroupmod.c:70
+#: apps/lpasswd.c:51 apps/lpasswd.c:53 apps/luseradd.c:59 apps/luseradd.c:61
+#: apps/luseradd.c:63 apps/luseradd.c:65 apps/luseradd.c:69 apps/luseradd.c:75
+#: apps/luseradd.c:77 apps/luseradd.c:79 apps/luseradd.c:81 apps/luseradd.c:83
+#: apps/luseradd.c:85 apps/luseradd.c:87 apps/luseradd.c:89 apps/lusermod.c:58
+#: apps/lusermod.c:60 apps/lusermod.c:64 apps/lusermod.c:70 apps/lusermod.c:72
+#: apps/lusermod.c:74 apps/lusermod.c:80 apps/lusermod.c:82 apps/lusermod.c:84
+#: apps/lusermod.c:86 apps/lusermod.c:88 apps/lusermod.c:90
+msgid "STRING"
+msgstr "НИЗ"
+
+#: apps/lgroupmod.c:62 apps/luseradd.c:77
+msgid "pre-hashed password for use with group"
+msgstr "pre-hashed парола за употреба с групата"
+
+#: apps/lgroupmod.c:64
+msgid "list of administrators to add"
+msgstr "списък администратори за добавяне"
+
+#: apps/lgroupmod.c:66
+msgid "list of administrators to remove"
+msgstr "списък администратори за премахване"
+
+#: apps/lgroupmod.c:68
+msgid "list of group members to add"
+msgstr "списък членове на група за добавяне"
+
+#: apps/lgroupmod.c:70
+msgid "list of group members to remove"
+msgstr "списък членове на група за премахване"
+
+#: apps/lgroupmod.c:71
+msgid "lock group"
+msgstr "заключва група"
+
+#: apps/lgroupmod.c:72
+msgid "unlock group"
+msgstr "отключва група"
+
+#: apps/lgroupmod.c:125 apps/lusermod.c:164
+#, c-format
+msgid "Both -L and -U specified.\n"
+msgstr "И -L и -U са указани едновременно.\n"
+
+#: apps/lgroupmod.c:139 apps/lgroupmod.c:148
+#, c-format
+msgid "Failed to set password for group %s: %s\n"
+msgstr "Неуспешно задаване на парола за група %s: %s\n"
+
+#: apps/lgroupmod.c:157
+#, c-format
+msgid "Group %s could not be locked: %s\n"
+msgstr "Група %s не може да бъде заключена: %s\n"
+
+#: apps/lgroupmod.c:166
+#, c-format
+msgid "Group %s could not be unlocked: %s\n"
+msgstr "Група %s не може да бъде отключена: %s\n"
+
+#: apps/lgroupmod.c:242 apps/lgroupmod.c:257
+#, c-format
+msgid "Group %s could not be modified: %s\n"
+msgstr "Група %s не може да бъде модифицирана: %s\n"
+
+#: apps/lid.c:42 apps/lid.c:74 apps/lid.c:188
+#, c-format
+msgid "Error looking up %s: %s\n"
+msgstr "Грешка при търсене на %s: %s\n"
+
+#: apps/lid.c:117
+msgid ""
+"list members of a named group instead of the group memberships for the named "
+"user"
+msgstr ""
+"показвай членовете на посочената група вместо членството в групи на "
+"посочения потребител"
+
+#: apps/lid.c:120
+msgid "only list membership information by name, and not UID/GID"
+msgstr "показвай информацията за членството по име, а не по UID/GID"
+
+#: apps/lid.c:146
+#, c-format
+msgid "No group name specified, using %s.\n"
+msgstr "Не е посочено име на група, ще бъде използвана %s.\n"
+
+#: apps/lid.c:150
+#, c-format
+msgid "No group name specified, no name for gid %d.\n"
+msgstr "Не е посочено име на група, няма име за gid %d.\n"
+
+#: apps/lid.c:160
+#, c-format
+msgid "No user name specified, using %s.\n"
+msgstr "Не е посочен потребител, ще бъде използван %s.\n"
+
+#: apps/lid.c:192
+#, c-format
+msgid "%s does not exist\n"
+msgstr "%s не съжествува\n"
+
+#: apps/lnewusers.c:47
+msgid "file with user information records"
+msgstr "файл със записи на информация за потребителя"
+
+#: apps/lnewusers.c:47
+msgid "PATH"
+msgstr "ПЪТ"
+
+#: apps/lnewusers.c:49
+msgid "don't create home directories"
+msgstr "не създавай домашни директории"
+
+#: apps/lnewusers.c:51
+msgid "don't create mail spools"
+msgstr "не създавай директории за съхранение на поща"
+
+#: apps/lnewusers.c:63
+msgid "[OPTION...]"
+msgstr "[ПАРАМЕТЪР...]"
+
+#: apps/lnewusers.c:88
+#, c-format
+msgid "Error opening `%s': %s.\n"
+msgstr "Грешка при отваряне на `%s': %s.\n"
+
+#: apps/lnewusers.c:118
+#, c-format
+msgid "Error creating account for `%s': line improperly formatted.\n"
+msgstr "Грешка при създаване на потребител `%s': некоректно форматиран ред.\n"
+
+#: apps/lnewusers.c:129 apps/luseradd.c:128 apps/lusermod.c:142
+#, c-format
+msgid "Invalid user ID %s\n"
+msgstr "Невалиден потребителски идентификатор %s\n"
+
+#: apps/lnewusers.c:136
+msgid "Refusing to create account with UID 0.\n"
+msgstr "Отказано създаването на потребител с UID 0.\n"
+
+#: apps/lnewusers.c:206
+#, c-format
+msgid "Error creating group for `%s' with GID %jd: %s\n"
+msgstr ""
+"Грешка при създаването на група за `%s' с групов идентификатор %jd: %s\n"
+
+#: apps/lnewusers.c:246
+#, c-format
+msgid "Refusing to use dangerous home directory `%s' for %s by default\n"
+msgstr ""
+"Отказано използването на опасна домашна директория `%s' за %s по "
+"подразбиране\n"
+
+#: apps/lnewusers.c:257
+#, c-format
+msgid "Error creating home directory for %s: %s\n"
+msgstr "Грешка при създаване на домашна директория за %s: %s\n"
+
+#: apps/lnewusers.c:270
+#, c-format
+msgid "Error creating mail spool for %s: %s\n"
+msgstr "Грешка при създаване на mail spool за %s: %s\n"
+
+#: apps/lnewusers.c:285
+#, c-format
+msgid "Error setting initial password for %s: %s\n"
+msgstr "Грешка при задаване начална парола за %s: %s\n"
+
+#: apps/lnewusers.c:295
+#, c-format
+msgid "Error creating user account for %s: %s\n"
+msgstr "Грешка при създаване на потребителски акаунт за %s: %s\n"
+
+#: apps/lpasswd.c:49
+msgid "set group password instead of user password"
+msgstr "задай парола на групата вместо на потребителя"
+
+#: apps/lpasswd.c:51
+msgid "new plain password"
+msgstr "нова парола в прав текст"
+
+#: apps/lpasswd.c:53
+msgid "new crypted password"
+msgstr "нова криптирана парола"
+
+#: apps/lpasswd.c:55
+msgid "read new plain password from given descriptor"
+msgstr "прочети новата парола в прав текст от дадения дескриптор"
+
+#: apps/lpasswd.c:58
+msgid "read new crypted password from given descriptor"
+msgstr "прочети новата криптирана парола от дадения дескриптор"
+
+#: apps/lpasswd.c:83
+#, c-format
+msgid "Changing password for %s.\n"
+msgstr "Промяна паролата на %s.\n"
+
+#: apps/lpasswd.c:111
+msgid "New password"
+msgstr "Нова парола"
+
+#: apps/lpasswd.c:114
+msgid "New password (confirm)"
+msgstr "Нова парола (потвърждение)"
+
+#: apps/lpasswd.c:128
+#, c-format
+msgid "Passwords do not match, try again.\n"
+msgstr "Паролите не съвпадат, опитайте отново.\n"
+
+#: apps/lpasswd.c:133
+#, c-format
+msgid "Password change canceled.\n"
+msgstr "Смяната на паролата прекъсната.\n"
+
+#: apps/lpasswd.c:165 apps/lpasswd.c:182
+#, c-format
+msgid "Error reading from file descriptor %d.\n"
+msgstr "Грешка при четене от дескриптора на файл %d.\n"
+
+#: apps/lpasswd.c:203 apps/luseradd.c:302 apps/luseradd.c:311
+#, c-format
+msgid "Error setting password for user %s: %s.\n"
+msgstr "Грешка при задаване паролата за потребител %s: %s.\n"
+
+#: apps/lpasswd.c:212
+#, c-format
+msgid "Error setting password for group %s: %s.\n"
+msgstr "Грешка при задаване паролата за група %s: %s.\n"
+
+#: apps/lpasswd.c:224
+#, c-format
+msgid "Password changed.\n"
+msgstr "Паролата е променена.\n"
+
+#: apps/luseradd.c:57
+msgid "create a system user"
+msgstr "създава системен потребител"
+
+#: apps/luseradd.c:59
+msgid "GECOS information for new user"
+msgstr "GECOS информация за новия потребител"
+
+#: apps/luseradd.c:61
+msgid "home directory for new user"
+msgstr "домашна директория за новия потребител"
+
+#: apps/luseradd.c:63
+msgid "directory with files for the new user"
+msgstr "директория с файлове за новия потребител"
+
+#: apps/luseradd.c:65
+msgid "shell for new user"
+msgstr "shell за новия потребител"
+
+#: apps/luseradd.c:67
+msgid "uid for new user"
+msgstr "uid за новия потребител"
+
+#: apps/luseradd.c:69
+msgid "group for new user"
+msgstr "група за новия потребител"
+
+#: apps/luseradd.c:71
+msgid "don't create home directory for user"
+msgstr "не създавай домашна директория за потребителя"
+
+#: apps/luseradd.c:73
+msgid "don't create group with same name as user"
+msgstr "не създавай група със същото като на потребителя име"
+
+#: apps/luseradd.c:79
+msgid "common name for new user"
+msgstr "common име на новия потребител"
+
+#: apps/luseradd.c:81
+msgid "given name for new user"
+msgstr "собствено име на новия потребител"
+
+#: apps/luseradd.c:83
+msgid "surname for new user"
+msgstr "фамилно име на новия потребител"
+
+#: apps/luseradd.c:85
+msgid "room number for new user"
+msgstr "номер на стая на новия потребител"
+
+#: apps/luseradd.c:87
+msgid "telephone number for new user"
+msgstr "номер на телефон на новия потребител"
+
+#: apps/luseradd.c:89
+msgid "home telephone number for new user"
+msgstr "номер на домашен телефон на новия потребител"
+
+#: apps/luseradd.c:189
+#, c-format
+msgid "Group %jd does not exist\n"
+msgstr "Група %jd не съществува\n"
+
+#: apps/luseradd.c:207 apps/luseradd.c:220
+#, c-format
+msgid "Error creating group `%s': %s\n"
+msgstr "Грешка при създаване на група `%s': %s\n"
+
+#: apps/luseradd.c:260
+#, c-format
+msgid "Account creation failed: %s.\n"
+msgstr "Неуспех при създаването на акаунт: %s.\n"
+
+#: apps/luseradd.c:283
+#, c-format
+msgid "Error creating %s: %s.\n"
+msgstr "Грешка при създаване на %s: %s.\n"
+
+#: apps/luseradd.c:290
+#, c-format
+msgid "Error creating mail spool: %s\n"
+msgstr "Грешка при създаване на mail spool: %s\n"
+
+#: apps/luserdel.c:47
+msgid "don't remove the user's private group, if the user has one"
+msgstr "не премахвай личната група на потребителя, ако има такава"
+
+#: apps/luserdel.c:50
+msgid "remove the user's home directory"
+msgstr "премахни домашната директория на потребителя"
+
+#: apps/luserdel.c:94
+#, c-format
+msgid "User %s could not be deleted: %s.\n"
+msgstr "Потребител %s не може да бъде изтрит: %s.\n"
+
+#: apps/luserdel.c:108
+#, c-format
+msgid "%s did not have a gid number.\n"
+msgstr "%s нямаше gid номер.\n"
+
+#: apps/luserdel.c:114
+#, c-format
+msgid "No group with GID %jd exists, not removing.\n"
+msgstr "Не съществува група с идентификатор %jd, не може да се премахне.\n"
+
+#: apps/luserdel.c:120
+#, c-format
+msgid "Group with GID %jd did not have a group name.\n"
+msgstr "Групата с идентификатор %jd нямаше име.\n"
+
+#: apps/luserdel.c:126
+#, c-format
+msgid "Group %s could not be deleted: %s.\n"
+msgstr "Група %s не може да бъде изтрита: %s.\n"
+
+#: apps/luserdel.c:139
+#, fuzzy, c-format
+msgid "Error removing home directory: %s.\n"
+msgstr "грешка при премахване на домашна директория за потребител"
+
+#: apps/luserdel.c:145
+#, c-format
+msgid "Error removing mail spool: %s"
+msgstr "Грешка при премахване на mail spool: %s"
+
+#: apps/lusermod.c:58
+msgid "GECOS information"
+msgstr "GECOS информация"
+
+#: apps/lusermod.c:60
+msgid "home directory"
+msgstr "домашна директория"
+
+#: apps/lusermod.c:62
+msgid "move home directory contents"
+msgstr "премести съдържанието на домашната директория"
+
+#: apps/lusermod.c:64
+msgid "set shell for user"
+msgstr "задава shell за потребителя"
+
+#: apps/lusermod.c:66
+msgid "set UID for user"
+msgstr "задава UID за потребителя"
+
+#: apps/lusermod.c:68
+msgid "set primary GID for user"
+msgstr "задава първичен GID за потребителя"
+
+#: apps/lusermod.c:70
+msgid "change login name for user"
+msgstr "заменя името за влизане на потребителя"
+
+#: apps/lusermod.c:72
+msgid "plaintext password for the user"
+msgstr "парола в прав текст за потребителя"
+
+#: apps/lusermod.c:74
+msgid "pre-hashed password for the user"
+msgstr "pre-hashed парола за потребителя"
+
+#: apps/lusermod.c:75
+msgid "lock account"
+msgstr "заключва акаунта"
+
+#: apps/lusermod.c:78
+msgid "unlock account"
+msgstr "отключва акаунта"
+
+#: apps/lusermod.c:80
+msgid "set common name for user"
+msgstr "задава common име за потребител"
+
+#: apps/lusermod.c:82
+msgid "set given name for user"
+msgstr "задава собствено име за потребител"
+
+#: apps/lusermod.c:84
+msgid "set surname for user"
+msgstr "задава фамилно име за потребител"
+
+#: apps/lusermod.c:86
+msgid "set room number for user"
+msgstr "задава номер на стая на потребител"
+
+#: apps/lusermod.c:88
+msgid "set telephone number for user"
+msgstr "задава номер на телефон на потребител"
+
+#: apps/lusermod.c:90
+msgid "set home telephone number for user"
+msgstr "задава номер на домашен телефон на потребител"
+
+#: apps/lusermod.c:180 apps/lusermod.c:193
+#, c-format
+msgid "Failed to set password for user %s: %s.\n"
+msgstr "Неуспешно задаване парола за потребител %s: %s.\n"
+
+#: apps/lusermod.c:203
+#, c-format
+msgid "User %s could not be locked: %s.\n"
+msgstr "Потребител %s не може да бъде заключен: %s.\n"
+
+#: apps/lusermod.c:211
+#, c-format
+msgid "User %s could not be unlocked: %s.\n"
+msgstr "Потребител %s не може да бъде отключен: %s.\n"
+
+#: apps/lusermod.c:232
+#, c-format
+msgid "Warning: Group with ID %jd does not exist.\n"
+msgstr "Предупреждение: Група %jd не съществува.\n"
+
+#: apps/lusermod.c:275
+#, c-format
+msgid "User %s could not be modified: %s.\n"
+msgstr "Потребител %s не може да бъде изменен: %s.\n"
+
+#: apps/lusermod.c:326
+#, c-format
+msgid "Group %s could not be modified: %s.\n"
+msgstr "Група %s не може да бъде изменена: %s.\n"
+
+#: apps/lusermod.c:342
+#, c-format
+msgid "No old home directory for %s.\n"
+msgstr "Няма стара домашна директория за %s.\n"
+
+#: apps/lusermod.c:347
+#, c-format
+msgid "No new home directory for %s.\n"
+msgstr "Няма нова домашна директория за %s.\n"
+
+#: apps/lusermod.c:353
+#, c-format
+msgid "Error moving %s to %s: %s.\n"
+msgstr "Грешка при преместване на %s към %s: %s.\n"
+
+#: lib/config.c:128
+#, c-format
+msgid "could not open configuration file `%s': %s"
+msgstr "не може да бъде отворен конфигурационен файл `%s': %s"
+
+#: lib/config.c:134
+#, c-format
+msgid "could not stat configuration file `%s': %s"
+msgstr "не може да stat конфигурационния файл `%s': %s"
+
+#: lib/config.c:143
+#, c-format
+msgid "configuration file `%s' is too large"
+msgstr "конфигурационния файл `%s' е твърде голям"
+
+#: lib/config.c:159
+#, c-format
+msgid "could not read configuration file `%s': %s"
+msgstr "не може да бъде прочетен конфигурационния файл `%s': %s"
+
+#: lib/error.c:62
+msgid "success"
+msgstr "успешно"
+
+#: lib/error.c:64
+msgid "module disabled by configuration"
+msgstr "модула е деактивиран от конфигурацията"
+
+#: lib/error.c:66
+msgid "generic error"
+msgstr "обща грешка"
+
+#: lib/error.c:68
+msgid "not enough privileges"
+msgstr "недостатъчни права"
+
+#: lib/error.c:70
+msgid "access denied"
+msgstr "достъпа забранен"
+
+#: lib/error.c:72
+msgid "bad user/group name"
+msgstr "лошо име на потребител/група"
+
+#: lib/error.c:74
+msgid "bad user/group id"
+msgstr "лошо id на потребител/група"
+
+#: lib/error.c:76
+msgid "user/group name in use"
+msgstr "името на потребител/група вече се ползва"
+
+#: lib/error.c:78
+msgid "user/group id in use"
+msgstr "такова id на потребител/група вече се ползва"
+
+#: lib/error.c:80
+msgid "error manipulating terminal attributes"
+msgstr "грешка при манипулиране атрибутите на терминала"
+
+#: lib/error.c:82
+msgid "error opening file"
+msgstr "грешка при отваряне на файл"
+
+#: lib/error.c:84
+msgid "error locking file"
+msgstr "грешка при заключване на файл"
+
+#: lib/error.c:86
+msgid "error statting file"
+msgstr "грешка при получаване състоянието на файл"
+
+#: lib/error.c:88
+msgid "error reading file"
+msgstr "грешка при четене на файл"
+
+#: lib/error.c:90
+msgid "error writing to file"
+msgstr "грешка при запис във файл"
+
+#: lib/error.c:92
+msgid "data not found in file"
+msgstr "данните не са намерени във файла"
+
+#: lib/error.c:94
+msgid "internal initialization error"
+msgstr "вътрешна грешка при инициализацията"
+
+#: lib/error.c:96
+msgid "error loading module"
+msgstr "грешка при зареждане на модул"
+
+#: lib/error.c:98
+msgid "error resolving symbol in module"
+msgstr "грешка при откриване на символ в модула"
+
+#: lib/error.c:100
+msgid "library/module version mismatch"
+msgstr "грешна версия на библиотека/модул"
+
+#: lib/error.c:102
+msgid "unlocking would make the password field empty"
+msgstr "отключването ще направи паролата празно поле"
+
+#: lib/error.c:105
+msgid "invalid attribute value"
+msgstr "невалидна стойност на атрибут"
+
+#: lib/error.c:107
+msgid "invalid module combination"
+msgstr "невалидно комбиниране на модул"
+
+#: lib/error.c:109
+#, fuzzy
+msgid "user's home directory not owned by them"
+msgstr "домашна директория за новия потребител"
+
+#: lib/error.c:115
+msgid "unknown error"
+msgstr "неизвестна грешка"
+
+#: lib/misc.c:240
+msgid "invalid number"
+msgstr "невалиден номер"
+
+#: lib/misc.c:254
+msgid "invalid ID"
+msgstr "невалиден ID"
+
+#: lib/modules.c:61
+#, c-format
+msgid "no initialization function %s in `%s'"
+msgstr "няма инициализираща функция %s в `%s'"
+
+#: lib/modules.c:79
+#, c-format
+msgid "module version mismatch in `%s'"
+msgstr "грешна версия на модул в `%s'"
+
+#: lib/modules.c:92
+#, c-format
+msgid "module `%s' does not define `%s'"
+msgstr "модул `%s' не дефинира `%s'"
+
+#: lib/prompt.c:88
+msgid "error reading terminal attributes"
+msgstr "грешка при четене атрибутите на терминала"
+
+#: lib/prompt.c:95 lib/prompt.c:107
+msgid "error setting terminal attributes"
+msgstr "грешка при задаване атрибутите на терминала"
+
+#: lib/prompt.c:101
+msgid "error reading from terminal"
+msgstr "грешка при четене от терминала"
+
+#: lib/user.c:218
+msgid "name is not set"
+msgstr "името не е зададено"
+
+#: lib/user.c:223
+msgid "name is too short"
+msgstr "името е твърде късо"
+
+#: lib/user.c:228
+#, c-format
+msgid "name is too long (%zu > %d)"
+msgstr "името е твърде дълго (%zu > %d)"
+
+#: lib/user.c:235
+msgid "name contains non-ASCII characters"
+msgstr "името съдържа не-ASCII знаци"
+
+#: lib/user.c:242
+msgid "name contains control characters"
+msgstr "името съдържа контролни знаци"
+
+#: lib/user.c:249
+msgid "name contains whitespace"
+msgstr "името съдържа интервали"
+
+#: lib/user.c:261
+msgid "name starts with a hyphen"
+msgstr "името започва с тире"
+
+#: lib/user.c:272
+#, c-format
+msgid "name contains invalid char `%c'"
+msgstr "името съдържа невалиден знак `%c'"
+
+#: lib/user.c:308 lib/user.c:360
+#, c-format
+msgid "user %s has no UID"
+msgstr "потребител %s няма UID"
+
+#: lib/user.c:310
+#, c-format
+msgid "user %s not found"
+msgstr "не е намерен потребител %s"
+
+#: lib/user.c:333 lib/user.c:361
+#, c-format
+msgid "group %s has no GID"
+msgstr "група %s няма GID"
+
+#: lib/user.c:335
+#, c-format
+msgid "group %s not found"
+msgstr "не е намерена група %s"
+
+#: lib/user.c:355
+#, c-format
+msgid "user %jd has no name"
+msgstr "потребител %jd няма име"
+
+#: lib/user.c:356
+#, c-format
+msgid "group %jd has no name"
+msgstr "група %jd няма име"
+
+#: lib/user.c:364
+msgid "user has neither a name nor an UID"
+msgstr "потребителят няма нито име нито UID"
+
+#: lib/user.c:365
+msgid "group has neither a name nor a GID"
+msgstr "групата няма нито име нито GID"
+
+#: lib/user.c:1311
+#, c-format
+msgid "Refusing to use dangerous home directory `%s' by default"
+msgstr "Отказано използване на опасна домашна директория `%s' по подразбиране"
+
+#: lib/user.c:2310
+#, c-format
+msgid "Invalid default value of field %s: %s"
+msgstr "Невалидна стойност по подразбиране на поле %s: %s"
+
+#: lib/util.c:300 modules/files.c:374
+#, c-format
+msgid "error locking file: %s"
+msgstr "грешка при заключване на файл: %s"
+
+#: lib/util.c:704
+#, c-format
+msgid "couldn't get default security context: %s"
+msgstr "грешка при получаване подразбрания защитен контекст: %s"
+
+#: lib/util.c:731 lib/util.c:757 lib/util.c:783
+#, c-format
+msgid "couldn't get security context of `%s': %s"
+msgstr "не може да получи защитния контекст на `%s': %s"
+
+#: lib/util.c:737 lib/util.c:763 lib/util.c:789 lib/util.c:821
+#, c-format
+msgid "couldn't set default security context to `%s': %s"
+msgstr "не може да се установи защитния контекст в `%s': %s"
+
+#: lib/util.c:813
+#, c-format
+msgid "couldn't determine security context for `%s': %s"
+msgstr "не може да получи защитния контекст за `%s': %s"
+
+#: modules/files.c:129 modules/files.c:692 modules/files.c:1585
+#: modules/files.c:1920 modules/files.c:1930 modules/files.c:2012
+#: modules/files.c:2023 modules/files.c:2089 modules/files.c:2101
+#: modules/files.c:2191 modules/files.c:2200 modules/files.c:2255
+#: modules/files.c:2264 modules/files.c:2359 modules/files.c:2368
+#, c-format
+msgid "couldn't open `%s': %s"
+msgstr "не може да се отвори `%s': %s"
+
+#: modules/files.c:137 modules/files.c:994 modules/files.c:1187
+#: modules/files.c:1329
+#, c-format
+msgid "couldn't stat `%s': %s"
+msgstr "грешка при получаване състоянието на `%s': %s"
+
+#: modules/files.c:161
+#, c-format
+msgid "error creating `%s': %s"
+msgstr "грешка при създаване на `%s': %s"
+
+#: modules/files.c:169
+#, c-format
+msgid "Error changing owner of `%s': %s"
+msgstr "Грешка при променяне на собственика на `%s': %s"
+
+#: modules/files.c:175
+#, c-format
+msgid "Error changing mode of `%s': %s"
+msgstr "Грешка при смяна на режима на `%s': %s"
+
+#: modules/files.c:191
+#, c-format
+msgid "Error reading `%s': %s"
+msgstr "Грешка при четене на `%s': %s"
+
+#: modules/files.c:206 modules/files.c:217 modules/files.c:305
+#: modules/files.c:467
+#, c-format
+msgid "Error writing `%s': %s"
+msgstr "Грешка при записването на`%s': %s"
+
+#: modules/files.c:247 modules/files.c:1005 modules/files.c:1195
+#: modules/files.c:1338
+#, c-format
+msgid "couldn't read from `%s': %s"
+msgstr "не може да се чете от `%s': %s"
+
+#: modules/files.c:256
+#, c-format
+msgid "Invalid contents of lock `%s'"
+msgstr ""
+
+#: modules/files.c:261
+#, c-format
+msgid "The lock %s is held by process %ju"
+msgstr ""
+
+#: modules/files.c:269
+#, fuzzy, c-format
+msgid "Error removing stale lock `%s': %s"
+msgstr "Грешка при преместване на %s към %s: %s.\n"
+
+#: modules/files.c:297
+#, fuzzy, c-format
+msgid "error opening temporary file for `%s': %s"
+msgstr "Грешка при смяна на режима на `%s': %s"
+
+#: modules/files.c:321
+#, c-format
+msgid "Cannot obtain lock `%s': %s"
+msgstr ""
+
+#: modules/files.c:434
+#, fuzzy, c-format
+msgid "Error resolving `%s': %s"
+msgstr "Грешка при четене на `%s': %s"
+
+#: modules/files.c:442
+#, fuzzy, c-format
+msgid "Error replacing `%s': %s"
+msgstr "Грешка при четене на `%s': %s"
+
+#: modules/files.c:903
+#, fuzzy, c-format
+msgid "%s value `%s': `\\n' not allowed"
+msgstr "%s стойността `%s': `:' не е позволено"
+
+#: modules/files.c:910
+#, c-format
+msgid "%s value `%s': `:' not allowed"
+msgstr "%s стойността `%s': `:' не е позволено"
+
+#: modules/files.c:1014
+msgid "entry already present in file"
+msgstr "записът вече присъства във файла"
+
+#: modules/files.c:1021 modules/files.c:1031 modules/files.c:1041
+#: modules/files.c:1393 modules/files.c:1401 modules/files.c:1409
+#, c-format
+msgid "couldn't write to `%s': %s"
+msgstr "не може да се пише в `%s': %s"
+
+#: modules/files.c:1173
+#, c-format
+msgid "entity object has no %s attribute"
+msgstr "обектът от записа няма атрибут %s"
+
+#: modules/files.c:1215
+msgid "entry with conflicting name already present in file"
+msgstr "позицията с конфликт в името вече съществува във файл"
+
+#: modules/files.c:1803
+#, fuzzy
+msgid "`:' and `\\n' not allowed in encrypted password"
+msgstr "`:' не е позволено в криптирана парола"
+
+#: modules/files.c:1815 modules/ldap.c:1543 modules/ldap.c:1812
+msgid "error encrypting password"
+msgstr "грешка при криптиране на паролата"
+
+#: modules/files.c:2517 modules/ldap.c:2410
+#, c-format
+msgid "the `%s' and `%s' modules can not be combined"
+msgstr "Модулите `%s' и `%s' не могат да се комбинират"
+
+#: modules/files.c:2601 modules/files.c:2679
+msgid "not executing with superuser privileges"
+msgstr "няма да бъде изпълнено с администраторски права"
+
+#: modules/files.c:2692
+msgid "no shadow file present -- disabling"
+msgstr "няма наличен shadow файл -- деактивиране"
+
+#: modules/ldap.c:199
+msgid "error initializing ldap library"
+msgstr "грешка при инициализация на ldap библиотеката"
+
+#: modules/ldap.c:210
+#, c-format
+msgid "could not set LDAP protocol to version %d"
+msgstr "не може да бъде установена версията на LDAP протокола на %d"
+
+#: modules/ldap.c:229
+msgid "could not negotiate TLS with LDAP server"
+msgstr "не може да бъде договорен TLS с LDAP сървъра"
+
+#: modules/ldap.c:424
+msgid "could not bind to LDAP server"
+msgstr "грешка при свързване с LDAP сървъра"
+
+#: modules/ldap.c:427
+#, c-format
+msgid "could not bind to LDAP server, first attempt as `%s': %s"
+msgstr "грешка при свързване с LDAP сървъра, първи опит като `%s': %s"
+
+#: modules/ldap.c:1315
+#, c-format
+msgid "user object had no %s attribute"
+msgstr "потребителския обект нямаше атрибут %s"
+
+#: modules/ldap.c:1324
+#, c-format
+msgid "user object was created with no `%s'"
+msgstr "потребителския обект създаден без `%s'"
+
+#: modules/ldap.c:1344
+#, c-format
+msgid "error creating a LDAP directory entry: %s"
+msgstr "грешка при създаване на запис в LDAP директорията: %s"
+
+#: modules/ldap.c:1370 modules/ldap.c:1604
+#, c-format
+msgid "error modifying LDAP directory entry: %s"
+msgstr "грешка при промяна на LDAP директориен запис: %s"
+
+#: modules/ldap.c:1395
+#, c-format
+msgid "error renaming LDAP directory entry: %s"
+msgstr "грешка при преименуване на запис в LDAP директорията: %s"
+
+#: modules/ldap.c:1440
+#, c-format
+msgid "object had no %s attribute"
+msgstr "обектът нямаше атрибут %s"
+
+#: modules/ldap.c:1456
+#, c-format
+msgid "error removing LDAP directory entry: %s"
+msgstr "грешка при премахване на запис в LDAP директорията: %s"
+
+#: modules/ldap.c:1506 modules/ldap.c:1521 modules/ldap.c:1635
+#: modules/ldap.c:1730
+#, c-format
+msgid "object has no %s attribute"
+msgstr "обектът няма атрибут %s"
+
+#: modules/ldap.c:1533
+msgid "unsupported password encryption scheme"
+msgstr "Неподдържана схема за криптиране на парола"
+
+#: modules/ldap.c:1658
+msgid "no such object in LDAP directory"
+msgstr "няма такъв обект в LDAP директорията"
+
+#: modules/ldap.c:1670
+#, c-format
+msgid "no `%s' attribute found"
+msgstr "няма намерен атрибут `%s'"
+
+#: modules/ldap.c:1843
+#, c-format
+msgid "error setting password in LDAP directory for %s: %s"
+msgstr "грешка при задаване парола в LDAP директорията за %s: %s"
+
+#: modules/ldap.c:2446
+msgid "LDAP Server Name"
+msgstr "Име на LDAP сървър"
+
+#: modules/ldap.c:2452
+msgid "LDAP Search Base DN"
+msgstr "Базов DN за LDAP търсене"
+
+#: modules/ldap.c:2458
+msgid "LDAP Bind DN"
+msgstr "LDAP DN за връзка"
+
+#: modules/ldap.c:2465
+msgid "LDAP Bind Password"
+msgstr "LDAP парола за връзка"
+
+#: modules/ldap.c:2471
+msgid "LDAP SASL User"
+msgstr "LDAP SASL Потребител"
+
+#: modules/ldap.c:2478
+msgid "LDAP SASL Authorization User"
+msgstr "LDAP SASL Упълномощаване на потребител"
+
+#: modules/sasldb.c:132
+#, c-format
+msgid "Cyrus SASL error creating user: %s"
+msgstr "Грешка на Cyrus SASL при създаване на потребител: %s"
+
+#: modules/sasldb.c:136
+#, c-format
+msgid "Cyrus SASL error removing user: %s"
+msgstr "Грешка на Cyrus SASL при премахване на потребител: %s"
+
+#: modules/sasldb.c:503 modules/sasldb.c:511
+#, c-format
+msgid "error initializing Cyrus SASL: %s"
+msgstr "грешка при инициализация на Cyrus SASL: %s"
+
+#: python/admin.c:505
+msgid "error creating home directory for user"
+msgstr "грешка при създаване домашна директория за потребител"
+
+#: python/admin.c:544 python/admin.c:583
+msgid "error removing home directory for user"
+msgstr "грешка при премахване на домашна директория за потребител"
+
+#: python/admin.c:654
+msgid "error moving home directory for user"
+msgstr "грешка при преместване домашната директория на потребител"
+
+#: samples/lookup.c:63
+#, c-format
+msgid "Error initializing %s: %s\n"
+msgstr "Грешка при инициализация на %s: %s\n"
+
+#: samples/lookup.c:76
+#, c-format
+msgid "Invalid ID %s\n"
+msgstr "Невалиден идентификатор %s\n"
+
+#: samples/lookup.c:88
+#, c-format
+msgid "Searching for group with ID %jd.\n"
+msgstr "Търсене на група с идентификатор %jd.\n"
+
+#: samples/lookup.c:92
+#, c-format
+msgid "Searching for group named %s.\n"
+msgstr "Търсене на група именувана %s.\n"
+
+#: samples/lookup.c:99
+#, c-format
+msgid "Searching for user with ID %jd.\n"
+msgstr "Търсене на потребител с идентификатор %jd.\n"
+
+#: samples/lookup.c:103
+#, c-format
+msgid "Searching for user named %s.\n"
+msgstr "Търсене на потребител наименуван %s.\n"
+
+#: samples/lookup.c:117
+msgid "Entry not found.\n"
+msgstr "Запис не е намерен.\n"
+
+#: samples/prompt.c:48
+msgid "Prompts succeeded.\n"
+msgstr "Промптовете успяха.\n"
+
+#: samples/prompt.c:58
+msgid "Prompts failed.\n"
+msgstr "Промптовете се провалиха.\n"
+
+#: samples/testuser.c:76
+msgid "Default user object classes:\n"
+msgstr "Стандартни класове за потребителски обект:\n"
+
+#: samples/testuser.c:82
+msgid "Default user attribute names:\n"
+msgstr "Стандартни потребителски атрибути:\n"
+
+#: samples/testuser.c:88
+msgid "Getting default user attributes:\n"
+msgstr "Извличане на стандартни потребителски атрибути:\n"
+
+#: samples/testuser.c:95
+msgid "Copying user structure:\n"
+msgstr "Копиране на потребителска структура:\n"
+
+#~ msgid "backup file `%s' exists and is not a regular file"
+#~ msgstr "резервното копие `%s' съществува и не е обикновен файл"
+
+#~ msgid "backup file size mismatch"
+#~ msgstr "големината на резервното копие не съвпада"

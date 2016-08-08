@@ -1,0 +1,1419 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Red Hat, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# Miloslav Trmač <mitr@volny.cz>, 2011
+# Nikola Pajtic <salgeras@gmail.com>, 2008
+# Momcilo Medic <medicmomcilo@gmail.com>, 2015. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: libuser 0.60\n"
+"Report-Msgid-Bugs-To: http://bugzilla.redhat.com/bugzilla/\n"
+"POT-Creation-Date: 2015-07-23 21:16+0200\n"
+"PO-Revision-Date: 2015-05-06 10:50-0400\n"
+"Last-Translator: Momcilo Medic <medicmomcilo@gmail.com>\n"
+"Language-Team: Serbian (http://www.transifex.com/projects/p/fedora/language/"
+"sr/)\n"
+"Language: sr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Zanata 3.6.2\n"
+
+#: apps/apputil.c:197 apps/apputil.c:201
+#, c-format
+msgid "Failed to drop privileges.\n"
+msgstr "Неуспело одбацивање повластица.\n"
+
+#: apps/apputil.c:210
+#, c-format
+msgid "Internal error.\n"
+msgstr "Унутрашња грешка.\n"
+
+#: apps/apputil.c:231
+#, c-format
+msgid "%s is not authorized to change the finger info of %s\n"
+msgstr "%s није овлашћен да мења finger податке за %s\n"
+
+#: apps/apputil.c:233
+msgid "Unknown user context"
+msgstr "Непознат кориснички контекст"
+
+#: apps/apputil.c:241
+#, c-format
+msgid "Can't set default context for /etc/passwd\n"
+msgstr "Не могу да поставим подразумевани контекст за /etc/passwd\n"
+
+#: apps/apputil.c:250
+#, c-format
+msgid "Error initializing PAM.\n"
+msgstr "Грешка при иницијализацији PAM-а.\n"
+
+#: apps/apputil.c:260 apps/apputil.c:287
+#, c-format
+msgid "Authentication failed for %s.\n"
+msgstr "Неуспела аутентификација за %s.\n"
+
+#: apps/apputil.c:268
+#, c-format
+msgid "Internal PAM error `%s'.\n"
+msgstr "Унутрашња PAM грешка „%s“.\n"
+
+#: apps/apputil.c:273
+#, c-format
+msgid "Unknown user authenticated.\n"
+msgstr "Аутентификован непознат корисник.\n"
+
+#: apps/apputil.c:277
+#, c-format
+msgid "User mismatch.\n"
+msgstr "Неслагање корисника.\n"
+
+#: apps/lchage.c:84 apps/lchfn.c:53 apps/lchsh.c:44 apps/lgroupadd.c:47
+#: apps/lgroupdel.c:42 apps/lgroupmod.c:54 apps/lid.c:115 apps/lnewusers.c:45
+#: apps/lpasswd.c:47 apps/luseradd.c:55 apps/luserdel.c:45 apps/lusermod.c:56
+msgid "prompt for all information"
+msgstr "упит за све информације"
+
+#: apps/lchage.c:86
+msgid "list aging parameters for the user"
+msgstr "списак параметара старења за корисника"
+
+#: apps/lchage.c:88
+msgid "minimum days between password changes"
+msgstr "минимални број дана између промена лозинки"
+
+#: apps/lchage.c:88 apps/lchage.c:90 apps/lchage.c:93 apps/lchage.c:96
+#: apps/lchage.c:99 apps/lchage.c:102
+msgid "DAYS"
+msgstr "ДАНА"
+
+#: apps/lchage.c:90
+msgid "maximum days between password changes"
+msgstr "максимални број дана између промена лозинки"
+
+#: apps/lchage.c:92
+msgid "date of last password change in days since 1/1/70"
+msgstr "датум последње промене лозинке у данима од 1/1/70"
+
+#: apps/lchage.c:95
+msgid ""
+"number of days after password expiration date when account is considered "
+"inactive"
+msgstr ""
+"број дана након датума истицања лозинка када ће се налог сматрати неактивним"
+
+#: apps/lchage.c:98
+msgid "password expiration date in days since 1/1/70"
+msgstr "датум истицања лозинке у данима након 1/1/70"
+
+#: apps/lchage.c:101
+msgid "days before expiration to begin warning user"
+msgstr "број дана пре истицања када се почиње упозоравати корисник"
+
+#: apps/lchage.c:114 apps/lid.c:130 apps/lpasswd.c:68 apps/luseradd.c:100
+#: apps/luserdel.c:59 apps/lusermod.c:101
+msgid "[OPTION...] user"
+msgstr "[ОПЦИЈА...] корисник"
+
+#: apps/lchage.c:117 apps/lchfn.c:70 apps/lchsh.c:58 apps/lgroupadd.c:65
+#: apps/lgroupdel.c:56 apps/lgroupmod.c:85 apps/lid.c:133 apps/lnewusers.c:66
+#: apps/lpasswd.c:71 apps/luseradd.c:103 apps/luserdel.c:62
+#: apps/lusermod.c:104
+#, c-format
+msgid "Error parsing arguments: %s.\n"
+msgstr "Грешка при тумачењу аргумената: %s.\n"
+
+#: apps/lchage.c:126 apps/lpasswd.c:85 apps/luseradd.c:118 apps/luserdel.c:70
+#: apps/lusermod.c:115
+#, c-format
+msgid "No user name specified.\n"
+msgstr "Није наведено корисничко име.\n"
+
+#: apps/lchage.c:138 apps/lchfn.c:103 apps/lchsh.c:91 apps/lgroupadd.c:102
+#: apps/lgroupdel.c:77 apps/lgroupmod.c:119 apps/lid.c:179 apps/lnewusers.c:79
+#: apps/lpasswd.c:97 apps/luseradd.c:143 apps/luserdel.c:81
+#: apps/lusermod.c:157 samples/enum.c:56 samples/testuser.c:71
+#, c-format
+msgid "Error initializing %s: %s.\n"
+msgstr "Грешка при иницијализацији %s: %s.\n"
+
+#: apps/lchage.c:147 apps/lchfn.c:114 apps/lchsh.c:102 apps/lpasswd.c:148
+#: apps/luserdel.c:89 apps/lusermod.c:171
+#, c-format
+msgid "User %s does not exist.\n"
+msgstr "Корисник %s не постоји.\n"
+
+#: apps/lchage.c:160
+#, c-format
+msgid "Account is locked.\n"
+msgstr "Налог је закључан.\n"
+
+#: apps/lchage.c:162
+#, c-format
+msgid "Account is not locked.\n"
+msgstr "Налог није закључан.\n"
+
+#: apps/lchage.c:166
+#, c-format
+msgid "Minimum:\t%ld\n"
+msgstr "Најмањи:\t%ld\n"
+
+#: apps/lchage.c:170
+#, c-format
+msgid "Maximum:\t%ld\n"
+msgstr "Највећи:\t%ld\n"
+
+#: apps/lchage.c:172
+#, c-format
+msgid "Maximum:\tNone\n"
+msgstr "Максимално:\tНиједан\n"
+
+#: apps/lchage.c:175
+#, c-format
+msgid "Warning:\t%ld\n"
+msgstr "Упозорење:\t%ld\n"
+
+#: apps/lchage.c:180
+#, c-format
+msgid "Inactive:\t%ld\n"
+msgstr "Неактивно:\t%ld\n"
+
+#: apps/lchage.c:182
+#, c-format
+msgid "Inactive:\tNever\n"
+msgstr "Неактивно:\tНикад\n"
+
+#: apps/lchage.c:186 apps/lchage.c:194 apps/lchage.c:204
+msgid "Must change password on next login"
+msgstr "Мора променити лозинку при следећој пријави"
+
+#: apps/lchage.c:188 apps/lchage.c:196 apps/lchage.c:206 apps/lchage.c:215
+msgid "Never"
+msgstr "Никада"
+
+#: apps/lchage.c:191
+#, c-format
+msgid "Last Change:\t%s\n"
+msgstr "Последња промена:\t%s\n"
+
+#: apps/lchage.c:201
+#, c-format
+msgid "Password Expires:\t%s\n"
+msgstr "Лозинка истиче:\t%s\n"
+
+#: apps/lchage.c:213
+#, c-format
+msgid "Password Inactive:\t%s\n"
+msgstr "Лозинка неактивна:\t%s\n"
+
+#: apps/lchage.c:219
+#, c-format
+msgid "Account Expires:\t%s\n"
+msgstr "Налог истиче:\t%s\n"
+
+#: apps/lchage.c:240
+#, c-format
+msgid "Failed to modify aging information for %s: %s\n"
+msgstr "Неуспела измена застарелих података за %s: %s\n"
+
+#: apps/lchfn.c:67 apps/lchsh.c:55
+msgid "[OPTION...] [user]"
+msgstr "[ОПЦИЈА...] [корисник]"
+
+#: apps/lchfn.c:86 apps/lchsh.c:74 apps/lid.c:164
+#, c-format
+msgid "No user name specified, no name for uid %d.\n"
+msgstr "Није наведено корисничко име, нема имена за uid %d.\n"
+
+#: apps/lchfn.c:96
+#, c-format
+msgid "Changing finger information for %s.\n"
+msgstr "Мењам finger податке за %s.\n"
+
+#: apps/lchfn.c:136
+msgid "Full Name"
+msgstr "Пуно име"
+
+#: apps/lchfn.c:146
+msgid "Surname"
+msgstr "Презиме"
+
+#: apps/lchfn.c:157
+msgid "Given Name"
+msgstr "Крштено име"
+
+#: apps/lchfn.c:167
+msgid "Office"
+msgstr "Канцеларија"
+
+#: apps/lchfn.c:176
+msgid "Office Phone"
+msgstr "Канцеларијски телефон"
+
+#: apps/lchfn.c:185
+msgid "Home Phone"
+msgstr "Кућни телефон"
+
+#: apps/lchfn.c:195
+msgid "E-Mail Address"
+msgstr "Адреса е-поште"
+
+#: apps/lchfn.c:208
+#, c-format
+msgid "Finger information not changed:  input error.\n"
+msgstr "Finger подаци нису промењени:  грешка у уносу.\n"
+
+#: apps/lchfn.c:270
+msgid "Finger information changed.\n"
+msgstr "Finger подаци су промењени.\n"
+
+#: apps/lchfn.c:273
+#, c-format
+msgid "Finger information not changed: %s.\n"
+msgstr "Finger подаци нису промењени: %s.\n"
+
+#: apps/lchsh.c:84
+#, c-format
+msgid "Changing shell for %s.\n"
+msgstr "Мењам љуску за %s.\n"
+
+#: apps/lchsh.c:114
+msgid "New Shell"
+msgstr "Нова љуска"
+
+#: apps/lchsh.c:121 apps/lchsh.c:136
+#, c-format
+msgid "Shell not changed: %s\n"
+msgstr "Љуска није промењена: %s\n"
+
+#: apps/lchsh.c:133
+msgid "Shell changed.\n"
+msgstr "Љуска је промењена.\n"
+
+#: apps/lgroupadd.c:49
+msgid "gid for new group"
+msgstr "gid нове групе"
+
+#: apps/lgroupadd.c:49 apps/lgroupmod.c:56 apps/lpasswd.c:56 apps/lpasswd.c:59
+#: apps/luseradd.c:67 apps/lusermod.c:66 apps/lusermod.c:68
+msgid "NUM"
+msgstr "БРОЈ"
+
+#: apps/lgroupadd.c:51
+msgid "create a system group"
+msgstr "направи системску групу"
+
+#: apps/lgroupadd.c:62 apps/lgroupdel.c:53 apps/lgroupmod.c:82
+msgid "[OPTION...] group"
+msgstr "[ОПЦИЈА...] група"
+
+#: apps/lgroupadd.c:74 apps/lgroupdel.c:65 apps/lgroupmod.c:93
+#, c-format
+msgid "No group name specified.\n"
+msgstr "Није наведено име групе.\n"
+
+#: apps/lgroupadd.c:87 apps/lgroupmod.c:105 apps/lnewusers.c:172
+#: apps/luseradd.c:164 apps/lusermod.c:127
+#, c-format
+msgid "Invalid group ID %s\n"
+msgstr "Неисправан ID групе %s\n"
+
+#: apps/lgroupadd.c:119
+#, c-format
+msgid "Group creation failed: %s\n"
+msgstr "Неуспело прављење групе: %s\n"
+
+#: apps/lgroupdel.c:85 apps/lgroupmod.c:132 apps/lpasswd.c:153
+#, c-format
+msgid "Group %s does not exist.\n"
+msgstr "Група %s не постоји.\n"
+
+#: apps/lgroupdel.c:91
+#, c-format
+msgid "Group %s could not be deleted: %s\n"
+msgstr "Група %s не може бити избрисана: %s\n"
+
+#: apps/lgroupmod.c:56
+msgid "set GID for group"
+msgstr "постави GID за групу"
+
+#: apps/lgroupmod.c:58
+msgid "change group to have given name"
+msgstr "промени групу да има задато име"
+
+#: apps/lgroupmod.c:58
+msgid "NAME"
+msgstr "ИМЕ"
+
+#: apps/lgroupmod.c:60 apps/luseradd.c:75
+msgid "plaintext password for use with group"
+msgstr "обична лозинка у употреби за групу"
+
+#: apps/lgroupmod.c:60 apps/lgroupmod.c:62 apps/lgroupmod.c:64
+#: apps/lgroupmod.c:66 apps/lgroupmod.c:68 apps/lgroupmod.c:70
+#: apps/lpasswd.c:51 apps/lpasswd.c:53 apps/luseradd.c:59 apps/luseradd.c:61
+#: apps/luseradd.c:63 apps/luseradd.c:65 apps/luseradd.c:69 apps/luseradd.c:75
+#: apps/luseradd.c:77 apps/luseradd.c:79 apps/luseradd.c:81 apps/luseradd.c:83
+#: apps/luseradd.c:85 apps/luseradd.c:87 apps/luseradd.c:89 apps/lusermod.c:58
+#: apps/lusermod.c:60 apps/lusermod.c:64 apps/lusermod.c:70 apps/lusermod.c:72
+#: apps/lusermod.c:74 apps/lusermod.c:80 apps/lusermod.c:82 apps/lusermod.c:84
+#: apps/lusermod.c:86 apps/lusermod.c:88 apps/lusermod.c:90
+msgid "STRING"
+msgstr "ТЕКСТ"
+
+#: apps/lgroupmod.c:62 apps/luseradd.c:77
+msgid "pre-hashed password for use with group"
+msgstr "унапред израчуната лозинка у употреби за групу"
+
+#: apps/lgroupmod.c:64
+msgid "list of administrators to add"
+msgstr "списак администратора за додавање"
+
+#: apps/lgroupmod.c:66
+msgid "list of administrators to remove"
+msgstr "списак администратора за уклањање"
+
+#: apps/lgroupmod.c:68
+msgid "list of group members to add"
+msgstr "списак чланова групе за додавање"
+
+#: apps/lgroupmod.c:70
+msgid "list of group members to remove"
+msgstr "списак чланова групе за уклањање"
+
+#: apps/lgroupmod.c:71
+msgid "lock group"
+msgstr "закључај групу"
+
+#: apps/lgroupmod.c:72
+msgid "unlock group"
+msgstr "откључај групу"
+
+#: apps/lgroupmod.c:125 apps/lusermod.c:164
+#, c-format
+msgid "Both -L and -U specified.\n"
+msgstr "И -L и -U су наведени.\n"
+
+#: apps/lgroupmod.c:139 apps/lgroupmod.c:148
+#, c-format
+msgid "Failed to set password for group %s: %s\n"
+msgstr "Неуспело постављање лозинке за групу %s: %s\n"
+
+#: apps/lgroupmod.c:157
+#, c-format
+msgid "Group %s could not be locked: %s\n"
+msgstr "Група %s не може бити закључана: %s\n"
+
+#: apps/lgroupmod.c:166
+#, c-format
+msgid "Group %s could not be unlocked: %s\n"
+msgstr "Група %s не може бити откључана: %s\n"
+
+#: apps/lgroupmod.c:242 apps/lgroupmod.c:257
+#, c-format
+msgid "Group %s could not be modified: %s\n"
+msgstr "Група %s не може бити измењена: %s\n"
+
+#: apps/lid.c:42 apps/lid.c:74 apps/lid.c:188
+#, c-format
+msgid "Error looking up %s: %s\n"
+msgstr "Грешка при потрази за %s: %s\n"
+
+#: apps/lid.c:117
+msgid ""
+"list members of a named group instead of the group memberships for the named "
+"user"
+msgstr ""
+"списак чланова именоване групе уместо групног чланства именованог корисника"
+
+#: apps/lid.c:120
+msgid "only list membership information by name, and not UID/GID"
+msgstr "прикажи само списак информација о чланству по имену, а не по UID/GID"
+
+#: apps/lid.c:146
+#, c-format
+msgid "No group name specified, using %s.\n"
+msgstr "Није наведено име групе, користим %s.\n"
+
+#: apps/lid.c:150
+#, c-format
+msgid "No group name specified, no name for gid %d.\n"
+msgstr "Није наведено име групе, нема имена за gid %d.\n"
+
+#: apps/lid.c:160
+#, c-format
+msgid "No user name specified, using %s.\n"
+msgstr "Није наведено корисничко име, користим %s.\n"
+
+#: apps/lid.c:192
+#, c-format
+msgid "%s does not exist\n"
+msgstr "%s не постоји\n"
+
+#: apps/lnewusers.c:47
+msgid "file with user information records"
+msgstr "датотека са записима информација"
+
+#: apps/lnewusers.c:47
+msgid "PATH"
+msgstr "ПУТАЊА"
+
+#: apps/lnewusers.c:49
+msgid "don't create home directories"
+msgstr "немој правити личне директоријуме"
+
+#: apps/lnewusers.c:51
+msgid "don't create mail spools"
+msgstr "немој правити ред за слање поште"
+
+#: apps/lnewusers.c:63
+msgid "[OPTION...]"
+msgstr "[ОПЦИЈА...]"
+
+#: apps/lnewusers.c:88
+#, c-format
+msgid "Error opening `%s': %s.\n"
+msgstr "Грешка при отварању „%s“: %s.\n"
+
+#: apps/lnewusers.c:118
+#, c-format
+msgid "Error creating account for `%s': line improperly formatted.\n"
+msgstr "Грешка при прављењу налога за „%s“: неправилно обликована линија.\n"
+
+#: apps/lnewusers.c:129 apps/luseradd.c:128 apps/lusermod.c:142
+#, c-format
+msgid "Invalid user ID %s\n"
+msgstr "Неисправан кориснички ID %s\n"
+
+#: apps/lnewusers.c:136
+msgid "Refusing to create account with UID 0.\n"
+msgstr "Одбијам да направим налог са UID 0.\n"
+
+#: apps/lnewusers.c:206
+#, c-format
+msgid "Error creating group for `%s' with GID %jd: %s\n"
+msgstr "Грешка при прављењу групе „%s“ са GID %jd: %s\n"
+
+#: apps/lnewusers.c:246
+#, c-format
+msgid "Refusing to use dangerous home directory `%s' for %s by default\n"
+msgstr "Одбијам да подразумевано употребим опасан директоријум „%s“ за %s\n"
+
+#: apps/lnewusers.c:257
+#, c-format
+msgid "Error creating home directory for %s: %s\n"
+msgstr "Грешка при прављењу личног директоријума за %s: %s\n"
+
+#: apps/lnewusers.c:270
+#, c-format
+msgid "Error creating mail spool for %s: %s\n"
+msgstr "Грешка при прављењу реда за слање поште за %s: %s\n"
+
+#: apps/lnewusers.c:285
+#, c-format
+msgid "Error setting initial password for %s: %s\n"
+msgstr "Грешка при постављању лозинке за %s: %s\n"
+
+#: apps/lnewusers.c:295
+#, c-format
+msgid "Error creating user account for %s: %s\n"
+msgstr "Грешка при прављењу корисничког налога за %s: %s\n"
+
+#: apps/lpasswd.c:49
+msgid "set group password instead of user password"
+msgstr "постави групну лозинку уместо корисничке лозинке"
+
+#: apps/lpasswd.c:51
+msgid "new plain password"
+msgstr "нова обична лозинка"
+
+#: apps/lpasswd.c:53
+msgid "new crypted password"
+msgstr "нова шифрована лозинка"
+
+#: apps/lpasswd.c:55
+msgid "read new plain password from given descriptor"
+msgstr "учитај нову обичну лозинку из датог описника"
+
+#: apps/lpasswd.c:58
+msgid "read new crypted password from given descriptor"
+msgstr "учитај нову шифровану лозинку из датог описника"
+
+#: apps/lpasswd.c:83
+#, c-format
+msgid "Changing password for %s.\n"
+msgstr "Мењам лозинку за %s.\n"
+
+#: apps/lpasswd.c:111
+msgid "New password"
+msgstr "Нова лозинка"
+
+#: apps/lpasswd.c:114
+msgid "New password (confirm)"
+msgstr "Нова лозинка (потврда)"
+
+#: apps/lpasswd.c:128
+#, c-format
+msgid "Passwords do not match, try again.\n"
+msgstr "Лозинке се не слажу, покушајте поново.\n"
+
+#: apps/lpasswd.c:133
+#, c-format
+msgid "Password change canceled.\n"
+msgstr "Промена лозинке је отказана.\n"
+
+#: apps/lpasswd.c:165 apps/lpasswd.c:182
+#, c-format
+msgid "Error reading from file descriptor %d.\n"
+msgstr "Грешка при читању из датотеке описника %d.\n"
+
+#: apps/lpasswd.c:203 apps/luseradd.c:302 apps/luseradd.c:311
+#, c-format
+msgid "Error setting password for user %s: %s.\n"
+msgstr "Грешка при постављању лозинке за корисника %s: %s.\n"
+
+#: apps/lpasswd.c:212
+#, c-format
+msgid "Error setting password for group %s: %s.\n"
+msgstr "Грешка при постављању лозинке за групу %s: %s.\n"
+
+#: apps/lpasswd.c:224
+#, c-format
+msgid "Password changed.\n"
+msgstr "Лозинка је промењена.\n"
+
+#: apps/luseradd.c:57
+msgid "create a system user"
+msgstr "направи системског корисника"
+
+#: apps/luseradd.c:59
+msgid "GECOS information for new user"
+msgstr "GECOS информација за новог корисника"
+
+#: apps/luseradd.c:61
+msgid "home directory for new user"
+msgstr "лични директоријум за новог корисника"
+
+#: apps/luseradd.c:63
+msgid "directory with files for the new user"
+msgstr "директоријум са датотекама за новог корисника"
+
+#: apps/luseradd.c:65
+msgid "shell for new user"
+msgstr "љуска за новог корисника"
+
+#: apps/luseradd.c:67
+msgid "uid for new user"
+msgstr "uid за новог корисника"
+
+#: apps/luseradd.c:69
+msgid "group for new user"
+msgstr "група за новог корисника"
+
+#: apps/luseradd.c:71
+msgid "don't create home directory for user"
+msgstr "немој правити лични директоријум за корисника"
+
+#: apps/luseradd.c:73
+msgid "don't create group with same name as user"
+msgstr "немој правити групу са истим именом као и корисник"
+
+#: apps/luseradd.c:79
+msgid "common name for new user"
+msgstr "заједничко име за новог корисника"
+
+#: apps/luseradd.c:81
+msgid "given name for new user"
+msgstr "дато име за новог корисника"
+
+#: apps/luseradd.c:83
+msgid "surname for new user"
+msgstr "презиме за новог корисника"
+
+#: apps/luseradd.c:85
+msgid "room number for new user"
+msgstr "број собе за новог корисника"
+
+#: apps/luseradd.c:87
+msgid "telephone number for new user"
+msgstr "број телефона за новог корисника"
+
+#: apps/luseradd.c:89
+msgid "home telephone number for new user"
+msgstr "број кућног телефона за новог корисника"
+
+#: apps/luseradd.c:189
+#, c-format
+msgid "Group %jd does not exist\n"
+msgstr "Група %jd не постоји\n"
+
+#: apps/luseradd.c:207 apps/luseradd.c:220
+#, c-format
+msgid "Error creating group `%s': %s\n"
+msgstr "Грешка при прављењу групе „%s“: %s\n"
+
+#: apps/luseradd.c:260
+#, c-format
+msgid "Account creation failed: %s.\n"
+msgstr "Неуспело прављење налога: %s.\n"
+
+#: apps/luseradd.c:283
+#, c-format
+msgid "Error creating %s: %s.\n"
+msgstr "Грешка при прављењу %s: %s.\n"
+
+#: apps/luseradd.c:290
+#, c-format
+msgid "Error creating mail spool: %s\n"
+msgstr "Грешка при прављењу реда за слање поште : %s\n"
+
+#: apps/luserdel.c:47
+msgid "don't remove the user's private group, if the user has one"
+msgstr "немој уклањати корисникову приватну групу, ако је корисник има"
+
+#: apps/luserdel.c:50
+msgid "remove the user's home directory"
+msgstr "уклони корисников лични директоријум"
+
+#: apps/luserdel.c:94
+#, c-format
+msgid "User %s could not be deleted: %s.\n"
+msgstr "Корисник %s не може да буде обрисан: %s.\n"
+
+#: apps/luserdel.c:108
+#, c-format
+msgid "%s did not have a gid number.\n"
+msgstr "%s није имала gid број.\n"
+
+#: apps/luserdel.c:114
+#, c-format
+msgid "No group with GID %jd exists, not removing.\n"
+msgstr "Не постоји група са GID %jd, не уклањам.\n"
+
+#: apps/luserdel.c:120
+#, c-format
+msgid "Group with GID %jd did not have a group name.\n"
+msgstr "Група са GID %jd није имала име групе.\n"
+
+#: apps/luserdel.c:126
+#, c-format
+msgid "Group %s could not be deleted: %s.\n"
+msgstr "Група %s не може да буде обрисана: %s.\n"
+
+#: apps/luserdel.c:139
+#, c-format
+msgid "Error removing home directory: %s.\n"
+msgstr "Грешка при уклањању личног директоријума за корисника: %s.\n"
+
+#: apps/luserdel.c:145
+#, c-format
+msgid "Error removing mail spool: %s"
+msgstr "Грешка при уклањању реда за слање поште : %s"
+
+#: apps/lusermod.c:58
+msgid "GECOS information"
+msgstr "GECOS информација"
+
+#: apps/lusermod.c:60
+msgid "home directory"
+msgstr "лични директоријум"
+
+#: apps/lusermod.c:62
+msgid "move home directory contents"
+msgstr "премести садржај личног директоријума"
+
+#: apps/lusermod.c:64
+msgid "set shell for user"
+msgstr "постави љуску за корисника"
+
+#: apps/lusermod.c:66
+msgid "set UID for user"
+msgstr "постави UID за корисника"
+
+#: apps/lusermod.c:68
+msgid "set primary GID for user"
+msgstr "постави примарни GID за корисника"
+
+#: apps/lusermod.c:70
+msgid "change login name for user"
+msgstr "промени пријавно име корисника"
+
+#: apps/lusermod.c:72
+msgid "plaintext password for the user"
+msgstr "обична лозинка за корисника"
+
+#: apps/lusermod.c:74
+msgid "pre-hashed password for the user"
+msgstr "унапред израчуната лозинка за корисника"
+
+#: apps/lusermod.c:75
+msgid "lock account"
+msgstr "закључај налог"
+
+#: apps/lusermod.c:78
+msgid "unlock account"
+msgstr "откључај налог"
+
+#: apps/lusermod.c:80
+msgid "set common name for user"
+msgstr "постави уобичајено име за корисника"
+
+#: apps/lusermod.c:82
+msgid "set given name for user"
+msgstr "постави дато име за корисника"
+
+#: apps/lusermod.c:84
+msgid "set surname for user"
+msgstr "постави презиме за корисника"
+
+#: apps/lusermod.c:86
+msgid "set room number for user"
+msgstr "постави број собе за корисника"
+
+#: apps/lusermod.c:88
+msgid "set telephone number for user"
+msgstr "постави број телефона за корисника"
+
+#: apps/lusermod.c:90
+msgid "set home telephone number for user"
+msgstr "постави број кућног телефона за корисника"
+
+#: apps/lusermod.c:180 apps/lusermod.c:193
+#, c-format
+msgid "Failed to set password for user %s: %s.\n"
+msgstr "Неуспело постављање лозинке за корисника %s: %s.\n"
+
+#: apps/lusermod.c:203
+#, c-format
+msgid "User %s could not be locked: %s.\n"
+msgstr "Корисник %s не може да буде закључан: %s.\n"
+
+#: apps/lusermod.c:211
+#, c-format
+msgid "User %s could not be unlocked: %s.\n"
+msgstr "Корисник %s не може да буде откључан: %s.\n"
+
+#: apps/lusermod.c:232
+#, c-format
+msgid "Warning: Group with ID %jd does not exist.\n"
+msgstr "Упозорење: Група са ID-ом %jd не постоји\n"
+
+#: apps/lusermod.c:275
+#, c-format
+msgid "User %s could not be modified: %s.\n"
+msgstr "Корисник %s не може да буде измењен: %s.\n"
+
+#: apps/lusermod.c:326
+#, c-format
+msgid "Group %s could not be modified: %s.\n"
+msgstr "Група %s не може да буде измењена: %s.\n"
+
+#: apps/lusermod.c:342
+#, c-format
+msgid "No old home directory for %s.\n"
+msgstr "Нема старог личног директоријума за %s.\n"
+
+#: apps/lusermod.c:347
+#, c-format
+msgid "No new home directory for %s.\n"
+msgstr "Нема новог личног директоријума за %s.\n"
+
+#: apps/lusermod.c:353
+#, c-format
+msgid "Error moving %s to %s: %s.\n"
+msgstr "Грешка при премештању %s у %s: %s.\n"
+
+#: lib/config.c:128
+#, c-format
+msgid "could not open configuration file `%s': %s"
+msgstr "не могу да отворим датотеку подешавања „%s“: %s"
+
+#: lib/config.c:134
+#, c-format
+msgid "could not stat configuration file `%s': %s"
+msgstr "не могу да извршим stat над датотеком подешавања „%s“: %s"
+
+#: lib/config.c:143
+#, c-format
+msgid "configuration file `%s' is too large"
+msgstr "датотека подешавања „%s“ је превелика"
+
+#: lib/config.c:159
+#, c-format
+msgid "could not read configuration file `%s': %s"
+msgstr "не могу да прочитам датотеку подешавања „%s“: %s"
+
+#: lib/error.c:62
+msgid "success"
+msgstr "успех"
+
+#: lib/error.c:64
+msgid "module disabled by configuration"
+msgstr "модул искључен у подешавањима"
+
+#: lib/error.c:66
+msgid "generic error"
+msgstr "уопштена грешка"
+
+#: lib/error.c:68
+msgid "not enough privileges"
+msgstr "нема довољно повластица"
+
+#: lib/error.c:70
+msgid "access denied"
+msgstr "приступ одбијен"
+
+#: lib/error.c:72
+msgid "bad user/group name"
+msgstr "лоше име корисника/групе"
+
+#: lib/error.c:74
+msgid "bad user/group id"
+msgstr "лош id корисника/групе"
+
+#: lib/error.c:76
+msgid "user/group name in use"
+msgstr "име корисника/групе је у употреби"
+
+#: lib/error.c:78
+msgid "user/group id in use"
+msgstr "id корисника/групе је у употреби"
+
+#: lib/error.c:80
+msgid "error manipulating terminal attributes"
+msgstr "грешка при удешавању својстава терминала"
+
+#: lib/error.c:82
+msgid "error opening file"
+msgstr "грешка при отварању датотеке"
+
+#: lib/error.c:84
+msgid "error locking file"
+msgstr "грешка при закључавању датотеке"
+
+#: lib/error.c:86
+msgid "error statting file"
+msgstr "грешка при извршавању stat над датотеком"
+
+#: lib/error.c:88
+msgid "error reading file"
+msgstr "грешка при читању датотеке"
+
+#: lib/error.c:90
+msgid "error writing to file"
+msgstr "грешка при упису у датотеку"
+
+#: lib/error.c:92
+msgid "data not found in file"
+msgstr "подаци нису нађени у датотеци"
+
+#: lib/error.c:94
+msgid "internal initialization error"
+msgstr "унутрашња грешка иницијализације"
+
+#: lib/error.c:96
+msgid "error loading module"
+msgstr "грешка при учитавању модула"
+
+#: lib/error.c:98
+msgid "error resolving symbol in module"
+msgstr "грешка при разрешавању симбола у модулу"
+
+#: lib/error.c:100
+msgid "library/module version mismatch"
+msgstr "неслагање верзије библиотеке/модула"
+
+#: lib/error.c:102
+msgid "unlocking would make the password field empty"
+msgstr "откључавање би учинило поље лозинке празним"
+
+#: lib/error.c:105
+msgid "invalid attribute value"
+msgstr "неисправна вредност атрибута"
+
+#: lib/error.c:107
+msgid "invalid module combination"
+msgstr "неисправна комбинација модула"
+
+#: lib/error.c:109
+msgid "user's home directory not owned by them"
+msgstr "корисников лични директоријум није у његовом власништву"
+
+#: lib/error.c:115
+msgid "unknown error"
+msgstr "непозната грешка"
+
+#: lib/misc.c:240
+msgid "invalid number"
+msgstr "неисправан број"
+
+#: lib/misc.c:254
+msgid "invalid ID"
+msgstr "неисправан ID"
+
+#: lib/modules.c:61
+#, c-format
+msgid "no initialization function %s in `%s'"
+msgstr "нема функције иницијализације %s у „%s“"
+
+#: lib/modules.c:79
+#, c-format
+msgid "module version mismatch in `%s'"
+msgstr "неслагање верзије модула у „%s“"
+
+#: lib/modules.c:92
+#, c-format
+msgid "module `%s' does not define `%s'"
+msgstr "модул „%s“ не дефинише „%s“"
+
+#: lib/prompt.c:88
+msgid "error reading terminal attributes"
+msgstr "грешка при читању својстава терминала"
+
+#: lib/prompt.c:95 lib/prompt.c:107
+msgid "error setting terminal attributes"
+msgstr "грешка при постављању својстава терминала"
+
+#: lib/prompt.c:101
+msgid "error reading from terminal"
+msgstr "грешка при читању са терминала"
+
+#: lib/user.c:218
+msgid "name is not set"
+msgstr "име није постављено"
+
+#: lib/user.c:223
+msgid "name is too short"
+msgstr "име је прекратко"
+
+#: lib/user.c:228
+#, c-format
+msgid "name is too long (%zu > %d)"
+msgstr "име је предугачко (%zu > %d)"
+
+#: lib/user.c:235
+msgid "name contains non-ASCII characters"
+msgstr "име садржи не-ASCII знакове"
+
+#: lib/user.c:242
+msgid "name contains control characters"
+msgstr "име садржи контролне знакове"
+
+#: lib/user.c:249
+msgid "name contains whitespace"
+msgstr "име садржи размак"
+
+#: lib/user.c:261
+msgid "name starts with a hyphen"
+msgstr "име почиње цртицом"
+
+#: lib/user.c:272
+#, c-format
+msgid "name contains invalid char `%c'"
+msgstr "име садржи неисправан знак „%c“"
+
+#: lib/user.c:308 lib/user.c:360
+#, c-format
+msgid "user %s has no UID"
+msgstr "корисник %s нема UID"
+
+#: lib/user.c:310
+#, c-format
+msgid "user %s not found"
+msgstr "корисник %s није пронађен"
+
+#: lib/user.c:333 lib/user.c:361
+#, c-format
+msgid "group %s has no GID"
+msgstr "група %s нема GID"
+
+#: lib/user.c:335
+#, c-format
+msgid "group %s not found"
+msgstr "група %s није пронађена"
+
+#: lib/user.c:355
+#, c-format
+msgid "user %jd has no name"
+msgstr "корисник %jd нема име"
+
+#: lib/user.c:356
+#, c-format
+msgid "group %jd has no name"
+msgstr "група %jd нема име"
+
+#: lib/user.c:364
+msgid "user has neither a name nor an UID"
+msgstr "корисник нема ни име нити UID"
+
+#: lib/user.c:365
+msgid "group has neither a name nor a GID"
+msgstr "група нема ни име нити GID"
+
+#: lib/user.c:1311
+#, c-format
+msgid "Refusing to use dangerous home directory `%s' by default"
+msgstr "Одбијам да подразумевано употребим опасан директоријум „%s“"
+
+#: lib/user.c:2310
+#, c-format
+msgid "Invalid default value of field %s: %s"
+msgstr "Неисправна подразумевана вредност за поље %s: %s"
+
+#: lib/util.c:300 modules/files.c:374
+#, c-format
+msgid "error locking file: %s"
+msgstr "грешка при закључавању датотеке: %s"
+
+#: lib/util.c:704
+#, c-format
+msgid "couldn't get default security context: %s"
+msgstr "не могу да добавим подразумевани безбедносни контекст: %s"
+
+#: lib/util.c:731 lib/util.c:757 lib/util.c:783
+#, c-format
+msgid "couldn't get security context of `%s': %s"
+msgstr "не могу да добавим безбедносни контекст за „%s“: %s"
+
+#: lib/util.c:737 lib/util.c:763 lib/util.c:789 lib/util.c:821
+#, c-format
+msgid "couldn't set default security context to `%s': %s"
+msgstr "не могу да поставим подразумевани безбедносни контекст на „%s“: %s"
+
+#: lib/util.c:813
+#, c-format
+msgid "couldn't determine security context for `%s': %s"
+msgstr "не могу да утврдим безбедносни контекст за „%s“: %s"
+
+#: modules/files.c:129 modules/files.c:692 modules/files.c:1585
+#: modules/files.c:1920 modules/files.c:1930 modules/files.c:2012
+#: modules/files.c:2023 modules/files.c:2089 modules/files.c:2101
+#: modules/files.c:2191 modules/files.c:2200 modules/files.c:2255
+#: modules/files.c:2264 modules/files.c:2359 modules/files.c:2368
+#, c-format
+msgid "couldn't open `%s': %s"
+msgstr "не могу да отворим „%s“: %s"
+
+#: modules/files.c:137 modules/files.c:994 modules/files.c:1187
+#: modules/files.c:1329
+#, c-format
+msgid "couldn't stat `%s': %s"
+msgstr "не могу да извршим stat над „%s“: %s"
+
+#: modules/files.c:161
+#, c-format
+msgid "error creating `%s': %s"
+msgstr "грешка при прављењу „%s“: %s"
+
+#: modules/files.c:169
+#, c-format
+msgid "Error changing owner of `%s': %s"
+msgstr "Грешка при промени власника „%s“: %s"
+
+#: modules/files.c:175
+#, c-format
+msgid "Error changing mode of `%s': %s"
+msgstr "Грешка при промени режима за `%s': %s"
+
+#: modules/files.c:191
+#, c-format
+msgid "Error reading `%s': %s"
+msgstr "Грешка при читању „%s“: %s"
+
+#: modules/files.c:206 modules/files.c:217 modules/files.c:305
+#: modules/files.c:467
+#, c-format
+msgid "Error writing `%s': %s"
+msgstr "Грешка при писању „%s“: %s"
+
+#: modules/files.c:247 modules/files.c:1005 modules/files.c:1195
+#: modules/files.c:1338
+#, c-format
+msgid "couldn't read from `%s': %s"
+msgstr "не могу да читам из „%s“: %s"
+
+#: modules/files.c:256
+#, c-format
+msgid "Invalid contents of lock `%s'"
+msgstr ""
+
+#: modules/files.c:261
+#, c-format
+msgid "The lock %s is held by process %ju"
+msgstr ""
+
+#: modules/files.c:269
+#, fuzzy, c-format
+msgid "Error removing stale lock `%s': %s"
+msgstr "Грешка при премештању %s у %s: %s.\n"
+
+#: modules/files.c:297
+#, fuzzy, c-format
+msgid "error opening temporary file for `%s': %s"
+msgstr "Грешка при промени режима за `%s': %s"
+
+#: modules/files.c:321
+#, c-format
+msgid "Cannot obtain lock `%s': %s"
+msgstr ""
+
+#: modules/files.c:434
+#, fuzzy, c-format
+msgid "Error resolving `%s': %s"
+msgstr "Грешка при читању „%s“: %s"
+
+#: modules/files.c:442
+#, fuzzy, c-format
+msgid "Error replacing `%s': %s"
+msgstr "Грешка при читању „%s“: %s"
+
+#: modules/files.c:903
+#, fuzzy, c-format
+msgid "%s value `%s': `\\n' not allowed"
+msgstr "%s вредност „%s“: „:“ није дозвољена"
+
+#: modules/files.c:910
+#, c-format
+msgid "%s value `%s': `:' not allowed"
+msgstr "%s вредност „%s“: „:“ није дозвољена"
+
+#: modules/files.c:1014
+msgid "entry already present in file"
+msgstr "ставка је већ присутна у датотеци"
+
+#: modules/files.c:1021 modules/files.c:1031 modules/files.c:1041
+#: modules/files.c:1393 modules/files.c:1401 modules/files.c:1409
+#, c-format
+msgid "couldn't write to `%s': %s"
+msgstr "не могу да упишем у „%s“: %s"
+
+#: modules/files.c:1173
+#, c-format
+msgid "entity object has no %s attribute"
+msgstr "објекат ентитета нема %s својство"
+
+#: modules/files.c:1215
+msgid "entry with conflicting name already present in file"
+msgstr "ставка са сукобљеним именом је већ присутна у датотеци"
+
+#: modules/files.c:1803
+#, fuzzy
+msgid "`:' and `\\n' not allowed in encrypted password"
+msgstr "„:“ није дозвољена у шифрованој лозинци"
+
+#: modules/files.c:1815 modules/ldap.c:1543 modules/ldap.c:1812
+msgid "error encrypting password"
+msgstr "грешка при шифровању лозинке"
+
+#: modules/files.c:2517 modules/ldap.c:2410
+#, c-format
+msgid "the `%s' and `%s' modules can not be combined"
+msgstr "`%s' и `%s' модули не могу бити комбиновани"
+
+#: modules/files.c:2601 modules/files.c:2679
+msgid "not executing with superuser privileges"
+msgstr "не извршавам са администраторским повластицама"
+
+#: modules/files.c:2692
+msgid "no shadow file present -- disabling"
+msgstr "нема присутне shadow датотеке -- искључујем"
+
+#: modules/ldap.c:199
+msgid "error initializing ldap library"
+msgstr "грешка при иницијализацији ldap библиотеке"
+
+#: modules/ldap.c:210
+#, c-format
+msgid "could not set LDAP protocol to version %d"
+msgstr "не могу да поставим LDAP протокол на верзију %d"
+
+#: modules/ldap.c:229
+msgid "could not negotiate TLS with LDAP server"
+msgstr "нисам могао да преговарам TLS са LDAP сервером"
+
+#: modules/ldap.c:424
+msgid "could not bind to LDAP server"
+msgstr "не могу да се вежем за LDAP сервер"
+
+#: modules/ldap.c:427
+#, c-format
+msgid "could not bind to LDAP server, first attempt as `%s': %s"
+msgstr "не могу да се вежем за LDAP сервер, прво покушајте као „%s“: %s"
+
+#: modules/ldap.c:1315
+#, c-format
+msgid "user object had no %s attribute"
+msgstr "кориснички објекат нема %s својство"
+
+#: modules/ldap.c:1324
+#, c-format
+msgid "user object was created with no `%s'"
+msgstr "кориснички објекат је направљен без „%s“"
+
+#: modules/ldap.c:1344
+#, c-format
+msgid "error creating a LDAP directory entry: %s"
+msgstr "грешка при прављењу ставке LDAP каталога: %s"
+
+#: modules/ldap.c:1370 modules/ldap.c:1604
+#, c-format
+msgid "error modifying LDAP directory entry: %s"
+msgstr "грешка при измени ставке LDAP каталога: %s"
+
+#: modules/ldap.c:1395
+#, c-format
+msgid "error renaming LDAP directory entry: %s"
+msgstr "грешка при преименовању ставке LDAP каталога: %s"
+
+#: modules/ldap.c:1440
+#, c-format
+msgid "object had no %s attribute"
+msgstr "објекат није имао %s својство"
+
+#: modules/ldap.c:1456
+#, c-format
+msgid "error removing LDAP directory entry: %s"
+msgstr "грешка при уклањању ставке LDAP каталога: %s"
+
+#: modules/ldap.c:1506 modules/ldap.c:1521 modules/ldap.c:1635
+#: modules/ldap.c:1730
+#, c-format
+msgid "object has no %s attribute"
+msgstr "објекат нема %s својство"
+
+#: modules/ldap.c:1533
+msgid "unsupported password encryption scheme"
+msgstr "неподржана шема шифровања лозинке"
+
+#: modules/ldap.c:1658
+msgid "no such object in LDAP directory"
+msgstr "нема таквог објекта у LDAP каталогу"
+
+#: modules/ldap.c:1670
+#, c-format
+msgid "no `%s' attribute found"
+msgstr "није пронађено „%s“ својство"
+
+#: modules/ldap.c:1843
+#, c-format
+msgid "error setting password in LDAP directory for %s: %s"
+msgstr "грешка при постављању лозинке у LDAP каталогу за %s: %s"
+
+#: modules/ldap.c:2446
+msgid "LDAP Server Name"
+msgstr "Име LDAP сервера"
+
+#: modules/ldap.c:2452
+msgid "LDAP Search Base DN"
+msgstr "Основни DN LDAP претраге"
+
+#: modules/ldap.c:2458
+msgid "LDAP Bind DN"
+msgstr "DN LDAP увезивања"
+
+#: modules/ldap.c:2465
+msgid "LDAP Bind Password"
+msgstr "Лозинка LDAP увезивања"
+
+#: modules/ldap.c:2471
+msgid "LDAP SASL User"
+msgstr "LDAP SASL корисник"
+
+#: modules/ldap.c:2478
+msgid "LDAP SASL Authorization User"
+msgstr "LDAP SASL овлашћујући корисник"
+
+#: modules/sasldb.c:132
+#, c-format
+msgid "Cyrus SASL error creating user: %s"
+msgstr "Cyrus SASL грешка при прављењу корисника: %s"
+
+#: modules/sasldb.c:136
+#, c-format
+msgid "Cyrus SASL error removing user: %s"
+msgstr "Cyrus SASL грешка при уклањању корисника: %s"
+
+#: modules/sasldb.c:503 modules/sasldb.c:511
+#, c-format
+msgid "error initializing Cyrus SASL: %s"
+msgstr "грешка при иницијализацији Cyrus SASL-а: %s"
+
+#: python/admin.c:505
+msgid "error creating home directory for user"
+msgstr "грешка при прављењу личног директоријума за корисника"
+
+#: python/admin.c:544 python/admin.c:583
+msgid "error removing home directory for user"
+msgstr "грешка при уклањању личног директоријума за корисника"
+
+#: python/admin.c:654
+msgid "error moving home directory for user"
+msgstr "грешка при премештању личног директоријума за корисника"
+
+#: samples/lookup.c:63
+#, c-format
+msgid "Error initializing %s: %s\n"
+msgstr "Грешка при иницијализацији %s: %s\n"
+
+#: samples/lookup.c:76
+#, c-format
+msgid "Invalid ID %s\n"
+msgstr "Неисправан ID %s\n"
+
+#: samples/lookup.c:88
+#, c-format
+msgid "Searching for group with ID %jd.\n"
+msgstr "Претражујем за групом са ID %jd.\n"
+
+#: samples/lookup.c:92
+#, c-format
+msgid "Searching for group named %s.\n"
+msgstr "Претражујем за групом са именом %s.\n"
+
+#: samples/lookup.c:99
+#, c-format
+msgid "Searching for user with ID %jd.\n"
+msgstr "Претражујем за корисником са ID %jd.\n"
+
+#: samples/lookup.c:103
+#, c-format
+msgid "Searching for user named %s.\n"
+msgstr "Претражујем за корисником са именом %s.\n"
+
+#: samples/lookup.c:117
+msgid "Entry not found.\n"
+msgstr "Ставка није пронађена.\n"
+
+#: samples/prompt.c:48
+msgid "Prompts succeeded.\n"
+msgstr "Одзиви су успели.\n"
+
+#: samples/prompt.c:58
+msgid "Prompts failed.\n"
+msgstr "Одзиви нису успели.\n"
+
+#: samples/testuser.c:76
+msgid "Default user object classes:\n"
+msgstr "Подразумеване класе корисничких објеката:\n"
+
+#: samples/testuser.c:82
+msgid "Default user attribute names:\n"
+msgstr "Подразумевана имена корисничких својстава:\n"
+
+#: samples/testuser.c:88
+msgid "Getting default user attributes:\n"
+msgstr "Добављам подразумевана корисничка својства:\n"
+
+#: samples/testuser.c:95
+msgid "Copying user structure:\n"
+msgstr "Умножавам корисничку структуру:\n"
+
+#~ msgid "backup file `%s' exists and is not a regular file"
+#~ msgstr "резервна датотека „%s“ постоји и није редовна датотека"
+
+#~ msgid "backup file size mismatch"
+#~ msgstr "неслагање величине резервне датотеке"

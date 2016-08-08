@@ -1,0 +1,24 @@
+#!/bin/sh
+userlist() {
+	uid=$1
+	max=$2
+	while [ "$uid" -lt "$max" ] ; do
+		echo "joe${uid}:password${uid}:${uid}:${uid}:joe with uid ${uid}:/var/joe${uid}:/bin/bash"
+		uid=`expr $uid + 1`
+		echo "joe${uid}:password${uid}:${uid}:joe${uid}:joe with uid ${uid}:/var/joe${uid}:/bin/bash"
+		uid=`expr $uid + 1`
+		echo "joe${uid}:password${uid}:${uid}:users:joe with uid ${uid}:/var/joe${uid}:/bin/bash"
+		uid=`expr $uid + 1`
+	done
+}
+if [ x$1 = x ] ; then
+	uid=50000
+else
+	uid=$1
+fi
+if [ x$2 = x ] ; then
+	count=50
+else
+	count=$2
+fi
+userlist $uid `expr $uid + $count`

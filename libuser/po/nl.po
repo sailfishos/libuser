@@ -1,0 +1,1428 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Red Hat, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# Geert Warrink <geert.warrink@onsnet.nu>, 2009,2011-2013
+# Miloslav Trmač <mitr@volny.cz>, 2011
+# Peter van Egdom <p.van.egdom@gmail.com>, 2004, 2005, 2006, 2007, 2008
+# Tino Meinen <a.t.meinen@chello.nl>, 2003
+# Geert Warrink <geert.warrink@onsnet.nu>, 2015. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: libuser 0.60\n"
+"Report-Msgid-Bugs-To: http://bugzilla.redhat.com/bugzilla/\n"
+"POT-Creation-Date: 2015-07-23 21:16+0200\n"
+"PO-Revision-Date: 2015-04-08 08:34-0400\n"
+"Last-Translator: Geert Warrink <geert.warrink@onsnet.nu>\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/fedora/language/"
+"nl/)\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Zanata 3.6.2\n"
+
+#: apps/apputil.c:197 apps/apputil.c:201
+#, c-format
+msgid "Failed to drop privileges.\n"
+msgstr "Laten vallen privileges mislukt.\n"
+
+#: apps/apputil.c:210
+#, c-format
+msgid "Internal error.\n"
+msgstr "Interne fout.\n"
+
+#: apps/apputil.c:231
+#, c-format
+msgid "%s is not authorized to change the finger info of %s\n"
+msgstr ""
+"%s is niet geautoriseerd om de finger informatie van %s te veranderen\n"
+
+#: apps/apputil.c:233
+msgid "Unknown user context"
+msgstr "Onbekende gebruiker context"
+
+#: apps/apputil.c:241
+#, c-format
+msgid "Can't set default context for /etc/passwd\n"
+msgstr "Instellen van standaard context voor /etc/passwd mislukt\n"
+
+#: apps/apputil.c:250
+#, c-format
+msgid "Error initializing PAM.\n"
+msgstr "Fout bij initialiseren PAM.\n"
+
+#: apps/apputil.c:260 apps/apputil.c:287
+#, c-format
+msgid "Authentication failed for %s.\n"
+msgstr "Authenticatie mislukt voor %s.\n"
+
+#: apps/apputil.c:268
+#, c-format
+msgid "Internal PAM error `%s'.\n"
+msgstr "Interne PAM fout `%s'.\n"
+
+#: apps/apputil.c:273
+#, c-format
+msgid "Unknown user authenticated.\n"
+msgstr "Authenticatie voor onbekende gebruiker.\n"
+
+#: apps/apputil.c:277
+#, c-format
+msgid "User mismatch.\n"
+msgstr "Gebruikers komen niet overeen.\n"
+
+#: apps/lchage.c:84 apps/lchfn.c:53 apps/lchsh.c:44 apps/lgroupadd.c:47
+#: apps/lgroupdel.c:42 apps/lgroupmod.c:54 apps/lid.c:115 apps/lnewusers.c:45
+#: apps/lpasswd.c:47 apps/luseradd.c:55 apps/luserdel.c:45 apps/lusermod.c:56
+msgid "prompt for all information"
+msgstr "vraag om alle informatie"
+
+#: apps/lchage.c:86
+msgid "list aging parameters for the user"
+msgstr "toon veroudering parameters voor de gebruiker"
+
+#: apps/lchage.c:88
+msgid "minimum days between password changes"
+msgstr "minimale aantal dagen tussen wachtwoordveranderingen"
+
+#: apps/lchage.c:88 apps/lchage.c:90 apps/lchage.c:93 apps/lchage.c:96
+#: apps/lchage.c:99 apps/lchage.c:102
+msgid "DAYS"
+msgstr "DAGEN"
+
+#: apps/lchage.c:90
+msgid "maximum days between password changes"
+msgstr "maximale aantal dagen tussen wachtwoordveranderingen"
+
+#: apps/lchage.c:92
+msgid "date of last password change in days since 1/1/70"
+msgstr "datum van de laatste wachtwoordverandering in dagen sinds 1/1/70"
+
+#: apps/lchage.c:95
+msgid ""
+"number of days after password expiration date when account is considered "
+"inactive"
+msgstr ""
+"aantal dagen na wachtwoord vervaldatum als account als inactief beschouwd "
+"wordt"
+
+#: apps/lchage.c:98
+msgid "password expiration date in days since 1/1/70"
+msgstr "wachtwoord vervaldatum in dagen sinds 1/1/70"
+
+#: apps/lchage.c:101
+msgid "days before expiration to begin warning user"
+msgstr ""
+"dagen voor vervaldatum te beginnen met het waarschuwen van de gebruiker"
+
+#: apps/lchage.c:114 apps/lid.c:130 apps/lpasswd.c:68 apps/luseradd.c:100
+#: apps/luserdel.c:59 apps/lusermod.c:101
+msgid "[OPTION...] user"
+msgstr "[OPTIE...] gebruiker"
+
+#: apps/lchage.c:117 apps/lchfn.c:70 apps/lchsh.c:58 apps/lgroupadd.c:65
+#: apps/lgroupdel.c:56 apps/lgroupmod.c:85 apps/lid.c:133 apps/lnewusers.c:66
+#: apps/lpasswd.c:71 apps/luseradd.c:103 apps/luserdel.c:62
+#: apps/lusermod.c:104
+#, c-format
+msgid "Error parsing arguments: %s.\n"
+msgstr "Fout bij verwerken argumenten: %s.\n"
+
+#: apps/lchage.c:126 apps/lpasswd.c:85 apps/luseradd.c:118 apps/luserdel.c:70
+#: apps/lusermod.c:115
+#, c-format
+msgid "No user name specified.\n"
+msgstr "Geen gebruikersnaam opgegeven.\n"
+
+#: apps/lchage.c:138 apps/lchfn.c:103 apps/lchsh.c:91 apps/lgroupadd.c:102
+#: apps/lgroupdel.c:77 apps/lgroupmod.c:119 apps/lid.c:179 apps/lnewusers.c:79
+#: apps/lpasswd.c:97 apps/luseradd.c:143 apps/luserdel.c:81
+#: apps/lusermod.c:157 samples/enum.c:56 samples/testuser.c:71
+#, c-format
+msgid "Error initializing %s: %s.\n"
+msgstr "Fout bij initialiseren van %s: %s.\n"
+
+#: apps/lchage.c:147 apps/lchfn.c:114 apps/lchsh.c:102 apps/lpasswd.c:148
+#: apps/luserdel.c:89 apps/lusermod.c:171
+#, c-format
+msgid "User %s does not exist.\n"
+msgstr "Gebruiker %s bestaat niet.\n"
+
+#: apps/lchage.c:160
+#, c-format
+msgid "Account is locked.\n"
+msgstr "Account is vergrendeld.\n"
+
+#: apps/lchage.c:162
+#, c-format
+msgid "Account is not locked.\n"
+msgstr "Account is niet vergrendeld.\n"
+
+#: apps/lchage.c:166
+#, c-format
+msgid "Minimum:\t%ld\n"
+msgstr "Minimum:\t%ld\n"
+
+#: apps/lchage.c:170
+#, c-format
+msgid "Maximum:\t%ld\n"
+msgstr "Maximum:\t%ld\n"
+
+#: apps/lchage.c:172
+#, c-format
+msgid "Maximum:\tNone\n"
+msgstr "Maximum:»geen\n"
+
+#: apps/lchage.c:175
+#, c-format
+msgid "Warning:\t%ld\n"
+msgstr "Waarschuwing:\t%ld\n"
+
+#: apps/lchage.c:180
+#, c-format
+msgid "Inactive:\t%ld\n"
+msgstr "Inactief:\t%ld\n"
+
+#: apps/lchage.c:182
+#, c-format
+msgid "Inactive:\tNever\n"
+msgstr "Inactief:»nooit\n"
+
+#: apps/lchage.c:186 apps/lchage.c:194 apps/lchage.c:204
+msgid "Must change password on next login"
+msgstr "Wachtwoord moet bij de volgende keer inloggen vernieuwd worden"
+
+#: apps/lchage.c:188 apps/lchage.c:196 apps/lchage.c:206 apps/lchage.c:215
+msgid "Never"
+msgstr "Nooit"
+
+#: apps/lchage.c:191
+#, c-format
+msgid "Last Change:\t%s\n"
+msgstr "Laatste verandering:\t%s\n"
+
+#: apps/lchage.c:201
+#, c-format
+msgid "Password Expires:\t%s\n"
+msgstr "Wachtwoord verloopt:\t%s\n"
+
+#: apps/lchage.c:213
+#, c-format
+msgid "Password Inactive:\t%s\n"
+msgstr "Wachtwoord inactief:\t%s\n"
+
+#: apps/lchage.c:219
+#, c-format
+msgid "Account Expires:\t%s\n"
+msgstr "Account verloopt:\t%s\n"
+
+#: apps/lchage.c:240
+#, c-format
+msgid "Failed to modify aging information for %s: %s\n"
+msgstr "Aanpassen verloop informatie voor %s mislukt: %s\n"
+
+#: apps/lchfn.c:67 apps/lchsh.c:55
+msgid "[OPTION...] [user]"
+msgstr "[OPTIE...] [gebruiker]"
+
+#: apps/lchfn.c:86 apps/lchsh.c:74 apps/lid.c:164
+#, c-format
+msgid "No user name specified, no name for uid %d.\n"
+msgstr "Geen gebruikersnaam opgegeven, geen naam voor uid %d.\n"
+
+#: apps/lchfn.c:96
+#, c-format
+msgid "Changing finger information for %s.\n"
+msgstr "Finger informatie veranderen voor %s.\n"
+
+#: apps/lchfn.c:136
+msgid "Full Name"
+msgstr "Volledige naam"
+
+#: apps/lchfn.c:146
+msgid "Surname"
+msgstr "Achternaam"
+
+#: apps/lchfn.c:157
+msgid "Given Name"
+msgstr "Voornaam"
+
+#: apps/lchfn.c:167
+msgid "Office"
+msgstr "Werk"
+
+#: apps/lchfn.c:176
+msgid "Office Phone"
+msgstr "Telefoon werk"
+
+#: apps/lchfn.c:185
+msgid "Home Phone"
+msgstr "Telefoon thuis"
+
+#: apps/lchfn.c:195
+msgid "E-Mail Address"
+msgstr "Email adres"
+
+#: apps/lchfn.c:208
+#, c-format
+msgid "Finger information not changed:  input error.\n"
+msgstr "Finger informatie niet veranderd: input fout.\n"
+
+#: apps/lchfn.c:270
+msgid "Finger information changed.\n"
+msgstr "Finger informatie veranderd.\n"
+
+#: apps/lchfn.c:273
+#, c-format
+msgid "Finger information not changed: %s.\n"
+msgstr "Finger informatie niet veranderd: %s.\n"
+
+#: apps/lchsh.c:84
+#, c-format
+msgid "Changing shell for %s.\n"
+msgstr "Shell veranderen voor %s.\n"
+
+#: apps/lchsh.c:114
+msgid "New Shell"
+msgstr "Nieuwe shell"
+
+#: apps/lchsh.c:121 apps/lchsh.c:136
+#, c-format
+msgid "Shell not changed: %s\n"
+msgstr "Shell niet veranderd: %s\n"
+
+#: apps/lchsh.c:133
+msgid "Shell changed.\n"
+msgstr "Shell veranderd.\n"
+
+#: apps/lgroupadd.c:49
+msgid "gid for new group"
+msgstr "gid voor nieuwe groep"
+
+#: apps/lgroupadd.c:49 apps/lgroupmod.c:56 apps/lpasswd.c:56 apps/lpasswd.c:59
+#: apps/luseradd.c:67 apps/lusermod.c:66 apps/lusermod.c:68
+msgid "NUM"
+msgstr "NUM"
+
+#: apps/lgroupadd.c:51
+msgid "create a system group"
+msgstr "maak een systeemgroep aan"
+
+#: apps/lgroupadd.c:62 apps/lgroupdel.c:53 apps/lgroupmod.c:82
+msgid "[OPTION...] group"
+msgstr "[OPTIE...] groep"
+
+#: apps/lgroupadd.c:74 apps/lgroupdel.c:65 apps/lgroupmod.c:93
+#, c-format
+msgid "No group name specified.\n"
+msgstr "Geen groepsnaam opgegeven.\n"
+
+#: apps/lgroupadd.c:87 apps/lgroupmod.c:105 apps/lnewusers.c:172
+#: apps/luseradd.c:164 apps/lusermod.c:127
+#, c-format
+msgid "Invalid group ID %s\n"
+msgstr "Ongeldige groep ID %s\n"
+
+#: apps/lgroupadd.c:119
+#, c-format
+msgid "Group creation failed: %s\n"
+msgstr "Aanmaken groep mislukt: %s\n"
+
+#: apps/lgroupdel.c:85 apps/lgroupmod.c:132 apps/lpasswd.c:153
+#, c-format
+msgid "Group %s does not exist.\n"
+msgstr "Groep %s bestaat niet.\n"
+
+#: apps/lgroupdel.c:91
+#, c-format
+msgid "Group %s could not be deleted: %s\n"
+msgstr "Groep %s kon niet worden verwijderd: %s\n"
+
+#: apps/lgroupmod.c:56
+msgid "set GID for group"
+msgstr "stel GID in voor groep"
+
+#: apps/lgroupmod.c:58
+msgid "change group to have given name"
+msgstr "verander groep om de voornaam te gebruiken"
+
+#: apps/lgroupmod.c:58
+msgid "NAME"
+msgstr "NAAM"
+
+#: apps/lgroupmod.c:60 apps/luseradd.c:75
+msgid "plaintext password for use with group"
+msgstr "platte tekst wachtwoord voor gebruik met groep"
+
+#: apps/lgroupmod.c:60 apps/lgroupmod.c:62 apps/lgroupmod.c:64
+#: apps/lgroupmod.c:66 apps/lgroupmod.c:68 apps/lgroupmod.c:70
+#: apps/lpasswd.c:51 apps/lpasswd.c:53 apps/luseradd.c:59 apps/luseradd.c:61
+#: apps/luseradd.c:63 apps/luseradd.c:65 apps/luseradd.c:69 apps/luseradd.c:75
+#: apps/luseradd.c:77 apps/luseradd.c:79 apps/luseradd.c:81 apps/luseradd.c:83
+#: apps/luseradd.c:85 apps/luseradd.c:87 apps/luseradd.c:89 apps/lusermod.c:58
+#: apps/lusermod.c:60 apps/lusermod.c:64 apps/lusermod.c:70 apps/lusermod.c:72
+#: apps/lusermod.c:74 apps/lusermod.c:80 apps/lusermod.c:82 apps/lusermod.c:84
+#: apps/lusermod.c:86 apps/lusermod.c:88 apps/lusermod.c:90
+msgid "STRING"
+msgstr "STRING"
+
+#: apps/lgroupmod.c:62 apps/luseradd.c:77
+msgid "pre-hashed password for use with group"
+msgstr "pre-hashed wachtwoord voor gebruik met groep"
+
+#: apps/lgroupmod.c:64
+msgid "list of administrators to add"
+msgstr "lijst van toe te voegen beheerders"
+
+#: apps/lgroupmod.c:66
+msgid "list of administrators to remove"
+msgstr "lijst van te verwijderen beheerders"
+
+#: apps/lgroupmod.c:68
+msgid "list of group members to add"
+msgstr "lijst van toe te voegen groepsleden"
+
+#: apps/lgroupmod.c:70
+msgid "list of group members to remove"
+msgstr "lijst van te verwijderen groepsleden"
+
+#: apps/lgroupmod.c:71
+msgid "lock group"
+msgstr "sluit groep"
+
+#: apps/lgroupmod.c:72
+msgid "unlock group"
+msgstr "open groep"
+
+#: apps/lgroupmod.c:125 apps/lusermod.c:164
+#, c-format
+msgid "Both -L and -U specified.\n"
+msgstr "Zowel -L als -U opgegeven.\n"
+
+#: apps/lgroupmod.c:139 apps/lgroupmod.c:148
+#, c-format
+msgid "Failed to set password for group %s: %s\n"
+msgstr "Instellen wachtwoord voor groep %s mislukt: %s\n"
+
+#: apps/lgroupmod.c:157
+#, c-format
+msgid "Group %s could not be locked: %s\n"
+msgstr "Groep %s kon niet worden vergrendeld: %s\n"
+
+#: apps/lgroupmod.c:166
+#, c-format
+msgid "Group %s could not be unlocked: %s\n"
+msgstr "Groep %s kon niet worden ontgrendeld: %s\n"
+
+#: apps/lgroupmod.c:242 apps/lgroupmod.c:257
+#, c-format
+msgid "Group %s could not be modified: %s\n"
+msgstr "Groep %s kon niet worden aangepast: %s\n"
+
+#: apps/lid.c:42 apps/lid.c:74 apps/lid.c:188
+#, c-format
+msgid "Error looking up %s: %s\n"
+msgstr "Fout bij opzoeken %s: %s\n"
+
+#: apps/lid.c:117
+msgid ""
+"list members of a named group instead of the group memberships for the named "
+"user"
+msgstr ""
+"toon leden van een opgegeven groep in plaats van de groepslidmaatschappen "
+"van de opgegeven gebruiker"
+
+#: apps/lid.c:120
+msgid "only list membership information by name, and not UID/GID"
+msgstr "toon alleen lidmaatschap informatie volgens naam en niet UID/GID"
+
+#: apps/lid.c:146
+#, c-format
+msgid "No group name specified, using %s.\n"
+msgstr "Geen groepsnaam opgegeven, gebruik %s.\n"
+
+#: apps/lid.c:150
+#, c-format
+msgid "No group name specified, no name for gid %d.\n"
+msgstr "Geen groepsnaam opgegeven, geen naam voor gid %d.\n"
+
+#: apps/lid.c:160
+#, c-format
+msgid "No user name specified, using %s.\n"
+msgstr "Geen gebruikersnaam opgegeven, gebruik %s.\n"
+
+#: apps/lid.c:192
+#, c-format
+msgid "%s does not exist\n"
+msgstr "%s bestaat niet.\n"
+
+#: apps/lnewusers.c:47
+msgid "file with user information records"
+msgstr "bestand met gebruikersinformatie records"
+
+#: apps/lnewusers.c:47
+msgid "PATH"
+msgstr "PAD"
+
+#: apps/lnewusers.c:49
+msgid "don't create home directories"
+msgstr "maak geen persoonlijke mappen aan"
+
+#: apps/lnewusers.c:51
+msgid "don't create mail spools"
+msgstr "maak geen mail spools aan "
+
+#: apps/lnewusers.c:63
+msgid "[OPTION...]"
+msgstr "[OPTIE...]"
+
+#: apps/lnewusers.c:88
+#, c-format
+msgid "Error opening `%s': %s.\n"
+msgstr "Fout bij openen `%s': %s.\n"
+
+#: apps/lnewusers.c:118
+#, c-format
+msgid "Error creating account for `%s': line improperly formatted.\n"
+msgstr "Fout bij aanmaken account voor `%s': regel onjuist opgemaakt.\n"
+
+#: apps/lnewusers.c:129 apps/luseradd.c:128 apps/lusermod.c:142
+#, c-format
+msgid "Invalid user ID %s\n"
+msgstr "Ongeldige gebruiker ID %s\n"
+
+#: apps/lnewusers.c:136
+msgid "Refusing to create account with UID 0.\n"
+msgstr "Aanmaken account met UID 0 geweigerd.\n"
+
+#: apps/lnewusers.c:206
+#, c-format
+msgid "Error creating group for `%s' with GID %jd: %s\n"
+msgstr "Fout bij aanmaken groep voor `%s' met GID %jd: %s\n"
+
+#: apps/lnewusers.c:246
+#, c-format
+msgid "Refusing to use dangerous home directory `%s' for %s by default\n"
+msgstr ""
+"Weigering om standaard de gevaarlijke persoonlijke map `%s' voor %s te "
+"gebruiken\n"
+
+#: apps/lnewusers.c:257
+#, c-format
+msgid "Error creating home directory for %s: %s\n"
+msgstr "Fout bij aanmaken persoonlijke map voor %s: %s\n"
+
+#: apps/lnewusers.c:270
+#, c-format
+msgid "Error creating mail spool for %s: %s\n"
+msgstr "Fout bij het aanmaken van mail spool voor %s: %s\n"
+
+#: apps/lnewusers.c:285
+#, c-format
+msgid "Error setting initial password for %s: %s\n"
+msgstr "Fout bij instellen initiële wachtwoord voor %s: %s\n"
+
+#: apps/lnewusers.c:295
+#, c-format
+msgid "Error creating user account for %s: %s\n"
+msgstr "Fout bij aanmaken gebruiker account voor %s: %s\n"
+
+#: apps/lpasswd.c:49
+msgid "set group password instead of user password"
+msgstr "stel groepswachtwoord in plaats van gebruikerswachtwoord"
+
+#: apps/lpasswd.c:51
+msgid "new plain password"
+msgstr "nieuw platte tekst wachtwoord"
+
+#: apps/lpasswd.c:53
+msgid "new crypted password"
+msgstr "nieuw versleuteld wachtwoord"
+
+#: apps/lpasswd.c:55
+msgid "read new plain password from given descriptor"
+msgstr "lees nieuw platte tekst wachtwoord van gegeven descriptor"
+
+#: apps/lpasswd.c:58
+msgid "read new crypted password from given descriptor"
+msgstr "lees nieuw versleuteld wachtwoord van gegeven descriptor"
+
+#: apps/lpasswd.c:83
+#, c-format
+msgid "Changing password for %s.\n"
+msgstr "Wachtwoord veranderen voor %s.\n"
+
+#: apps/lpasswd.c:111
+msgid "New password"
+msgstr "Nieuw wachtwoord"
+
+#: apps/lpasswd.c:114
+msgid "New password (confirm)"
+msgstr "Nieuw wachtwoord (bevestigen)"
+
+#: apps/lpasswd.c:128
+#, c-format
+msgid "Passwords do not match, try again.\n"
+msgstr "Wachtwoorden komen niet overeen, probeer opnieuw.\n"
+
+#: apps/lpasswd.c:133
+#, c-format
+msgid "Password change canceled.\n"
+msgstr "Wachtwoord veranderen geannuleerd.\n"
+
+#: apps/lpasswd.c:165 apps/lpasswd.c:182
+#, c-format
+msgid "Error reading from file descriptor %d.\n"
+msgstr "Fout bij het lezen van bestand descriptor %d.\n"
+
+#: apps/lpasswd.c:203 apps/luseradd.c:302 apps/luseradd.c:311
+#, c-format
+msgid "Error setting password for user %s: %s.\n"
+msgstr "Fout bij instellen wachtwoord voor gebruiker %s: %s.\n"
+
+#: apps/lpasswd.c:212
+#, c-format
+msgid "Error setting password for group %s: %s.\n"
+msgstr "Fout bij instellen wachtwoord voor groep %s: %s.\n"
+
+#: apps/lpasswd.c:224
+#, c-format
+msgid "Password changed.\n"
+msgstr "Wachtwoord veranderd.\n"
+
+#: apps/luseradd.c:57
+msgid "create a system user"
+msgstr "maak een systeemgebruiker aan"
+
+#: apps/luseradd.c:59
+msgid "GECOS information for new user"
+msgstr "GECOS informatie voor nieuwe gebruiker"
+
+#: apps/luseradd.c:61
+msgid "home directory for new user"
+msgstr "persoonlijke map voor nieuwe gebruiker"
+
+#: apps/luseradd.c:63
+msgid "directory with files for the new user"
+msgstr "map met bestanden voor de nieuwe gebruiker"
+
+#: apps/luseradd.c:65
+msgid "shell for new user"
+msgstr "shell voor nieuwe gebruiker"
+
+#: apps/luseradd.c:67
+msgid "uid for new user"
+msgstr "uid voor nieuwe gebruiker"
+
+#: apps/luseradd.c:69
+msgid "group for new user"
+msgstr "groep voor nieuwe gebruiker"
+
+#: apps/luseradd.c:71
+msgid "don't create home directory for user"
+msgstr "maak geen persoonlijke map aan voor gebruiker"
+
+#: apps/luseradd.c:73
+msgid "don't create group with same name as user"
+msgstr "maak geen groep aan met dezelfde naam als de gebruiker"
+
+#: apps/luseradd.c:79
+msgid "common name for new user"
+msgstr "algemene naam voor nieuwe gebruiker"
+
+#: apps/luseradd.c:81
+msgid "given name for new user"
+msgstr "voornaam voor nieuwe gebruiker"
+
+#: apps/luseradd.c:83
+msgid "surname for new user"
+msgstr "achternaam voor niruwe gebruiker"
+
+#: apps/luseradd.c:85
+msgid "room number for new user"
+msgstr "kamernummer voor nieuwe gebruiker"
+
+#: apps/luseradd.c:87
+msgid "telephone number for new user"
+msgstr "telefoonnummer voor nieuwe gebruiker"
+
+#: apps/luseradd.c:89
+msgid "home telephone number for new user"
+msgstr "thuistelefoonnummer voor nieuwe gebruiker"
+
+#: apps/luseradd.c:189
+#, c-format
+msgid "Group %jd does not exist\n"
+msgstr "Groep %jd bestaat niet\n"
+
+#: apps/luseradd.c:207 apps/luseradd.c:220
+#, c-format
+msgid "Error creating group `%s': %s\n"
+msgstr "Fout bij aanmaken groep `%s': %s\n"
+
+#: apps/luseradd.c:260
+#, c-format
+msgid "Account creation failed: %s.\n"
+msgstr "Aanmaken account mislukt: %s.\n"
+
+#: apps/luseradd.c:283
+#, c-format
+msgid "Error creating %s: %s.\n"
+msgstr "Fout bij aanmaken %s: %s.\n"
+
+#: apps/luseradd.c:290
+#, c-format
+msgid "Error creating mail spool: %s\n"
+msgstr "Fout bij het aanmaken van mail spool: %s\n"
+
+#: apps/luserdel.c:47
+msgid "don't remove the user's private group, if the user has one"
+msgstr ""
+"verwijder de privé groep van de gebruiker niet, als de gebruiker die heeft"
+
+#: apps/luserdel.c:50
+msgid "remove the user's home directory"
+msgstr "verwijder de persoonlijke map van de gebruiker"
+
+#: apps/luserdel.c:94
+#, c-format
+msgid "User %s could not be deleted: %s.\n"
+msgstr "Gebruiker %s kon niet worden verwijderd: %s.\n"
+
+#: apps/luserdel.c:108
+#, c-format
+msgid "%s did not have a gid number.\n"
+msgstr "%s heeft geen gid nummer.\n"
+
+#: apps/luserdel.c:114
+#, c-format
+msgid "No group with GID %jd exists, not removing.\n"
+msgstr "Er bestaat geen groep met GID %jd, kan niet verwijderen.\n"
+
+#: apps/luserdel.c:120
+#, c-format
+msgid "Group with GID %jd did not have a group name.\n"
+msgstr "Groep met GID %jd heeft geen groepsnaam.\n"
+
+#: apps/luserdel.c:126
+#, c-format
+msgid "Group %s could not be deleted: %s.\n"
+msgstr "Groep %s kon niet worden verwijderd: %s.\n"
+
+#: apps/luserdel.c:139
+#, c-format
+msgid "Error removing home directory: %s.\n"
+msgstr "Fout bij het verwijderen van persoonlijke map: %s.\n"
+
+#: apps/luserdel.c:145
+#, c-format
+msgid "Error removing mail spool: %s"
+msgstr "Fout bij het verwijderen van mail spool: %s"
+
+#: apps/lusermod.c:58
+msgid "GECOS information"
+msgstr "GECOS informatie"
+
+#: apps/lusermod.c:60
+msgid "home directory"
+msgstr "persoonlijke map"
+
+#: apps/lusermod.c:62
+msgid "move home directory contents"
+msgstr "verplaats inhoud van persoonlijke map"
+
+#: apps/lusermod.c:64
+msgid "set shell for user"
+msgstr "stel shell voor gebruiker in"
+
+#: apps/lusermod.c:66
+msgid "set UID for user"
+msgstr "stel UID voor gebruiker in"
+
+#: apps/lusermod.c:68
+msgid "set primary GID for user"
+msgstr "stel primaire GID voor gebruiker in"
+
+#: apps/lusermod.c:70
+msgid "change login name for user"
+msgstr "verander inlognaam voor gebruiker"
+
+#: apps/lusermod.c:72
+msgid "plaintext password for the user"
+msgstr "platte tekst wachtwoord voor de gebruiker"
+
+#: apps/lusermod.c:74
+msgid "pre-hashed password for the user"
+msgstr "pre-hashed wachtwoord voor de gebruiker"
+
+#: apps/lusermod.c:75
+msgid "lock account"
+msgstr "sluit account af"
+
+#: apps/lusermod.c:78
+msgid "unlock account"
+msgstr "open account"
+
+#: apps/lusermod.c:80
+msgid "set common name for user"
+msgstr "stel algemene naam voor gebruiker in"
+
+#: apps/lusermod.c:82
+msgid "set given name for user"
+msgstr "stel voornaam voor gebruiker in"
+
+#: apps/lusermod.c:84
+msgid "set surname for user"
+msgstr "stel achternaam van gebruiker in"
+
+#: apps/lusermod.c:86
+msgid "set room number for user"
+msgstr "stel kamernummer voor gebruiker in"
+
+#: apps/lusermod.c:88
+msgid "set telephone number for user"
+msgstr "stel telefoonnummer voor gebruiker in"
+
+#: apps/lusermod.c:90
+msgid "set home telephone number for user"
+msgstr "stel huistelefoonnummer voor gebruiker in"
+
+#: apps/lusermod.c:180 apps/lusermod.c:193
+#, c-format
+msgid "Failed to set password for user %s: %s.\n"
+msgstr "Instellen wachtwoord voor gebruiker %s mislukt: %s.\n"
+
+#: apps/lusermod.c:203
+#, c-format
+msgid "User %s could not be locked: %s.\n"
+msgstr "Gebruiker %s kon niet worden vergrendeld: %s.\n"
+
+#: apps/lusermod.c:211
+#, c-format
+msgid "User %s could not be unlocked: %s.\n"
+msgstr "Gebruiker %s kon niet worden ontgrendeld: %s.\n"
+
+#: apps/lusermod.c:232
+#, c-format
+msgid "Warning: Group with ID %jd does not exist.\n"
+msgstr "Waarschuwing: Groep met ID %jd bestaat niet.\n"
+
+#: apps/lusermod.c:275
+#, c-format
+msgid "User %s could not be modified: %s.\n"
+msgstr "Gebruiker %s kon niet worden aangepast: %s.\n"
+
+#: apps/lusermod.c:326
+#, c-format
+msgid "Group %s could not be modified: %s.\n"
+msgstr "Groep %s kon niet worden aangepast: %s.\n"
+
+#: apps/lusermod.c:342
+#, c-format
+msgid "No old home directory for %s.\n"
+msgstr "Geen oude persoonlijke map voor %s.\n"
+
+#: apps/lusermod.c:347
+#, c-format
+msgid "No new home directory for %s.\n"
+msgstr "Geen nieuwe persoonlijke map voor %s.\n"
+
+#: apps/lusermod.c:353
+#, c-format
+msgid "Error moving %s to %s: %s.\n"
+msgstr "Fout bij verplaatsen van %s naar %s: %s.\n"
+
+#: lib/config.c:128
+#, c-format
+msgid "could not open configuration file `%s': %s"
+msgstr "kon configuratiebestand `%s' niet openen: %s"
+
+#: lib/config.c:134
+#, c-format
+msgid "could not stat configuration file `%s': %s"
+msgstr "kon de status van configuratiebestand `%s' niet opvragen: %s"
+
+#: lib/config.c:143
+#, c-format
+msgid "configuration file `%s' is too large"
+msgstr "configuratiebestand `%s' is te groot"
+
+#: lib/config.c:159
+#, c-format
+msgid "could not read configuration file `%s': %s"
+msgstr "kon configuratiebestand `%s' niet lezen: %s"
+
+#: lib/error.c:62
+msgid "success"
+msgstr "succes"
+
+#: lib/error.c:64
+msgid "module disabled by configuration"
+msgstr "module uitgezet door configuratie"
+
+#: lib/error.c:66
+msgid "generic error"
+msgstr "generieke fout"
+
+#: lib/error.c:68
+msgid "not enough privileges"
+msgstr "te weinig rechten"
+
+#: lib/error.c:70
+msgid "access denied"
+msgstr "toegang geweigerd"
+
+#: lib/error.c:72
+msgid "bad user/group name"
+msgstr "verkeerde gebruiker/groep naam"
+
+#: lib/error.c:74
+msgid "bad user/group id"
+msgstr "verkeerde gebruiker/groep id"
+
+#: lib/error.c:76
+msgid "user/group name in use"
+msgstr "gebruiker/groep naam in gebruik"
+
+#: lib/error.c:78
+msgid "user/group id in use"
+msgstr "gebruiker/groep id in gebruik"
+
+#: lib/error.c:80
+msgid "error manipulating terminal attributes"
+msgstr "fout bij manipuleren terminal attributen"
+
+#: lib/error.c:82
+msgid "error opening file"
+msgstr "fout bij openen bestand"
+
+#: lib/error.c:84
+msgid "error locking file"
+msgstr "fout bij vergrendelen bestand"
+
+#: lib/error.c:86
+msgid "error statting file"
+msgstr "fout bij opvragen status van bestand"
+
+#: lib/error.c:88
+msgid "error reading file"
+msgstr "fout bij lezen bestand"
+
+#: lib/error.c:90
+msgid "error writing to file"
+msgstr "fout bij schrijven naar bestand"
+
+#: lib/error.c:92
+msgid "data not found in file"
+msgstr "data niet in bestand gevonden"
+
+#: lib/error.c:94
+msgid "internal initialization error"
+msgstr "interne initialisatie fout"
+
+#: lib/error.c:96
+msgid "error loading module"
+msgstr "fout bij laden module"
+
+#: lib/error.c:98
+msgid "error resolving symbol in module"
+msgstr "fout bij oplossen van symbool in module"
+
+#: lib/error.c:100
+msgid "library/module version mismatch"
+msgstr "bibliotheek/module versies komen niet overeen"
+
+#: lib/error.c:102
+msgid "unlocking would make the password field empty"
+msgstr "ontgrendelen zou het wachtwoord veld leeg maken"
+
+#: lib/error.c:105
+msgid "invalid attribute value"
+msgstr "ongeldige attribuut waarde"
+
+#: lib/error.c:107
+msgid "invalid module combination"
+msgstr "ongeldige module combinatie"
+
+#: lib/error.c:109
+msgid "user's home directory not owned by them"
+msgstr "gebruiker is niet de eigenaar van zijn persoonlijke map"
+
+#: lib/error.c:115
+msgid "unknown error"
+msgstr "onbekende fout"
+
+#: lib/misc.c:240
+msgid "invalid number"
+msgstr "ongeldig nummer"
+
+#: lib/misc.c:254
+msgid "invalid ID"
+msgstr "ongeldig ID"
+
+#: lib/modules.c:61
+#, c-format
+msgid "no initialization function %s in `%s'"
+msgstr "geen initialisatie functie %s in `%s'"
+
+#: lib/modules.c:79
+#, c-format
+msgid "module version mismatch in `%s'"
+msgstr "module versies komen niet overeen in `%s'"
+
+#: lib/modules.c:92
+#, c-format
+msgid "module `%s' does not define `%s'"
+msgstr "module `%s' definieert `%s' niet"
+
+#: lib/prompt.c:88
+msgid "error reading terminal attributes"
+msgstr "fout bij lezen terminal attributen"
+
+#: lib/prompt.c:95 lib/prompt.c:107
+msgid "error setting terminal attributes"
+msgstr "fout bij instellen terminal attributen"
+
+#: lib/prompt.c:101
+msgid "error reading from terminal"
+msgstr "fout bij lezen van terminal"
+
+#: lib/user.c:218
+msgid "name is not set"
+msgstr "naam is niet ingesteld"
+
+#: lib/user.c:223
+msgid "name is too short"
+msgstr "naam is te kort"
+
+#: lib/user.c:228
+#, c-format
+msgid "name is too long (%zu > %d)"
+msgstr "naam is te lang (%zu > %d)"
+
+#: lib/user.c:235
+msgid "name contains non-ASCII characters"
+msgstr "naam bevat niet-ASCII karakters"
+
+#: lib/user.c:242
+msgid "name contains control characters"
+msgstr "naam bevat controle karakters"
+
+#: lib/user.c:249
+msgid "name contains whitespace"
+msgstr "naam bevat spaties of tabs"
+
+#: lib/user.c:261
+msgid "name starts with a hyphen"
+msgstr "naam begint met een koppelteken"
+
+#: lib/user.c:272
+#, c-format
+msgid "name contains invalid char `%c'"
+msgstr "naam bevat ongeldig karakter `%c'"
+
+#: lib/user.c:308 lib/user.c:360
+#, c-format
+msgid "user %s has no UID"
+msgstr "gebruiker %s heeft geen UID"
+
+#: lib/user.c:310
+#, c-format
+msgid "user %s not found"
+msgstr "gebruiker %s werd niet gevonden"
+
+#: lib/user.c:333 lib/user.c:361
+#, c-format
+msgid "group %s has no GID"
+msgstr "groep %s heeft geen GID"
+
+#: lib/user.c:335
+#, c-format
+msgid "group %s not found"
+msgstr "groep %s werd niet gevonden"
+
+#: lib/user.c:355
+#, c-format
+msgid "user %jd has no name"
+msgstr "gebruiker %jd heeft geen naam"
+
+#: lib/user.c:356
+#, c-format
+msgid "group %jd has no name"
+msgstr "groep %jd heeft geen naam"
+
+#: lib/user.c:364
+msgid "user has neither a name nor an UID"
+msgstr "gebruiker heeft zowel geen naam als geen UID"
+
+#: lib/user.c:365
+msgid "group has neither a name nor a GID"
+msgstr "groep heeft zowel geen naam als geen GID"
+
+#: lib/user.c:1311
+#, c-format
+msgid "Refusing to use dangerous home directory `%s' by default"
+msgstr ""
+"Weigeren om standaard de gevaarlijke persoonlijke map `%s' te gebruiken"
+
+#: lib/user.c:2310
+#, c-format
+msgid "Invalid default value of field %s: %s"
+msgstr "Ongeldige standaard waarde van veld %s: %s"
+
+#: lib/util.c:300 modules/files.c:374
+#, c-format
+msgid "error locking file: %s"
+msgstr "fout bij vergrendelen bestand: %s"
+
+#: lib/util.c:704
+#, c-format
+msgid "couldn't get default security context: %s"
+msgstr "kon standaard beveiliging context niet verkrijgen: %s"
+
+#: lib/util.c:731 lib/util.c:757 lib/util.c:783
+#, c-format
+msgid "couldn't get security context of `%s': %s"
+msgstr "kon beveiliging context van `%s' niet verkrijgen: %s"
+
+#: lib/util.c:737 lib/util.c:763 lib/util.c:789 lib/util.c:821
+#, c-format
+msgid "couldn't set default security context to `%s': %s"
+msgstr "kon standaard beveiliging context niet instellen naar `%s': %s"
+
+#: lib/util.c:813
+#, c-format
+msgid "couldn't determine security context for `%s': %s"
+msgstr "kon beveiliging context voor `%s' niet bepalen: %s"
+
+#: modules/files.c:129 modules/files.c:692 modules/files.c:1585
+#: modules/files.c:1920 modules/files.c:1930 modules/files.c:2012
+#: modules/files.c:2023 modules/files.c:2089 modules/files.c:2101
+#: modules/files.c:2191 modules/files.c:2200 modules/files.c:2255
+#: modules/files.c:2264 modules/files.c:2359 modules/files.c:2368
+#, c-format
+msgid "couldn't open `%s': %s"
+msgstr "kon `%s' niet openen: %s"
+
+#: modules/files.c:137 modules/files.c:994 modules/files.c:1187
+#: modules/files.c:1329
+#, c-format
+msgid "couldn't stat `%s': %s"
+msgstr "kon status van `%s' niet opvragen: %s"
+
+#: modules/files.c:161
+#, c-format
+msgid "error creating `%s': %s"
+msgstr "fout bij aanmaken `%s': %s"
+
+#: modules/files.c:169
+#, c-format
+msgid "Error changing owner of `%s': %s"
+msgstr "Fout bij veranderen eigenaar van `%s': %s"
+
+#: modules/files.c:175
+#, c-format
+msgid "Error changing mode of `%s': %s"
+msgstr "Fout bij het veranderen van de mode van `%s': %s"
+
+#: modules/files.c:191
+#, c-format
+msgid "Error reading `%s': %s"
+msgstr "Fout bij lezen van `%s': %s"
+
+#: modules/files.c:206 modules/files.c:217 modules/files.c:305
+#: modules/files.c:467
+#, c-format
+msgid "Error writing `%s': %s"
+msgstr "Fout bij schrijven van `%s': %s"
+
+#: modules/files.c:247 modules/files.c:1005 modules/files.c:1195
+#: modules/files.c:1338
+#, c-format
+msgid "couldn't read from `%s': %s"
+msgstr "kon niet lezen van `%s': %s"
+
+#: modules/files.c:256
+#, c-format
+msgid "Invalid contents of lock `%s'"
+msgstr ""
+
+#: modules/files.c:261
+#, c-format
+msgid "The lock %s is held by process %ju"
+msgstr ""
+
+#: modules/files.c:269
+#, fuzzy, c-format
+msgid "Error removing stale lock `%s': %s"
+msgstr "Fout bij verplaatsen van %s naar %s: %s.\n"
+
+#: modules/files.c:297
+#, fuzzy, c-format
+msgid "error opening temporary file for `%s': %s"
+msgstr "Fout bij het veranderen van de mode van `%s': %s"
+
+#: modules/files.c:321
+#, c-format
+msgid "Cannot obtain lock `%s': %s"
+msgstr ""
+
+#: modules/files.c:434
+#, fuzzy, c-format
+msgid "Error resolving `%s': %s"
+msgstr "Fout bij lezen van `%s': %s"
+
+#: modules/files.c:442
+#, fuzzy, c-format
+msgid "Error replacing `%s': %s"
+msgstr "Fout bij lezen van `%s': %s"
+
+#: modules/files.c:903
+#, fuzzy, c-format
+msgid "%s value `%s': `\\n' not allowed"
+msgstr "%s waarde `%s': `:' niet toegestaan"
+
+#: modules/files.c:910
+#, c-format
+msgid "%s value `%s': `:' not allowed"
+msgstr "%s waarde `%s': `:' niet toegestaan"
+
+#: modules/files.c:1014
+msgid "entry already present in file"
+msgstr "item reeds aanwezig in bestand"
+
+#: modules/files.c:1021 modules/files.c:1031 modules/files.c:1041
+#: modules/files.c:1393 modules/files.c:1401 modules/files.c:1409
+#, c-format
+msgid "couldn't write to `%s': %s"
+msgstr "kon niet naar `%s' schrijven: %s"
+
+#: modules/files.c:1173
+#, c-format
+msgid "entity object has no %s attribute"
+msgstr "entiteit object heeft geen %s attribuut"
+
+#: modules/files.c:1215
+msgid "entry with conflicting name already present in file"
+msgstr "item met conflict gevende naam is reeds aanwezig in bestand"
+
+#: modules/files.c:1803
+#, fuzzy
+msgid "`:' and `\\n' not allowed in encrypted password"
+msgstr "`:' niet toegestaan in versleuteld wachtwoord"
+
+#: modules/files.c:1815 modules/ldap.c:1543 modules/ldap.c:1812
+msgid "error encrypting password"
+msgstr "fout bij versleutelen wachtwoord"
+
+#: modules/files.c:2517 modules/ldap.c:2410
+#, c-format
+msgid "the `%s' and `%s' modules can not be combined"
+msgstr "de `%s' en `%s' modules kunnen niet gecombineerd worden"
+
+#: modules/files.c:2601 modules/files.c:2679
+msgid "not executing with superuser privileges"
+msgstr "zal niet uitvoeren met superuser rechten"
+
+#: modules/files.c:2692
+msgid "no shadow file present -- disabling"
+msgstr "geen schaduwbestand aanwezig -- uitzetten"
+
+#: modules/ldap.c:199
+msgid "error initializing ldap library"
+msgstr "fout bij initialiseren ldap bibliotheek"
+
+#: modules/ldap.c:210
+#, c-format
+msgid "could not set LDAP protocol to version %d"
+msgstr "kon LDAP protocol niet instellen op versie %d"
+
+#: modules/ldap.c:229
+msgid "could not negotiate TLS with LDAP server"
+msgstr "kon de TLS niet onderhandelen met LDAP server"
+
+#: modules/ldap.c:424
+msgid "could not bind to LDAP server"
+msgstr "kon niet binden met de LDAP server"
+
+#: modules/ldap.c:427
+#, c-format
+msgid "could not bind to LDAP server, first attempt as `%s': %s"
+msgstr "kon niet binden met de LDAP server, eerste poging als `%s': %s"
+
+#: modules/ldap.c:1315
+#, c-format
+msgid "user object had no %s attribute"
+msgstr "gebruiker object had geen %s attribuut"
+
+#: modules/ldap.c:1324
+#, c-format
+msgid "user object was created with no `%s'"
+msgstr "gebruiker object is aangemaakt zonder `%s'"
+
+#: modules/ldap.c:1344
+#, c-format
+msgid "error creating a LDAP directory entry: %s"
+msgstr "fout bij aanmaken LDAP map item: %s"
+
+#: modules/ldap.c:1370 modules/ldap.c:1604
+#, c-format
+msgid "error modifying LDAP directory entry: %s"
+msgstr "fout bij aanpassen LDAP map item: %s"
+
+#: modules/ldap.c:1395
+#, c-format
+msgid "error renaming LDAP directory entry: %s"
+msgstr "fout bij hernoemen LDAP map item: %s"
+
+#: modules/ldap.c:1440
+#, c-format
+msgid "object had no %s attribute"
+msgstr "object had geen %s attribuut"
+
+#: modules/ldap.c:1456
+#, c-format
+msgid "error removing LDAP directory entry: %s"
+msgstr "fout bij verwijderen LDAP map ingang: %s"
+
+#: modules/ldap.c:1506 modules/ldap.c:1521 modules/ldap.c:1635
+#: modules/ldap.c:1730
+#, c-format
+msgid "object has no %s attribute"
+msgstr "object heeft geen %s attribuut"
+
+#: modules/ldap.c:1533
+msgid "unsupported password encryption scheme"
+msgstr "niet ondersteund wachtwoord encryptie schema"
+
+#: modules/ldap.c:1658
+msgid "no such object in LDAP directory"
+msgstr "zo'n object niet gevonden in LDAP map"
+
+#: modules/ldap.c:1670
+#, c-format
+msgid "no `%s' attribute found"
+msgstr "geen `%s' attribuut gevonden"
+
+#: modules/ldap.c:1843
+#, c-format
+msgid "error setting password in LDAP directory for %s: %s"
+msgstr "fout bij instellen wachtwoord in LDAP map voor %s: %s"
+
+#: modules/ldap.c:2446
+msgid "LDAP Server Name"
+msgstr "LDAP server naam"
+
+#: modules/ldap.c:2452
+msgid "LDAP Search Base DN"
+msgstr "LDAP zoek basis DN"
+
+#: modules/ldap.c:2458
+msgid "LDAP Bind DN"
+msgstr "LDAP Bind DN"
+
+#: modules/ldap.c:2465
+msgid "LDAP Bind Password"
+msgstr "LDAP Bind wachtwoord"
+
+#: modules/ldap.c:2471
+msgid "LDAP SASL User"
+msgstr "LDAP SASL gebruiker"
+
+#: modules/ldap.c:2478
+msgid "LDAP SASL Authorization User"
+msgstr "LDAP SASL autorisatie gebruiker"
+
+#: modules/sasldb.c:132
+#, c-format
+msgid "Cyrus SASL error creating user: %s"
+msgstr "Cyrus SASL fout bij aanmaken gebruiker: %s"
+
+#: modules/sasldb.c:136
+#, c-format
+msgid "Cyrus SASL error removing user: %s"
+msgstr "Cyrus SASL fout bij verwijderen gebruiker: %s"
+
+#: modules/sasldb.c:503 modules/sasldb.c:511
+#, c-format
+msgid "error initializing Cyrus SASL: %s"
+msgstr "fout bij initialiseren Cyrus SASL: %s"
+
+#: python/admin.c:505
+msgid "error creating home directory for user"
+msgstr "fout bij aanmaken persoonlijke map voor gebruiker"
+
+#: python/admin.c:544 python/admin.c:583
+msgid "error removing home directory for user"
+msgstr "fout bij verwijderen persoonlijke map voor gebruiker"
+
+#: python/admin.c:654
+msgid "error moving home directory for user"
+msgstr "fout bij verplaatsen persoonlijke map voor gebruiker"
+
+#: samples/lookup.c:63
+#, c-format
+msgid "Error initializing %s: %s\n"
+msgstr "Fout bij initialiseren %s: %s\n"
+
+#: samples/lookup.c:76
+#, c-format
+msgid "Invalid ID %s\n"
+msgstr "Ongeldig ID %s\n"
+
+#: samples/lookup.c:88
+#, c-format
+msgid "Searching for group with ID %jd.\n"
+msgstr "Zoeken naar groep met ID %jd.\n"
+
+#: samples/lookup.c:92
+#, c-format
+msgid "Searching for group named %s.\n"
+msgstr "Zoeken naar groep met naam %s.\n"
+
+#: samples/lookup.c:99
+#, c-format
+msgid "Searching for user with ID %jd.\n"
+msgstr "Zoeken naar gebruiker met ID %jd.\n"
+
+#: samples/lookup.c:103
+#, c-format
+msgid "Searching for user named %s.\n"
+msgstr "Zoeken naar gebruiker met naam %s.\n"
+
+#: samples/lookup.c:117
+msgid "Entry not found.\n"
+msgstr "Ingang niet gevonden.\n"
+
+#: samples/prompt.c:48
+msgid "Prompts succeeded.\n"
+msgstr "Opvragen geslaagd.\n"
+
+#: samples/prompt.c:58
+msgid "Prompts failed.\n"
+msgstr "Opvragen mislukt.\n"
+
+#: samples/testuser.c:76
+msgid "Default user object classes:\n"
+msgstr "Standaard gebruiker object klassen:\n"
+
+#: samples/testuser.c:82
+msgid "Default user attribute names:\n"
+msgstr "Standaard gebruiker attribuut namen:\n"
+
+#: samples/testuser.c:88
+msgid "Getting default user attributes:\n"
+msgstr "Ophalen standaard gebruiker attributen:\n"
+
+#: samples/testuser.c:95
+msgid "Copying user structure:\n"
+msgstr "Gebruiker structuur kopiëren:\n"
+
+#~ msgid "backup file `%s' exists and is not a regular file"
+#~ msgstr "back-up bestand `%s' bestaat en is geen regulier bestand"
+
+#~ msgid "backup file size mismatch"
+#~ msgstr "grootte van het back-up bestand komt niet overeen"

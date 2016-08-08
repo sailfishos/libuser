@@ -1,0 +1,95 @@
+.\" A man page for lgroupmod
+.\" Copyright (C) 2005 Red Hat, Inc.
+.\"
+.\" This is free software; you can redistribute it and/or modify it under
+.\" the terms of the GNU Library General Public License as published by
+.\" the Free Software Foundation; either version 2 of the License, or
+.\" (at your option) any later version.
+.\"
+.\" This program is distributed in the hope that it will be useful, but
+.\" WITHOUT ANY WARRANTY; without even the implied warranty of
+.\" MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+.\" General Public License for more details.
+.\"
+.\" You should have received a copy of the GNU Library General Public
+.\" License along with this program; if not, write to the Free Software
+.\" Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
+.\"
+.\" Author: Miloslav Trmac <mitr@redhat.com>
+.TH lgroupmod 1 "Jan 11 2005" libuser
+
+.SH NAME
+lgroupmod \- Modify an user group
+
+.SH SYNOPSIS
+lgroupmod [\fIOPTION\fR]... \fIgroup\fR
+
+.SH DESCRIPTION
+Modifies the user group with name \fIgroup\fR.
+
+.SH OPTIONS
+.TP
+\fB\-A\fR, \fB\-\-admin-add\fR=\fIlist\fR
+Add users in comma-separated \fIlist\fR among \fIgroup\fR's administrators.
+
+.TP
+\fB\-a\fR, \fB\-\-admin-remove\fR=\fIlist\fR
+Remove users in comma-separated \fIlist\fR from \fIgroup\fR's administrators.
+Removing users that are not currently among \fIgroup\fR's administrators
+silently succeeds.
+
+.TP
+\fB\-g\fR, \fB\-\-gid\fR=\fIgid\fR
+Change \fIgroup\fR's group ID to \fIgid\fR.
+
+.TP
+\fB\-i\fR, \fB\-\-interactive\fR 
+Ask all questions when connecting to the user database,
+even if default answers are set up in
+.B libuser
+configuration.
+
+.TP
+\fB\-L\fR, \fB\-\-lock\fR
+Lock \fIgroup\fR.
+This prevents users from using the group password with
+.BR newgrp (1)
+to become a member of \fIgroup\fR.
+
+.TP
+\fB\-M\fR, \fB\-\-member-add\fR=\fIlist\fR
+Add users in comma-separated \fIlist\fR among \fIgroup\fR's members.
+
+.TP
+\fB\-m\fR, \fB\-\-member-remove\fR=\fIlist\fR
+Remove users in comma-separated \fIlist\fR from \fIgroup\fR's members.
+Removing users that are not currently among \fIgroup\fR's members silently
+succeeds.
+
+.TP
+\fB\-n\fR, \fB\-\-name\fR=\fIname\fR
+Rename \fIgroup\fR to \fIname\fR.
+
+.TP
+\fB\-P\fR, \fB\-\-plainpassword\fR=\fIpassword\fR
+Set \fIgroup\fR's password to \fIpassword\fR.
+Note that the password can be viewed while running
+.BR lgroupmod
+using tools such as
+.BR ps (1)\fR.
+
+.TP
+\fB\-p\fR, \fB\-\-password\fR=\fIencrypted\fR
+Set \fIgroup\fR's password to the password represented by the hash
+\fIencrypted\fR.
+Note that the hash can be viewed while running
+.BR lgroupmod
+using tools such as
+.BR ps (1)\fR.
+
+.TP
+\fB\-U\fR, \fB\-\-unlock\fR
+Unlock \fIgroup\fR.
+
+.SH EXIT STATUS
+The exit status is 0 on success, nonzero on error.

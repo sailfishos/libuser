@@ -1,0 +1,1443 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Red Hat, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# Bernd Groh <bgroh@redhat.com>, 2002, 2003
+# Claudia Krug <fhonig@redhat.it>, 2001
+# Fabian Affolter <fab@fedoraproject.org>, 2008, 2009
+# Jens <jensm@fedoraproject.org>, 2009
+# Laurin <lineak@fedoraproject.org>, 2011
+# Mario Blättermann <mario.blaettermann@gmail.com>, 2011
+# Miloslav Trmač <mitr@volny.cz>, 2011
+# Robert Scheck <redhat@linuxnetz.de>, 2005, 2007
+# Roman Spirgi <bigant@fedoraproject.org>, 2012-2013
+# Roman Spirgi <bigant@fedoraproject.org>, 2011, 2012
+# Ronny Buchmann <ronny-vlug@vlugnet.org>, 2005, 2006
+# sknirT omiT <moc.tahder@sknirtt>, 2010
+# Timo Trinks <ttrinks@redhat.com>, 2007
+# Verena <vfuehrer@redhat.com>, 2004
+# Roman Spirgi <rspirgi@gmail.com>, 2015. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: libuser 0.60\n"
+"Report-Msgid-Bugs-To: http://bugzilla.redhat.com/bugzilla/\n"
+"POT-Creation-Date: 2015-07-23 21:16+0200\n"
+"PO-Revision-Date: 2015-03-22 07:11-0400\n"
+"Last-Translator: Roman Spirgi <rspirgi@gmail.com>\n"
+"Language-Team: German (http://www.transifex.com/projects/p/fedora/language/"
+"de/)\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Zanata 3.6.2\n"
+
+#: apps/apputil.c:197 apps/apputil.c:201
+#, c-format
+msgid "Failed to drop privileges.\n"
+msgstr "Privilegien können nicht abgegeben werden.\n"
+
+#: apps/apputil.c:210
+#, c-format
+msgid "Internal error.\n"
+msgstr "Interner Fehler.\n"
+
+#: apps/apputil.c:231
+#, c-format
+msgid "%s is not authorized to change the finger info of %s\n"
+msgstr "%s ist nicht autorisiert, Finger-Einstellungen von %s zu ändern\n"
+
+#: apps/apputil.c:233
+msgid "Unknown user context"
+msgstr "Unbekannter Benutzerinhalt"
+
+#: apps/apputil.c:241
+#, c-format
+msgid "Can't set default context for /etc/passwd\n"
+msgstr "Vorgangskontext für /etc/passwd kann nicht gesetzt werden\n"
+
+#: apps/apputil.c:250
+#, c-format
+msgid "Error initializing PAM.\n"
+msgstr "Fehler beim Initialisieren von PAM.\n"
+
+#: apps/apputil.c:260 apps/apputil.c:287
+#, c-format
+msgid "Authentication failed for %s.\n"
+msgstr "Authentifizierung fehlgeschlagen: %s.\n"
+
+#: apps/apputil.c:268
+#, c-format
+msgid "Internal PAM error `%s'.\n"
+msgstr "Interner PAM-Fehler »%s«.\n"
+
+#: apps/apputil.c:273
+#, c-format
+msgid "Unknown user authenticated.\n"
+msgstr "Unbekannter Benutzer authentifiziert.\n"
+
+#: apps/apputil.c:277
+#, c-format
+msgid "User mismatch.\n"
+msgstr "Benutzer stimmt nicht überein.\n"
+
+#: apps/lchage.c:84 apps/lchfn.c:53 apps/lchsh.c:44 apps/lgroupadd.c:47
+#: apps/lgroupdel.c:42 apps/lgroupmod.c:54 apps/lid.c:115 apps/lnewusers.c:45
+#: apps/lpasswd.c:47 apps/luseradd.c:55 apps/luserdel.c:45 apps/lusermod.c:56
+msgid "prompt for all information"
+msgstr "Bei allen Informationen nachfragen"
+
+#: apps/lchage.c:86
+msgid "list aging parameters for the user"
+msgstr "Alterungs-Parameter für den Benutzer auflisten"
+
+#: apps/lchage.c:88
+msgid "minimum days between password changes"
+msgstr "Minimale Zeitspanne in Tagen zwischen Passwortänderungen"
+
+#: apps/lchage.c:88 apps/lchage.c:90 apps/lchage.c:93 apps/lchage.c:96
+#: apps/lchage.c:99 apps/lchage.c:102
+msgid "DAYS"
+msgstr "TAGE"
+
+#: apps/lchage.c:90
+msgid "maximum days between password changes"
+msgstr "Maximale Zeitspanne in Tagen zwischen Passwortänderungen"
+
+#: apps/lchage.c:92
+msgid "date of last password change in days since 1/1/70"
+msgstr "Datum der letzten Passwortänderung in Tagen seit 1/1/70"
+
+#: apps/lchage.c:95
+msgid ""
+"number of days after password expiration date when account is considered "
+"inactive"
+msgstr ""
+"Anzahl Tage nach Ablaufdatum des Passworts, an dem das Konto als inaktiv "
+"angesehen wird"
+
+#: apps/lchage.c:98
+msgid "password expiration date in days since 1/1/70"
+msgstr "Zeitraum seit dem Passwort-Ablaufdatum in Tagen seit 1/1/70"
+
+#: apps/lchage.c:101
+msgid "days before expiration to begin warning user"
+msgstr ""
+"Benachrichtung des Benutzers eine bestimmte Anzahl Tage vor dem Ablaufdatum"
+
+#: apps/lchage.c:114 apps/lid.c:130 apps/lpasswd.c:68 apps/luseradd.c:100
+#: apps/luserdel.c:59 apps/lusermod.c:101
+msgid "[OPTION...] user"
+msgstr "[OPTION...] Benutzer"
+
+#: apps/lchage.c:117 apps/lchfn.c:70 apps/lchsh.c:58 apps/lgroupadd.c:65
+#: apps/lgroupdel.c:56 apps/lgroupmod.c:85 apps/lid.c:133 apps/lnewusers.c:66
+#: apps/lpasswd.c:71 apps/luseradd.c:103 apps/luserdel.c:62
+#: apps/lusermod.c:104
+#, c-format
+msgid "Error parsing arguments: %s.\n"
+msgstr "Fehler beim Verarbeiten von Argumenten: %s.\n"
+
+#: apps/lchage.c:126 apps/lpasswd.c:85 apps/luseradd.c:118 apps/luserdel.c:70
+#: apps/lusermod.c:115
+#, c-format
+msgid "No user name specified.\n"
+msgstr "Es wurde kein Benutzername angegeben.\n"
+
+#: apps/lchage.c:138 apps/lchfn.c:103 apps/lchsh.c:91 apps/lgroupadd.c:102
+#: apps/lgroupdel.c:77 apps/lgroupmod.c:119 apps/lid.c:179 apps/lnewusers.c:79
+#: apps/lpasswd.c:97 apps/luseradd.c:143 apps/luserdel.c:81
+#: apps/lusermod.c:157 samples/enum.c:56 samples/testuser.c:71
+#, c-format
+msgid "Error initializing %s: %s.\n"
+msgstr "Fehler beim Initialisieren von %s: %s.\n"
+
+#: apps/lchage.c:147 apps/lchfn.c:114 apps/lchsh.c:102 apps/lpasswd.c:148
+#: apps/luserdel.c:89 apps/lusermod.c:171
+#, c-format
+msgid "User %s does not exist.\n"
+msgstr "Benutzer %s existiert nicht.\n"
+
+#: apps/lchage.c:160
+#, c-format
+msgid "Account is locked.\n"
+msgstr "Benutzerkonto ist gesperrt.\n"
+
+#: apps/lchage.c:162
+#, c-format
+msgid "Account is not locked.\n"
+msgstr "Benutzerkonto ist nicht gesperrt.\n"
+
+#: apps/lchage.c:166
+#, c-format
+msgid "Minimum:\t%ld\n"
+msgstr "Minimum:\t%ld\n"
+
+#: apps/lchage.c:170
+#, c-format
+msgid "Maximum:\t%ld\n"
+msgstr "Maximum:\t%ld\n"
+
+#: apps/lchage.c:172
+#, c-format
+msgid "Maximum:\tNone\n"
+msgstr "Maximum:\tNicht festgelegt\n"
+
+#: apps/lchage.c:175
+#, c-format
+msgid "Warning:\t%ld\n"
+msgstr "Warnung:\t%ld\n"
+
+#: apps/lchage.c:180
+#, c-format
+msgid "Inactive:\t%ld\n"
+msgstr "Nicht aktiv:\t%ld\n"
+
+#: apps/lchage.c:182
+#, c-format
+msgid "Inactive:\tNever\n"
+msgstr "Inaktiv:\tNiemals\n"
+
+#: apps/lchage.c:186 apps/lchage.c:194 apps/lchage.c:204
+msgid "Must change password on next login"
+msgstr "Passwort muss beim nächsten Login geändert werden"
+
+#: apps/lchage.c:188 apps/lchage.c:196 apps/lchage.c:206 apps/lchage.c:215
+msgid "Never"
+msgstr "Nie"
+
+#: apps/lchage.c:191
+#, c-format
+msgid "Last Change:\t%s\n"
+msgstr "Letzte Änderung:\t%s\n"
+
+#: apps/lchage.c:201
+#, c-format
+msgid "Password Expires:\t%s\n"
+msgstr "Passwort läuft ab:\t%s\n"
+
+#: apps/lchage.c:213
+#, c-format
+msgid "Password Inactive:\t%s\n"
+msgstr "Passwort nicht aktiv:\t%s\n"
+
+#: apps/lchage.c:219
+#, c-format
+msgid "Account Expires:\t%s\n"
+msgstr "Benutzerkonto läuft ab:\t%s\n"
+
+#: apps/lchage.c:240
+#, c-format
+msgid "Failed to modify aging information for %s: %s\n"
+msgstr "Ablauf-Einstellungen konnten nicht geändert werden für %s: %s\n"
+
+#: apps/lchfn.c:67 apps/lchsh.c:55
+msgid "[OPTION...] [user]"
+msgstr "[OPTION...] [Benutzer]"
+
+#: apps/lchfn.c:86 apps/lchsh.c:74 apps/lid.c:164
+#, c-format
+msgid "No user name specified, no name for uid %d.\n"
+msgstr "Kein Benutzername angegeben, kein Name für uid %d.\n"
+
+#: apps/lchfn.c:96
+#, c-format
+msgid "Changing finger information for %s.\n"
+msgstr "Finger-Einstellungen für %s werden geändert.\n"
+
+#: apps/lchfn.c:136
+msgid "Full Name"
+msgstr "Vollständiger Name"
+
+#: apps/lchfn.c:146
+msgid "Surname"
+msgstr "Nachname"
+
+#: apps/lchfn.c:157
+msgid "Given Name"
+msgstr "Vorname"
+
+#: apps/lchfn.c:167
+msgid "Office"
+msgstr "Büro"
+
+#: apps/lchfn.c:176
+msgid "Office Phone"
+msgstr "Telefon (Arbeit)"
+
+#: apps/lchfn.c:185
+msgid "Home Phone"
+msgstr "Telefon (Zuhause)"
+
+#: apps/lchfn.c:195
+msgid "E-Mail Address"
+msgstr "E-Mail-Adresse"
+
+#: apps/lchfn.c:208
+#, c-format
+msgid "Finger information not changed:  input error.\n"
+msgstr "Finger-Informationen nicht geändert: Eingabefehler.\n"
+
+#: apps/lchfn.c:270
+msgid "Finger information changed.\n"
+msgstr "Finger-Informationen geändert.\n"
+
+#: apps/lchfn.c:273
+#, c-format
+msgid "Finger information not changed: %s.\n"
+msgstr "Finger-Informationen nicht geändert: %s.\n"
+
+#: apps/lchsh.c:84
+#, c-format
+msgid "Changing shell for %s.\n"
+msgstr "Shell für %s wird geändert.\n"
+
+#: apps/lchsh.c:114
+msgid "New Shell"
+msgstr "Neue Shell"
+
+#: apps/lchsh.c:121 apps/lchsh.c:136
+#, c-format
+msgid "Shell not changed: %s\n"
+msgstr "Shell nicht geändert: %s\n"
+
+#: apps/lchsh.c:133
+msgid "Shell changed.\n"
+msgstr "Shell geändert.\n"
+
+#: apps/lgroupadd.c:49
+msgid "gid for new group"
+msgstr "gid für neue Gruppe"
+
+#: apps/lgroupadd.c:49 apps/lgroupmod.c:56 apps/lpasswd.c:56 apps/lpasswd.c:59
+#: apps/luseradd.c:67 apps/lusermod.c:66 apps/lusermod.c:68
+msgid "NUM"
+msgstr "NUM"
+
+#: apps/lgroupadd.c:51
+msgid "create a system group"
+msgstr "Eine System-Gruppe erstellen"
+
+#: apps/lgroupadd.c:62 apps/lgroupdel.c:53 apps/lgroupmod.c:82
+msgid "[OPTION...] group"
+msgstr "[OPTION...] Gruppe"
+
+#: apps/lgroupadd.c:74 apps/lgroupdel.c:65 apps/lgroupmod.c:93
+#, c-format
+msgid "No group name specified.\n"
+msgstr "Es wurde kein Gruppenname angegeben.\n"
+
+#: apps/lgroupadd.c:87 apps/lgroupmod.c:105 apps/lnewusers.c:172
+#: apps/luseradd.c:164 apps/lusermod.c:127
+#, c-format
+msgid "Invalid group ID %s\n"
+msgstr "Ungültige Gruppenkennung %s\n"
+
+#: apps/lgroupadd.c:119
+#, c-format
+msgid "Group creation failed: %s\n"
+msgstr "Die Erzeugung der Gruppe ist fehlgeschlagen: %s\n"
+
+#: apps/lgroupdel.c:85 apps/lgroupmod.c:132 apps/lpasswd.c:153
+#, c-format
+msgid "Group %s does not exist.\n"
+msgstr "Gruppe %s existiert nicht.\n"
+
+#: apps/lgroupdel.c:91
+#, c-format
+msgid "Group %s could not be deleted: %s\n"
+msgstr "Gruppe %s konnte nicht gelöscht werden: %s.\n"
+
+#: apps/lgroupmod.c:56
+msgid "set GID for group"
+msgstr "GID für Gruppe festlegen"
+
+#: apps/lgroupmod.c:58
+msgid "change group to have given name"
+msgstr "Gruppe auf den vorgegebenen Namen ändern"
+
+#: apps/lgroupmod.c:58
+msgid "NAME"
+msgstr "NAME"
+
+#: apps/lgroupmod.c:60 apps/luseradd.c:75
+msgid "plaintext password for use with group"
+msgstr "Klartext-Passwort für die Gruppen-Benutzung"
+
+#: apps/lgroupmod.c:60 apps/lgroupmod.c:62 apps/lgroupmod.c:64
+#: apps/lgroupmod.c:66 apps/lgroupmod.c:68 apps/lgroupmod.c:70
+#: apps/lpasswd.c:51 apps/lpasswd.c:53 apps/luseradd.c:59 apps/luseradd.c:61
+#: apps/luseradd.c:63 apps/luseradd.c:65 apps/luseradd.c:69 apps/luseradd.c:75
+#: apps/luseradd.c:77 apps/luseradd.c:79 apps/luseradd.c:81 apps/luseradd.c:83
+#: apps/luseradd.c:85 apps/luseradd.c:87 apps/luseradd.c:89 apps/lusermod.c:58
+#: apps/lusermod.c:60 apps/lusermod.c:64 apps/lusermod.c:70 apps/lusermod.c:72
+#: apps/lusermod.c:74 apps/lusermod.c:80 apps/lusermod.c:82 apps/lusermod.c:84
+#: apps/lusermod.c:86 apps/lusermod.c:88 apps/lusermod.c:90
+msgid "STRING"
+msgstr "STRING"
+
+#: apps/lgroupmod.c:62 apps/luseradd.c:77
+msgid "pre-hashed password for use with group"
+msgstr "Vor-verschlüsseltes Passwort (pre-hash) für die Benutzung der Gruppe"
+
+#: apps/lgroupmod.c:64
+msgid "list of administrators to add"
+msgstr "Hinzuzufügende Administratoren-Liste"
+
+#: apps/lgroupmod.c:66
+msgid "list of administrators to remove"
+msgstr "Zu entfernende Administratoren-Liste"
+
+#: apps/lgroupmod.c:68
+msgid "list of group members to add"
+msgstr "Hinzuzufügende Mitglieder-Liste"
+
+#: apps/lgroupmod.c:70
+msgid "list of group members to remove"
+msgstr "Zu entfernende Mitgliederliste"
+
+#: apps/lgroupmod.c:71
+msgid "lock group"
+msgstr "Gruppe sperren"
+
+#: apps/lgroupmod.c:72
+msgid "unlock group"
+msgstr "Gruppe entsperren"
+
+#: apps/lgroupmod.c:125 apps/lusermod.c:164
+#, c-format
+msgid "Both -L and -U specified.\n"
+msgstr "Sowohl -L als auch -U angegeben.\n"
+
+#: apps/lgroupmod.c:139 apps/lgroupmod.c:148
+#, c-format
+msgid "Failed to set password for group %s: %s\n"
+msgstr "Passwort konnte nicht gesetzt werden für Gruppe %s: %s\n"
+
+#: apps/lgroupmod.c:157
+#, c-format
+msgid "Group %s could not be locked: %s\n"
+msgstr "Gruppe %s konnte nicht gesperrt werden: %s\n"
+
+#: apps/lgroupmod.c:166
+#, c-format
+msgid "Group %s could not be unlocked: %s\n"
+msgstr "Gruppe %s konnte nicht entsperrt werden: %s\n"
+
+#: apps/lgroupmod.c:242 apps/lgroupmod.c:257
+#, c-format
+msgid "Group %s could not be modified: %s\n"
+msgstr "Gruppe %s konnte nicht geändert werden: %s\n"
+
+#: apps/lid.c:42 apps/lid.c:74 apps/lid.c:188
+#, c-format
+msgid "Error looking up %s: %s\n"
+msgstr "Fehler beim Nachschlagen von %s: %s.\n"
+
+#: apps/lid.c:117
+msgid ""
+"list members of a named group instead of the group memberships for the named "
+"user"
+msgstr ""
+"Auflistung von Mitgliedern einer benannten Gruppe anstelle der Gruppen-"
+"Mitgliedschaften des benannten Benutzer"
+
+#: apps/lid.c:120
+msgid "only list membership information by name, and not UID/GID"
+msgstr ""
+"Auflistung der Mitgliedschafts-Information nach Name und nicht nach UID/GID"
+
+#: apps/lid.c:146
+#, c-format
+msgid "No group name specified, using %s.\n"
+msgstr "Kein Gruppenname angegeben, %s wird benutzt.\n"
+
+#: apps/lid.c:150
+#, c-format
+msgid "No group name specified, no name for gid %d.\n"
+msgstr "Kein Gruppenname angegeben, kein Name für gid %d.\n"
+
+#: apps/lid.c:160
+#, c-format
+msgid "No user name specified, using %s.\n"
+msgstr "Kein Benutzername angegeben, %s wird benutzt.\n"
+
+#: apps/lid.c:192
+#, c-format
+msgid "%s does not exist\n"
+msgstr "%s existiert nicht\n"
+
+#: apps/lnewusers.c:47
+msgid "file with user information records"
+msgstr "Datei mit Einträgen der Benutzerinformationen"
+
+#: apps/lnewusers.c:47
+msgid "PATH"
+msgstr "PFAD"
+
+#: apps/lnewusers.c:49
+msgid "don't create home directories"
+msgstr "Erstelle keine Home-Verzeichnisse"
+
+#: apps/lnewusers.c:51
+msgid "don't create mail spools"
+msgstr "Erstelle keine Mail-Spools"
+
+#: apps/lnewusers.c:63
+msgid "[OPTION...]"
+msgstr "[OPTION...]"
+
+#: apps/lnewusers.c:88
+#, c-format
+msgid "Error opening `%s': %s.\n"
+msgstr "Fehler beim Öffnen von »%s«: %s.\n"
+
+#: apps/lnewusers.c:118
+#, c-format
+msgid "Error creating account for `%s': line improperly formatted.\n"
+msgstr ""
+"Fehler beim Erstellen des Benutzerkontos für `»%s«: Zeile inkorrekt "
+"formatiert.\n"
+
+#: apps/lnewusers.c:129 apps/luseradd.c:128 apps/lusermod.c:142
+#, c-format
+msgid "Invalid user ID %s\n"
+msgstr "Ungültige Benutzerkennung %s\n"
+
+#: apps/lnewusers.c:136
+msgid "Refusing to create account with UID 0.\n"
+msgstr "Erstellen eines Benutzerkontos mit UID 0 verweigert.\n"
+
+#: apps/lnewusers.c:206
+#, c-format
+msgid "Error creating group for `%s' with GID %jd: %s\n"
+msgstr "Fehler beim Erstellen der Gruppe für »%s« mit GID %jd: %s\n"
+
+#: apps/lnewusers.c:246
+#, c-format
+msgid "Refusing to use dangerous home directory `%s' for %s by default\n"
+msgstr ""
+"Verwendung des unsachgemäßen Benutzerordners »%s« für %s wird standardmäßig "
+"abgelehnt\n"
+
+#: apps/lnewusers.c:257
+#, c-format
+msgid "Error creating home directory for %s: %s\n"
+msgstr "Fehler beim Erstellen des persönlichen Ordners für %s: %s\n"
+
+#: apps/lnewusers.c:270
+#, c-format
+msgid "Error creating mail spool for %s: %s\n"
+msgstr "Fehler beim Erstellen von Mail-Zwischenspeicher für %s: %s\n"
+
+#: apps/lnewusers.c:285
+#, c-format
+msgid "Error setting initial password for %s: %s\n"
+msgstr "Fehler beim Setzen des Initialpassworts für %s: %s\n"
+
+#: apps/lnewusers.c:295
+#, c-format
+msgid "Error creating user account for %s: %s\n"
+msgstr "Fehler beim Erstellen des Benutzerkontos für %s: %s.\n"
+
+#: apps/lpasswd.c:49
+msgid "set group password instead of user password"
+msgstr "Setze Gruppen-Passwort anstelle Benutzerpasswort"
+
+#: apps/lpasswd.c:51
+msgid "new plain password"
+msgstr "Neues Klartext-Passwort"
+
+#: apps/lpasswd.c:53
+msgid "new crypted password"
+msgstr "Neues verschlüsseltes Passwort"
+
+#: apps/lpasswd.c:55
+msgid "read new plain password from given descriptor"
+msgstr "Lese neues Klartext-Passwort aus dem gegebenen Deskriptor"
+
+#: apps/lpasswd.c:58
+msgid "read new crypted password from given descriptor"
+msgstr "Lese neues verschlüsseltes Passwort aus dem gegebenen Deskriptor"
+
+#: apps/lpasswd.c:83
+#, c-format
+msgid "Changing password for %s.\n"
+msgstr "Passwort für »%s« geändert.\n"
+
+#: apps/lpasswd.c:111
+msgid "New password"
+msgstr "Neues Passwort"
+
+#: apps/lpasswd.c:114
+msgid "New password (confirm)"
+msgstr "Neues Passwort (Bestätigen)"
+
+#: apps/lpasswd.c:128
+#, c-format
+msgid "Passwords do not match, try again.\n"
+msgstr "Passwörter stimmen nicht überein. Noch einmal eingeben.\n"
+
+#: apps/lpasswd.c:133
+#, c-format
+msgid "Password change canceled.\n"
+msgstr "Passwortänderung abgebrochen.\n"
+
+#: apps/lpasswd.c:165 apps/lpasswd.c:182
+#, c-format
+msgid "Error reading from file descriptor %d.\n"
+msgstr "Fehler beim Lesen von Dateideskriptor %d.\n"
+
+#: apps/lpasswd.c:203 apps/luseradd.c:302 apps/luseradd.c:311
+#, c-format
+msgid "Error setting password for user %s: %s.\n"
+msgstr "Fehler beim Erstellen des Passworts für Benutzer %s: %s.\n"
+
+#: apps/lpasswd.c:212
+#, c-format
+msgid "Error setting password for group %s: %s.\n"
+msgstr "Fehler beim Erstellen des Passworts für Gruppe %s: %s.\n"
+
+#: apps/lpasswd.c:224
+#, c-format
+msgid "Password changed.\n"
+msgstr "Passwort geändert.\n"
+
+#: apps/luseradd.c:57
+msgid "create a system user"
+msgstr "Erstelle einen System-Benutzer"
+
+#: apps/luseradd.c:59
+msgid "GECOS information for new user"
+msgstr "GECOS-Information für neuen Benutzer"
+
+#: apps/luseradd.c:61
+msgid "home directory for new user"
+msgstr "Home-Verzeichnis für neuen Benutzer"
+
+#: apps/luseradd.c:63
+msgid "directory with files for the new user"
+msgstr "Daten-Verzeichnis für neuen Benutzer"
+
+#: apps/luseradd.c:65
+msgid "shell for new user"
+msgstr "Shell für neuen Benutzer"
+
+#: apps/luseradd.c:67
+msgid "uid for new user"
+msgstr "UID für neuen Benutzer"
+
+#: apps/luseradd.c:69
+msgid "group for new user"
+msgstr "Gruppe für neuen Benutzer"
+
+#: apps/luseradd.c:71
+msgid "don't create home directory for user"
+msgstr "Erstelle kein Home-Verzeichnis für den Benutzer"
+
+#: apps/luseradd.c:73
+msgid "don't create group with same name as user"
+msgstr "Erstelle keine Gruppe mit dem gleichen Namen des Benutzers"
+
+#: apps/luseradd.c:79
+msgid "common name for new user"
+msgstr "Gebräuchlicher Name für neuen Benutzer"
+
+#: apps/luseradd.c:81
+msgid "given name for new user"
+msgstr "Vorname des neuen Benutzers"
+
+#: apps/luseradd.c:83
+msgid "surname for new user"
+msgstr "Nachname des neuen Benutzers"
+
+#: apps/luseradd.c:85
+msgid "room number for new user"
+msgstr "Raum-Name für neuen Benutzer"
+
+#: apps/luseradd.c:87
+msgid "telephone number for new user"
+msgstr "Telefonnummer für neuen Benutzer"
+
+#: apps/luseradd.c:89
+msgid "home telephone number for new user"
+msgstr "Private Telefonnummer für neuen Benutzer"
+
+#: apps/luseradd.c:189
+#, c-format
+msgid "Group %jd does not exist\n"
+msgstr "Gruppe %jd existiert nicht\n"
+
+#: apps/luseradd.c:207 apps/luseradd.c:220
+#, c-format
+msgid "Error creating group `%s': %s\n"
+msgstr "Fehler beim Erstellen der Gruppe »%s«: %s\n"
+
+#: apps/luseradd.c:260
+#, c-format
+msgid "Account creation failed: %s.\n"
+msgstr "Die Erzeugung des Benutzerkontos ist fehlgeschlagen: %s.\n"
+
+#: apps/luseradd.c:283
+#, c-format
+msgid "Error creating %s: %s.\n"
+msgstr "Fehler bei der Erzeugung von %s: %s.\n"
+
+#: apps/luseradd.c:290
+#, c-format
+msgid "Error creating mail spool: %s\n"
+msgstr "Fehler beim Erstellen von Mail-Zwischenspeicher: %s\n"
+
+#: apps/luserdel.c:47
+msgid "don't remove the user's private group, if the user has one"
+msgstr ""
+"Entferne die private Gruppe des Benutzers nicht, falls der Benutzer eine hat"
+
+#: apps/luserdel.c:50
+msgid "remove the user's home directory"
+msgstr "Entferne das Home-Verzeichnis des Benutzers"
+
+#: apps/luserdel.c:94
+#, c-format
+msgid "User %s could not be deleted: %s.\n"
+msgstr "Benutzer %s konnte nicht gelöscht werden: %s.\n"
+
+#: apps/luserdel.c:108
+#, c-format
+msgid "%s did not have a gid number.\n"
+msgstr "%s hatte keine GID-Nummer.\n"
+
+#: apps/luserdel.c:114
+#, c-format
+msgid "No group with GID %jd exists, not removing.\n"
+msgstr "Gruppe mit GID %jd existiert nicht, wird nicht entfernt.\n"
+
+#: apps/luserdel.c:120
+#, c-format
+msgid "Group with GID %jd did not have a group name.\n"
+msgstr "Gruppe mit GID %jd hat keinen Gruppennamen.\n"
+
+#: apps/luserdel.c:126
+#, c-format
+msgid "Group %s could not be deleted: %s.\n"
+msgstr "Gruppe %s konnte nicht gelöscht werden: %s.\n"
+
+#: apps/luserdel.c:139
+#, c-format
+msgid "Error removing home directory: %s.\n"
+msgstr "Fehler beim Entfernen des persönlichen Ordners: %s\n"
+
+#: apps/luserdel.c:145
+#, c-format
+msgid "Error removing mail spool: %s"
+msgstr "Fehler beim Entfernen von Mail-Zwischenspeicher: %s"
+
+#: apps/lusermod.c:58
+msgid "GECOS information"
+msgstr "GECOS-Information"
+
+#: apps/lusermod.c:60
+msgid "home directory"
+msgstr "Home-Verzeichnis"
+
+#: apps/lusermod.c:62
+msgid "move home directory contents"
+msgstr "Verschiebe die Inhalte des Home-Verzeichnisses"
+
+#: apps/lusermod.c:64
+msgid "set shell for user"
+msgstr "Shell für Benutzer festlegen"
+
+#: apps/lusermod.c:66
+msgid "set UID for user"
+msgstr "UID für Benutzer festlegen"
+
+#: apps/lusermod.c:68
+msgid "set primary GID for user"
+msgstr "Primäre GID für Benutzer festlegen"
+
+#: apps/lusermod.c:70
+msgid "change login name for user"
+msgstr "Ändere Login-Name des Benutzers"
+
+#: apps/lusermod.c:72
+msgid "plaintext password for the user"
+msgstr "Klartext-Passwort des Benutzers"
+
+#: apps/lusermod.c:74
+msgid "pre-hashed password for the user"
+msgstr "Vor-verschlüsseltes Passwort (pre-hash) des Benutzers"
+
+#: apps/lusermod.c:75
+msgid "lock account"
+msgstr "Konto sperren"
+
+#: apps/lusermod.c:78
+msgid "unlock account"
+msgstr "Konto entsperren"
+
+#: apps/lusermod.c:80
+msgid "set common name for user"
+msgstr "Gebräuchlicher Name für den Benutzer wählen"
+
+#: apps/lusermod.c:82
+msgid "set given name for user"
+msgstr "Vornamen des Benutzers festlegen"
+
+#: apps/lusermod.c:84
+msgid "set surname for user"
+msgstr "Nachname des Benutzers festlegen "
+
+#: apps/lusermod.c:86
+msgid "set room number for user"
+msgstr "Raum-Nummer des Benutzers festlegen"
+
+#: apps/lusermod.c:88
+msgid "set telephone number for user"
+msgstr "Telefonnummer des Benutzers festlegen"
+
+#: apps/lusermod.c:90
+msgid "set home telephone number for user"
+msgstr "Private Telefonnummer des Benutzers festlegen"
+
+#: apps/lusermod.c:180 apps/lusermod.c:193
+#, c-format
+msgid "Failed to set password for user %s: %s.\n"
+msgstr "Passwort konnte für Benutzer %s nicht eingestellt werden: %s.\n"
+
+#: apps/lusermod.c:203
+#, c-format
+msgid "User %s could not be locked: %s.\n"
+msgstr "Benutzer %s konnte nicht gesperrt werden: %s.\n"
+
+#: apps/lusermod.c:211
+#, c-format
+msgid "User %s could not be unlocked: %s.\n"
+msgstr "Benutzer %s konnte nicht freigegeben werden: %s.\n"
+
+#: apps/lusermod.c:232
+#, c-format
+msgid "Warning: Group with ID %jd does not exist.\n"
+msgstr "Warnung: Gruppe mit Kennung %jd existiert nicht.\n"
+
+#: apps/lusermod.c:275
+#, c-format
+msgid "User %s could not be modified: %s.\n"
+msgstr "Benutzer %s konnte nicht geändert werden: %s.\n"
+
+#: apps/lusermod.c:326
+#, c-format
+msgid "Group %s could not be modified: %s.\n"
+msgstr "Gruppe %s konnte nicht geändert werden: %s.\n"
+
+#: apps/lusermod.c:342
+#, c-format
+msgid "No old home directory for %s.\n"
+msgstr "Kein alter persönlicher Ordner für %s.\n"
+
+#: apps/lusermod.c:347
+#, c-format
+msgid "No new home directory for %s.\n"
+msgstr "Kein neuer persönlicher Ordner für %s.\n"
+
+#: apps/lusermod.c:353
+#, c-format
+msgid "Error moving %s to %s: %s.\n"
+msgstr "Fehler beim Verschieben von %s zu %s: %s.\n"
+
+#: lib/config.c:128
+#, c-format
+msgid "could not open configuration file `%s': %s"
+msgstr "Konfigurationsdatei »%s« konnte nicht geöffnet werden: %s"
+
+#: lib/config.c:134
+#, c-format
+msgid "could not stat configuration file `%s': %s"
+msgstr "stat konnte nicht ausgeführt werden für Konfigurationsdatei »%s«: %s"
+
+#: lib/config.c:143
+#, c-format
+msgid "configuration file `%s' is too large"
+msgstr "Konfigurationsdatei »%s« ist zu groß"
+
+#: lib/config.c:159
+#, c-format
+msgid "could not read configuration file `%s': %s"
+msgstr "Konfigurationsdatei »%s« konnte nicht gelesen werden: %s"
+
+#: lib/error.c:62
+msgid "success"
+msgstr "Erfolg"
+
+#: lib/error.c:64
+msgid "module disabled by configuration"
+msgstr "Modul durch die Konfiguration deaktiviert"
+
+#: lib/error.c:66
+msgid "generic error"
+msgstr "Allgemeiner Fehler"
+
+#: lib/error.c:68
+msgid "not enough privileges"
+msgstr "Keine ausreichenden Berechtigungen"
+
+#: lib/error.c:70
+msgid "access denied"
+msgstr "Zugriff verweigert"
+
+#: lib/error.c:72
+msgid "bad user/group name"
+msgstr "Ungültiger Benutzer-/Gruppenname"
+
+#: lib/error.c:74
+msgid "bad user/group id"
+msgstr "Ungültige Benutzer-/Gruppenkennung"
+
+#: lib/error.c:76
+msgid "user/group name in use"
+msgstr "Benutzer-/Gruppenname wird bereits verwendet"
+
+#: lib/error.c:78
+msgid "user/group id in use"
+msgstr "Benutzer-/Gruppenkennung wird bereits verwendet"
+
+#: lib/error.c:80
+msgid "error manipulating terminal attributes"
+msgstr "Fehler beim Bearbeiten der Terminalattribute"
+
+#: lib/error.c:82
+msgid "error opening file"
+msgstr "Fehler beim Öffnen der Datei"
+
+#: lib/error.c:84
+msgid "error locking file"
+msgstr "Fehler beim Sperren der Datei"
+
+#: lib/error.c:86
+msgid "error statting file"
+msgstr "Fehler beim Ermitteln der Dateiinformationen"
+
+#: lib/error.c:88
+msgid "error reading file"
+msgstr "Fehler beim Lesen der Datei"
+
+#: lib/error.c:90
+msgid "error writing to file"
+msgstr "Fehler beim Schreiben in die Datei"
+
+#: lib/error.c:92
+msgid "data not found in file"
+msgstr "Daten wurden in der Datei nicht gefunden"
+
+#: lib/error.c:94
+msgid "internal initialization error"
+msgstr "Interner Fehler bei der Initialisierung"
+
+#: lib/error.c:96
+msgid "error loading module"
+msgstr "Fehler beim Laden des Moduls"
+
+#: lib/error.c:98
+msgid "error resolving symbol in module"
+msgstr "Fehler beim Auflösen des Symbols im Modul"
+
+#: lib/error.c:100
+msgid "library/module version mismatch"
+msgstr "Bibliothek-/Modulversion stimmt nicht überein"
+
+#: lib/error.c:102
+msgid "unlocking would make the password field empty"
+msgstr "Entsperrung würde das Passwortfeld leer machen"
+
+#: lib/error.c:105
+msgid "invalid attribute value"
+msgstr "Ungültiger Attributwert"
+
+#: lib/error.c:107
+msgid "invalid module combination"
+msgstr "Ungültige Modulkombination"
+
+#: lib/error.c:109
+msgid "user's home directory not owned by them"
+msgstr "Home-Verzeichnis für neuen Benutzer"
+
+#: lib/error.c:115
+msgid "unknown error"
+msgstr "Unbekannter Fehler"
+
+#: lib/misc.c:240
+msgid "invalid number"
+msgstr "Ungültige Nummer"
+
+#: lib/misc.c:254
+msgid "invalid ID"
+msgstr "Ungültige Kennung"
+
+#: lib/modules.c:61
+#, c-format
+msgid "no initialization function %s in `%s'"
+msgstr "Keine Initialisierungsfunktion %s in »%s«"
+
+#: lib/modules.c:79
+#, c-format
+msgid "module version mismatch in `%s'"
+msgstr "Fehlende Übereinstimmung von Modulversionen in »%s«"
+
+#: lib/modules.c:92
+#, c-format
+msgid "module `%s' does not define `%s'"
+msgstr "Modul %s definiert »%s« nicht"
+
+#: lib/prompt.c:88
+msgid "error reading terminal attributes"
+msgstr "Fehler beim Lesen der Terminalattribute"
+
+#: lib/prompt.c:95 lib/prompt.c:107
+msgid "error setting terminal attributes"
+msgstr "Fehler beim Einstellen der Terminalattribute"
+
+#: lib/prompt.c:101
+msgid "error reading from terminal"
+msgstr "Fehler beim Lesen vom Terminal"
+
+#: lib/user.c:218
+msgid "name is not set"
+msgstr "Name ist nicht definiert"
+
+#: lib/user.c:223
+msgid "name is too short"
+msgstr "Name ist zu kurz"
+
+#: lib/user.c:228
+#, c-format
+msgid "name is too long (%zu > %d)"
+msgstr "Name ist zu lang (%zu > %d)"
+
+#: lib/user.c:235
+msgid "name contains non-ASCII characters"
+msgstr "Name enthält Nicht-ASCII-Zeichen"
+
+#: lib/user.c:242
+msgid "name contains control characters"
+msgstr "Name enthält Kontrollzeichen"
+
+#: lib/user.c:249
+msgid "name contains whitespace"
+msgstr "Name enthält Leerzeichen"
+
+#: lib/user.c:261
+msgid "name starts with a hyphen"
+msgstr "Name beginnt mit einem Bindestrich"
+
+#: lib/user.c:272
+#, c-format
+msgid "name contains invalid char `%c'"
+msgstr "Name enthält ungültiges Zeichen »%c«"
+
+#: lib/user.c:308 lib/user.c:360
+#, c-format
+msgid "user %s has no UID"
+msgstr "Benutzer %s hat keine Benutzerkennung"
+
+#: lib/user.c:310
+#, c-format
+msgid "user %s not found"
+msgstr "Benutzer %s nicht gefunden"
+
+#: lib/user.c:333 lib/user.c:361
+#, c-format
+msgid "group %s has no GID"
+msgstr "Gruppe %s hat keine Gruppenkennung"
+
+#: lib/user.c:335
+#, c-format
+msgid "group %s not found"
+msgstr "Gruppe %s nicht gefunden"
+
+#: lib/user.c:355
+#, c-format
+msgid "user %jd has no name"
+msgstr "Benutzer %jd ist namenlos"
+
+#: lib/user.c:356
+#, c-format
+msgid "group %jd has no name"
+msgstr "Gruppe %jd ist namenlos"
+
+#: lib/user.c:364
+msgid "user has neither a name nor an UID"
+msgstr "Benutzer ist namenlos und hat keine Benutzerkennung"
+
+#: lib/user.c:365
+msgid "group has neither a name nor a GID"
+msgstr "Gruppe ist namenlos und hat keine Gruppenkennung"
+
+#: lib/user.c:1311
+#, c-format
+msgid "Refusing to use dangerous home directory `%s' by default"
+msgstr ""
+"Verwendung des unsachgemäßen Benutzerordners »%s« wird standardmäßig "
+"abgelehnt"
+
+#: lib/user.c:2310
+#, c-format
+msgid "Invalid default value of field %s: %s"
+msgstr "Ungültiger Wert in Feld %s: %s"
+
+#: lib/util.c:300 modules/files.c:374
+#, c-format
+msgid "error locking file: %s"
+msgstr "Fehler beim Sperren der Datei: %s"
+
+#: lib/util.c:704
+#, c-format
+msgid "couldn't get default security context: %s"
+msgstr "Standard-Sicherheitskontext konnte nicht gesetzt werden: %s"
+
+#: lib/util.c:731 lib/util.c:757 lib/util.c:783
+#, c-format
+msgid "couldn't get security context of `%s': %s"
+msgstr "Sicherheitskontext »%s« konnte nicht ermittelt werden: %s"
+
+#: lib/util.c:737 lib/util.c:763 lib/util.c:789 lib/util.c:821
+#, c-format
+msgid "couldn't set default security context to `%s': %s"
+msgstr "Sicherheitskontext konnte nicht nach »%s« geschrieben werden: %s"
+
+#: lib/util.c:813
+#, c-format
+msgid "couldn't determine security context for `%s': %s"
+msgstr "Sicherheitskontext »%s« konnte nicht bestimmt werden: %s"
+
+#: modules/files.c:129 modules/files.c:692 modules/files.c:1585
+#: modules/files.c:1920 modules/files.c:1930 modules/files.c:2012
+#: modules/files.c:2023 modules/files.c:2089 modules/files.c:2101
+#: modules/files.c:2191 modules/files.c:2200 modules/files.c:2255
+#: modules/files.c:2264 modules/files.c:2359 modules/files.c:2368
+#, c-format
+msgid "couldn't open `%s': %s"
+msgstr "»%s« konnte nicht geöffnet werden: %s"
+
+#: modules/files.c:137 modules/files.c:994 modules/files.c:1187
+#: modules/files.c:1329
+#, c-format
+msgid "couldn't stat `%s': %s"
+msgstr "stat »%s« konnte nicht ausgeführt werden: %s"
+
+#: modules/files.c:161
+#, c-format
+msgid "error creating `%s': %s"
+msgstr "Fehler beim Erzeugen von »%s«: %s"
+
+#: modules/files.c:169
+#, c-format
+msgid "Error changing owner of `%s': %s"
+msgstr "Fehler beim Ändern des Eigentümers von »%s«: %s"
+
+#: modules/files.c:175
+#, c-format
+msgid "Error changing mode of `%s': %s"
+msgstr "Fehler beim Ändern des Modus von `%s': %s"
+
+#: modules/files.c:191
+#, c-format
+msgid "Error reading `%s': %s"
+msgstr "Fehler beim Lesen von »%s«: %s"
+
+#: modules/files.c:206 modules/files.c:217 modules/files.c:305
+#: modules/files.c:467
+#, c-format
+msgid "Error writing `%s': %s"
+msgstr "Fehler beim Schreiben von »%s«: %s"
+
+#: modules/files.c:247 modules/files.c:1005 modules/files.c:1195
+#: modules/files.c:1338
+#, c-format
+msgid "couldn't read from `%s': %s"
+msgstr "»%s« konnte nicht gelesen werden: %s"
+
+#: modules/files.c:256
+#, c-format
+msgid "Invalid contents of lock `%s'"
+msgstr ""
+
+#: modules/files.c:261
+#, c-format
+msgid "The lock %s is held by process %ju"
+msgstr ""
+
+#: modules/files.c:269
+#, fuzzy, c-format
+msgid "Error removing stale lock `%s': %s"
+msgstr "Fehler beim Verschieben von %s zu %s: %s.\n"
+
+#: modules/files.c:297
+#, fuzzy, c-format
+msgid "error opening temporary file for `%s': %s"
+msgstr "Fehler beim Ändern des Modus von `%s': %s"
+
+#: modules/files.c:321
+#, c-format
+msgid "Cannot obtain lock `%s': %s"
+msgstr ""
+
+#: modules/files.c:434
+#, fuzzy, c-format
+msgid "Error resolving `%s': %s"
+msgstr "Fehler beim Lesen von »%s«: %s"
+
+#: modules/files.c:442
+#, fuzzy, c-format
+msgid "Error replacing `%s': %s"
+msgstr "Fehler beim Lesen von »%s«: %s"
+
+#: modules/files.c:903
+#, fuzzy, c-format
+msgid "%s value `%s': `\\n' not allowed"
+msgstr "%s-Wert »%s«: »:« ist nicht erlaubt"
+
+#: modules/files.c:910
+#, c-format
+msgid "%s value `%s': `:' not allowed"
+msgstr "%s-Wert »%s«: »:« ist nicht erlaubt"
+
+#: modules/files.c:1014
+msgid "entry already present in file"
+msgstr "Eintrag bereits in der Datei vorhanden"
+
+#: modules/files.c:1021 modules/files.c:1031 modules/files.c:1041
+#: modules/files.c:1393 modules/files.c:1401 modules/files.c:1409
+#, c-format
+msgid "couldn't write to `%s': %s"
+msgstr "Nach »%s« konnte nicht geschrieben werden: %s"
+
+#: modules/files.c:1173
+#, c-format
+msgid "entity object has no %s attribute"
+msgstr "Entitätsobjekt besitzt kein %s-Attribut"
+
+#: modules/files.c:1215
+msgid "entry with conflicting name already present in file"
+msgstr "Eintrag mit kollidierendem Namen bereits in der Datei vorhanden"
+
+#: modules/files.c:1803
+#, fuzzy
+msgid "`:' and `\\n' not allowed in encrypted password"
+msgstr "»:« ist nicht erlaubt in verschlüsselten Passwörtern"
+
+#: modules/files.c:1815 modules/ldap.c:1543 modules/ldap.c:1812
+msgid "error encrypting password"
+msgstr "Fehler beim Verschlüsseln des Passworts"
+
+#: modules/files.c:2517 modules/ldap.c:2410
+#, c-format
+msgid "the `%s' and `%s' modules can not be combined"
+msgstr "Die Module »%s« und »%s« können nicht miteinander kombiniert werden"
+
+#: modules/files.c:2601 modules/files.c:2679
+msgid "not executing with superuser privileges"
+msgstr "Keine Ausführung mit Administrator-Rechten."
+
+#: modules/files.c:2692
+msgid "no shadow file present -- disabling"
+msgstr "Keine Shadow-Datei vorhanden -- wird deaktiviert."
+
+#: modules/ldap.c:199
+msgid "error initializing ldap library"
+msgstr "Fehler bei der Initialisierung der LDAP-Bibliothek"
+
+#: modules/ldap.c:210
+#, c-format
+msgid "could not set LDAP protocol to version %d"
+msgstr "LDAP-Protokoll konnte nicht auf Version %d eingestellt werden"
+
+#: modules/ldap.c:229
+msgid "could not negotiate TLS with LDAP server"
+msgstr "TLS-Serververbindung konnte nicht ausgehandelt werden"
+
+#: modules/ldap.c:424
+msgid "could not bind to LDAP server"
+msgstr "Verbindung zum LDAP-Server konnte nicht aufgebaut werden"
+
+#: modules/ldap.c:427
+#, c-format
+msgid "could not bind to LDAP server, first attempt as `%s': %s"
+msgstr ""
+"Verbindung zum LDAP-Server konnte nicht aufgebaut werden, erster Versuch als "
+"»%s«: %s"
+
+#: modules/ldap.c:1315
+#, c-format
+msgid "user object had no %s attribute"
+msgstr "Benutzerobjekt hatte kein Attribut %s"
+
+#: modules/ldap.c:1324
+#, c-format
+msgid "user object was created with no `%s'"
+msgstr "Benutzerobjekt wurde ohne »%s« erstellt"
+
+#: modules/ldap.c:1344
+#, c-format
+msgid "error creating a LDAP directory entry: %s"
+msgstr "Fehler beim Erstellen eines LDAP-Verzeichniseintrags: %s"
+
+#: modules/ldap.c:1370 modules/ldap.c:1604
+#, c-format
+msgid "error modifying LDAP directory entry: %s"
+msgstr "Fehler bei der Änderung des LDAP-Verzeichniseintrags: %s"
+
+#: modules/ldap.c:1395
+#, c-format
+msgid "error renaming LDAP directory entry: %s"
+msgstr "Fehler beim Umbenennen des LDAP-Verzeichniseintrags: %s"
+
+#: modules/ldap.c:1440
+#, c-format
+msgid "object had no %s attribute"
+msgstr "Objekt hatte kein Attribut %s"
+
+#: modules/ldap.c:1456
+#, c-format
+msgid "error removing LDAP directory entry: %s"
+msgstr "Fehler beim Entfernen des LDAP-Verzeichniseintrags: %s"
+
+#: modules/ldap.c:1506 modules/ldap.c:1521 modules/ldap.c:1635
+#: modules/ldap.c:1730
+#, c-format
+msgid "object has no %s attribute"
+msgstr "Objekt besitzt kein Attribut %s"
+
+#: modules/ldap.c:1533
+msgid "unsupported password encryption scheme"
+msgstr "Nicht unterstütztes Passwort-Verschlüsselungsschema"
+
+#: modules/ldap.c:1658
+msgid "no such object in LDAP directory"
+msgstr "Kein entsprechendes Objekt im LDAP-Verzeichnis vorhanden"
+
+#: modules/ldap.c:1670
+#, c-format
+msgid "no `%s' attribute found"
+msgstr "Kein »%s«-Attribut gefunden"
+
+#: modules/ldap.c:1843
+#, c-format
+msgid "error setting password in LDAP directory for %s: %s"
+msgstr "Fehler beim Einrichten des Passworts im LDAP-Verzeichnis für %s: %s."
+
+#: modules/ldap.c:2446
+msgid "LDAP Server Name"
+msgstr "LDAP-Servername"
+
+#: modules/ldap.c:2452
+msgid "LDAP Search Base DN"
+msgstr "LDAP Basissuche-DN"
+
+#: modules/ldap.c:2458
+msgid "LDAP Bind DN"
+msgstr "LDAP Bind DN"
+
+#: modules/ldap.c:2465
+msgid "LDAP Bind Password"
+msgstr "LDAP Bind-Passwort"
+
+#: modules/ldap.c:2471
+msgid "LDAP SASL User"
+msgstr "LDAP SASL-Benutzer"
+
+#: modules/ldap.c:2478
+msgid "LDAP SASL Authorization User"
+msgstr "LDAP SASL-Autorisierungsbenutzer"
+
+#: modules/sasldb.c:132
+#, c-format
+msgid "Cyrus SASL error creating user: %s"
+msgstr "Cyrus SASL-Fehler beim Erstellen des Benutzers: %s"
+
+#: modules/sasldb.c:136
+#, c-format
+msgid "Cyrus SASL error removing user: %s"
+msgstr "Cyrus SASL-Fehler beim Entfernen des Benutzers: %s"
+
+#: modules/sasldb.c:503 modules/sasldb.c:511
+#, c-format
+msgid "error initializing Cyrus SASL: %s"
+msgstr "Fehler beim Initialisieren von Cyrus SASL: %s"
+
+#: python/admin.c:505
+msgid "error creating home directory for user"
+msgstr "Fehler beim Erstellen des persönlichen Ordners für Benutzer"
+
+#: python/admin.c:544 python/admin.c:583
+msgid "error removing home directory for user"
+msgstr "Fehler beim Entfernen des persönlichen Ordners für Benutzer"
+
+#: python/admin.c:654
+msgid "error moving home directory for user"
+msgstr "Fehler beim Verschieben des persönlichen Ordners für Benutzer"
+
+#: samples/lookup.c:63
+#, c-format
+msgid "Error initializing %s: %s\n"
+msgstr "Fehler beim Initialisieren von %s: %s\n"
+
+#: samples/lookup.c:76
+#, c-format
+msgid "Invalid ID %s\n"
+msgstr "Ungültige Kennung %s\n"
+
+#: samples/lookup.c:88
+#, c-format
+msgid "Searching for group with ID %jd.\n"
+msgstr "Nach Gruppe mit Kennung %jd wird gesucht.\n"
+
+#: samples/lookup.c:92
+#, c-format
+msgid "Searching for group named %s.\n"
+msgstr "Nach Gruppe mit Namen %s wird gesucht.\n"
+
+#: samples/lookup.c:99
+#, c-format
+msgid "Searching for user with ID %jd.\n"
+msgstr "Nach Benutzer mit Kennung %jd wird gesucht.\n"
+
+#: samples/lookup.c:103
+#, c-format
+msgid "Searching for user named %s.\n"
+msgstr "Nach Benutzer mit Namen %s wird gesucht.\n"
+
+#: samples/lookup.c:117
+msgid "Entry not found.\n"
+msgstr "Eintrag wurde nicht gefunden.\n"
+
+#: samples/prompt.c:48
+msgid "Prompts succeeded.\n"
+msgstr "Eingabeaufforderungen erfolgreich.\n"
+
+#: samples/prompt.c:58
+msgid "Prompts failed.\n"
+msgstr "Eingabeaufforderungen fehlgeschlagen.\n"
+
+#: samples/testuser.c:76
+msgid "Default user object classes:\n"
+msgstr "Standardmäßige Benutzerobjekt-Klassen:\n"
+
+#: samples/testuser.c:82
+msgid "Default user attribute names:\n"
+msgstr "Standardmäßige Benutzerattribut-Namen:\n"
+
+#: samples/testuser.c:88
+msgid "Getting default user attributes:\n"
+msgstr "Nach standardmäßigen Benutzerattributen wird gesucht:\n"
+
+#: samples/testuser.c:95
+msgid "Copying user structure:\n"
+msgstr "Benutzerstrukturen werden kopiert:\n"
+
+#~ msgid "backup file `%s' exists and is not a regular file"
+#~ msgstr "Sicherungsdatei »%s« ist vorhanden und keine reguläre Datei"
+
+#~ msgid "backup file size mismatch"
+#~ msgstr "Sicherungsdateigröße passt nicht"
