@@ -1,0 +1,23 @@
+include         /etc/openldap/schema/core.schema
+include         /etc/openldap/schema/cosine.schema
+include         /etc/openldap/schema/inetorgperson.schema
+include         /etc/openldap/schema/nis.schema
+
+allow bind_v2
+
+pidfile @WORKDIR@/slapd.pid
+
+TLSCertificateFile @WORKDIR@/key.pem
+TLSCertificateKeyFile @WORKDIR@/key.pem
+
+database bdb
+suffix "dc=libuser"
+rootdn "cn=Manager,dc=libuser"
+rootpw {SSHA}ABgelmLFZQ/OJzVEp3OM5MzWQ9rt3b4F
+
+directory @WORKDIR@/db
+
+index objectClass                       eq,pres
+index ou,cn,mail,surname,givenname      eq,pres,sub
+index uidNumber,gidNumber,loginShell    eq,pres
+index uid,memberUid                     eq,pres,sub

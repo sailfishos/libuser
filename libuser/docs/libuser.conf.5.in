@@ -1,0 +1,427 @@
+'\" t
+.\" A man page for libuser.conf -*- nroff -*-
+.\" Copyright (C) 2005, 2008, 2010 Red Hat, Inc.
+.\"
+.\" This is free software; you can redistribute it and/or modify it under
+.\" the terms of the GNU Library General Public License as published by
+.\" the Free Software Foundation; either version 2 of the License, or
+.\" (at your option) any later version.
+.\"
+.\" This program is distributed in the hope that it will be useful, but
+.\" WITHOUT ANY WARRANTY; without even the implied warranty of
+.\" MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+.\" General Public License for more details.
+.\"
+.\" You should have received a copy of the GNU Library General Public
+.\" License along with this program; if not, write to the Free Software
+.\" Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
+.\"
+.\" Author: Miloslav Trmac <mitr@redhat.com>
+.TH libuser.conf 5 2010-02-08 libuser
+
+.SH NAME
+libuser.conf \- configuration for libuser and libuser utilities
+
+.SH FILE FORMAT
+.B libuser.conf
+is a text file.
+Leading and trailing white space on each line is ignored.
+Lines starting with
+.B #
+are ignored.
+
+The file defines variables grouped into sections.  Each section starts with
+a section header:
+.RS
+\fB[\fIsection name\fB]\fR
+.RE
+A single section header can appear more than once in the file.
+
+The lines following a section header define variables from that section:
+.RS
+.I variable
+.B =
+.I value
+.RE
+The
+.I value
+can be empty.
+
+A
+.I variable
+can have more than one value, specified by using more than one line
+defining that \fIvariable\fR.
+All currently defined variables accept only the first value and ignore
+the others, if any.
+
+.SH \fB[defaults]\fR
+.TP
+.B create_modules
+A list of module names to use when creating user or group entries,
+unless the application specifies a different list.
+The module names in the list can be separated using space, tab or comma.
+Default value is \fBfiles shadow\fR.
+
+.TP
+.B crypt_style
+The algorithm to use for password encryption when creating new passwords.
+The current algorithm may be retained
+when changing a password of an existing user, depending on the application.
+
+Possible values are \fBdes\fR, \fBmd5\fR, \fBblowfish\fR,
+.B sha256
+and \fBsha512\fR, all case-insensitive.
+Unrecognized values are treated as \fBdes\fR.
+Default value is \fBdes\fR.
+
+.TP
+\fBhash_rounds_min\fR, \fBhash_rounds_max\fR
+These variables specify an inclusive range of hash rounds used when
+.B crypt_style
+is
+.B sha256
+or \fBsha512\fR.
+A number of hash rounds is chosen from this interval randomly.
+A larger number of rounds makes password checking, and brute-force attempts
+to guess the password by reversing the hash, more CPU-intensive.
+The number of rounds is restricted to the interval [1000, 999999999].
+
+If only one of the above variables is specified, the number of rounds used is
+specified by the other variable.
+If neither variable is specified, the number of rounds is chosen by \fBlibc\fR.
+
+.TP
+.B mailspooldir
+The directory containing user's mail spool files.
+Default value is \fB/var/mail\fR.
+
+.TP
+.B moduledir
+The directory containing
+.B libuser
+modules.
+Default value uses the modules installed with \fBlibuser\fR,
+corresponding to the architecture of the
+.B libuser
+library,
+e.g. \fB/usr/lib/libuser\fR or \fB/usr/lib64/libuser\fR
+(assuming
+.B libuser
+was configured with \fB--prefix=/usr\fR).
+
+.TP
+.B modules
+A list of module names to use when not creating user or group entries,
+unless the application specifies a different list.
+The module names in the list can be separated using space, tab or comma.
+Default value is \fBfiles shadow\fR.
+
+.TP
+.B skeleton
+The directory containing files to copy to newly created home directories.
+Default value is \fB/etc/skel\fR.
+
+.SH \fB[import]\fR
+.TP
+.B login_defs
+A path to the
+.I login.defs
+file from \fBshadow\fR.
+If this variable is defined,
+the variables from the named file are used in place of some
+.B libuser
+variables.
+Variables explicitly defined in
+.I libuser.conf
+are not affected by contents of \fIlogin.defs\fR.
+
+The following variables are imported:
+.TS
+tab(,);
+l|l
+-|-
+lb|lb.
+Variable,Imported as
+ENCRYPT_METHOD,defaults/crypt_style
+GID_MIN,groupdefaults/LU_GIDNUMBER
+MAIL_DIR,defaults/mailspooldir
+MD5_CRYPT_ENAB,defaults/crypt_style
+PASS_MAX_DAYS,userdefaults/LU_SHADOWMAX
+PASS_MIN_DAYS,userdefaults/LU_SHADOWMIN
+PASS_WARN_AGE,userdefaults/LU_SHADOWWARNING
+SHA_CRYPT_MIN_ROUNDS,defaults/hash_rounds_min
+SHA_CRYPT_MAX_ROUNDS,defaults/hash_rounds_max
+UID_MIN,userdefaults/LU_UIDNUMBER
+.TE
+
+The following variables are
+.I not
+imported:
+\fBCREATE_HOME\fR, \fBGID_MAX\fR, \fBMAIL_FILE\fR, \fBSYSLOG_SG_ENAB\fR,
+\fBUID_MAX\fR, \fBUMASK\fR, \fBUSERDEL_CMD\fR, \fBUSERGROUPS_ENAB\fR
+
+.TP
+.B default_useradd
+A path to the
+.I default/useradd
+file from
+.B useradd
+in \fBshadow\fR.
+If this variable is defined,
+the variables from the named file are used in place of some
+.B libuser
+variables.
+Variables explicitly defined in
+.I libuser.conf
+are not affected by contents of \fIdefault/useradd\fR.
+
+The following variables are imported:
+.TS
+tab(,);
+l|l
+-|-
+lb|lb.
+Variable,Imported as
+EXPIRE,userdefaults/LU_SHADOWEXPIRE
+GROUP,userdefaults/LU_GIDNUMBER
+HOME,userdefaults/LU_HOMEDIRECTORY
+INACTIVE,userdefaults/LU_SHADOWINACTIVE
+SHELL,userdefaults/LU_LOGINSHELL
+SKEL,defaults/skeleton
+.TE
+
+The
+.B HOME
+variable value has
+.B /%n
+appended to it before importing.
+
+.SH \fB[userdefaults]\fR
+This section defines attribute values of newly created user entities.
+There is one special variable:
+
+.TP
+.B LU_UIDNUMBER
+A decimal number, the first allowed UID value for regular users (not system
+users).
+Default value is \fB500\fR.
+
+.P
+All other variables have the same names as the attribute names from
+\fB<libuser/entity.h>\fR and define attribute values.
+Either the macro name (e.g. \fBLU_GECOS\fR)
+or the macro content (e.g. \fBpw_gecos\fR)
+can be used;
+if both are used, the one appearing later in the configuration file
+is used.
+
+The
+.B %
+character in the value of the variable introduces an escape sequence:
+.B %n
+is replaced by the user name,
+.B %d
+is replaced by current date in days since the epoch,
+.B %u
+is replaced by the user's UID.
+There is no way to escape the
+.B %
+character and avoid this substitution.
+
+After the
+.B userdefaults
+section is processed, modules may define additional attributes
+or even override the attributes defined in this section.
+
+.SH \fB[groupdefaults]\fR
+The
+.B groupdefaults
+section is similar to \fBuserdefaults\fR.
+There is one special variable:
+
+.TP
+.B LU_GIDNUMBER
+A decimal number, the first allowed GID value for regular groups (not system
+groups).
+Default value is \fB500\fR.
+
+.P
+The other variables follow the same rules as in the
+.B userdefaults
+section,
+except that
+.B %n
+and
+.B %u
+are replaced by the group name and group's GID, respectively.
+
+After the
+.B groupdefaults
+section is processed, modules may define additional attributes
+or even override the attributes defined in this section.
+
+.SH \fB[files]\fR
+Configures the
+.B files
+module, which manages
+.I /etc/group
+and \fI/etc/passwd\fR.
+The configuration variables are probably useful only for
+.B libuser
+development.
+
+.TP
+.B directory
+The directory containing the
+.I group
+and
+.I passwd
+files.
+Default value is \fB/etc\fR.
+
+.TP
+.B nonroot
+Allow module initialization when not invoked as the
+.B root
+user if the value is \fByes\fR.
+
+.SH \fB[shadow]\fR
+Configures the
+.B files
+module, which manages
+.I /etc/gshadow
+and \fI/etc/shadow\fR.
+The configuration variables are probably useful only for
+.B libuser
+development.
+
+.TP
+.B directory
+The directory containing the
+.I gshadow
+and
+.I shadow
+files.
+Default value is \fB/etc\fR.
+
+.TP
+.B nonroot
+Allow module initialization when not invoked as the
+.B root
+user if the value is \fByes\fR.
+
+.SH \fB[ldap]\fR
+Configures the
+.B ldap
+module, which manages an user database accessible using LDAP.
+
+.TP
+.B userBranch
+The LDAP suffix for user entities.
+Default value is \fBou=People\fR.
+
+.TP
+.B groupBranch
+The LDAP suffix for group entities.
+Default value is \fBou=Group\fR.
+
+.TP
+.B server
+A domain name or an URI of the LDAP server.
+The URI can use the \fBldap\fR,
+.B ldapi
+or the
+.B ldaps
+protocol.
+When a simple domain name is used,
+the connection fails if TLS can not be used;
+an URI using the
+.B ldap
+protocol allows connection without TLS.
+TLS is never used with the
+.B ldapi
+protocol.
+Default value is \fBldap\fR.
+
+.TP
+.B basedn
+The base DN of the server.
+Default value is \fBdc=example,dc=com\fR.
+
+.TP
+.B binddn
+A DN for binding to the server.
+If the value is empty or binding using this DN fails,
+a DN of \fBuid=\fIuser\fR,\fIuserBranch\fR,\fIbasedn\fR is used, where
+.I userBranch
+and
+.I basedn
+are variables from this section
+and
+.I user
+is the user name of the invoking user, unless overridden by the
+.B user
+variable from this section.
+Default value is \fBcn=manager,dc=example,dc=com\fR.
+
+.TP
+.B user
+The SASLv2 identity for authenticating to the LDAP server,
+also overrides the user name for generating a bind DN.
+Default value is the name of the invoking user.
+
+.TP
+.B password
+The password used for a simple bind by default.  If not specified, there is
+no default and the user must supply the password each time.
+
+.B IT IS STRONGLY RECOMMENDED NOT TO STORE A PASSWORD IN THE SYSTEM-WIDE
+.I @sysconfdir@/libuser.conf
+.B FILE.
+The configuration file is world-readable by default,
+and setuid programs that prompt for a server name could be used
+to send the password to an attacker-controlled server.
+
+.TP
+.B authuser
+The SASLv2 authorization user, if non-empty.
+Default value is empty.
+
+.TP
+.B bindtype
+The list of bind types to use, separated by commas.
+Allowed bind types are \fBsimple\fR, \fBsasl\fR, and \fBsasl/\fImechanism\fR,
+where
+.I mechanism
+is a SASL mechanism.
+The bind types (but not necessarily \fImechanism\fR) are case-insensitive.
+If more than one bind type is specified, their relative order is ignored.
+Default value is \fBsimple,sasl\fR.
+
+.SH \fB[sasl]\fR
+Configures the
+.B sasl
+module, which manages a SASLv2 user database.
+
+.TP
+.B appname
+Name of the SASLv2 application.
+Default value is empty.
+
+.TP
+.B domain
+Domain used by libuser for the SASLv2 authentication object.
+Default value is empty.
+
+.SH BUGS
+Invalid lines in the configuration file (or the imported
+.B shadow
+configuration files) are silently ignored.
+
+.SH FILES
+.TP
+.I @sysconfdir@/libuser.conf
+The default location of the configuration file. Can be overridden
+by the
+.I LIBUSER_CONF
+environment variable, except in set-uid or set-gid programs.

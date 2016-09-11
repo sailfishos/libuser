@@ -1,0 +1,14 @@
+dn: dc=libuser
+dc: libuser
+objectClass: top
+objectClass: domain
+
+dn: ou=People,dc=libuser
+ou: People
+objectClass: top
+objectClass: organizationalUnit
+
+dn: ou=Group,dc=libuser
+ou: Group
+objectClass: top
+objectClass: organizationalUnit

@@ -1,0 +1,52 @@
+.\" A man page for lchsh
+.\" Copyright (C) 2004 Red Hat, Inc.
+.\"
+.\" This is free software; you can redistribute it and/or modify it under
+.\" the terms of the GNU Library General Public License as published by
+.\" the Free Software Foundation; either version 2 of the License, or
+.\" (at your option) any later version.
+.\"
+.\" This program is distributed in the hope that it will be useful, but
+.\" WITHOUT ANY WARRANTY; without even the implied warranty of
+.\" MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+.\" General Public License for more details.
+.\"
+.\" You should have received a copy of the GNU Library General Public
+.\" License along with this program; if not, write to the Free Software
+.\" Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
+.\"
+.\" Author: Miloslav Trmac <mitr@redhat.com>
+.TH lchsh 1 "Sep 20 2004" libuser
+
+.SH NAME
+lchsh \- Change login shell
+
+.SH SYNOPSIS
+lchsh [\fIOPTION\fR]... [\fIuser\fR]
+
+.SH DESCRIPTION
+Displays and allows changing login shell of \fIuser\fR.
+
+If the \fIuser\fR argument is not provided,
+username of the invoking user is used;
+the \fIuser\fR argument is ignored if
+.B lchsh
+is run set-uid to a different user.
+
+Entering an empty string (by pressing Enter) at the "New Shell" prompt
+is interpreted as accepting the current value.
+
+.SH OPTIONS
+.TP
+\fB\-i\fR, \fB\-\-interactive\fR 
+Ask all questions when connecting to the user database,
+even if default answers are set up in
+.B libuser
+configuration.
+
+.SH EXIT STATUS
+The exit status is 0 on success, 1 on error.
+
+.SH BUGS
+.B lchsh
+ignores \fI/etc/shells\fR.

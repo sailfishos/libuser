@@ -1,0 +1,75 @@
+#! /bin/sh
+# Automated LDAP regression tester
+#
+# Copyright (c) 2004 Red Hat, Inc. All rights reserved.
+#
+# This is free software; you can redistribute it and/or modify it under
+# the terms of the GNU Library General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU Library General Public
+# License along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
+#
+# Author: Miloslav Trmac <mitr@redhat.com>
+
+srcdir=$srcdir/tests
+
+workdir=$(pwd)/test_ldap
+
+trap 'status=$?; rm -rf "$workdir"; exit $status' 0
+trap '(exit 1); exit 1' 1 2 13 15
+
+rm -rf "$workdir"
+mkdir "$workdir"
+
+# Create a SSL key
+/usr/bin/openssl req -newkey rsa:1024 -keyout "$workdir"/key1 -nodes \
+    -x509 -days 2 -out "$workdir"/key3 2>/dev/null <<EOF
+.
+.
+.
+.
+.
+127.0.0.1
+.
+EOF
+echo > "$workdir"/key2
+cat "$workdir"/key{1,2,3} > "$workdir"/key.pem
+rm "$workdir"/key{1,2,3}
+
+
+# Set up an LDAP server
+mkdir "$workdir"/db
+sed "s|@WORKDIR@|$workdir|g" < "$srcdir"/slapd.conf.in > "$workdir"/slapd.conf
+ldap_port=$(tests/alloc_port) # This is racy, but much better than a static port
+# FIXME: path
+/usr/sbin/slapd -h ldap://127.0.0.1:"$ldap_port"/ -f "$workdir"/slapd.conf &
+tests/wait_for_slapd_start "$workdir"/slapd.pid "$ldap_port"
+slapd_pid=$(cat "$workdir"/slapd.pid)
+trap 'status=$?; kill $slapd_pid
+	tests/wait_for_slapd_exit "$workdir"/slapd.pid "$ldap_port"
+	rm -rf "$workdir"; exit $status' 0
+ldapadd -h 127.0.0.1 -p "$ldap_port" -f "$srcdir/ldap_skel.ldif" -x \
+    -D cn=Manager,dc=libuser -w password
+
+
+# Set up the client
+LIBUSER_CONF=$workdir/libuser.conf
+export LIBUSER_CONF
+sed -e "s|@WORKDIR@|$workdir|g; s|@TOP_BUILDDIR@|$(pwd)|g" \
+    -e "s|@LDAP_PORT@|$ldap_port|g" < "$srcdir"/ldap.conf.in > "$LIBUSER_CONF"
+# Ugly non-portable hacks
+LD_LIBRARY_PATH=$(pwd)/lib/.libs
+export LD_LIBRARY_PATH
+PYTHONPATH=$(pwd)/python/.libs
+export PYTHONPATH
+
+# Point "$HOME/ldaprc" to "$srcdir"/ldaprc
+HOME="$srcdir" $VALGRIND $PYTHON "$srcdir"/ldap_test.py

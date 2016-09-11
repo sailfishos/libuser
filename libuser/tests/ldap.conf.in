@@ -1,0 +1,40 @@
+[defaults]
+# non-portable
+moduledir = @TOP_BUILDDIR@/modules/.libs
+skeleton = /etc/skel
+mailspooldir = /var/mail
+modules = ldap
+create_modules = ldap
+crypt_style = md5
+
+[userdefaults]
+LU_USERNAME = %n
+LU_UIDNUMBER = 500
+LU_GIDNUMBER = %u
+# LU_USERPASSWORD = !!
+# LU_GECOS = %n
+# LU_HOMEDIRECTORY = /home/%n
+# LU_LOGINSHELL = /bin/bash
+
+# LU_SHADOWNAME = %n
+# LU_SHADOWPASSWORD = !!
+# LU_SHADOWLASTCHANGE = %d
+# LU_SHADOWMIN = 0
+# LU_SHADOWMAX = 99999
+# LU_SHADOWWARNING = 7
+# LU_SHADOWINACTIVE = -1
+# LU_SHADOWEXPIRE = -1
+# LU_SHADOWFLAG = -1
+
+[groupdefaults]
+LU_GROUPNAME = %n
+LU_GIDNUMBER = 500
+# LU_GROUPPASSWORD = !!
+# LU_MEMBERUID =
+# LU_ADMINISTRATORUID =
+
+[ldap]
+server = 127.0.0.1:@LDAP_PORT@
+basedn = dc=libuser
+bindtype = simple
+binddn = cn=Manager,dc=libuser

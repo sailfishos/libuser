@@ -1,0 +1,49 @@
+.\" A man page for luserdel
+.\" Copyright (C) 2005, 2009 Red Hat, Inc.
+.\"
+.\" This is free software; you can redistribute it and/or modify it under
+.\" the terms of the GNU Library General Public License as published by
+.\" the Free Software Foundation; either version 2 of the License, or
+.\" (at your option) any later version.
+.\"
+.\" This program is distributed in the hope that it will be useful, but
+.\" WITHOUT ANY WARRANTY; without even the implied warranty of
+.\" MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+.\" General Public License for more details.
+.\"
+.\" You should have received a copy of the GNU Library General Public
+.\" License along with this program; if not, write to the Free Software
+.\" Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
+.\"
+.\" Author: Miloslav Trmac <mitr@redhat.com>
+.TH luserdel 1 "May 2009" libuser
+
+.SH NAME
+luserdel \- Delete an user
+
+.SH SYNOPSIS
+luserdel [\fIOPTION\fR]... \fIuser\fR
+
+.SH DESCRIPTION
+Deletes the user with name \fIuser\fR.
+
+.SH OPTIONS
+.TP
+\fB\-G\fR, \fB\-\-dontremovegroup\fR
+By default the user's primary group is removed
+if it has group name \fIuser\fR (user's private group).
+This option disables this behavior.
+
+.TP
+\fB\-i\fR, \fB\-\-interactive\fR 
+Ask all questions when connecting to the user database,
+even if default answers are set up in
+.B libuser
+configuration.
+
+.TP
+\fB\-r\fR, \fB\-\-removehome\fR
+Remove user's home directory and mail spool after deleting the user.
+
+.SH EXIT STATUS
+The exit status is 0 on success, nonzero on error.

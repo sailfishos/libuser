@@ -1,0 +1,1422 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Red Hat, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# Arun Prakash <arunprakash.pts@gmail.com>, 2012
+# Felix <ifelix@redhat.com>, 2006
+# Felix I <ifelix25@gmail.com>, 2011, 2012
+# I felix <ifelix@redhat.com>, 2007
+# Jayaradha N <jaya@pune.redhat.com>, 2004
+# Jayaradha N <njaya@redhat.com>, 2004, 2005, 2006
+# Miloslav Trmač <mitr@volny.cz>, 2011
+msgid ""
+msgstr ""
+"Project-Id-Version: libuser 0.60\n"
+"Report-Msgid-Bugs-To: http://bugzilla.redhat.com/bugzilla/\n"
+"POT-Creation-Date: 2015-07-23 21:16+0200\n"
+"PO-Revision-Date: 2013-04-29 04:37-0400\n"
+"Last-Translator: Miloslav Trmač <mitr@volny.cz>\n"
+"Language-Team: Tamil (http://www.transifex.com/projects/p/fedora/language/"
+"ta/)\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Zanata 3.6.2\n"
+
+#: apps/apputil.c:197 apps/apputil.c:201
+#, c-format
+msgid "Failed to drop privileges.\n"
+msgstr "சலுகைகள் வழங்கபடாதது கைவிடப்படுகிறது.\n"
+
+#: apps/apputil.c:210
+#, c-format
+msgid "Internal error.\n"
+msgstr "உள்ளார்ந்த பிழை.\n"
+
+#: apps/apputil.c:231
+#, c-format
+msgid "%s is not authorized to change the finger info of %s\n"
+msgstr "%s க்கு %s இன் தகவலை மாற்ற அனுமதி இல்லை\n"
+
+#: apps/apputil.c:233
+msgid "Unknown user context"
+msgstr "தெரியாத பயனர் தொடர்பு"
+
+#: apps/apputil.c:241
+#, c-format
+msgid "Can't set default context for /etc/passwd\n"
+msgstr "/etc/passwd முன்னிருப்பு சூழலை அமைக்க முடியவில்லை\n"
+
+#: apps/apputil.c:250
+#, c-format
+msgid "Error initializing PAM.\n"
+msgstr "PAM துவக்குவதில் பிழை.\n"
+
+#: apps/apputil.c:260 apps/apputil.c:287
+#, c-format
+msgid "Authentication failed for %s.\n"
+msgstr "%s உறுதிப்படுத்தல் தவறானது.\n"
+
+#: apps/apputil.c:268
+#, c-format
+msgid "Internal PAM error `%s'.\n"
+msgstr "உள்ளார்ந்த PAM பிழை  `%s'.\n"
+
+#: apps/apputil.c:273
+#, c-format
+msgid "Unknown user authenticated.\n"
+msgstr "தெரியாத பயனர் அங்கீரித்தல்.\n"
+
+#: apps/apputil.c:277
+#, c-format
+msgid "User mismatch.\n"
+msgstr "பயனர் பொறுத்தம் இல்லை.\n"
+
+#: apps/lchage.c:84 apps/lchfn.c:53 apps/lchsh.c:44 apps/lgroupadd.c:47
+#: apps/lgroupdel.c:42 apps/lgroupmod.c:54 apps/lid.c:115 apps/lnewusers.c:45
+#: apps/lpasswd.c:47 apps/luseradd.c:55 apps/luserdel.c:45 apps/lusermod.c:56
+msgid "prompt for all information"
+msgstr ""
+
+#: apps/lchage.c:86
+msgid "list aging parameters for the user"
+msgstr ""
+
+#: apps/lchage.c:88
+msgid "minimum days between password changes"
+msgstr ""
+
+#: apps/lchage.c:88 apps/lchage.c:90 apps/lchage.c:93 apps/lchage.c:96
+#: apps/lchage.c:99 apps/lchage.c:102
+msgid "DAYS"
+msgstr ""
+
+#: apps/lchage.c:90
+msgid "maximum days between password changes"
+msgstr ""
+
+#: apps/lchage.c:92
+msgid "date of last password change in days since 1/1/70"
+msgstr ""
+
+#: apps/lchage.c:95
+msgid ""
+"number of days after password expiration date when account is considered "
+"inactive"
+msgstr ""
+
+#: apps/lchage.c:98
+msgid "password expiration date in days since 1/1/70"
+msgstr ""
+
+#: apps/lchage.c:101
+msgid "days before expiration to begin warning user"
+msgstr ""
+
+#: apps/lchage.c:114 apps/lid.c:130 apps/lpasswd.c:68 apps/luseradd.c:100
+#: apps/luserdel.c:59 apps/lusermod.c:101
+msgid "[OPTION...] user"
+msgstr "[OPTION...] பயனர்"
+
+#: apps/lchage.c:117 apps/lchfn.c:70 apps/lchsh.c:58 apps/lgroupadd.c:65
+#: apps/lgroupdel.c:56 apps/lgroupmod.c:85 apps/lid.c:133 apps/lnewusers.c:66
+#: apps/lpasswd.c:71 apps/luseradd.c:103 apps/luserdel.c:62
+#: apps/lusermod.c:104
+#, c-format
+msgid "Error parsing arguments: %s.\n"
+msgstr "அளவுருக்கள் பகுப்பதில் பிழை: %s.\n"
+
+#: apps/lchage.c:126 apps/lpasswd.c:85 apps/luseradd.c:118 apps/luserdel.c:70
+#: apps/lusermod.c:115
+#, c-format
+msgid "No user name specified.\n"
+msgstr "பயனர் பெயர் எதுவும் குறிப்பிடப்படவில்லை.\n"
+
+#: apps/lchage.c:138 apps/lchfn.c:103 apps/lchsh.c:91 apps/lgroupadd.c:102
+#: apps/lgroupdel.c:77 apps/lgroupmod.c:119 apps/lid.c:179 apps/lnewusers.c:79
+#: apps/lpasswd.c:97 apps/luseradd.c:143 apps/luserdel.c:81
+#: apps/lusermod.c:157 samples/enum.c:56 samples/testuser.c:71
+#, c-format
+msgid "Error initializing %s: %s.\n"
+msgstr "%sஐ துவங்குவதில் பிழை: %s.\n"
+
+#: apps/lchage.c:147 apps/lchfn.c:114 apps/lchsh.c:102 apps/lpasswd.c:148
+#: apps/luserdel.c:89 apps/lusermod.c:171
+#, c-format
+msgid "User %s does not exist.\n"
+msgstr "பயனர்%s இல்லை.\n"
+
+#: apps/lchage.c:160
+#, c-format
+msgid "Account is locked.\n"
+msgstr "கணக்கு பூட்டப்பட்டது.\n"
+
+#: apps/lchage.c:162
+#, c-format
+msgid "Account is not locked.\n"
+msgstr "கணக்கு பூட்டப்படவில்லை.\n"
+
+#: apps/lchage.c:166
+#, c-format
+msgid "Minimum:\t%ld\n"
+msgstr "குறைந்தபட்சம்:\t%ld\n"
+
+#: apps/lchage.c:170
+#, c-format
+msgid "Maximum:\t%ld\n"
+msgstr "அதிகபட்சம்:\t%ld\n"
+
+#: apps/lchage.c:172
+#, c-format
+msgid "Maximum:\tNone\n"
+msgstr ""
+
+#: apps/lchage.c:175
+#, c-format
+msgid "Warning:\t%ld\n"
+msgstr "எச்சரிக்கை:\t%ld\n"
+
+#: apps/lchage.c:180
+#, c-format
+msgid "Inactive:\t%ld\n"
+msgstr "செயலிழக்கப்பட்டது:\t%ld\n"
+
+#: apps/lchage.c:182
+#, c-format
+msgid "Inactive:\tNever\n"
+msgstr ""
+
+#: apps/lchage.c:186 apps/lchage.c:194 apps/lchage.c:204
+msgid "Must change password on next login"
+msgstr ""
+
+#: apps/lchage.c:188 apps/lchage.c:196 apps/lchage.c:206 apps/lchage.c:215
+msgid "Never"
+msgstr "எப்போதும் இல்லை"
+
+#: apps/lchage.c:191
+#, c-format
+msgid "Last Change:\t%s\n"
+msgstr "கடைசி மாற்றம்:\t%s\n"
+
+#: apps/lchage.c:201
+#, c-format
+msgid "Password Expires:\t%s\n"
+msgstr "கடவுச்சொல் முடிவுற்றது:\t%s\n"
+
+#: apps/lchage.c:213
+#, c-format
+msgid "Password Inactive:\t%s\n"
+msgstr "செயலிழக்கப்பட்ட கடவுச்சொல் :\t%s\n"
+
+#: apps/lchage.c:219
+#, c-format
+msgid "Account Expires:\t%s\n"
+msgstr "கணக்கு முடிவுற்றது:\t%s\n"
+
+#: apps/lchage.c:240
+#, c-format
+msgid "Failed to modify aging information for %s: %s\n"
+msgstr "பழைய செய்தியை %sக்கு மாற்ற முடியவில்லை: %s\n"
+
+#: apps/lchfn.c:67 apps/lchsh.c:55
+msgid "[OPTION...] [user]"
+msgstr "[OPTION...] [user]"
+
+#: apps/lchfn.c:86 apps/lchsh.c:74 apps/lid.c:164
+#, c-format
+msgid "No user name specified, no name for uid %d.\n"
+msgstr "பயனர் பெயர் எதுவும் குறிப்பிடவில்லை, பயனர் குறியீடு %dக்கு பெயர் இல்லை.\n"
+
+#: apps/lchfn.c:96
+#, c-format
+msgid "Changing finger information for %s.\n"
+msgstr "%sக்கு தகவல் மாற்றப்படுகிறது.\n"
+
+#: apps/lchfn.c:136
+msgid "Full Name"
+msgstr "முழுப்பெயர்"
+
+#: apps/lchfn.c:146
+msgid "Surname"
+msgstr "துணைப்பெயர்"
+
+#: apps/lchfn.c:157
+msgid "Given Name"
+msgstr "கொடுத்த பெயர்"
+
+#: apps/lchfn.c:167
+msgid "Office"
+msgstr "அலுவலகம்"
+
+#: apps/lchfn.c:176
+msgid "Office Phone"
+msgstr "அலுவலக தொலைபேசி "
+
+#: apps/lchfn.c:185
+msgid "Home Phone"
+msgstr "வீட்டு தொலைபேசி "
+
+#: apps/lchfn.c:195
+msgid "E-Mail Address"
+msgstr "மின்அஞ்சல் முகவரி"
+
+#: apps/lchfn.c:208
+#, c-format
+msgid "Finger information not changed:  input error.\n"
+msgstr "தகவல் மாற்றவில்லை: உள்ளீடு பிழை.\n"
+
+#: apps/lchfn.c:270
+msgid "Finger information changed.\n"
+msgstr "தகவல் மாற்றப்பட்டது.\n"
+
+#: apps/lchfn.c:273
+#, c-format
+msgid "Finger information not changed: %s.\n"
+msgstr "தகவல் மாற்ற முடியவில்லை.%s.\n"
+
+#: apps/lchsh.c:84
+#, c-format
+msgid "Changing shell for %s.\n"
+msgstr "%sக்கு ஷெல் மாற்றப்படுகிறது.\n"
+
+#: apps/lchsh.c:114
+msgid "New Shell"
+msgstr "புதிய ஷெல் "
+
+#: apps/lchsh.c:121 apps/lchsh.c:136
+#, c-format
+msgid "Shell not changed: %s\n"
+msgstr "ஷெல் மாற்றப்படவில்லை: %s\n"
+
+#: apps/lchsh.c:133
+msgid "Shell changed.\n"
+msgstr "ஷெல் மாற்றப்பட்டது.\n"
+
+#: apps/lgroupadd.c:49
+msgid "gid for new group"
+msgstr ""
+
+#: apps/lgroupadd.c:49 apps/lgroupmod.c:56 apps/lpasswd.c:56 apps/lpasswd.c:59
+#: apps/luseradd.c:67 apps/lusermod.c:66 apps/lusermod.c:68
+msgid "NUM"
+msgstr ""
+
+#: apps/lgroupadd.c:51
+msgid "create a system group"
+msgstr ""
+
+#: apps/lgroupadd.c:62 apps/lgroupdel.c:53 apps/lgroupmod.c:82
+msgid "[OPTION...] group"
+msgstr "[OPTION...] குழு"
+
+#: apps/lgroupadd.c:74 apps/lgroupdel.c:65 apps/lgroupmod.c:93
+#, c-format
+msgid "No group name specified.\n"
+msgstr "குழுப் பெயர் எதுவும் குறிப்பிடவில்லை\n"
+
+#: apps/lgroupadd.c:87 apps/lgroupmod.c:105 apps/lnewusers.c:172
+#: apps/luseradd.c:164 apps/lusermod.c:127
+#, c-format
+msgid "Invalid group ID %s\n"
+msgstr "தவறான குழு ID %s\n"
+
+#: apps/lgroupadd.c:119
+#, c-format
+msgid "Group creation failed: %s\n"
+msgstr "குழு உருவாக்க முடியவில்லை: %s\n"
+
+#: apps/lgroupdel.c:85 apps/lgroupmod.c:132 apps/lpasswd.c:153
+#, c-format
+msgid "Group %s does not exist.\n"
+msgstr "குழு %s இல்லை.\n"
+
+#: apps/lgroupdel.c:91
+#, c-format
+msgid "Group %s could not be deleted: %s\n"
+msgstr "குழு %sஐ அழிக்க முடியவில்லை: %s.\n"
+
+#: apps/lgroupmod.c:56
+msgid "set GID for group"
+msgstr ""
+
+#: apps/lgroupmod.c:58
+msgid "change group to have given name"
+msgstr ""
+
+#: apps/lgroupmod.c:58
+msgid "NAME"
+msgstr ""
+
+#: apps/lgroupmod.c:60 apps/luseradd.c:75
+msgid "plaintext password for use with group"
+msgstr ""
+
+#: apps/lgroupmod.c:60 apps/lgroupmod.c:62 apps/lgroupmod.c:64
+#: apps/lgroupmod.c:66 apps/lgroupmod.c:68 apps/lgroupmod.c:70
+#: apps/lpasswd.c:51 apps/lpasswd.c:53 apps/luseradd.c:59 apps/luseradd.c:61
+#: apps/luseradd.c:63 apps/luseradd.c:65 apps/luseradd.c:69 apps/luseradd.c:75
+#: apps/luseradd.c:77 apps/luseradd.c:79 apps/luseradd.c:81 apps/luseradd.c:83
+#: apps/luseradd.c:85 apps/luseradd.c:87 apps/luseradd.c:89 apps/lusermod.c:58
+#: apps/lusermod.c:60 apps/lusermod.c:64 apps/lusermod.c:70 apps/lusermod.c:72
+#: apps/lusermod.c:74 apps/lusermod.c:80 apps/lusermod.c:82 apps/lusermod.c:84
+#: apps/lusermod.c:86 apps/lusermod.c:88 apps/lusermod.c:90
+msgid "STRING"
+msgstr ""
+
+#: apps/lgroupmod.c:62 apps/luseradd.c:77
+msgid "pre-hashed password for use with group"
+msgstr ""
+
+#: apps/lgroupmod.c:64
+msgid "list of administrators to add"
+msgstr ""
+
+#: apps/lgroupmod.c:66
+msgid "list of administrators to remove"
+msgstr ""
+
+#: apps/lgroupmod.c:68
+msgid "list of group members to add"
+msgstr ""
+
+#: apps/lgroupmod.c:70
+msgid "list of group members to remove"
+msgstr ""
+
+#: apps/lgroupmod.c:71
+msgid "lock group"
+msgstr ""
+
+#: apps/lgroupmod.c:72
+msgid "unlock group"
+msgstr ""
+
+#: apps/lgroupmod.c:125 apps/lusermod.c:164
+#, c-format
+msgid "Both -L and -U specified.\n"
+msgstr "இரண்டும் -L மற்றும் -U குறிப்பிடப்பட்டது.\n"
+
+#: apps/lgroupmod.c:139 apps/lgroupmod.c:148
+#, c-format
+msgid "Failed to set password for group %s: %s\n"
+msgstr "குழு %sக்கான கடவுச்சொல்லை அமைக்க முடியவில்லை: %s\n"
+
+#: apps/lgroupmod.c:157
+#, c-format
+msgid "Group %s could not be locked: %s\n"
+msgstr "குழு%s ஐ பூட்ட முடியவில்லை: %s\n"
+
+#: apps/lgroupmod.c:166
+#, c-format
+msgid "Group %s could not be unlocked: %s\n"
+msgstr "குழு %s ஐ பூட்டு நீக்க முடியவில்லை: %s\n"
+
+#: apps/lgroupmod.c:242 apps/lgroupmod.c:257
+#, c-format
+msgid "Group %s could not be modified: %s\n"
+msgstr "குழு %s ஐ மாற்ற முடியவில்லை: %s.\n"
+
+#: apps/lid.c:42 apps/lid.c:74 apps/lid.c:188
+#, c-format
+msgid "Error looking up %s: %s\n"
+msgstr "%sஇல் பிழை தேடுதல்: %s.\n"
+
+#: apps/lid.c:117
+msgid ""
+"list members of a named group instead of the group memberships for the named "
+"user"
+msgstr ""
+
+#: apps/lid.c:120
+msgid "only list membership information by name, and not UID/GID"
+msgstr ""
+
+#: apps/lid.c:146
+#, c-format
+msgid "No group name specified, using %s.\n"
+msgstr "%s ஐ பயன்படுத்தி, குழுப் பெயர் குறிப்பிடவில்லை .\n"
+
+#: apps/lid.c:150
+#, c-format
+msgid "No group name specified, no name for gid %d.\n"
+msgstr "குழுப் பெயர் குறிப்பிடப்படவில்லை, குழு குறியீடுக்கு பெயர் இல்லை%d.\n"
+
+#: apps/lid.c:160
+#, c-format
+msgid "No user name specified, using %s.\n"
+msgstr "%s பயன்படுத்தி, பயனர் பெயர் எதுவும் குறிப்பிடப்படவில்லை.\n"
+
+#: apps/lid.c:192
+#, c-format
+msgid "%s does not exist\n"
+msgstr "%s இல்லை.\n"
+
+#: apps/lnewusers.c:47
+msgid "file with user information records"
+msgstr ""
+
+#: apps/lnewusers.c:47
+msgid "PATH"
+msgstr ""
+
+#: apps/lnewusers.c:49
+msgid "don't create home directories"
+msgstr ""
+
+#: apps/lnewusers.c:51
+msgid "don't create mail spools"
+msgstr ""
+
+#: apps/lnewusers.c:63
+msgid "[OPTION...]"
+msgstr "[OPTION...]"
+
+#: apps/lnewusers.c:88
+#, c-format
+msgid "Error opening `%s': %s.\n"
+msgstr "`%s' ஐ திறப்பதில் பிழை: %s.\n"
+
+#: apps/lnewusers.c:118
+#, c-format
+msgid "Error creating account for `%s': line improperly formatted.\n"
+msgstr "'%s'க்கு கணக்கு உருவாக்குவதில் பிழை. வரி ஒழுங்கின்றி வடிவமைக்கப்பட்டுள்ளது.\n"
+
+#: apps/lnewusers.c:129 apps/luseradd.c:128 apps/lusermod.c:142
+#, c-format
+msgid "Invalid user ID %s\n"
+msgstr "தவறான பயனர் குறியீடு %s\n"
+
+#: apps/lnewusers.c:136
+msgid "Refusing to create account with UID 0.\n"
+msgstr "UID 0 உடன் கணக்கு உருவாக்க மறுக்கப்படுகிறது.\n"
+
+#: apps/lnewusers.c:206
+#, c-format
+msgid "Error creating group for `%s' with GID %jd: %s\n"
+msgstr "`%s'க்கு GID %jd: உடன் குழு உருவாக்கவதில் பிழை %s\n"
+
+#: apps/lnewusers.c:246
+#, c-format
+msgid "Refusing to use dangerous home directory `%s' for %s by default\n"
+msgstr "அபாயகரமான இல்ல அடைவு `%s' க்கு %sஐ முன்னிப்பாக பயன்படுத்த மறுக்கிறது\n"
+
+#: apps/lnewusers.c:257
+#, c-format
+msgid "Error creating home directory for %s: %s\n"
+msgstr "%sக்கு இல்ல அடைவை உருவாக்குவதில் பிழை: %s\n"
+
+#: apps/lnewusers.c:270
+#, c-format
+msgid "Error creating mail spool for %s: %s\n"
+msgstr ""
+
+#: apps/lnewusers.c:285
+#, c-format
+msgid "Error setting initial password for %s: %s\n"
+msgstr "%sக்கு ஆரம்ப கடவுச்சொல் அமைப்பதில் பிழை: %s\n"
+
+#: apps/lnewusers.c:295
+#, c-format
+msgid "Error creating user account for %s: %s\n"
+msgstr "%sக்கு பயனர் கணக்கு உருவாக்குவதில் பிழை: %s\n"
+
+#: apps/lpasswd.c:49
+msgid "set group password instead of user password"
+msgstr ""
+
+#: apps/lpasswd.c:51
+msgid "new plain password"
+msgstr ""
+
+#: apps/lpasswd.c:53
+msgid "new crypted password"
+msgstr ""
+
+#: apps/lpasswd.c:55
+msgid "read new plain password from given descriptor"
+msgstr ""
+
+#: apps/lpasswd.c:58
+msgid "read new crypted password from given descriptor"
+msgstr ""
+
+#: apps/lpasswd.c:83
+#, c-format
+msgid "Changing password for %s.\n"
+msgstr "%sக்கு கடவுச்சொல்லை மாற்றுகிறது.\n"
+
+#: apps/lpasswd.c:111
+msgid "New password"
+msgstr "புதிய கடவுச்சொல்"
+
+#: apps/lpasswd.c:114
+msgid "New password (confirm)"
+msgstr "புதிய கடவுச்சொல் (உறுதிப்படுத்துதல்)"
+
+#: apps/lpasswd.c:128
+#, c-format
+msgid "Passwords do not match, try again.\n"
+msgstr "கடவுச்சொல் பொருந்தவில்லை. மீண்டும் முயற்சி செய்யவும்.\n"
+
+#: apps/lpasswd.c:133
+#, c-format
+msgid "Password change canceled.\n"
+msgstr "மாற்றிய கடவுச்சொல் ரத்து செய்யப்பட்டது.\n"
+
+#: apps/lpasswd.c:165 apps/lpasswd.c:182
+#, c-format
+msgid "Error reading from file descriptor %d.\n"
+msgstr "Error reading from file descriptor %d.\n"
+
+#: apps/lpasswd.c:203 apps/luseradd.c:302 apps/luseradd.c:311
+#, c-format
+msgid "Error setting password for user %s: %s.\n"
+msgstr "பயனர் %sக்கு கடவுச்சொல் அமைப்பதில் பிழை: %s.\n"
+
+#: apps/lpasswd.c:212
+#, c-format
+msgid "Error setting password for group %s: %s.\n"
+msgstr "குழு %sக்கு கடவுச்சொல் அமைப்பதில் பிழை: %s.\n"
+
+#: apps/lpasswd.c:224
+#, c-format
+msgid "Password changed.\n"
+msgstr "கடவுச்சொல் மாற்றப்பட்டது.\n"
+
+#: apps/luseradd.c:57
+msgid "create a system user"
+msgstr ""
+
+#: apps/luseradd.c:59
+msgid "GECOS information for new user"
+msgstr ""
+
+#: apps/luseradd.c:61
+msgid "home directory for new user"
+msgstr ""
+
+#: apps/luseradd.c:63
+msgid "directory with files for the new user"
+msgstr ""
+
+#: apps/luseradd.c:65
+msgid "shell for new user"
+msgstr ""
+
+#: apps/luseradd.c:67
+msgid "uid for new user"
+msgstr ""
+
+#: apps/luseradd.c:69
+msgid "group for new user"
+msgstr ""
+
+#: apps/luseradd.c:71
+msgid "don't create home directory for user"
+msgstr ""
+
+#: apps/luseradd.c:73
+msgid "don't create group with same name as user"
+msgstr ""
+
+#: apps/luseradd.c:79
+msgid "common name for new user"
+msgstr ""
+
+#: apps/luseradd.c:81
+msgid "given name for new user"
+msgstr ""
+
+#: apps/luseradd.c:83
+msgid "surname for new user"
+msgstr ""
+
+#: apps/luseradd.c:85
+msgid "room number for new user"
+msgstr ""
+
+#: apps/luseradd.c:87
+msgid "telephone number for new user"
+msgstr ""
+
+#: apps/luseradd.c:89
+msgid "home telephone number for new user"
+msgstr ""
+
+#: apps/luseradd.c:189
+#, c-format
+msgid "Group %jd does not exist\n"
+msgstr "குழு %jd இல்லை \n"
+
+#: apps/luseradd.c:207 apps/luseradd.c:220
+#, c-format
+msgid "Error creating group `%s': %s\n"
+msgstr "குழு `%s' அமைப்பதில் பிழை: %s\n"
+
+#: apps/luseradd.c:260
+#, c-format
+msgid "Account creation failed: %s.\n"
+msgstr "கணக்கு உருவாக்க முடியவில்லை: %s.\n"
+
+#: apps/luseradd.c:283
+#, c-format
+msgid "Error creating %s: %s.\n"
+msgstr "%sஐ உருவாக்குவதில் பிழை: %s.\n"
+
+#: apps/luseradd.c:290
+#, c-format
+msgid "Error creating mail spool: %s\n"
+msgstr ""
+
+#: apps/luserdel.c:47
+msgid "don't remove the user's private group, if the user has one"
+msgstr ""
+
+#: apps/luserdel.c:50
+msgid "remove the user's home directory"
+msgstr ""
+
+#: apps/luserdel.c:94
+#, c-format
+msgid "User %s could not be deleted: %s.\n"
+msgstr "பயனர் %sஐ அழிக்க முடியாது: %s.\n"
+
+#: apps/luserdel.c:108
+#, c-format
+msgid "%s did not have a gid number.\n"
+msgstr "%sக்கு ஒரு gid எண் இல்லை.\n"
+
+#: apps/luserdel.c:114
+#, c-format
+msgid "No group with GID %jd exists, not removing.\n"
+msgstr "%jd GID எனக்கொண்ட குழு இல்லை, நீக்கப்படவில்லை.\n"
+
+#: apps/luserdel.c:120
+#, c-format
+msgid "Group with GID %jd did not have a group name.\n"
+msgstr "GID %jd உடன் உள்ள குழுவுக்கு குழுப்பெயர் இல்லை.\n"
+
+#: apps/luserdel.c:126
+#, c-format
+msgid "Group %s could not be deleted: %s.\n"
+msgstr "குழு %sஐ அழிக்க முடியவில்லை: %s.\n"
+
+#: apps/luserdel.c:139
+#, fuzzy, c-format
+msgid "Error removing home directory: %s.\n"
+msgstr "பயனருக்காக இல்ல அடைவை நீக்குவதில் பிழை"
+
+#: apps/luserdel.c:145
+#, c-format
+msgid "Error removing mail spool: %s"
+msgstr ""
+
+#: apps/lusermod.c:58
+msgid "GECOS information"
+msgstr ""
+
+#: apps/lusermod.c:60
+msgid "home directory"
+msgstr ""
+
+#: apps/lusermod.c:62
+msgid "move home directory contents"
+msgstr ""
+
+#: apps/lusermod.c:64
+msgid "set shell for user"
+msgstr ""
+
+#: apps/lusermod.c:66
+msgid "set UID for user"
+msgstr ""
+
+#: apps/lusermod.c:68
+msgid "set primary GID for user"
+msgstr ""
+
+#: apps/lusermod.c:70
+msgid "change login name for user"
+msgstr ""
+
+#: apps/lusermod.c:72
+msgid "plaintext password for the user"
+msgstr ""
+
+#: apps/lusermod.c:74
+msgid "pre-hashed password for the user"
+msgstr ""
+
+#: apps/lusermod.c:75
+msgid "lock account"
+msgstr ""
+
+#: apps/lusermod.c:78
+msgid "unlock account"
+msgstr ""
+
+#: apps/lusermod.c:80
+msgid "set common name for user"
+msgstr ""
+
+#: apps/lusermod.c:82
+msgid "set given name for user"
+msgstr ""
+
+#: apps/lusermod.c:84
+msgid "set surname for user"
+msgstr ""
+
+#: apps/lusermod.c:86
+msgid "set room number for user"
+msgstr ""
+
+#: apps/lusermod.c:88
+msgid "set telephone number for user"
+msgstr ""
+
+#: apps/lusermod.c:90
+msgid "set home telephone number for user"
+msgstr ""
+
+#: apps/lusermod.c:180 apps/lusermod.c:193
+#, c-format
+msgid "Failed to set password for user %s: %s.\n"
+msgstr "பயனர் %sக்கு கடவுச்சொல் அமைக்க முடியவில்லை: %s.\n"
+
+#: apps/lusermod.c:203
+#, c-format
+msgid "User %s could not be locked: %s.\n"
+msgstr "பயனர்%s ஐ பூட்ட இயலவில்லை: %s.\n"
+
+#: apps/lusermod.c:211
+#, c-format
+msgid "User %s could not be unlocked: %s.\n"
+msgstr "பயனர்%s இன் பூட்டை நீக்க முடியவில்லை: %s.\n"
+
+#: apps/lusermod.c:232
+#, c-format
+msgid "Warning: Group with ID %jd does not exist.\n"
+msgstr "எச்சரிக்கை: குழு குறியீடு %jd இல்லை.\n"
+
+#: apps/lusermod.c:275
+#, c-format
+msgid "User %s could not be modified: %s.\n"
+msgstr "பயனர்%s ஐ மாற்ற முடியவில்லை: %s.\n"
+
+#: apps/lusermod.c:326
+#, c-format
+msgid "Group %s could not be modified: %s.\n"
+msgstr "குழுவை %s ஐ மாற்ற முடியவில்லை: %s.\n"
+
+#: apps/lusermod.c:342
+#, c-format
+msgid "No old home directory for %s.\n"
+msgstr "பழைய இல்ல அடைவு எதுவும் இல்லை %s.\n"
+
+#: apps/lusermod.c:347
+#, c-format
+msgid "No new home directory for %s.\n"
+msgstr "%sக்கு புதிய இல்ல அடைவு இல்லை.\n"
+
+#: apps/lusermod.c:353
+#, c-format
+msgid "Error moving %s to %s: %s.\n"
+msgstr " %s இலிருந்து %sக்கு நகர்த்துவதில் பிழை: %s.\n"
+
+#: lib/config.c:128
+#, c-format
+msgid "could not open configuration file `%s': %s"
+msgstr "கட்டமைப்பு கோப்பு `%s'ஐ திறக்க முடியவில்லை: %s"
+
+#: lib/config.c:134
+#, c-format
+msgid "could not stat configuration file `%s': %s"
+msgstr "கட்டமைப்பு கோப்பு `%s'ஐ ஆரம்பிக்க முடியவில்லை: %s"
+
+#: lib/config.c:143
+#, c-format
+msgid "configuration file `%s' is too large"
+msgstr "கட்டமைப்பு கோப்பு `%s' மிகப் பெரியது"
+
+#: lib/config.c:159
+#, c-format
+msgid "could not read configuration file `%s': %s"
+msgstr "கட்டமைக்கப்பட்ட கோப்பு `%s'ஐ வாசிக்க முடியவில்லை: %s"
+
+#: lib/error.c:62
+msgid "success"
+msgstr "வெற்றி"
+
+#: lib/error.c:64
+msgid "module disabled by configuration"
+msgstr "கட்டமைப்பால் தொகுதி செயல்நீக்கப்பட்டது"
+
+#: lib/error.c:66
+msgid "generic error"
+msgstr "உற்பத்தி பிழை"
+
+#: lib/error.c:68
+msgid "not enough privileges"
+msgstr "போதிய சலுகைகள் இல்லை"
+
+#: lib/error.c:70
+msgid "access denied"
+msgstr "அனுமதி மறுக்கப்பட்டது"
+
+#: lib/error.c:72
+msgid "bad user/group name"
+msgstr "தவறான பயனர்/குழுப் பெயர்"
+
+#: lib/error.c:74
+msgid "bad user/group id"
+msgstr "தவறான பயனர்/குழு குறியீடு"
+
+#: lib/error.c:76
+msgid "user/group name in use"
+msgstr "பயனர்/குழு பெயர் பயனில் உள்ளது"
+
+#: lib/error.c:78
+msgid "user/group id in use"
+msgstr "பயனர்/குழு குறியீடு பயனில் உள்ளது"
+
+#: lib/error.c:80
+msgid "error manipulating terminal attributes"
+msgstr "முனையம் கூறுகளை கணக்கிடும் போது பிழை"
+
+#: lib/error.c:82
+msgid "error opening file"
+msgstr "கோப்பினை திறக்கும் போது பிழை"
+
+#: lib/error.c:84
+msgid "error locking file"
+msgstr "கோப்பினை பூட்டும் போது பிழை"
+
+#: lib/error.c:86
+msgid "error statting file"
+msgstr "கோப்பின் நிலையில் பிழை"
+
+#: lib/error.c:88
+msgid "error reading file"
+msgstr "கோப்பினை வாசிப்பதில் பிழை"
+
+#: lib/error.c:90
+msgid "error writing to file"
+msgstr "கோப்பில் எழுதுவதில் பிழை"
+
+#: lib/error.c:92
+msgid "data not found in file"
+msgstr "கோப்பில் தகவல் இல்லை"
+
+#: lib/error.c:94
+msgid "internal initialization error"
+msgstr "உள்ளார்ந்த துவக்க பிழை"
+
+#: lib/error.c:96
+msgid "error loading module"
+msgstr "தொகுதி ஏற்றும் போது பிழை"
+
+#: lib/error.c:98
+msgid "error resolving symbol in module"
+msgstr "தொகுதியில் சின்னத்தை சரி செய்யும் போது பிழை"
+
+#: lib/error.c:100
+msgid "library/module version mismatch"
+msgstr "நூலகம்/தொகுதி பதிப்பு பொறுத்தம் இல்லை"
+
+#: lib/error.c:102
+msgid "unlocking would make the password field empty"
+msgstr "பூட்டு நீக்குதல் கடவுச்சொல் புலத்தை வெறுமையாக்கும்"
+
+#: lib/error.c:105
+msgid "invalid attribute value"
+msgstr "தவறான அளவுரு மதிப்புதவறான அற"
+
+#: lib/error.c:107
+msgid "invalid module combination"
+msgstr "தவறான தொகுதி கலவைதவறான "
+
+#: lib/error.c:109
+msgid "user's home directory not owned by them"
+msgstr ""
+
+#: lib/error.c:115
+msgid "unknown error"
+msgstr "தெரியாத பிழை"
+
+#: lib/misc.c:240
+msgid "invalid number"
+msgstr "தவறான எண்"
+
+#: lib/misc.c:254
+msgid "invalid ID"
+msgstr "தவறான குறியீடு"
+
+#: lib/modules.c:61
+#, c-format
+msgid "no initialization function %s in `%s'"
+msgstr "`%s'இல் துவக்க செயல்பாடு %s இல்லை"
+
+#: lib/modules.c:79
+#, c-format
+msgid "module version mismatch in `%s'"
+msgstr "`%s'இல் தொகுதி பதிப்பு பொருந்தவில்லை"
+
+#: lib/modules.c:92
+#, c-format
+msgid "module `%s' does not define `%s'"
+msgstr "தொகுதி `%s' யானது `%s'ஐ குறிப்பிடவில்லை"
+
+#: lib/prompt.c:88
+msgid "error reading terminal attributes"
+msgstr "முனையம் கூறுகளை வாசிப்பதில் பிழை"
+
+#: lib/prompt.c:95 lib/prompt.c:107
+msgid "error setting terminal attributes"
+msgstr "முனையம் கூறுகளை அமைப்பதில் பிழை"
+
+#: lib/prompt.c:101
+msgid "error reading from terminal"
+msgstr "முனையத்திலிருந்து வாசிப்பதில் பிழை"
+
+#: lib/user.c:218
+msgid "name is not set"
+msgstr "பெயர் அமைக்கவில்லை"
+
+#: lib/user.c:223
+msgid "name is too short"
+msgstr "பெயர் மிகச் சிறியதாக உள்ளது"
+
+#: lib/user.c:228
+#, c-format
+msgid "name is too long (%zu > %d)"
+msgstr "பெயர் மிக நீளமாக உள்ளது (%zu > %d)"
+
+#: lib/user.c:235
+msgid "name contains non-ASCII characters"
+msgstr "பெயர் ASCII அல்லாத எழுத்தை கொண்டுள்ளது"
+
+#: lib/user.c:242
+msgid "name contains control characters"
+msgstr "பெயர் கட்டுப்பாட்டு எழுத்துகளை கொண்டுள்ளது"
+
+#: lib/user.c:249
+msgid "name contains whitespace"
+msgstr "பெயர் வெற்றிடத்தை கொண்டுள்ளது"
+
+#: lib/user.c:261
+msgid "name starts with a hyphen"
+msgstr "பெயர் இடைக்கோட்டினால் ஆரம்பமாகிறது"
+
+#: lib/user.c:272
+#, c-format
+msgid "name contains invalid char `%c'"
+msgstr "பெயர் தவறான எழுத்து `%c' ஐ கொண்டுள்ளது"
+
+#: lib/user.c:308 lib/user.c:360
+#, c-format
+msgid "user %s has no UID"
+msgstr "பயனர் %sம் UID இல்லை"
+
+#: lib/user.c:310
+#, c-format
+msgid "user %s not found"
+msgstr ""
+
+#: lib/user.c:333 lib/user.c:361
+#, c-format
+msgid "group %s has no GID"
+msgstr "குழு %sம் GID இல்லை"
+
+#: lib/user.c:335
+#, c-format
+msgid "group %s not found"
+msgstr ""
+
+#: lib/user.c:355
+#, c-format
+msgid "user %jd has no name"
+msgstr "பயனர் %jd க்கு பெயர் இல்லை"
+
+#: lib/user.c:356
+#, c-format
+msgid "group %jd has no name"
+msgstr "குழு %jd க்கு பெயர் இல்லை"
+
+#: lib/user.c:364
+msgid "user has neither a name nor an UID"
+msgstr "பயனரிடம் பெயர் அல்லது UID இல்லை"
+
+#: lib/user.c:365
+msgid "group has neither a name nor a GID"
+msgstr "குழுவில் ஒரு பெயர் அல்லது ஒரு GID இல்லை"
+
+#: lib/user.c:1311
+#, c-format
+msgid "Refusing to use dangerous home directory `%s' by default"
+msgstr "அபாயகரமான இல்ல அடைவு `%s'ஐ முன்னிப்பாக பயன்படுத்த மறுக்கிறது"
+
+#: lib/user.c:2310
+#, c-format
+msgid "Invalid default value of field %s: %s"
+msgstr "புலத்தின் தவறான முன்னிருப்பு மதிப்பு %s: %s"
+
+#: lib/util.c:300 modules/files.c:374
+#, c-format
+msgid "error locking file: %s"
+msgstr "கோப்பினை பூட்டுவதில் பிழை : %s"
+
+#: lib/util.c:704
+#, c-format
+msgid "couldn't get default security context: %s"
+msgstr "முன்னிருப்பு பாதுகாப்பு சூழலை பெற முடியவில்லை:%s"
+
+#: lib/util.c:731 lib/util.c:757 lib/util.c:783
+#, c-format
+msgid "couldn't get security context of `%s': %s"
+msgstr "`%s'இன் பாதுகாப்பு சூழலை பெற முடியவில்லை: %s"
+
+#: lib/util.c:737 lib/util.c:763 lib/util.c:789 lib/util.c:821
+#, c-format
+msgid "couldn't set default security context to `%s': %s"
+msgstr "`%s' க்கு முன்னிருப்பு பாதுகாப்பு சூழலை அமைக்க முடியவில்லை: %s"
+
+#: lib/util.c:813
+#, c-format
+msgid "couldn't determine security context for `%s': %s"
+msgstr "`%s'இன் பாதுகாப்பு சூழலை குறிப்பிட முடியவில்லை: %s"
+
+#: modules/files.c:129 modules/files.c:692 modules/files.c:1585
+#: modules/files.c:1920 modules/files.c:1930 modules/files.c:2012
+#: modules/files.c:2023 modules/files.c:2089 modules/files.c:2101
+#: modules/files.c:2191 modules/files.c:2200 modules/files.c:2255
+#: modules/files.c:2264 modules/files.c:2359 modules/files.c:2368
+#, c-format
+msgid "couldn't open `%s': %s"
+msgstr "`%s' ஐ திறக்க முடியவில்லை: %s"
+
+#: modules/files.c:137 modules/files.c:994 modules/files.c:1187
+#: modules/files.c:1329
+#, c-format
+msgid "couldn't stat `%s': %s"
+msgstr "'%s' வரையறுக்க முடியவில்லை: %s"
+
+#: modules/files.c:161
+#, c-format
+msgid "error creating `%s': %s"
+msgstr "`%s'ஐ உருவாக்குவதில் பிழை : %s"
+
+#: modules/files.c:169
+#, c-format
+msgid "Error changing owner of `%s': %s"
+msgstr "`%s' இன் உரிமையாளரை மாற்றுவதில் பிழை: %s"
+
+#: modules/files.c:175
+#, c-format
+msgid "Error changing mode of `%s': %s"
+msgstr "'%s' பிழை மாற்றும் விதம்: %s"
+
+#: modules/files.c:191
+#, c-format
+msgid "Error reading `%s': %s"
+msgstr "வாசிப்பதில் பிழை `%s': %s"
+
+#: modules/files.c:206 modules/files.c:217 modules/files.c:305
+#: modules/files.c:467
+#, c-format
+msgid "Error writing `%s': %s"
+msgstr "'%s' எழுதுவதில் பிழை :%s"
+
+#: modules/files.c:247 modules/files.c:1005 modules/files.c:1195
+#: modules/files.c:1338
+#, c-format
+msgid "couldn't read from `%s': %s"
+msgstr "`%s'இலிருந்து வாசிக்க முடியவில்லை: %s"
+
+#: modules/files.c:256
+#, c-format
+msgid "Invalid contents of lock `%s'"
+msgstr ""
+
+#: modules/files.c:261
+#, c-format
+msgid "The lock %s is held by process %ju"
+msgstr ""
+
+#: modules/files.c:269
+#, fuzzy, c-format
+msgid "Error removing stale lock `%s': %s"
+msgstr " %s இலிருந்து %sக்கு நகர்த்துவதில் பிழை: %s.\n"
+
+#: modules/files.c:297
+#, fuzzy, c-format
+msgid "error opening temporary file for `%s': %s"
+msgstr "'%s' பிழை மாற்றும் விதம்: %s"
+
+#: modules/files.c:321
+#, c-format
+msgid "Cannot obtain lock `%s': %s"
+msgstr ""
+
+#: modules/files.c:434
+#, fuzzy, c-format
+msgid "Error resolving `%s': %s"
+msgstr "வாசிப்பதில் பிழை `%s': %s"
+
+#: modules/files.c:442
+#, fuzzy, c-format
+msgid "Error replacing `%s': %s"
+msgstr "வாசிப்பதில் பிழை `%s': %s"
+
+#: modules/files.c:903
+#, fuzzy, c-format
+msgid "%s value `%s': `\\n' not allowed"
+msgstr "%s மதிப்பு `%s': `:' அனுமதிக்கப்படுவதில்லை"
+
+#: modules/files.c:910
+#, c-format
+msgid "%s value `%s': `:' not allowed"
+msgstr "%s மதிப்பு `%s': `:' அனுமதிக்கப்படுவதில்லை"
+
+#: modules/files.c:1014
+msgid "entry already present in file"
+msgstr "உள்ளீடு ஏற்கனவே கோப்பில் உள்ளது"
+
+#: modules/files.c:1021 modules/files.c:1031 modules/files.c:1041
+#: modules/files.c:1393 modules/files.c:1401 modules/files.c:1409
+#, c-format
+msgid "couldn't write to `%s': %s"
+msgstr "`%s'க்கு எழுத முடியவில்லை: %s"
+
+#: modules/files.c:1173
+#, c-format
+msgid "entity object has no %s attribute"
+msgstr "உருப்படியில் %s கூறுகள் இல்லை"
+
+#: modules/files.c:1215
+msgid "entry with conflicting name already present in file"
+msgstr "முரண்படும் பெயருடன் உள்ள உள்ளீடு ஏற்கனவே கோப்பில் உள்ளது"
+
+#: modules/files.c:1803
+#, fuzzy
+msgid "`:' and `\\n' not allowed in encrypted password"
+msgstr "`:' மறைகுறியாக்கப்பட்ட கடவுச்சொல்லில் அனுமதிக்கப்படுவதில்லை"
+
+#: modules/files.c:1815 modules/ldap.c:1543 modules/ldap.c:1812
+msgid "error encrypting password"
+msgstr "கடவுச்சொல்லை குறிமுறையாக்குவதில் பிழை"
+
+#: modules/files.c:2517 modules/ldap.c:2410
+#, c-format
+msgid "the `%s' and `%s' modules can not be combined"
+msgstr "`%s' மற்றும் `%s' தொகுதிகளை கலக்க முடியாது"
+
+#: modules/files.c:2601 modules/files.c:2679
+msgid "not executing with superuser privileges"
+msgstr "சிறப்பு பயனர் சலுகைகளை செயல்படுத்தவில்லை"
+
+#: modules/files.c:2692
+msgid "no shadow file present -- disabling"
+msgstr "நிழல் கோப்பு இல்லை - செயல்நீக்கப்படுகிறது"
+
+#: modules/ldap.c:199
+msgid "error initializing ldap library"
+msgstr "ldap நூலகத்தை துவக்குவதில் பிழை"
+
+#: modules/ldap.c:210
+#, c-format
+msgid "could not set LDAP protocol to version %d"
+msgstr "LDAP நெறிமுறையைப் பதிப்பு %dக்காக அமைக்க முடியவில்லை"
+
+#: modules/ldap.c:229
+msgid "could not negotiate TLS with LDAP server"
+msgstr "TLS யுடன் LDAP சேவையகத்தை கேட்க முடியாது"
+
+#: modules/ldap.c:424
+msgid "could not bind to LDAP server"
+msgstr "LDAP சேவையகத்துடன் பிணைக்க முடியவில்லை"
+
+#: modules/ldap.c:427
+#, c-format
+msgid "could not bind to LDAP server, first attempt as `%s': %s"
+msgstr "LDAP சேவையகத்துடன் பிணைக்க முடியவில்லை, முதல் முயற்சி `%s': %s"
+
+#: modules/ldap.c:1315
+#, c-format
+msgid "user object had no %s attribute"
+msgstr "பயனர் பொருளில் %s கூறு இல்லை"
+
+#: modules/ldap.c:1324
+#, c-format
+msgid "user object was created with no `%s'"
+msgstr "பயனர் பொருள் `%s' இல்லாமல் உருவாக்கப்பட்டது"
+
+#: modules/ldap.c:1344
+#, c-format
+msgid "error creating a LDAP directory entry: %s"
+msgstr "LDAP அடைவு உள்ளீட்டை உருவாக்கும் போது பிழை: %s"
+
+#: modules/ldap.c:1370 modules/ldap.c:1604
+#, c-format
+msgid "error modifying LDAP directory entry: %s"
+msgstr "LDAP அடைவு உள்ளீட்டை மாற்றும் போது பிழை: %s"
+
+#: modules/ldap.c:1395
+#, c-format
+msgid "error renaming LDAP directory entry: %s"
+msgstr "LDAP அடைவு உள்ளீடுகளை பெயர் மாற்றுவதில் பிழை: %s"
+
+#: modules/ldap.c:1440
+#, c-format
+msgid "object had no %s attribute"
+msgstr "பொருளில் %s கூறுகள் இல்லை"
+
+#: modules/ldap.c:1456
+#, c-format
+msgid "error removing LDAP directory entry: %s"
+msgstr "LDAP அடைவு உள்ளீட்டை நீக்கும் போது பிழை: %s"
+
+#: modules/ldap.c:1506 modules/ldap.c:1521 modules/ldap.c:1635
+#: modules/ldap.c:1730
+#, c-format
+msgid "object has no %s attribute"
+msgstr "பொருளுக்கு %s கூறு இல்லை"
+
+#: modules/ldap.c:1533
+msgid "unsupported password encryption scheme"
+msgstr "துணைபுரியாத கடவுச்சொல் மறைக்குறியாக்க திட்டம்"
+
+#: modules/ldap.c:1658
+msgid "no such object in LDAP directory"
+msgstr "LDAP அடைவில் பொருள் எதுவும் இல்லை"
+
+#: modules/ldap.c:1670
+#, c-format
+msgid "no `%s' attribute found"
+msgstr "`%s' கூறு இல்லை"
+
+#: modules/ldap.c:1843
+#, c-format
+msgid "error setting password in LDAP directory for %s: %s"
+msgstr "LDAP அடைவில் %s க்கு கடவுச்சொல் அமைப்பதில் பிழை: %s"
+
+#: modules/ldap.c:2446
+msgid "LDAP Server Name"
+msgstr "LDAP சேவையக பெயர்"
+
+#: modules/ldap.c:2452
+msgid "LDAP Search Base DN"
+msgstr "LDAP தேடல் தளம் DN"
+
+#: modules/ldap.c:2458
+msgid "LDAP Bind DN"
+msgstr "LDAP பிணைத்தல் DN"
+
+#: modules/ldap.c:2465
+msgid "LDAP Bind Password"
+msgstr "LDAP பிணைத்தல் கடவுச்சொல்"
+
+#: modules/ldap.c:2471
+msgid "LDAP SASL User"
+msgstr "LDAP SASL பயனர்"
+
+#: modules/ldap.c:2478
+msgid "LDAP SASL Authorization User"
+msgstr "LDAP SASL அனுமதிக்கப்பட்ட பயனர்"
+
+#: modules/sasldb.c:132
+#, c-format
+msgid "Cyrus SASL error creating user: %s"
+msgstr "Cyrus SASL பயனர் உருவாக்குவதில் பிழை: %s"
+
+#: modules/sasldb.c:136
+#, c-format
+msgid "Cyrus SASL error removing user: %s"
+msgstr "Cyrus SASL பயனரை நீக்குவதில் பிழை: %s"
+
+#: modules/sasldb.c:503 modules/sasldb.c:511
+#, c-format
+msgid "error initializing Cyrus SASL: %s"
+msgstr "Cyrus SASL துவக்குவதில் பிழை: %s"
+
+#: python/admin.c:505
+msgid "error creating home directory for user"
+msgstr "பயனருக்காக இல்ல அடைவை உருவாக்குவதில் பிழை"
+
+#: python/admin.c:544 python/admin.c:583
+msgid "error removing home directory for user"
+msgstr "பயனருக்காக இல்ல அடைவை நீக்குவதில் பிழை"
+
+#: python/admin.c:654
+msgid "error moving home directory for user"
+msgstr "பயனருக்காக இல்ல அடைவை நகர்த்துவதில் பிழை"
+
+#: samples/lookup.c:63
+#, c-format
+msgid "Error initializing %s: %s\n"
+msgstr "துவக்குவதில் பிழை %s: %s\n"
+
+#: samples/lookup.c:76
+#, c-format
+msgid "Invalid ID %s\n"
+msgstr "தவறான குறியீடு %s\n"
+
+#: samples/lookup.c:88
+#, c-format
+msgid "Searching for group with ID %jd.\n"
+msgstr "குறியீடு %jd ஐ கொண்ட குழுவை தேடுகிறது.\n"
+
+#: samples/lookup.c:92
+#, c-format
+msgid "Searching for group named %s.\n"
+msgstr "குழுப்பெயர் %sஐ தேடுகிறது.\n"
+
+#: samples/lookup.c:99
+#, c-format
+msgid "Searching for user with ID %jd.\n"
+msgstr "%jd பயனர் குறியீட்டை தேடுகிறது .\n"
+
+#: samples/lookup.c:103
+#, c-format
+msgid "Searching for user named %s.\n"
+msgstr ""
+"பயனர் பெயர் %sஐ தேடுகிறது.\n"
+"\n"
+
+#: samples/lookup.c:117
+msgid "Entry not found.\n"
+msgstr "உள்ளீடு இல்லை.\n"
+
+#: samples/prompt.c:48
+msgid "Prompts succeeded.\n"
+msgstr "வெற்றிகரமாக கண்டுபிடித்தது.\n"
+
+#: samples/prompt.c:58
+msgid "Prompts failed.\n"
+msgstr "கண்டுபிடிக்க முடியவில்லை.\n"
+
+#: samples/testuser.c:76
+msgid "Default user object classes:\n"
+msgstr "முன்னிருப்பு பயனர் பொருள் வகுப்புகள்:\n"
+
+#: samples/testuser.c:82
+msgid "Default user attribute names:\n"
+msgstr "முன்னிருப்பு பயனர் கூறுகளின் பெயர்கள்:\n"
+
+#: samples/testuser.c:88
+msgid "Getting default user attributes:\n"
+msgstr "முன்னிருப்பு பயனர் கூறுகளை பெறுகிறது :\n"
+
+#: samples/testuser.c:95
+msgid "Copying user structure:\n"
+msgstr "பயனர் வடிவத்தை நகலெடுக்கிறது:\n"
+
+#~ msgid "backup file `%s' exists and is not a regular file"
+#~ msgstr "பின்சேமிப்பு கோப்பு %s' உள்ளது, ஆனால் அது இயல்பான கோப்பில்லை"
+
+#~ msgid "backup file size mismatch"
+#~ msgstr "பின்சேமிப்பு கோப்பின் அளவு தவறானது"

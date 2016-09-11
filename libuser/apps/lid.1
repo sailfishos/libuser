@@ -1,0 +1,58 @@
+.\" A man page for lid
+.\" Copyright (C) 2005, 2007 Red Hat, Inc.
+.\"
+.\" This is free software; you can redistribute it and/or modify it under
+.\" the terms of the GNU Library General Public License as published by
+.\" the Free Software Foundation; either version 2 of the License, or
+.\" (at your option) any later version.
+.\"
+.\" This program is distributed in the hope that it will be useful, but
+.\" WITHOUT ANY WARRANTY; without even the implied warranty of
+.\" MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+.\" General Public License for more details.
+.\"
+.\" You should have received a copy of the GNU Library General Public
+.\" License along with this program; if not, write to the Free Software
+.\" Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
+.\"
+.\" Author: Miloslav Trmac <mitr@redhat.com>
+.TH lid 1 "Dec 6 2007" libuser
+
+.SH NAME
+lid \- Display user's groups or group's users
+
+.SH SYNOPSIS
+lid [\fIOPTION\fR]... [\fIname\fR]
+
+.SH DESCRIPTION
+Displays information about groups containing user \fIname\fR, or
+users contained in group \fIname\fR.
+
+By default
+.B lid
+lists groups containing user \fIname\fR,
+or groups containing the invoking user
+if \fIname\fR is not specified;
+the mode of operation can be changed using the \fB\-g\fR option.
+
+.SH OPTIONS
+.TP
+\fB\-g\fR, \fB\-\-group\fR
+List users in a group \fIname\fR,
+or in the invoking user's primary group
+if \fIname\fR is not specified.
+
+.TP
+\fB\-i\fR, \fB\-\-interactive\fR 
+Ask all questions when connecting to the user database,
+even if default answers are set up in
+.B libuser
+configuration.
+
+.TP
+\fB\-n\fR, \fB\-\-onlynames\fR
+List only group or user names.
+By default the corresponging user or group IDs are listed too.
+
+.SH EXIT STATUS
+The exit status is 0 on success, 1 on error.

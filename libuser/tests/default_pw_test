@@ -1,0 +1,212 @@
+#! /bin/sh
+# Automated default password value regression tester
+#
+# Copyright (c) 2004, 2010 Red Hat, Inc. All rights reserved.
+#
+# This is free software; you can redistribute it and/or modify it under
+# the terms of the GNU Library General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU Library General Public
+# License along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
+#
+# Author: Miloslav Trmač <mitr@redhat.com>
+
+srcdir=$srcdir/tests
+
+workdir=$(pwd)/test_default_pw
+
+trap 'status=$?; rm -rf "$workdir"; exit $status' 0
+trap '(exit 1); exit 1' 1 2 13 15
+
+rm -rf "$workdir"
+mkdir "$workdir"
+
+# Create a SSL key
+/usr/bin/openssl req -newkey rsa:1024 -keyout "$workdir"/key1 -nodes \
+    -x509 -days 2 -out "$workdir"/key3 2>/dev/null <<EOF
+.
+.
+.
+.
+.
+127.0.0.1
+.
+EOF
+echo > "$workdir"/key2
+cat "$workdir"/key{1,2,3} > "$workdir"/key.pem
+rm "$workdir"/key{1,2,3}
+
+sed "s|@WORKDIR@|$workdir|g" < "$srcdir"/slapd.conf.in > "$workdir"/slapd.conf
+LIBUSER_CONF=$workdir/libuser.conf
+export LIBUSER_CONF
+# Ugly non-portable hacks
+LD_LIBRARY_PATH=$(pwd)/lib/.libs
+export LD_LIBRARY_PATH
+PYTHONPATH=$(pwd)/python/.libs
+export PYTHONPATH
+
+exit_status=0
+fail() # message
+{
+    echo "Modules $modules: $1" >&2
+    exit_status=1
+}
+
+get_file_password() # file under $workdir/files, entry name
+{
+    echo "Checking $1 $2 ..." >&2
+    awk -F : "\$1 == \"$2\" { print \$2; }" "$workdir/files/$1"
+}
+
+get_ldap_password() # entry filter
+{
+    echo "Checking $1 ..." >&2
+    ldapsearch -LLL -h 127.0.0.1 -p "$ldap_port" -x -b 'dc=libuser' "$1" \
+	userPassword | sed -n 's/userPassword:: //p'
+}
+
+valid_password() # encoded value
+{
+    local v=$($PYTHON -c "import crypt; print(crypt.crypt('password', '$1'))")
+    [ "x$v" = "x$1" ]
+}
+
+ldap_port=
+# Try all concievable combinations and orders, assuming "shadow" requires
+# "files".
+for modules in \
+	files ldap \
+	'files ldap' 'files shadow' 'ldap files' 'shadow files' \
+	'files ldap shadow' 'files shadow ldap' 'ldap files shadow' \
+	'ldap shadow files' 'shadow files ldap' 'shadow ldap files'; do
+
+    echo ">>>modules: $modules" >&2
+
+    # Set up an LDAP server and database files
+    mkdir "$workdir"/db "$workdir"/files
+    touch "$workdir"/files/{passwd,shadow,group,gshadow}
+    case $modules in
+	*ldap*)
+	    # This is racy, but much better than a static port
+	    [ -z "$ldap_port" ] && ldap_port=$(tests/alloc_port)
+	    # FIXME: path
+	    /usr/sbin/slapd -h ldap://127.0.0.1:"$ldap_port"/ \
+		-f "$workdir"/slapd.conf &
+	    tests/wait_for_slapd_start "$workdir"/slapd.pid "$ldap_port"
+	    slapd_pid=$(cat "$workdir"/slapd.pid)
+	    trap 'status=$?; kill $slapd_pid; rm -rf "$workdir"; exit $status' 0
+	    ldapadd -h 127.0.0.1 -p "$ldap_port" -f "$srcdir/ldap_skel.ldif" -x \
+		-D cn=Manager,dc=libuser -w password
+	    ;;
+    esac
+
+    # Set up the client
+    sed -e "s|@WORKDIR@|$workdir|g; s|@TOP_BUILDDIR@|$(pwd)|g" \
+	-e "s|@MODULES@|$modules|g; s|@LDAP_PORT@|$ldap_port|g" \
+	< "$srcdir"/default_pw.conf.in > "$LIBUSER_CONF"
+
+    valid_combination=1
+    case $modules in
+	*ldap*)
+	    case $modules in
+		*files* | *shadow*)
+		    valid_combination=0
+		    ;;
+	    esac
+    esac
+
+    # Point "$HOME/ldaprc" to "$srcdir"/ldaprc
+    HOME="$srcdir" $VALGRIND $PYTHON "$srcdir"/default_pw_test.py \
+	"$valid_combination"
+
+    if [ "$valid_combination" -ne 0 ]; then
+	# Test that {passwd,group} handle passwords correctly
+	case $modules in
+	    *shadow*)
+		for pair in 'passwd user_default' 'passwd user_setpass' \
+		    'group group_default' 'group group_setpass'; do
+		    if [ "x$(get_file_password $pair)" != xx ]; then
+			fail "Unexpected $pair password value"
+		    fi
+		done
+		;;
+	    *files*)
+		for pair in 'passwd user_default' 'group group_default'; do
+		    if [ "x$(get_file_password $pair)" != 'x!!' ]; then
+			fail "Unexpected $pair password value"
+		    fi
+		done
+		for pair in 'passwd user_setpass' 'group group_setpass'; do
+		    if ! valid_password "$(get_file_password $pair)"; then
+			fail "Password not set correctly for $pair"
+		    fi
+		done
+		;;
+	esac
+
+	# Test that {shadow,gshadow} handle passwords correctly
+	case $modules in
+	    *shadow*)
+		for pair in 'shadow user_default' 'gshadow group_default'; do
+		    if [ "x$(get_file_password $pair)" != 'x!!' ]; then
+			fail "Unexpected $pair password value"
+		    fi
+		done
+		for pair in 'shadow user_setpass' 'gshadow group_setpass'; do
+		    if ! valid_password "$(get_file_password $pair)"; then
+			fail "Password not set correctly for $pair"
+		    fi
+		done
+		;;
+	esac
+
+	# Test that ldap handles password correctly
+	case $modules in
+	    *ldap*)
+		if [ "x$(get_ldap_password uid=user_default | base64 -d)" \
+		    != 'x{CRYPT}!!' ]; then
+		    fail "Unexpected uid=user_default password value"
+		fi
+		# The LDAP module does not add a group password by default.
+		v=$(get_ldap_password cn=group_default)
+		if [ "x$v" != x ]; then
+		    fail "Unexpected cn=group_default password"
+		fi
+		v=$(get_ldap_password uid=user_setpass | base64 -d)
+		if [ "x${v#'{CRYPT}'}" = "x$v" ]; then
+		    fail "Missing {CRYPT} marker in uid=user_setpass"
+		fi
+		if ! valid_password "${v#'{CRYPT}'}"; then
+		    fail "Password not set correctly for uid=user_setpass"
+		fi
+		v=$(get_ldap_password cn=group_setpass | base64 -d)
+		if [ "x${v#'{CRYPT}'}" = "x$v" ]; then
+		    fail "Missing {CRYPT} marker in cn=group_setpass"
+		fi
+		if ! valid_password "${v#'{CRYPT}'}"; then
+		    fail "Password not set correctly for cn=group_setpass"
+		fi
+		;;
+	esac
+    fi
+
+    case $modules in
+	*ldap*)
+	    kill "$slapd_pid"
+	    trap 'status=$?; rm -rf "$workdir"; exit $status' 0
+	    tests/wait_for_slapd_exit "$workdir"/slapd.pid "$ldap_port"
+	    ;;
+    esac
+    slapd_pid=
+    rm -rf "$workdir"/db "$workdir"/files
+done
+
+(exit "$exit_status"); exit "$exit_status"

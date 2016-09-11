@@ -1,0 +1,38 @@
+[defaults]
+# non-portable
+moduledir = @TOP_BUILDDIR@/modules/.libs
+modules = files shadow
+create_modules = files shadow
+mailspooldir = /overridden/mailspooldir
+crypt_style = des
+hash_rounds_min = 4250
+hash_rounds_max = 4251
+skeleton = /overridden/skeleton
+
+[import]
+login_defs = @SRCDIR@/config_login.defs
+default_useradd = @SRCDIR@/config_default_useradd
+
+[groupdefaults]
+LU_GIDNUMBER = 4242
+
+[userdefaults]
+LU_SHADOWMAX = 4243
+# LU_SHADOWMIN
+sp_min = 4244
+LU_SHADOWWARNING = 4245
+# LU_UIDNUMBER
+pw_uid = 4246
+
+LU_SHADOWEXPIRE = 4247
+LU_GIDNUMBER = 4248
+LU_HOMEDIRECTORY = /overridden/home-%n
+# LU_SHADOWINACTIVE
+sp_inact = 4249
+LU_LOGINSHELL = /overridden/shell
+
+[files]
+nonroot = yes
+
+[shadow]
+nonroot = yes

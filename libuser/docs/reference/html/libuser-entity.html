@@ -1,0 +1,1835 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>entity: libuser Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="libuser Reference Manual">
+<link rel="up" href="ch01.html" title="libuser">
+<link rel="prev" href="libuser-value.html" title="value">
+<link rel="next" href="libuser-error.html" title="error">
+<meta name="generator" content="GTK-Doc V1.24 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#libuser-entity.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="libuser-value.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="libuser-error.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="libuser-entity"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="libuser-entity.top_of_page"></a>entity</span></h2>
+<p>entity — Functions for manipulating <a class="link" href="libuser-entity.html#lu-ent" title="struct lu_ent"><span class="type">lu_ent</span></a> structures.</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="libuser-entity.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">struct <a class="link" href="libuser-entity.html#lu-ent" title="struct lu_ent"><span class="returnvalue">lu_ent</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libuser-entity.html#lu-ent-new" title="lu_ent_new ()">lu_ent_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libuser-entity.html#lu-ent-free" title="lu_ent_free ()">lu_ent_free</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libuser-entity.html#lu-ent-copy" title="lu_ent_copy ()">lu_ent_copy</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libuser-entity.html#lu-ent-commit" title="lu_ent_commit ()">lu_ent_commit</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libuser-entity.html#lu-ent-revert" title="lu_ent_revert ()">lu_ent_revert</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libuser-entity.html#lu-ent-add" title="lu_ent_add ()">lu_ent_add</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libuser-entity.html#lu-ent-add-current" title="lu_ent_add_current ()">lu_ent_add_current</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libuser-entity.html#lu-ent-clear" title="lu_ent_clear ()">lu_ent_clear</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libuser-entity.html#lu-ent-clear-all" title="lu_ent_clear_all ()">lu_ent_clear_all</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libuser-entity.html#lu-ent-clear-all-current" title="lu_ent_clear_all_current ()">lu_ent_clear_all_current</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libuser-entity.html#lu-ent-clear-current" title="lu_ent_clear_current ()">lu_ent_clear_current</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libuser-entity.html#lu-ent-del" title="lu_ent_del ()">lu_ent_del</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libuser-entity.html#lu-ent-del-current" title="lu_ent_del_current ()">lu_ent_del_current</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libuser-entity.html#lu-ent-dump" title="lu_ent_dump ()">lu_ent_dump</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="https://developer.gnome.org/gobject/unstable/gobject-Value-arrays.html#GValueArray"><span class="returnvalue">GValueArray</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libuser-entity.html#lu-ent-get" title="lu_ent_get ()">lu_ent_get</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a class="link" href="libuser-entity.html#lu-ent-get-first-string" title="lu_ent_get_first_string ()">lu_ent_get_first_string</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a class="link" href="libuser-entity.html#lu-ent-get-first-string-current" title="lu_ent_get_first_string_current ()">lu_ent_get_first_string_current</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a class="link" href="libuser-entity.html#lu-ent-get-first-value-strdup" title="lu_ent_get_first_value_strdup ()">lu_ent_get_first_value_strdup</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a class="link" href="libuser-entity.html#lu-ent-get-first-value-strdup-current" title="lu_ent_get_first_value_strdup_current ()">lu_ent_get_first_value_strdup_current</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">id_t</span>
+</td>
+<td class="function_name">
+<a class="link" href="libuser-entity.html#lu-ent-get-first-id" title="lu_ent_get_first_id ()">lu_ent_get_first_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">id_t</span>
+</td>
+<td class="function_name">
+<a class="link" href="libuser-entity.html#lu-ent-get-first-id-current" title="lu_ent_get_first_id_current ()">lu_ent_get_first_id_current</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libuser-entity.html#lu-ent-get-attributes" title="lu_ent_get_attributes ()">lu_ent_get_attributes</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libuser-entity.html#lu-ent-get-attributes-current" title="lu_ent_get_attributes_current ()">lu_ent_get_attributes_current</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="https://developer.gnome.org/gobject/unstable/gobject-Value-arrays.html#GValueArray"><span class="returnvalue">GValueArray</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="libuser-entity.html#lu-ent-get-current" title="lu_ent_get_current ()">lu_ent_get_current</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libuser-entity.html#lu-ent-has" title="lu_ent_has ()">lu_ent_has</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="libuser-entity.html#lu-ent-has-current" title="lu_ent_has_current ()">lu_ent_has_current</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libuser-entity.html#lu-ent-set" title="lu_ent_set ()">lu_ent_set</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libuser-entity.html#lu-ent-set-current" title="lu_ent_set_current ()">lu_ent_set_current</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libuser-entity.html#lu-ent-set-string" title="lu_ent_set_string ()">lu_ent_set_string</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libuser-entity.html#lu-ent-set-string-current" title="lu_ent_set_string_current ()">lu_ent_set_string_current</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libuser-entity.html#lu-ent-set-id" title="lu_ent_set_id ()">lu_ent_set_id</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libuser-entity.html#lu-ent-set-id-current" title="lu_ent_set_id_current ()">lu_ent_set_id_current</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libuser-entity.html#lu-ent-set-long" title="lu_ent_set_long ()">lu_ent_set_long</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="libuser-entity.html#lu-ent-set-long-current" title="lu_ent_set_long_current ()">lu_ent_set_long_current</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="libuser-entity.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword">struct</td>
+<td class="function_name"><a class="link" href="libuser-entity.html#lu-ent" title="struct lu_ent">lu_ent</a></td>
+</tr>
+<tr>
+<td class="typedef_keyword">typedef</td>
+<td class="function_name"><a class="link" href="libuser-entity.html#lu-ent-t" title="lu_ent_t">lu_ent_t</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libuser-entity.html#LU-USERNAME:CAPS" title="LU_USERNAME">LU_USERNAME</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libuser-entity.html#LU-USERPASSWORD:CAPS" title="LU_USERPASSWORD">LU_USERPASSWORD</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libuser-entity.html#LU-UIDNUMBER:CAPS" title="LU_UIDNUMBER">LU_UIDNUMBER</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libuser-entity.html#LU-GIDNUMBER:CAPS" title="LU_GIDNUMBER">LU_GIDNUMBER</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libuser-entity.html#LU-GECOS:CAPS" title="LU_GECOS">LU_GECOS</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libuser-entity.html#LU-HOMEDIRECTORY:CAPS" title="LU_HOMEDIRECTORY">LU_HOMEDIRECTORY</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libuser-entity.html#LU-LOGINSHELL:CAPS" title="LU_LOGINSHELL">LU_LOGINSHELL</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libuser-entity.html#LU-GROUPNAME:CAPS" title="LU_GROUPNAME">LU_GROUPNAME</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libuser-entity.html#LU-GROUPPASSWORD:CAPS" title="LU_GROUPPASSWORD">LU_GROUPPASSWORD</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libuser-entity.html#LU-MEMBERNAME:CAPS" title="LU_MEMBERNAME">LU_MEMBERNAME</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libuser-entity.html#LU-ADMINISTRATORNAME:CAPS" title="LU_ADMINISTRATORNAME">LU_ADMINISTRATORNAME</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libuser-entity.html#LU-SHADOWNAME:CAPS" title="LU_SHADOWNAME">LU_SHADOWNAME</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libuser-entity.html#LU-SHADOWPASSWORD:CAPS" title="LU_SHADOWPASSWORD">LU_SHADOWPASSWORD</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libuser-entity.html#LU-SHADOWLASTCHANGE:CAPS" title="LU_SHADOWLASTCHANGE">LU_SHADOWLASTCHANGE</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libuser-entity.html#LU-SHADOWMIN:CAPS" title="LU_SHADOWMIN">LU_SHADOWMIN</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libuser-entity.html#LU-SHADOWMAX:CAPS" title="LU_SHADOWMAX">LU_SHADOWMAX</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libuser-entity.html#LU-SHADOWWARNING:CAPS" title="LU_SHADOWWARNING">LU_SHADOWWARNING</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libuser-entity.html#LU-SHADOWINACTIVE:CAPS" title="LU_SHADOWINACTIVE">LU_SHADOWINACTIVE</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libuser-entity.html#LU-SHADOWEXPIRE:CAPS" title="LU_SHADOWEXPIRE">LU_SHADOWEXPIRE</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libuser-entity.html#LU-SHADOWFLAG:CAPS" title="LU_SHADOWFLAG">LU_SHADOWFLAG</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libuser-entity.html#LU-COMMONNAME:CAPS" title="LU_COMMONNAME">LU_COMMONNAME</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libuser-entity.html#LU-GIVENNAME:CAPS" title="LU_GIVENNAME">LU_GIVENNAME</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libuser-entity.html#LU-SN:CAPS" title="LU_SN">LU_SN</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libuser-entity.html#LU-ROOMNUMBER:CAPS" title="LU_ROOMNUMBER">LU_ROOMNUMBER</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libuser-entity.html#LU-TELEPHONENUMBER:CAPS" title="LU_TELEPHONENUMBER">LU_TELEPHONENUMBER</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libuser-entity.html#LU-HOMEPHONE:CAPS" title="LU_HOMEPHONE">LU_HOMEPHONE</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="libuser-entity.html#LU-EMAIL:CAPS" title="LU_EMAIL">LU_EMAIL</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="libuser-entity.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;libuser/error.h&gt;
+</pre>
+</div>
+<div class="refsect1">
+<a name="libuser-entity.description"></a><h2>Description</h2>
+<p><code class="filename">entity.h</code> declares functions for manipulating <a class="link" href="libuser-entity.html#lu-ent" title="struct lu_ent"><span class="type">lu_ent</span></a>
+structures, which are used by libuser, its modules, and applications to hold
+data about a particular user or group account.</p>
+</div>
+<div class="refsect1">
+<a name="libuser-entity.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="lu-ent-new"></a><h3>lu_ent_new ()</h3>
+<pre class="programlisting">struct <a class="link" href="libuser-entity.html#lu-ent" title="struct lu_ent"><span class="returnvalue">lu_ent</span></a> *
+lu_ent_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Creates a new, empty struct <a class="link" href="libuser-entity.html#lu-ent" title="struct lu_ent"><span class="type">lu_ent</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.2.4.7.2.5"></a><h4>Returns</h4>
+<p> The created entity, which should be deallocated by <a class="link" href="libuser-entity.html#lu-ent-free" title="lu_ent_free ()"><code class="function">lu_ent_free()</code></a></p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lu-ent-free"></a><h3>lu_ent_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+lu_ent_free (<em class="parameter"><code><span class="type">struct lu_ent</span> *ent</code></em>);</pre>
+<p>Frees an struct <a class="link" href="libuser-entity.html#lu-ent" title="struct lu_ent"><span class="type">lu_ent</span></a>, including all strings it owns.</p>
+<div class="refsect3">
+<a name="id-1.2.4.7.3.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>ent</p></td>
+<td class="parameter_description"><p>The entity to free</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lu-ent-copy"></a><h3>lu_ent_copy ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+lu_ent_copy (<em class="parameter"><code><span class="type">struct lu_ent</span> *source</code></em>,
+             <em class="parameter"><code><span class="type">struct lu_ent</span> *dest</code></em>);</pre>
+<p>Copies one struct <a class="link" href="libuser-entity.html#lu-ent" title="struct lu_ent"><span class="type">lu_ent</span></a> over another.</p>
+<div class="refsect3">
+<a name="id-1.2.4.7.4.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>source</p></td>
+<td class="parameter_description"><p>The entity to copy</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>dest</p></td>
+<td class="parameter_description"><p>The destination space, must be already allocated by <a class="link" href="libuser-entity.html#lu-ent-new" title="lu_ent_new ()"><code class="function">lu_ent_new()</code></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lu-ent-commit"></a><h3>lu_ent_commit ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+lu_ent_commit (<em class="parameter"><code><span class="type">struct lu_ent</span> *ent</code></em>);</pre>
+<p>Sets pending attribute changes as current values of the entity.</p>
+<div class="refsect3">
+<a name="id-1.2.4.7.5.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>ent</p></td>
+<td class="parameter_description"><p>An entity</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lu-ent-revert"></a><h3>lu_ent_revert ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+lu_ent_revert (<em class="parameter"><code><span class="type">struct lu_ent</span> *ent</code></em>);</pre>
+<p>Replaces all attributes with changes pending by their current values,
+forgetting the pending changes.</p>
+<div class="refsect3">
+<a name="id-1.2.4.7.6.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>ent</p></td>
+<td class="parameter_description"><p>an entity</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lu-ent-add"></a><h3>lu_ent_add ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+lu_ent_add (<em class="parameter"><code><span class="type">struct lu_ent</span> *ent</code></em>,
+            <em class="parameter"><code>const <span class="type">char</span> *attr</code></em>,
+            <em class="parameter"><code>const <a href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue"><span class="type">GValue</span></a> *value</code></em>);</pre>
+<p>Appends <em class="parameter"><code>value</code></em>
+ to pending attribute <em class="parameter"><code>attr</code></em>
+ in a struct <a class="link" href="libuser-entity.html#lu-ent" title="struct lu_ent"><span class="type">lu_ent</span></a> if <em class="parameter"><code>value</code></em>
+ is
+not yet in the list of <em class="parameter"><code>attr</code></em>
+ values.</p>
+<div class="refsect3">
+<a name="id-1.2.4.7.7.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ent</p></td>
+<td class="parameter_description"><p>An entity</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>attr</p></td>
+<td class="parameter_description"><p>Attribute name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>New attribute value</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lu-ent-add-current"></a><h3>lu_ent_add_current ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+lu_ent_add_current (<em class="parameter"><code><span class="type">struct lu_ent</span> *ent</code></em>,
+                    <em class="parameter"><code>const <span class="type">char</span> *attr</code></em>,
+                    <em class="parameter"><code>const <a href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue"><span class="type">GValue</span></a> *value</code></em>);</pre>
+<p>Appends <em class="parameter"><code>value</code></em>
+ to current attribute <em class="parameter"><code>attr</code></em>
+ in a struct <a class="link" href="libuser-entity.html#lu-ent" title="struct lu_ent"><span class="type">lu_ent</span></a> if <em class="parameter"><code>value</code></em>
+ is
+not yet in the list of <em class="parameter"><code>attr</code></em>
+ values.</p>
+<div class="refsect3">
+<a name="id-1.2.4.7.8.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ent</p></td>
+<td class="parameter_description"><p>An entity</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>attr</p></td>
+<td class="parameter_description"><p>Attribute name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>New attribute value</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lu-ent-clear"></a><h3>lu_ent_clear ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+lu_ent_clear (<em class="parameter"><code><span class="type">struct lu_ent</span> *ent</code></em>,
+              <em class="parameter"><code>const <span class="type">char</span> *attr</code></em>);</pre>
+<p>Removes all values of pending attribute <em class="parameter"><code>attribute</code></em>
+ from a struct <a class="link" href="libuser-entity.html#lu-ent" title="struct lu_ent"><span class="type">lu_ent</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.2.4.7.9.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ent</p></td>
+<td class="parameter_description"><p>An entity</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>attr</p></td>
+<td class="parameter_description"><p>Attribute name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lu-ent-clear-all"></a><h3>lu_ent_clear_all ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+lu_ent_clear_all (<em class="parameter"><code><span class="type">struct lu_ent</span> *ent</code></em>);</pre>
+<p>Removes all pending attributes from a struct <a class="link" href="libuser-entity.html#lu-ent" title="struct lu_ent"><span class="type">lu_ent</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.2.4.7.10.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>ent</p></td>
+<td class="parameter_description"><p>an entity</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lu-ent-clear-all-current"></a><h3>lu_ent_clear_all_current ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+lu_ent_clear_all_current (<em class="parameter"><code><span class="type">struct lu_ent</span> *ent</code></em>);</pre>
+<p>Removes all current attributes from a struct <a class="link" href="libuser-entity.html#lu-ent" title="struct lu_ent"><span class="type">lu_ent</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.2.4.7.11.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>ent</p></td>
+<td class="parameter_description"><p>an entity</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lu-ent-clear-current"></a><h3>lu_ent_clear_current ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+lu_ent_clear_current (<em class="parameter"><code><span class="type">struct lu_ent</span> *ent</code></em>,
+                      <em class="parameter"><code>const <span class="type">char</span> *attr</code></em>);</pre>
+<p>Removes all values of current attribute <em class="parameter"><code>attribute</code></em>
+ from a struct <a class="link" href="libuser-entity.html#lu-ent" title="struct lu_ent"><span class="type">lu_ent</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.2.4.7.12.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ent</p></td>
+<td class="parameter_description"><p>An entity</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>attr</p></td>
+<td class="parameter_description"><p>Attribute name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lu-ent-del"></a><h3>lu_ent_del ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+lu_ent_del (<em class="parameter"><code><span class="type">struct lu_ent</span> *ent</code></em>,
+            <em class="parameter"><code>const <span class="type">char</span> *attr</code></em>,
+            <em class="parameter"><code>const <a href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue"><span class="type">GValue</span></a> *value</code></em>);</pre>
+<p>Removes a pending attribute <em class="parameter"><code>attr</code></em>
+ value <em class="parameter"><code>value</code></em>
+ from a struct <a class="link" href="libuser-entity.html#lu-ent" title="struct lu_ent"><span class="type">lu_ent</span></a>, if
+present.</p>
+<div class="refsect3">
+<a name="id-1.2.4.7.13.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ent</p></td>
+<td class="parameter_description"><p>An entity</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>attr</p></td>
+<td class="parameter_description"><p>Attribute name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>Attribute value</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lu-ent-del-current"></a><h3>lu_ent_del_current ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+lu_ent_del_current (<em class="parameter"><code><span class="type">struct lu_ent</span> *ent</code></em>,
+                    <em class="parameter"><code>const <span class="type">char</span> *attr</code></em>,
+                    <em class="parameter"><code>const <a href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue"><span class="type">GValue</span></a> *value</code></em>);</pre>
+<p>Removes a current attribute <em class="parameter"><code>attr</code></em>
+ value <em class="parameter"><code>value</code></em>
+ from a struct <a class="link" href="libuser-entity.html#lu-ent" title="struct lu_ent"><span class="type">lu_ent</span></a>, if
+present.</p>
+<div class="refsect3">
+<a name="id-1.2.4.7.14.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ent</p></td>
+<td class="parameter_description"><p>An entity</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>attr</p></td>
+<td class="parameter_description"><p>Attribute name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>Attribute value</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lu-ent-dump"></a><h3>lu_ent_dump ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+lu_ent_dump (<em class="parameter"><code><span class="type">struct lu_ent</span> *ent</code></em>,
+             <em class="parameter"><code><span class="type">FILE</span> *fp</code></em>);</pre>
+<p>Dumps a struct <a class="link" href="libuser-entity.html#lu-ent" title="struct lu_ent"><span class="type">lu_ent</span></a> to a file in text form, for debugging.</p>
+<div class="refsect3">
+<a name="id-1.2.4.7.15.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ent</p></td>
+<td class="parameter_description"><p>The entity to dump</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>fp</p></td>
+<td class="parameter_description"><p>Destination file</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lu-ent-get"></a><h3>lu_ent_get ()</h3>
+<pre class="programlisting"><a href="https://developer.gnome.org/gobject/unstable/gobject-Value-arrays.html#GValueArray"><span class="returnvalue">GValueArray</span></a> *
+lu_ent_get (<em class="parameter"><code><span class="type">struct lu_ent</span> *ent</code></em>,
+            <em class="parameter"><code>const <span class="type">char</span> *attribute</code></em>);</pre>
+<p>Returns values associated with a pending attribute in a struct <a class="link" href="libuser-entity.html#lu-ent" title="struct lu_ent"><span class="type">lu_ent</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.2.4.7.16.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ent</p></td>
+<td class="parameter_description"><p>An entity</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>attribute</p></td>
+<td class="parameter_description"><p>Attribute name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.2.4.7.16.6"></a><h4>Returns</h4>
+<p> a <a href="https://developer.gnome.org/gobject/unstable/gobject-Value-arrays.html#GValueArray"><span class="type">GValueArray</span></a> of values, valid at least until they are modified or
+deleted. The array is never empty and it should not be freed by the caller.
+Returns <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the attribute is not present at all or on error.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lu-ent-get-first-string"></a><h3>lu_ent_get_first_string ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *
+lu_ent_get_first_string (<em class="parameter"><code><span class="type">struct lu_ent</span> *ent</code></em>,
+                         <em class="parameter"><code>const <span class="type">char</span> *attribute</code></em>);</pre>
+<p>Returns the first string associated with a pending attribute in a struct
+<a class="link" href="libuser-entity.html#lu-ent" title="struct lu_ent"><span class="type">lu_ent</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.2.4.7.17.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ent</p></td>
+<td class="parameter_description"><p>An entity</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>attribute</p></td>
+<td class="parameter_description"><p>Attribute name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.2.4.7.17.6"></a><h4>Returns</h4>
+<p> a string pointer valid at least the value is modified or deleted if
+the attribute is present and the first value is a string.  Returns <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if
+the attribute is not present, the first value is not a string, or on error.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lu-ent-get-first-string-current"></a><h3>lu_ent_get_first_string_current ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *
+lu_ent_get_first_string_current (<em class="parameter"><code><span class="type">struct lu_ent</span> *ent</code></em>,
+                                 <em class="parameter"><code>const <span class="type">char</span> *attribute</code></em>);</pre>
+<p>Returns the first string associated with a current attribute in a struct
+<a class="link" href="libuser-entity.html#lu-ent" title="struct lu_ent"><span class="type">lu_ent</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.2.4.7.18.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ent</p></td>
+<td class="parameter_description"><p>An entity</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>attribute</p></td>
+<td class="parameter_description"><p>Attribute name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.2.4.7.18.6"></a><h4>Returns</h4>
+<p> a string pointer valid at least the value is modified or deleted if
+the attribute is present and the first value is a string.  Returns <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if
+the attribute is not present, the first value is not a string, or on error.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lu-ent-get-first-value-strdup"></a><h3>lu_ent_get_first_value_strdup ()</h3>
+<pre class="programlisting"><span class="returnvalue">char</span> *
+lu_ent_get_first_value_strdup (<em class="parameter"><code><span class="type">struct lu_ent</span> *ent</code></em>,
+                               <em class="parameter"><code>const <span class="type">char</span> *attribute</code></em>);</pre>
+<p>Returns a string representation (as if by <a class="link" href="libuser-value.html#lu-value-strdup" title="lu_value_strdup ()"><code class="function">lu_value_strdup()</code></a>) of the first
+value associated with a pending attribute in a struct <a class="link" href="libuser-entity.html#lu-ent" title="struct lu_ent"><span class="type">lu_ent</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.2.4.7.19.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ent</p></td>
+<td class="parameter_description"><p>An entity</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>attribute</p></td>
+<td class="parameter_description"><p>Attribute name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.2.4.7.19.6"></a><h4>Returns</h4>
+<p> a string, should be freed by <a href="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a> if the attribute is present.
+Returns <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the attribute is not present or on error.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lu-ent-get-first-value-strdup-current"></a><h3>lu_ent_get_first_value_strdup_current ()</h3>
+<pre class="programlisting"><span class="returnvalue">char</span> *
+lu_ent_get_first_value_strdup_current (<em class="parameter"><code><span class="type">struct lu_ent</span> *ent</code></em>,
+                                       <em class="parameter"><code>const <span class="type">char</span> *attribute</code></em>);</pre>
+<p>Returns a string representation (as if by <a class="link" href="libuser-value.html#lu-value-strdup" title="lu_value_strdup ()"><code class="function">lu_value_strdup()</code></a>) of the first
+value associated with a current attribute in a struct <a class="link" href="libuser-entity.html#lu-ent" title="struct lu_ent"><span class="type">lu_ent</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.2.4.7.20.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ent</p></td>
+<td class="parameter_description"><p>An entity</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>attribute</p></td>
+<td class="parameter_description"><p>Attribute name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.2.4.7.20.6"></a><h4>Returns</h4>
+<p> a string, should be freed by <a href="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a> if the attribute is present.
+Returns <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the attribute is not present or on error.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lu-ent-get-first-id"></a><h3>lu_ent_get_first_id ()</h3>
+<pre class="programlisting"><span class="returnvalue">id_t</span>
+lu_ent_get_first_id (<em class="parameter"><code><span class="type">struct lu_ent</span> *ent</code></em>,
+                     <em class="parameter"><code>const <span class="type">char</span> *attribute</code></em>);</pre>
+<p>Returns the first <span class="type">id_t</span> value associated with a pending attribute in a struct
+<a class="link" href="libuser-entity.html#lu-ent" title="struct lu_ent"><span class="type">lu_ent</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.2.4.7.21.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ent</p></td>
+<td class="parameter_description"><p>An entity</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>attribute</p></td>
+<td class="parameter_description"><p>Attribute name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.2.4.7.21.6"></a><h4>Returns</h4>
+<p> ID value the attribute is present and can be converted into <span class="type">id_t</span>.
+Returns <a class="link" href="libuser-value.html#LU-VALUE-INVALID-ID:CAPS" title="LU_VALUE_INVALID_ID"><code class="literal">LU_VALUE_INVALID_ID</code></a> if the attribute is not present, the first
+value cannot be converted, or on error.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lu-ent-get-first-id-current"></a><h3>lu_ent_get_first_id_current ()</h3>
+<pre class="programlisting"><span class="returnvalue">id_t</span>
+lu_ent_get_first_id_current (<em class="parameter"><code><span class="type">struct lu_ent</span> *ent</code></em>,
+                             <em class="parameter"><code>const <span class="type">char</span> *attribute</code></em>);</pre>
+<p>Returns the first <span class="type">id_t</span> value associated with a current attribute in a struct
+<a class="link" href="libuser-entity.html#lu-ent" title="struct lu_ent"><span class="type">lu_ent</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.2.4.7.22.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ent</p></td>
+<td class="parameter_description"><p>An entity</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>attribute</p></td>
+<td class="parameter_description"><p>Attribute name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.2.4.7.22.6"></a><h4>Returns</h4>
+<p> ID value the attribute is present and can be converted into <span class="type">id_t</span>.
+Returns <a class="link" href="libuser-value.html#LU-VALUE-INVALID-ID:CAPS" title="LU_VALUE_INVALID_ID"><code class="literal">LU_VALUE_INVALID_ID</code></a> if the attribute is not present, the first
+value cannot be converted, or on error.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lu-ent-get-attributes"></a><h3>lu_ent_get_attributes ()</h3>
+<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+lu_ent_get_attributes (<em class="parameter"><code><span class="type">struct lu_ent</span> *ent</code></em>);</pre>
+<p>Returns a list of all pending attributes in a struct <a class="link" href="libuser-entity.html#lu-ent" title="struct lu_ent"><span class="type">lu_ent</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.2.4.7.23.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>ent</p></td>
+<td class="parameter_description"><p>An entity</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.2.4.7.23.6"></a><h4>Returns</h4>
+<p> a <a href="https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> of attribute names.  The list (but not the strings in the
+list) should be freed by the caller.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lu-ent-get-attributes-current"></a><h3>lu_ent_get_attributes_current ()</h3>
+<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *
+lu_ent_get_attributes_current (<em class="parameter"><code><span class="type">struct lu_ent</span> *ent</code></em>);</pre>
+<p>Returns a list of all current attributes in a struct <a class="link" href="libuser-entity.html#lu-ent" title="struct lu_ent"><span class="type">lu_ent</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.2.4.7.24.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>ent</p></td>
+<td class="parameter_description"><p>An entity</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.2.4.7.24.6"></a><h4>Returns</h4>
+<p> a <a href="https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> of attribute names.  The list (but not the strings in the
+list) should be freed by the caller.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lu-ent-get-current"></a><h3>lu_ent_get_current ()</h3>
+<pre class="programlisting"><a href="https://developer.gnome.org/gobject/unstable/gobject-Value-arrays.html#GValueArray"><span class="returnvalue">GValueArray</span></a> *
+lu_ent_get_current (<em class="parameter"><code><span class="type">struct lu_ent</span> *ent</code></em>,
+                    <em class="parameter"><code>const <span class="type">char</span> *attribute</code></em>);</pre>
+<p>Returns values associated with a current attribute in a struct <a class="link" href="libuser-entity.html#lu-ent" title="struct lu_ent"><span class="type">lu_ent</span></a>.</p>
+<div class="refsect3">
+<a name="id-1.2.4.7.25.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ent</p></td>
+<td class="parameter_description"><p>An entity</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>attribute</p></td>
+<td class="parameter_description"><p>Attribute name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.2.4.7.25.6"></a><h4>Returns</h4>
+<p> a <a href="https://developer.gnome.org/gobject/unstable/gobject-Value-arrays.html#GValueArray"><span class="type">GValueArray</span></a> of values, valid at least until they are modified or
+deleted. The array is never empty and it should not be freed by the caller.
+Returns <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if the attribute is not present at all or on error.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lu-ent-has"></a><h3>lu_ent_has ()</h3>
+<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+lu_ent_has (<em class="parameter"><code><span class="type">struct lu_ent</span> *ent</code></em>,
+            <em class="parameter"><code>const <span class="type">char</span> *attribute</code></em>);</pre>
+<p>Checks if a struct <a class="link" href="libuser-entity.html#lu-ent" title="struct lu_ent"><span class="type">lu_ent</span></a> has at least one pending attribute <em class="parameter"><code>attribute</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.2.4.7.26.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ent</p></td>
+<td class="parameter_description"><p>An entity</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>attribute</p></td>
+<td class="parameter_description"><p>Attribute name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.2.4.7.26.6"></a><h4>Returns</h4>
+<p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>attribute</code></em>
+has a value in <em class="parameter"><code>ent</code></em>
+.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lu-ent-has-current"></a><h3>lu_ent_has_current ()</h3>
+<pre class="programlisting"><a href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+lu_ent_has_current (<em class="parameter"><code><span class="type">struct lu_ent</span> *ent</code></em>,
+                    <em class="parameter"><code>const <span class="type">char</span> *attribute</code></em>);</pre>
+<p>Checks if a struct <a class="link" href="libuser-entity.html#lu-ent" title="struct lu_ent"><span class="type">lu_ent</span></a> has at least one current attribute <em class="parameter"><code>attribute</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.2.4.7.27.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ent</p></td>
+<td class="parameter_description"><p>An entity</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>attribute</p></td>
+<td class="parameter_description"><p>Attribute name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="id-1.2.4.7.27.6"></a><h4>Returns</h4>
+<p> <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>attribute</code></em>
+has a value in <em class="parameter"><code>ent</code></em>
+.</p>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lu-ent-set"></a><h3>lu_ent_set ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+lu_ent_set (<em class="parameter"><code><span class="type">struct lu_ent</span> *ent</code></em>,
+            <em class="parameter"><code>const <span class="type">char</span> *attr</code></em>,
+            <em class="parameter"><code>const <a href="https://developer.gnome.org/gobject/unstable/gobject-Value-arrays.html#GValueArray"><span class="type">GValueArray</span></a> *values</code></em>);</pre>
+<p>Replaces all pending attributes <em class="parameter"><code>attr</code></em>
+ in a struct <a class="link" href="libuser-entity.html#lu-ent" title="struct lu_ent"><span class="type">lu_ent</span></a> by a copy of
+<em class="parameter"><code>values</code></em>
+.  If <em class="parameter"><code>values</code></em>
+ is empty, it removes the pending attribute completely.</p>
+<div class="refsect3">
+<a name="id-1.2.4.7.28.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ent</p></td>
+<td class="parameter_description"><p>An entity</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>attr</p></td>
+<td class="parameter_description"><p>Attribute name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>values</p></td>
+<td class="parameter_description"><p>An array of values</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lu-ent-set-current"></a><h3>lu_ent_set_current ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+lu_ent_set_current (<em class="parameter"><code><span class="type">struct lu_ent</span> *ent</code></em>,
+                    <em class="parameter"><code>const <span class="type">char</span> *attr</code></em>,
+                    <em class="parameter"><code>const <a href="https://developer.gnome.org/gobject/unstable/gobject-Value-arrays.html#GValueArray"><span class="type">GValueArray</span></a> *values</code></em>);</pre>
+<p>Replaces all current attributes <em class="parameter"><code>attr</code></em>
+ in a struct <a class="link" href="libuser-entity.html#lu-ent" title="struct lu_ent"><span class="type">lu_ent</span></a> by a copy of
+<em class="parameter"><code>values</code></em>
+.  If <em class="parameter"><code>values</code></em>
+ is empty, it removes the pending attribute completely.</p>
+<div class="refsect3">
+<a name="id-1.2.4.7.29.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ent</p></td>
+<td class="parameter_description"><p>An entity</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>attr</p></td>
+<td class="parameter_description"><p>Attribute name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>values</p></td>
+<td class="parameter_description"><p>An array of values</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lu-ent-set-string"></a><h3>lu_ent_set_string ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+lu_ent_set_string (<em class="parameter"><code><span class="type">struct lu_ent</span> *ent</code></em>,
+                   <em class="parameter"><code>const <span class="type">char</span> *attr</code></em>,
+                   <em class="parameter"><code>const <span class="type">char</span> *value</code></em>);</pre>
+<p>Replaces all pending attributes <em class="parameter"><code>attr</code></em>
+ in a struct <a class="link" href="libuser-entity.html#lu-ent" title="struct lu_ent"><span class="type">lu_ent</span></a> by a copy of
+string <em class="parameter"><code>value</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.2.4.7.30.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ent</p></td>
+<td class="parameter_description"><p>An entity</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>attr</p></td>
+<td class="parameter_description"><p>Attribute name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>A string</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lu-ent-set-string-current"></a><h3>lu_ent_set_string_current ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+lu_ent_set_string_current (<em class="parameter"><code><span class="type">struct lu_ent</span> *ent</code></em>,
+                           <em class="parameter"><code>const <span class="type">char</span> *attr</code></em>,
+                           <em class="parameter"><code>const <span class="type">char</span> *value</code></em>);</pre>
+<p>Replaces all current attributes <em class="parameter"><code>attr</code></em>
+ in a struct <a class="link" href="libuser-entity.html#lu-ent" title="struct lu_ent"><span class="type">lu_ent</span></a> by a copy of
+string <em class="parameter"><code>value</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.2.4.7.31.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ent</p></td>
+<td class="parameter_description"><p>An entity</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>attr</p></td>
+<td class="parameter_description"><p>Attribute name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>A string</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lu-ent-set-id"></a><h3>lu_ent_set_id ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+lu_ent_set_id (<em class="parameter"><code><span class="type">struct lu_ent</span> *ent</code></em>,
+               <em class="parameter"><code>const <span class="type">char</span> *attr</code></em>,
+               <em class="parameter"><code><span class="type">id_t</span> value</code></em>);</pre>
+<p>Replaces all pending attributes <em class="parameter"><code>attr</code></em>
+ in a struct <a class="link" href="libuser-entity.html#lu-ent" title="struct lu_ent"><span class="type">lu_ent</span></a> by an id_t <em class="parameter"><code>value</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.2.4.7.32.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ent</p></td>
+<td class="parameter_description"><p>An entity</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>attr</p></td>
+<td class="parameter_description"><p>Attribute name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>An <span class="type">id_t</span> value</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lu-ent-set-id-current"></a><h3>lu_ent_set_id_current ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+lu_ent_set_id_current (<em class="parameter"><code><span class="type">struct lu_ent</span> *ent</code></em>,
+                       <em class="parameter"><code>const <span class="type">char</span> *attr</code></em>,
+                       <em class="parameter"><code><span class="type">id_t</span> value</code></em>);</pre>
+<p>Replaces all current attributes <em class="parameter"><code>attr</code></em>
+ in a struct <a class="link" href="libuser-entity.html#lu-ent" title="struct lu_ent"><span class="type">lu_ent</span></a> by an id_t <em class="parameter"><code>value</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.2.4.7.33.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ent</p></td>
+<td class="parameter_description"><p>An entity</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>attr</p></td>
+<td class="parameter_description"><p>Attribute name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>An <span class="type">id_t</span> value</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lu-ent-set-long"></a><h3>lu_ent_set_long ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+lu_ent_set_long (<em class="parameter"><code><span class="type">struct lu_ent</span> *ent</code></em>,
+                 <em class="parameter"><code>const <span class="type">char</span> *attr</code></em>,
+                 <em class="parameter"><code>long <span class="type">int</span> value</code></em>);</pre>
+<p>Replaces all pending attributes <em class="parameter"><code>attr</code></em>
+ in a struct <a class="link" href="libuser-entity.html#lu-ent" title="struct lu_ent"><span class="type">lu_ent</span></a> by a long <em class="parameter"><code>value</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.2.4.7.34.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ent</p></td>
+<td class="parameter_description"><p>An entity</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>attr</p></td>
+<td class="parameter_description"><p>Attribute name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>A value</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lu-ent-set-long-current"></a><h3>lu_ent_set_long_current ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+lu_ent_set_long_current (<em class="parameter"><code><span class="type">struct lu_ent</span> *ent</code></em>,
+                         <em class="parameter"><code>const <span class="type">char</span> *attr</code></em>,
+                         <em class="parameter"><code>long <span class="type">int</span> value</code></em>);</pre>
+<p>Replaces all current attributes <em class="parameter"><code>attr</code></em>
+ in a struct <a class="link" href="libuser-entity.html#lu-ent" title="struct lu_ent"><span class="type">lu_ent</span></a> by a long <em class="parameter"><code>value</code></em>
+.</p>
+<div class="refsect3">
+<a name="id-1.2.4.7.35.5"></a><h4>Parameters</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>ent</p></td>
+<td class="parameter_description"><p>An entity</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>attr</p></td>
+<td class="parameter_description"><p>Attribute name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>A value</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="libuser-entity.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="lu-ent"></a><h3>struct lu_ent</h3>
+<pre class="programlisting">struct lu_ent;</pre>
+<p>An opaque structure used to hold data about a particular user or group
+account.</p>
+<p>Each struct lu_ent contains two sets of attributes: pending and current.
+The pending attributes are modified by default, the current attributes are
+modified by functions ending with _current.</p>
+<p>Each attribute contains a list of values.  The list is never empty; removing
+the last entry from the list removes the list completely.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="lu-ent-t"></a><h3>lu_ent_t</h3>
+<pre class="programlisting">typedef struct lu_ent lu_ent_t;
+</pre>
+<div class="warning">
+<p><code class="literal">lu_ent_t</code> has been deprecated since version 0.57.3 and should not be used in newly-written code.</p>
+<p>Use struct <a class="link" href="libuser-entity.html#lu-ent" title="struct lu_ent"><span class="type">lu_ent</span></a> directly.</p>
+</div>
+<p>An alias for struct <a class="link" href="libuser-entity.html#lu-ent" title="struct lu_ent"><span class="type">lu_ent</span></a>.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="LU-USERNAME:CAPS"></a><h3>LU_USERNAME</h3>
+<pre class="programlisting">#define LU_USERNAME		"pw_name"
+</pre>
+<p>User name, a <a href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#G-TYPE-STRING:CAPS"><code class="literal">G_TYPE_STRING</code></a>.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="LU-USERPASSWORD:CAPS"></a><h3>LU_USERPASSWORD</h3>
+<pre class="programlisting">#define LU_USERPASSWORD		"pw_passwd"
+</pre>
+<p>User password, a <a href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#G-TYPE-STRING:CAPS"><code class="literal">G_TYPE_STRING</code></a>.  If shadow passwords are used, this is the
+placeholder password.</p>
+<p>Don't modify passwords by changing this attribute directly, use one of the
+specialized functions.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="LU-UIDNUMBER:CAPS"></a><h3>LU_UIDNUMBER</h3>
+<pre class="programlisting">#define LU_UIDNUMBER		"pw_uid"
+</pre>
+<p>User ID, an <span class="type">id_t</span>.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="LU-GIDNUMBER:CAPS"></a><h3>LU_GIDNUMBER</h3>
+<pre class="programlisting">#define LU_GIDNUMBER		"pw_gid"
+</pre>
+<p>Group ID, an <span class="type">id_t</span>.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="LU-GECOS:CAPS"></a><h3>LU_GECOS</h3>
+<pre class="programlisting">#define LU_GECOS		"pw_gecos"
+</pre>
+<p>Usually user's real name, a <a href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#G-TYPE-STRING:CAPS"><code class="literal">G_TYPE_STRING</code></a>.  Often contains user's real name,
+office name, office phone, home phone, separated by commas.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="LU-HOMEDIRECTORY:CAPS"></a><h3>LU_HOMEDIRECTORY</h3>
+<pre class="programlisting">#define LU_HOMEDIRECTORY "pw_dir"
+</pre>
+<p>User's home directory, a <a href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#G-TYPE-STRING:CAPS"><code class="literal">G_TYPE_STRING</code></a>.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="LU-LOGINSHELL:CAPS"></a><h3>LU_LOGINSHELL</h3>
+<pre class="programlisting">#define LU_LOGINSHELL		"pw_shell"
+</pre>
+<p>User's login shell, a <a href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#G-TYPE-STRING:CAPS"><code class="literal">G_TYPE_STRING</code></a>.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="LU-GROUPNAME:CAPS"></a><h3>LU_GROUPNAME</h3>
+<pre class="programlisting">#define LU_GROUPNAME		"gr_name"
+</pre>
+<p>Group name, a <a href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#G-TYPE-STRING:CAPS"><code class="literal">G_TYPE_STRING</code></a>.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="LU-GROUPPASSWORD:CAPS"></a><h3>LU_GROUPPASSWORD</h3>
+<pre class="programlisting">#define LU_GROUPPASSWORD "gr_passwd"
+</pre>
+<p>Group password, a <a href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#G-TYPE-STRING:CAPS"><code class="literal">G_TYPE_STRING</code></a>.</p>
+<p>Don't modify passwords by changing this attribute directly, use one of the
+specialized functions.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="LU-MEMBERNAME:CAPS"></a><h3>LU_MEMBERNAME</h3>
+<pre class="programlisting">#define LU_MEMBERNAME		"gr_mem"
+</pre>
+<p>Group member names; each member is represented by a separate <a href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#G-TYPE-STRING:CAPS"><code class="literal">G_TYPE_STRING</code></a>
+value.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="LU-ADMINISTRATORNAME:CAPS"></a><h3>LU_ADMINISTRATORNAME</h3>
+<pre class="programlisting">#define LU_ADMINISTRATORNAME "gr_adm"
+</pre>
+<p>Group administrator names; each administrator is represented by a separate
+<a href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#G-TYPE-STRING:CAPS"><code class="literal">G_TYPE_STRING</code></a> value.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="LU-SHADOWNAME:CAPS"></a><h3>LU_SHADOWNAME</h3>
+<pre class="programlisting">#define LU_SHADOWNAME		LU_USERNAME
+</pre>
+<p>User name, a <a href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#G-TYPE-STRING:CAPS"><code class="literal">G_TYPE_STRING</code></a>.  Note that <a class="link" href="libuser-entity.html#LU-SHADOWNAME:CAPS" title="LU_SHADOWNAME"><code class="literal">LU_SHADOWNAME</code></a> is not distinct from
+<a class="link" href="libuser-entity.html#LU-USERNAME:CAPS" title="LU_USERNAME"><code class="literal">LU_USERNAME</code></a>.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="LU-SHADOWPASSWORD:CAPS"></a><h3>LU_SHADOWPASSWORD</h3>
+<pre class="programlisting">#define LU_SHADOWPASSWORD "sp_pwdp"
+</pre>
+<p>User password in the shadow file, a <a href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#G-TYPE-STRING:CAPS"><code class="literal">G_TYPE_STRING</code></a>.</p>
+<p>Don't modify passwords by changing this attribute directly, use one of the
+specialized functions.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="LU-SHADOWLASTCHANGE:CAPS"></a><h3>LU_SHADOWLASTCHANGE</h3>
+<pre class="programlisting">#define LU_SHADOWLASTCHANGE "sp_lstchg"
+</pre>
+<p>The number of days since the epoch to the day when the password was last
+changed, a <a href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#G-TYPE-LONG:CAPS"><code class="literal">G_TYPE_LONG</code></a>.</p>
+<p>May be -1 to indicate that the field exists without a value.  This should be
+handled the same as if the attribute was missing altogether, and consistently
+with shadow(5).</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="LU-SHADOWMIN:CAPS"></a><h3>LU_SHADOWMIN</h3>
+<pre class="programlisting">#define LU_SHADOWMIN		"sp_min"
+</pre>
+<p>Minimum password lifetime in days before it can be changed, a <a href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#G-TYPE-LONG:CAPS"><code class="literal">G_TYPE_LONG</code></a>.</p>
+<p>May be -1 to indicate that the field exists without a value.  This should be
+handled the same as if the attribute was missing altogether, and consistently
+with shadow(5).</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="LU-SHADOWMAX:CAPS"></a><h3>LU_SHADOWMAX</h3>
+<pre class="programlisting">#define LU_SHADOWMAX		"sp_max"
+</pre>
+<p>Maximum password lifetime in days before it must be changed, a <a href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#G-TYPE-LONG:CAPS"><code class="literal">G_TYPE_LONG</code></a>.</p>
+<p>May be -1 to indicate that the field exists without a value.  This should be
+handled the same as if the attribute was missing altogether, and consistently
+with shadow(5).</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="LU-SHADOWWARNING:CAPS"></a><h3>LU_SHADOWWARNING</h3>
+<pre class="programlisting">#define LU_SHADOWWARNING "sp_warn"
+</pre>
+<p>Days before the password lifetime expires when the user should start to be
+warned, a <a href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#G-TYPE-LONG:CAPS"><code class="literal">G_TYPE_LONG</code></a>.</p>
+<p>May be -1 to indicate that the field exists without a value.  This should be
+handled the same as if the attribute was missing altogether, and consistently
+with shadow(5).</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="LU-SHADOWINACTIVE:CAPS"></a><h3>LU_SHADOWINACTIVE</h3>
+<pre class="programlisting">#define LU_SHADOWINACTIVE "sp_inact"
+</pre>
+<p>Days after the password lifetime expires when the user account is disabled
+(because it is considered inactive), a <a href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#G-TYPE-LONG:CAPS"><code class="literal">G_TYPE_LONG</code></a>.  -1 to disable inactive
+account disabling.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="LU-SHADOWEXPIRE:CAPS"></a><h3>LU_SHADOWEXPIRE</h3>
+<pre class="programlisting">#define LU_SHADOWEXPIRE		"sp_expire"
+</pre>
+<p>The number of days since the epoch to the day when the account expires and
+is disabled, a <a href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#G-TYPE-LONG:CAPS"><code class="literal">G_TYPE_LONG</code></a>.  -1 to disable account expiration.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="LU-SHADOWFLAG:CAPS"></a><h3>LU_SHADOWFLAG</h3>
+<pre class="programlisting">#define LU_SHADOWFLAG		"sp_flag"
+</pre>
+<p>A reserved value "for future use", a <a href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#G-TYPE-LONG:CAPS"><code class="literal">G_TYPE_LONG</code></a>.  In most cases the value
+is -1.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="LU-COMMONNAME:CAPS"></a><h3>LU_COMMONNAME</h3>
+<pre class="programlisting">#define LU_COMMONNAME		"cn"
+</pre>
+<p>User's real name, a <a href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#G-TYPE-STRING:CAPS"><code class="literal">G_TYPE_STRING</code></a>.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="LU-GIVENNAME:CAPS"></a><h3>LU_GIVENNAME</h3>
+<pre class="programlisting">#define LU_GIVENNAME		"givenName"
+</pre>
+<p>User's given name, a <a href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#G-TYPE-STRING:CAPS"><code class="literal">G_TYPE_STRING</code></a>.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="LU-SN:CAPS"></a><h3>LU_SN</h3>
+<pre class="programlisting">#define LU_SN			"sn"
+</pre>
+<p>User's surname, a <a href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#G-TYPE-STRING:CAPS"><code class="literal">G_TYPE_STRING</code></a>.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="LU-ROOMNUMBER:CAPS"></a><h3>LU_ROOMNUMBER</h3>
+<pre class="programlisting">#define LU_ROOMNUMBER		"roomNumber"
+</pre>
+<p>User's room number, a <a href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#G-TYPE-STRING:CAPS"><code class="literal">G_TYPE_STRING</code></a>.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="LU-TELEPHONENUMBER:CAPS"></a><h3>LU_TELEPHONENUMBER</h3>
+<pre class="programlisting">#define LU_TELEPHONENUMBER "telephoneNumber"
+</pre>
+<p>User's telephone number, a <a href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#G-TYPE-STRING:CAPS"><code class="literal">G_TYPE_STRING</code></a>.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="LU-HOMEPHONE:CAPS"></a><h3>LU_HOMEPHONE</h3>
+<pre class="programlisting">#define LU_HOMEPHONE		"homePhone"
+</pre>
+<p>User's home telephone number, a <a href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#G-TYPE-STRING:CAPS"><code class="literal">G_TYPE_STRING</code></a>.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="LU-EMAIL:CAPS"></a><h3>LU_EMAIL</h3>
+<pre class="programlisting">#define LU_EMAIL		"mail"
+</pre>
+<p>User's email address, a <a href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#G-TYPE-STRING:CAPS"><code class="literal">G_TYPE_STRING</code></a>.</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.24</div>
+</body>
+</html>

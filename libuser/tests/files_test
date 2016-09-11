@@ -1,0 +1,76 @@
+#! /bin/sh
+# Automated files/shadow regression tester
+#
+# Copyright (c) 2004 Red Hat, Inc. All rights reserved.
+#
+# This is free software; you can redistribute it and/or modify it under
+# the terms of the GNU Library General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU Library General Public
+# License along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
+#
+# Author: Miloslav Trmac <mitr@redhat.com>
+
+srcdir=$srcdir/tests
+
+workdir=$(pwd)/test_files
+
+trap 'status=$?; rm -rf "$workdir"; exit $status' 0
+trap '(exit 1); exit 1' 1 2 13 15
+
+rm -rf "$workdir"
+mkdir "$workdir"
+
+# Set up an the environment
+mkdir "$workdir"/files
+
+cat > "$workdir"/files/passwd <<\EOF
+empty_user::42:43:::
+077:077:230:231:077:077:077
++::::::
+-nonis_user::::::
++nis_user:::1504:::
+user12_3:*:1203:1203:::
+user30_4::3004:3004:::
+EOF
+cat > "$workdir"/files/shadow <<\EOF
+empty_user::::::::
+077:077:077:077:077:077:077:077:077
++::::::::
+-nonis_user::::::::
++nis_user::::::::
+EOF
+cat > "$workdir"/files/group <<\EOF
+empty_group::44:
+077:077:1730:077
++:::
++nis_group:::user30_4
+-nonis_group:::
+group15_4::1504:
+group27_3:*:2703:
+EOF
+cat > "$workdir"/files/gshadow <<\EOF
+empty_group:::
+077:077:077:077
+EOF
+
+# Set up the client
+LIBUSER_CONF=$workdir/libuser.conf
+export LIBUSER_CONF
+sed "s|@WORKDIR@|$workdir|g; s|@TOP_BUILDDIR@|$(pwd)|g" \
+    < "$srcdir"/files.conf.in > "$LIBUSER_CONF"
+# Ugly non-portable hacks
+LD_LIBRARY_PATH=$(pwd)/lib/.libs
+export LD_LIBRARY_PATH
+PYTHONPATH=$(pwd)/python/.libs
+export PYTHONPATH
+
+workdir="$workdir" $VALGRIND $PYTHON "$srcdir"/files_test.py

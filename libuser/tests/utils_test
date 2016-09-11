@@ -1,0 +1,234 @@
+#! /bin/sh
+# Automated libuser utilities regression tester
+#
+# Copyright (c) 2004, 2005, 2008 Red Hat, Inc. All rights reserved.
+#
+# This is free software; you can redistribute it and/or modify it under
+# the terms of the GNU Library General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU Library General Public
+# License along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
+#
+# Author: Miloslav Trmac <mitr@redhat.com>
+
+srcdir=$srcdir/tests
+
+workdir=$(pwd)/test_utils
+
+trap 'status=$?; rm -rf "$workdir"; exit $status' 0
+trap '(exit 1); exit 1' 1 2 13 15
+
+rm -rf "$workdir"
+mkdir "$workdir"
+
+# Set up an the environment
+mkdir "$workdir"/files
+> "$workdir"/files/passwd
+> "$workdir"/files/shadow
+> "$workdir"/files/group
+> "$workdir"/files/gshadow
+
+# Set up the client
+LIBUSER_CONF=$workdir/libuser.conf
+export LIBUSER_CONF
+sed "s|@WORKDIR@|$workdir|g; s|@TOP_BUILDDIR@|$(pwd)|g" \
+    < "$srcdir"/utils.conf.in > "$LIBUSER_CONF"
+P=$(pwd)/apps
+VG=$VALGRIND
+
+LARGE_ID=2147483648
+(
+set -e
+# lgroupadd:
+$VG "$P"/lgroupadd -g "$(expr $LARGE_ID + 110)" group1_1
+#  untested: -r
+
+# lgroupdel:
+$VG "$P"/lgroupadd group2_1
+$VG "$P"/lgroupdel group2_1
+
+# lgroupmod:
+$VG "$P"/lgroupadd -g "$(expr $LARGE_ID + 310)" group3_1
+$VG "$P"/lgroupmod -A user3_1,user3_2 -g "$(expr $LARGE_ID + 311)" -L \
+    -M user3_3,user3_4 -n group3_2 -p '01vokOibos3pg' group3_1
+$VG "$P"/lgroupmod -a user3_1,user3_1notexist -m user3_3,user3_2notexist -L \
+    group3_2
+$VG "$P"/lgroupadd -g "$(expr $LARGE_ID + 330)" group3_3
+$VG "$P"/lgroupmod -p '!!02yd6IWnPes66' group3_3
+$VG "$P"/lgroupmod -U group3_3
+#  Handling of GID change for primary and secondary groups
+$VG "$P"/lgroupadd -g "$(expr $LARGE_ID + 340)" group3_4
+$VG "$P"/luseradd -M -g group3_4 -u "$(expr $LARGE_ID + 350)" user3_5
+$VG "$P"/lgroupadd -g "$(expr $LARGE_ID + 350)" group3_5
+$VG "$P"/luseradd -M -g group3_5 -u "$(expr $LARGE_ID + 360)" user3_6
+$VG "$P"/lgroupmod -M user3_6 group3_4
+$VG "$P"/lgroupmod -g "$(expr $LARGE_ID + 341)" group3_4
+#  untested: -P
+
+# lchage:
+$VG "$P"/lgroupadd -g "$(expr $LARGE_ID + 410)" user4_1
+$VG "$P"/luseradd -M -u "$(expr $LARGE_ID + 410)" user4_1
+$VG "$P"/lchage -d 400 -E 410 -I 420 -m 430 -M 440 -W 450 user4_1
+LC_ALL=C $VG "$P"/lchage -l user4_1 > "$workdir"/lchage_output
+diff - "$workdir"/lchage_output <<\EOF
+Account is locked.
+Minimum:	430
+Maximum:	440
+Warning:	450
+Inactive:	420
+Last Change:	02/05/71
+Password Expires:	04/20/72
+Password Inactive:	06/14/73
+Account Expires:	02/15/71
+EOF
+$VG "$P"/lgroupadd -g "$(expr $LARGE_ID + 420)" user4_2
+$VG "$P"/luseradd -M -u "$(expr $LARGE_ID + 420)" user4_2
+$VG "$P"/lchage -d 0 -E -1 -I -1 -m -1 -M -1 -W -1 user4_2
+LC_ALL=C $VG "$P"/lchage -l user4_2 > "$workdir"/lchage_output
+diff - "$workdir"/lchage_output <<\EOF
+Account is locked.
+Minimum:	0
+Maximum:	None
+Warning:	0
+Inactive:	Never
+Last Change:	Must change password on next login
+Password Expires:	Must change password on next login
+Password Inactive:	Must change password on next login
+Account Expires:	Never
+EOF
+$VG "$P"/lchage -d -1 -E -1 -I -1 -m -1 -M -1 -W -1 user4_2
+LC_ALL=C $VG "$P"/lchage -l user4_2 > "$workdir"/lchage_output
+diff - "$workdir"/lchage_output <<\EOF
+Account is locked.
+Minimum:	0
+Maximum:	None
+Warning:	0
+Inactive:	Never
+Last Change:	Never
+Password Expires:	Never
+Password Inactive:	Never
+Account Expires:	Never
+EOF
+
+# lchfn: untested (requires system account)
+# lchsh: untested (requires system account)
+
+# lid:
+$VG "$P"/lgroupadd -g "$(expr $LARGE_ID + 510)" group5_1
+$VG "$P"/lgroupadd -g "$(expr $LARGE_ID + 520)" group5_2
+$VG "$P"/lgroupadd -g "$(expr $LARGE_ID + 530)" group5_3
+$VG "$P"/luseradd -M -g group5_1 -u "$(expr $LARGE_ID + 510)" user5_1
+$VG "$P"/luseradd -M -g group5_3 -u "$(expr $LARGE_ID + 520)" user5_2
+$VG "$P"/lgroupmod -M user5_1,user5_2 group5_2
+$VG "$P"/lgroupmod -M user5_2 group5_1
+$VG "$P"/lid user5_1 > "$workdir"/lid_output1
+diff - "$workdir"/lid_output1 <<EOF
+ group5_1(gid=$(expr $LARGE_ID + 510))
+ group5_2(gid=$(expr $LARGE_ID + 520))
+EOF
+$VG "$P"/lid -n user5_1 > "$workdir"/lid_output2
+diff - "$workdir"/lid_output2 <<\EOF
+ group5_1
+ group5_2
+EOF
+$VG "$P"/lid -g group5_1 > "$workdir"/lid_output3
+diff - "$workdir"/lid_output3 <<EOF
+ user5_1(uid=$(expr $LARGE_ID + 510))
+ user5_2(uid=$(expr $LARGE_ID + 520))
+EOF
+$VG "$P"/lid -g -n group5_1 > "$workdir"/lid_output4
+diff - "$workdir"/lid_output4 <<\EOF
+ user5_1
+ user5_2
+EOF
+
+# lnewusers:
+$VG "$P"/lgroupadd -g "$(expr $LARGE_ID + 620)" user6_2
+$VG "$P"/lgroupadd -g "$(expr $LARGE_ID + 630)" group6_3
+LC_ALL=C $VG "$P"/lnewusers -M -n 2> "$workdir"/lnewusers_output <<EOF
+user6_1:password:$(expr $LARGE_ID + 610):$(expr $LARGE_ID + 610):GECOS6_1:HomeDir6_1:Shell6_1
+user6_2:password:$(expr $LARGE_ID + 620)::::
+Invalid line
+user6_3:password:$(expr $LARGE_ID + 630):$(expr $LARGE_ID + 630):::
+user6_4:password:$(expr $LARGE_ID + 640):group6_4:::
+.:password:$(expr $LARGE_ID + 650):$(expr $LARGE_ID + 650):::
+..:password:$(expr $LARGE_ID + 660):$(expr $LARGE_ID + 660):::
+EOF
+diff - "$workdir"/lnewusers_output <<\EOF
+Error creating account for `Invalid line': line improperly formatted.
+Refusing to use dangerous home directory `/home/.' for . by default
+Refusing to use dangerous home directory `/home/..' for .. by default
+EOF
+
+# lpasswd: untested (requires system account)
+
+# luseradd:
+$VG "$P"/lgroupadd -g "$(expr $LARGE_ID + 710)" group7_1
+$VG "$P"/luseradd -c GECOS7_1 -d HomeDir7_1 -g group7_1 -M -p '03dgZm5nZvqOc' \
+    -s Shell7_1 -u "$(expr $LARGE_ID + 710)" user7_1
+#  untested: -k, -r, -n, -P
+# Handling numeric user names: default to the same numeric group name
+$VG "$P"/lgroupadd -g "$(expr $LARGE_ID + 720)" "$(expr $LARGE_ID + 721)"
+$VG "$P"/luseradd -M -u "$(expr $LARGE_ID + 722)" "$(expr $LARGE_ID + 721)"
+
+# luserdel:
+$VG "$P"/lgroupadd -g "$(expr $LARGE_ID + 810)" group8_1
+$VG "$P"/luseradd -g group8_1 -M user8_1
+$VG "$P"/luserdel user8_1
+$VG "$P"/luseradd -M user8_2
+$VG "$P"/luserdel user8_2
+$VG "$P"/lgroupadd -g "$(expr $LARGE_ID + 830)" user8_3
+$VG "$P"/luseradd -M user8_3
+$VG "$P"/luserdel -G user8_3
+
+# lusermod:
+$VG "$P"/lgroupadd -g "$(expr $LARGE_ID + 910)" group9_1
+$VG "$P"/luseradd -g group9_1 -u "$(expr $LARGE_ID + 910)" -M user9_1
+$VG "$P"/lgroupadd -g "$(expr $LARGE_ID + 920)" group9_2
+$VG "$P"/lusermod -c GECOS9_1 -d HomeDir9_1 -g "$(expr $LARGE_ID + 920)" \
+    -l user9_2 -p '04aqostCGmvZM' -s Shell9_1 -u "$(expr $LARGE_ID + 911)" \
+    user9_1
+$VG "$P"/lusermod -L user9_2
+$VG "$P"/lgroupadd -g "$(expr $LARGE_ID + 930)" group9_3
+$VG "$P"/luseradd -g group9_3 -u "$(expr $LARGE_ID + 930)" -M user9_3
+$VG "$P"/lusermod -p '!!05FdoegP8UniQ' user9_3
+$VG "$P"/lusermod -U user9_3
+#  Handling of username change for primary and secondary groups
+$VG "$P"/lgroupadd -g "$(expr $LARGE_ID + 940)" group9_4
+$VG "$P"/lgroupadd -g "$(expr $LARGE_ID + 950)" group9_5
+$VG "$P"/luseradd -g "$(expr $LARGE_ID + 940)" -u "$(expr $LARGE_ID + 940)" \
+    -M user9_4
+$VG "$P"/lgroupmod -M user9_4 group9_5
+$VG "$P"/lusermod -l user9_5 user9_4
+#  lusermod -g warns if the group does not exist
+$VG "$P"/lgroupadd -g "$(expr $LARGE_ID + 960)" group9_6
+$VG "$P"/luseradd -g group9_6 -u "$(expr $LARGE_ID + 960)" -M user9_6
+LC_ALL=C $VG "$P"/lusermod -g "$(expr $LARGE_ID + 961)" user9_6 \
+    2>"$workdir"/lusermod_output
+diff - "$workdir"/lusermod_output <<EOF
+Warning: Group with ID $(expr $LARGE_ID + 961) does not exist.
+EOF
+#  untested: -m, -P
+
+sed 's/^group6_4:x:[0123456789]*:$/group6_4:x:GID:/' < "$workdir"/files/group \
+    | grep -v '^\.\.\?:' > "$workdir"/group
+diff -u "$srcdir"/utils_group "$workdir"/group
+grep -v '^\.\.\?:' < "$workdir"/files/gshadow > "$workdir"/gshadow
+diff -u "$srcdir"/utils_gshadow "$workdir"/gshadow
+sed 's/^\(user6_4:x:[^:]*\):[0123456789]*:\(.*\)$/\1:GID:\2/' \
+    < "$workdir"/files/passwd > "$workdir"/passwd
+diff -u "$srcdir"/utils_passwd "$workdir"/passwd
+sed -e 's/^\([^:]*:[^:]*\):[0123456789]\{5,\}:\(.*\)$/\1:DATE:\2/' \
+    -e 's/^\([^:]*\):\$1\$[^:]*:\(.*\)$/\1:HASH:\2/' \
+    < "$workdir"/files/shadow \
+    | grep -v '^\.\.\?:' > "$workdir"/shadow
+diff -u "$srcdir"/utils_shadow "$workdir"/shadow
+)
