@@ -34,6 +34,14 @@ Requires:   %{name} = %{version}-%{release}
 %description devel
 %{summary}.
 
+%package doc
+Summary:   Documentation for %{name}
+Group:     Documentation
+Requires:  %{name} = %{version}-%{release}
+
+%description doc
+Man pages for %{name}.
+
 %prep
 %setup -q -n %{name}-%{version}/%{name}
 
@@ -50,25 +58,31 @@ rm -rf %{buildroot}
 
 %find_lang libuser
 
+mkdir -p %{buildroot}%{_docdir}/%{name}-%{version}
+install -m0644 -t %{buildroot}%{_docdir}/%{name}-%{version} \
+	AUTHORS NEWS README TODO
+
+# Remove extra comment from the top
+tail -n+4 python/modules.txt > modules.tmp
+install -m0644 modules.tmp \
+        %{buildroot}%{_docdir}/%{name}-%{version}/python-modules.txt
+
 %post -p /sbin/ldconfig
 
 %postun -p /sbin/ldconfig
 
 %files -f libuser.lang
 %defattr(-,root,root,-)
-%doc AUTHORS COPYING NEWS README TODO
+%license COPYING
 %config(noreplace) %{_sysconfdir}/libuser.conf
 %attr(0755,root,root) %{_bindir}/*
 %{_libdir}/*.so.*
 %dir %{_libdir}/%{name}
 %{_libdir}/%{name}/*.so
 %attr(0755,root,root) %{_sbindir}/*
-%doc %{_mandir}/man1/*
-%doc %{_mandir}/man5/*
 
 %files python
 %defattr(-,root,root,-)
-%doc python/modules.txt
 %{python_sitearch}/*.so
 
 %files devel
@@ -76,5 +90,10 @@ rm -rf %{buildroot}
 %{_includedir}/libuser
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/*
-%{_datadir}/gtk-doc/html/libuser/*
 
+%files doc
+%defattr(-,root,root,-)
+%{_mandir}/man1/*
+%{_mandir}/man5/%{name}.*
+%{_docdir}/%{name}-%{version}
+%doc %{_datadir}/gtk-doc/html/libuser/*
