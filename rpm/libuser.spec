@@ -13,7 +13,6 @@ BuildRequires:  pkgconfig(popt)
 BuildRequires:  pam-devel
 BuildRequires:  gettext-devel
 BuildRequires:  python-devel
-BuildRequires:  cvs
 
 %description
 %{summary}.
