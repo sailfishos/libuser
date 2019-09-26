@@ -73,7 +73,7 @@ install -m0644 modules.tmp \
 %files -f libuser.lang
 %defattr(-,root,root,-)
 %license COPYING
-%config(noreplace) %{_sysconfdir}/libuser.conf
+%config %{_sysconfdir}/libuser.conf
 %attr(0755,root,root) %{_bindir}/*
 %{_libdir}/*.so.*
 %dir %{_libdir}/%{name}
