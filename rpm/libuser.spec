@@ -2,10 +2,9 @@ Name:       libuser
 Summary:    A user and group account administration library
 Version:    0.62
 Release:    1
-Group:      System/Base
 License:    LGPLv2+
-URL:        https://fedorahosted.org/libuser/
-Source0:    https://fedorahosted.org/releases/l/i/libuser/%{name}-%{version}.tar.xz
+URL:        https://git.sailfishos.org/mer-core/libuser/
+Source0:    https://pagure.io/libuser/%{name}-%{version}.tar.gz
 Requires(post): /sbin/ldconfig
 Requires(postun): /sbin/ldconfig
 BuildRequires:  pkgconfig(glib-2.0)
@@ -18,7 +17,6 @@ BuildRequires:  gettext-devel
 
 %package devel
 Summary:    Files needed for developing applications which use libuser
-Group:      Development/Libraries
 Requires:   %{name} = %{version}-%{release}
 
 %description devel
@@ -26,7 +24,6 @@ Requires:   %{name} = %{version}-%{release}
 
 %package doc
 Summary:   Documentation for %{name}
-Group:     Documentation
 Requires:  %{name} = %{version}-%{release}
 
 %description doc
@@ -40,7 +37,7 @@ Man pages for %{name}.
     --without-python \
     --disable-gtk-doc
 
-make %{?jobs:-j%jobs}
+make %{?_smp_mflags}
 
 %install
 rm -rf %{buildroot}
