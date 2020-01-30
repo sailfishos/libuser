@@ -2,32 +2,21 @@ Name:       libuser
 Summary:    A user and group account administration library
 Version:    0.62
 Release:    1
-Group:      System/Base
 License:    LGPLv2+
-URL:        https://fedorahosted.org/libuser/
-Source0:    https://fedorahosted.org/releases/l/i/libuser/%{name}-%{version}.tar.xz
+URL:        https://git.sailfishos.org/mer-core/libuser/
+Source0:    https://pagure.io/libuser/%{name}-%{version}.tar.gz
 Requires(post): /sbin/ldconfig
 Requires(postun): /sbin/ldconfig
 BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:  pkgconfig(popt)
 BuildRequires:  pam-devel
 BuildRequires:  gettext-devel
-BuildRequires:  python-devel
 
 %description
 %{summary}.
 
-%package python
-Summary:    Python bindings for the libuser library
-Group:      Development/Libraries
-Requires:   %{name} = %{version}-%{release}
-
-%description python
-%{summary}.
-
 %package devel
 Summary:    Files needed for developing applications which use libuser
-Group:      Development/Libraries
 Requires:   %{name} = %{version}-%{release}
 
 %description devel
@@ -35,7 +24,6 @@ Requires:   %{name} = %{version}-%{release}
 
 %package doc
 Summary:   Documentation for %{name}
-Group:     Documentation
 Requires:  %{name} = %{version}-%{release}
 
 %description doc
@@ -46,10 +34,10 @@ Man pages for %{name}.
 
 %build
 %reconfigure --disable-static \
-    --with-python \
+    --without-python \
     --disable-gtk-doc
 
-make %{?jobs:-j%jobs}
+make %{?_smp_mflags}
 
 %install
 rm -rf %{buildroot}
@@ -60,11 +48,6 @@ rm -rf %{buildroot}
 mkdir -p %{buildroot}%{_docdir}/%{name}-%{version}
 install -m0644 -t %{buildroot}%{_docdir}/%{name}-%{version} \
 	AUTHORS NEWS README TODO
-
-# Remove extra comment from the top
-tail -n+4 python/modules.txt > modules.tmp
-install -m0644 modules.tmp \
-        %{buildroot}%{_docdir}/%{name}-%{version}/python-modules.txt
 
 %post -p /sbin/ldconfig
 
@@ -79,10 +62,6 @@ install -m0644 modules.tmp \
 %dir %{_libdir}/%{name}
 %{_libdir}/%{name}/*.so
 %attr(0755,root,root) %{_sbindir}/*
-
-%files python
-%defattr(-,root,root,-)
-%{python_sitearch}/*.so
 
 %files devel
 %defattr(-,root,root,-)
