@@ -9,6 +9,7 @@ Requires(post): /sbin/ldconfig
 Requires(postun): /sbin/ldconfig
 BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:  pkgconfig(popt)
+BuildRequires:  pkgconfig(libcrypt)
 BuildRequires:  pam-devel
 BuildRequires:  gettext-devel
 
