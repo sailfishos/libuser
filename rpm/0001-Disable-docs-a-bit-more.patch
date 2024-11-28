@@ -1,0 +1,35 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Pekka Vuorela <pekka.vuorela@jolla.com>
+Date: Thu, 28 Nov 2024 10:30:10 +0200
+Subject: [PATCH] Disable docs a bit more
+
+---
+ Makefile.am  | 2 +-
+ configure.ac | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/Makefile.am b/Makefile.am
+index 9f099bd..397d5bf 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -24,7 +24,7 @@ VG_ENVIRONMENT = G_SLICE=always-malloc \
+ 	G_DEBUG=gc-friendly,resident-modules
+ 
+ ## Targets
+-SUBDIRS = po docs
++SUBDIRS = po #docs
+ TESTS = tests/config_test.sh tests/fs_test tests/files_test tests/pwhash_test \
+ 	tests/utils_test
+ if LDAP
+diff --git a/configure.ac b/configure.ac
+index 0bd4a67..f7559de 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -171,6 +171,6 @@ fi
+ 
+ GTK_DOC_CHECK
+ 
+-AC_CONFIG_FILES([Makefile po/Makefile.in docs/Makefile docs/reference/Makefile
++AC_CONFIG_FILES([Makefile po/Makefile.in docs/Makefile
+ libuser.pc])
+ AC_OUTPUT
