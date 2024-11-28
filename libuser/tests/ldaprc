@@ -1,4 +1,0 @@
-HOST 127.0.0.1
-BASE dc=libuser
-# Don't check hostname on certificate
-TLS_REQCERT allow
