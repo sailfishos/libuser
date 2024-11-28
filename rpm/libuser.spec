@@ -1,10 +1,11 @@
 Name:       libuser
 Summary:    A user and group account administration library
-Version:    0.62
+Version:    0.64
 Release:    1
 License:    LGPLv2+
-URL:        https://git.sailfishos.org/mer-core/libuser/
+URL:        https://github.com/sailfishos/libuser
 Source0:    https://pagure.io/libuser/%{name}-%{version}.tar.gz
+Patch0001:  0001-Disable-docs-a-bit-more.patch
 Requires(post): /sbin/ldconfig
 Requires(postun): /sbin/ldconfig
 BuildRequires:  pkgconfig(glib-2.0)
@@ -12,6 +13,7 @@ BuildRequires:  pkgconfig(popt)
 BuildRequires:  pkgconfig(libcrypt)
 BuildRequires:  pam-devel
 BuildRequires:  gettext-devel
+BuildRequires:  bison
 
 %description
 %{summary}.
@@ -31,17 +33,16 @@ Requires:  %{name} = %{version}-%{release}
 Man pages for %{name}.
 
 %prep
-%setup -q -n %{name}-%{version}/%{name}
+%autosetup -p1 -n %{name}-%{version}/%{name}
 
 %build
 %reconfigure --disable-static \
     --without-python \
     --disable-gtk-doc
 
-make %{?_smp_mflags}
+%make_build
 
 %install
-rm -rf %{buildroot}
 %make_install
 
 %find_lang libuser
@@ -55,7 +56,6 @@ install -m0644 -t %{buildroot}%{_docdir}/%{name}-%{version} \
 %postun -p /sbin/ldconfig
 
 %files -f libuser.lang
-%defattr(-,root,root,-)
 %license COPYING
 %config %{_sysconfdir}/libuser.conf
 %attr(0755,root,root) %{_bindir}/*
@@ -65,14 +65,10 @@ install -m0644 -t %{buildroot}%{_docdir}/%{name}-%{version} \
 %attr(0755,root,root) %{_sbindir}/*
 
 %files devel
-%defattr(-,root,root,-)
 %{_includedir}/libuser
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/*
 
 %files doc
-%defattr(-,root,root,-)
 %{_mandir}/man1/*
-%{_mandir}/man5/%{name}.*
 %{_docdir}/%{name}-%{version}
-%doc %{_datadir}/gtk-doc/html/libuser/*
